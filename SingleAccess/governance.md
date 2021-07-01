@@ -1,4 +1,4 @@
-##Statement of scope
+## Statement of scope
 
 The aim of the portal is to provide one place where you can query and find datasets used in climate research which are available in Australia.
 
@@ -15,8 +15,7 @@ As well as datasets we also want to create records for:
  * Projects which are producing climate data which is not yet published (to foster collaboration)
 …
 
-##Guidelines for users
-
+## Guidelines for users
 
 The portal is open to anyone looking for climate datasets. You can query the portal records in two ways:
 1. With a free text search

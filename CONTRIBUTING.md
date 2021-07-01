@@ -25,8 +25,7 @@ and "help wanted" is open to whoever wants to implement it.
 
 ## Write Documentation
 
-Working with Big/Challenging Data Collections could always use more documentation, whether as part of the
-official Working with Big/Challenging Data Collections docs, in docstrings, or even on the web in blog posts,
+`Creation of a single access point to climate data` could always use more documentation, whether as part of the working group official docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 ## Submit Feedback
@@ -42,7 +41,7 @@ If you are proposing a feature:
 
 ## Get Started
 
-Ready to contribute? Here's how to set up `Working with Big/Challenging Data Collections` for local development.
+Ready to contribute? Here's how to set up `Creation of a single access point to climate data` for local development.
 
 1. Fork the repo on GitHub.
 2. Clone your fork locally.
@@ -53,4 +52,4 @@ Ready to contribute? Here's how to set up `Working with Big/Challenging Data Col
 
 ## Code of Conduct
 
-Please note that the Working with Big/Challenging Data Collections project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
+Please note that the `Creation of a single access point to climate data` project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
