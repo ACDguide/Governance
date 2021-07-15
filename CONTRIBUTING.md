@@ -52,4 +52,4 @@ Ready to contribute? Here's how to set up `Creation of a single access point to 
 
 ## Code of Conduct
 
-Please note that the `Creation of a single access point to climate data` project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
+Please note that the `Climate dataset guidelines` project is released with a [Contributor Code of Conduct](CONDUCT.md). By contributing to this project you agree to abide by its terms.
