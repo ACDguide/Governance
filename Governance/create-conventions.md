@@ -57,7 +57,7 @@ named in the file. Standard\_name is a very useful attribute but should
 be applied with attention. It is better to leave it out if a suitable
 one is not available. There are various tools available to help you
 check your files against a version of the CF Conventions. We covered
-some in this wiki page: \[\[CF\_checker|CF checker]]   
+some in this wiki page: (..add link to CF checker)   
 
 ### **Attribute Convention for Data Discovery**
 The [https://wiki.esipfed.org/Attribute\_Convention\_for\_Data\_Discovery\_1-3
@@ -93,7 +93,7 @@ projects, if you know of more please let us know.
 
 #### **CMIP**
 * [https://cmor.llnl.gov CMOR - Climate Model Output
-Rewriter] convetions and associated software used to generate CMIP
+Rewriter] conventions and associated software used to generate CMIP
 model output. They also include rules around filenames and directory
 structure. 
 * Their [https://github.com/PCMDI/cmip6-cmor-tables/tree/master/Tables variable
@@ -126,7 +126,9 @@ ARGO netCDF conventions for data centers]
 Conventions] 
 * [https://www.ncei.noaa.gov/netcdf-templates US
 NCEI NetCDF templates] - these templates illustrate how to apply CF and
-ACDD conventions **Atmosphere** 
+ACDD conventions
+
+#### **Atmosphere** 
 * [http://www.eol.ucar.edu/raf/Software/netCDF.html NCAR-RAF Conventions
 for Aircraft Data] 
 
