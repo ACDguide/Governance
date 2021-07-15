@@ -1,10 +1,11 @@
 Data conventions and standards are an important tool to manage your data
 in a way it can be easily and effectively shared with others.
+
 Conventions help achieving this in two ways: 
 * formatting the data in a
 way which is easy for others in the same community to use; 
 * providing enough information about the data (metadata) in a shared "language" so
-others can understand the data as it was meant to by its creator
+others can understand the data as it was meant to by its creator.
 Conventions are also convenient for anyone using them, as they provide
 and easy to adopt template for your data and you do not need to invent a
 new data model with every new project. What's more they help you being
