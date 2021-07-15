@@ -1,8 +1,9 @@
 Data conventions and standards are an important tool to manage your data
 in a way it can be easily and effectively shared with others.
-Conventions help achieving this in two ways: \* formatting the data in a
-way which is easy for others in the same community to use; \* providing
-enough information about the data (metadata) in a shared "language" so
+Conventions help achieving this in two ways: 
+* formatting the data in a
+way which is easy for others in the same community to use; 
+* providing enough information about the data (metadata) in a shared "language" so
 others can understand the data as it was meant to by its creator
 Conventions are also convenient for anyone using them, as they provide
 and easy to adopt template for your data and you do not need to invent a
@@ -46,10 +47,10 @@ in most cases, you will be using the same attributes. This
 \[https://climate-cms.org/2018/10/26/Setting-up-NetCDF-file-attributes.html
 CMS Blog\] provides an example on how to apply them to your data,
 covering the attributes most commonly required. Important elements of
-the Conventions are: \*
-the \[https://ncics.org/portfolio/other-resources/udunits2/? UDUNITS2\]
-packages for units' standards \* the
-\[https://cfconventions.org/Data/cf-standard-names/77/build/cf-standard-name-table.html
+the Conventions are: 
+* the \[https://ncics.org/portfolio/other-resources/udunits2/? UDUNITS2\]
+packages for units' standards 
+* the [https://cfconventions.org/Data/cf-standard-names/77/build/cf-standard-name-table.html
 standard\_name\] whose scope is to provide a common terminology for
 variables names. For example, every variable with the standard\_name
 '''''air\_temperature''''' can be defined as "''Air temperature is the
@@ -104,32 +105,34 @@ variable tables \] ==== '''Land ''' ==== \*
 \[https://www.lmd.jussieu.fr/\~polcher/ALMA/ ALMA data exchange
 convention\] the Assistance for Land-surface Modelling Activities group
 estanblished conventions for land-surface schemes and their outputs.
-==== '''Ocean''' ==== \* \[https://arxiv.org/pdf/1911.08638.pdf
+==== '''Ocean''' ==== 
+* [https://arxiv.org/pdf/1911.08638.pdf
 gridspec\] defined by GFDL in 2019 as a standard for Earth System Model
 grids to be included in the CF Conventions. It used for MOM5 and MOM6
-grids. \*
-\[http://content.aodn.org.au/Documents/IMOS/Conventions/IMOS\_NetCDF\_Conventions.pdf
+grids. 
+* [http://content.aodn.org.au/Documents/IMOS/Conventions/IMOS\_NetCDF\_Conventions.pdf
 IMOS\] has very specific extensions of the CF conventions for different
 kind of ocean observation data, which has to be used if you want to
-contribute data to their portal. \*
-\[http://www.oceansites.org/docs/oceansites\_data\_format\_reference\_manual.pdf
+contribute data to their portal. 
+* [http://www.oceansites.org/docs/oceansites\_data\_format\_reference\_manual.pdf
 OceanSITES Data Format\] - extension of CF Conventions standard for
-OceanSITES data \*
-\[http://www.argodatamgt.org/Media/Medias-Argo-Data-Management/Argo-documentation/General-documentation/Data-format
-ARGO netCDF conventions for data centers\] \*
-\[https://www.pmel.noaa.gov/epic/document/convention.htm PMEL-EPIC
+OceanSITES data 
+* [http://www.argodatamgt.org/Media/Medias-Argo-Data-Management/Argo-documentation/General-documentation/Data-format
+ARGO netCDF conventions for data centers\] 
+* [https://www.pmel.noaa.gov/epic/document/convention.htm PMEL-EPIC
 Conventions\] \* \[https://www.ncei.noaa.gov/netcdf-templates US
 NCEI NetCDF templates\] - these templates illustrate how to apply CF and
-ACDD conventions '''Atmosphere''' \*
-\[http://www.eol.ucar.edu/raf/Software/netCDF.html NCAR-RAF Conventions
-for Aircraft Data\] ==== '''Other''' ==== \*
-\[http://ambermd.org/netcdf/nctraj.xhtml AMBER Trajectory Conventions
-for molecular dynamics simulations\] \*
-\[http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries
+ACDD conventions '''Atmosphere''' 
+* [http://www.eol.ucar.edu/raf/Software/netCDF.html NCAR-RAF Conventions
+for Aircraft Data\] ==== '''Other''' ==== 
+* [http://ambermd.org/netcdf/nctraj.xhtml AMBER Trajectory Conventions
+for molecular dynamics simulations\] 
+* [http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries
 CF Discrete Sampling Geometries Conventions\] - CF for observational and
-point data \* \[http://ugrid-conventions.github.io/ugrid-conventions/
-UGRID Conventions for unstructured (e.g. triangular, hex) grids.\] \*
-\[http://sgrid.github.io/sgrid/ SGRID Conventions for staggered,
+point data 
+* [http://ugrid-conventions.github.io/ugrid-conventions/
+UGRID Conventions for unstructured (e.g. triangular, hex) grids.\] 
+* [http://sgrid.github.io/sgrid/ SGRID Conventions for staggered,
 structured (e.g. ROMS, WRF) grids\] \*
 \[https://www.unidata.ucar.edu/software/netcdf/conventions.html
 UNIDATA NetCDF conventions lists\] - including COARDS and other older
