@@ -6,6 +6,8 @@
   chapters:
       - file: create-intro
       - file: create-conventions
+- part: Publish
+      - file: publish-intro
 - part: Retire
   chapters:
       - file: retire-intro
