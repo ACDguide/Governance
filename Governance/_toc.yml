@@ -8,6 +8,7 @@
       - file: create-conventions
 - part: Publish
       - file: publish-intro
+      - file: publish-options-considerations
 - part: Retire
   chapters:
       - file: retire-intro
