@@ -1,18 +1,24 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: goals
-- part: Create 
-  chapters:
-      - file: create-intro
-      - file: create-conventions
-      - file: create-keywords
-      - file: create-pids
-      - file: create-license
-      - file: create-drs
-- part: Publish
-      - file: publish-intro
-      - file: publish-options-considerations
-- part: Retire
-  chapters:
-      - file: retire-intro
+format: jb-book
+root: index
+parts:
+  - caption: Introduction 
+    chapters:
+    - file: goals
+  - caption: Creating climate data 
+    chapters:
+    - file: create-intro
+    - file: create-conventions
+    - file: create-pids
+    - file: create-drs
+  - caption: Publishing climate data
+    chapters:
+    - file: publish-intro
+    - file: publish-options-considerations
+    - file: create-license
+    - file: create-keywords
+  - caption: Retiring dataset
+    chapters:
+    - file: retire-intro

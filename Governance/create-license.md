@@ -1,14 +1,16 @@
-### Why a license?
+# Open Access License
+
+## Why a license?
 If you are sharing your data or code freely, you might be wondering why you should be using a license, but making your data freely available to others doesn't mean that you shouldn't establish in which way it can be used. This is where open access licenses come in handy and this is why you can have different flavours of the same open-access license.
 
 Licenses are really useful for both the "data" creator and the user, it helps a potential user to work out quickly if the data is suitable for their intended use and helps them citing and using the data in the way the creator intended.
 
-### Commonly used licenses
+## Commonly used licenses
 Here we summarise the licenses we commonly use. For a much more detailed view of these licenses, ARDC (the Australian Research Data Commons) has a comprehensive guide which covers also copyright.
 
 The important thing to understand about copyright is that it is usually held by or shared with your own institution, even if you are publishing with CLEX. This is because CLEX is not a legal entity and your institution has the Intellectual Property of your work (see below). When you or CLEX applies a license to your data, you are doing so on behalf of your institution. Most institutions have an open-access policy and would be fine with an open-access license unless there are particular circumstances around your data, for example, if it is already covered by an agreement or is of a sensitive nature. If you are in doubt, check with your institution research office if they are fine with the license you want to use.
 
-#### Common license rules
+## Common license rules
 Before looking at the different flavours of licenses, we need to understand what they are covering. First of all, these are all open-access licenses so by applying one of them, you are usually giving free access to your data which means that you are not charging for using your data. However, you can regulate how a potential user can access and use your data. Usually, a license will cover some or all of the following points:
 
 * Attribution: a user is required to cite and/or acknowledge your data, this is usually included in any license. You should make sure you are sharing the information on how to cite the data.
@@ -28,9 +30,9 @@ Finally licenses usually contain a disclaimer to cover warranty and liability, i
 ```{admonition} CC-BY 4.0
 As you can see there are a lot of different flavours possible. Usually, any license will cover "attribution" which is the most common reason to apply a license: to get your work recognised!
 If you are unsure which license to use, we advise using the International CC-BY 4.0 license.
-````
+```
  
-### Datasets license
+## Datasets license
 While we consider both datasets and code as a form of data, from a licensing point of view they are treated differently. For datasets we suggest the Creative Commons licenses (CC). As well as the international version, there is also an Australian Creative Commons. These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an online tool to help you choose between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user's country of origin.
 
 Creative Commons use abbreviation for each of the options:
@@ -48,7 +50,7 @@ Check this 5 minutes video to learn more on the available combinations:
 In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.
 ```
 
-### Software licenses
+## Software licenses
 For software, you can refer to the Open Source initiative and the Software Sustainability Institute, SSI. They both offer a good introduction, SSI also lists several other websites covering available licenses in a human-readable way and useful comparison tools. Among these:
 
 * [github choose a license tool](https://choosealicense.com/licenses/)
@@ -78,7 +80,7 @@ Summarised this means that commercial and private use, distribution and modifica
 A good insight is again given by [this article](https://opensource.com/article/18/2/how-make-sense-apache-2-patent-license) from the [opensource.com](https://opensource.com/) website.
 
  
-### How to apply a license
+## How to apply a license
 Once you have decided which license to apply it is usually fairly easy to apply it to your dataset or code.
 
 If publishing a dataset set you can create a license.txt file which contains the chosen license legal text.
@@ -131,7 +133,7 @@ UNSW
 
 UTAS 
 
-#### Q&A
+## Q&A
 * Does a license last forever?
 Technically a license is valid until you hold the copyright, which usually in Australia expires 70 years after creation. You can revoke a license and apply a different one anytime 
 * If I move from one license to a different one, would the new one apply in retrospect?
