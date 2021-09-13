@@ -15,6 +15,7 @@ parts:
     - file: publish-intro
     - file: publish-options-considerations
     - file: publish-keywords
+    - file: publish-license
     - file: publish-versioning
   - caption: Retiring dataset
     chapters:
