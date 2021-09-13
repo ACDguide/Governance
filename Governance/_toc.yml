@@ -6,6 +6,10 @@
   chapters:
       - file: create-intro
       - file: create-conventions
+      - file: create-keywords
+      - file: create-pids
+      - file: create-license
+      - file: create-drs
 - part: Publish
       - file: publish-intro
       - file: publish-options-considerations

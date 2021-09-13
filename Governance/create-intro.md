@@ -1,5 +1,5 @@
-#Guidelines to create a dataset
+# Guidelines to create a dataset
 
 ### Scope of the guidelines
 
-###Index
+### Index

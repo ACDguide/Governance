@@ -26,7 +26,6 @@ The following two points apply only to software:
 Finally licenses usually contain a disclaimer to cover warranty and liability, i.e. that the data or software is provided "as is" and that the copyright owner cannot be considered responsible for any damages derived by using the product.
 
 ```{admonition} CC-BY 4.0
-:class:tip
 As you can see there are a lot of different flavours possible. Usually, any license will cover "attribution" which is the most common reason to apply a license: to get your work recognised!
 If you are unsure which license to use, we advise using the International CC-BY 4.0 license.
 ````
@@ -46,7 +45,6 @@ Check this 5 minutes video to learn more on the available combinations:
 
 
 ```{admonition} Non-commercial license
-:class: tip
 In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.
 ```
 
@@ -69,12 +67,11 @@ Apache 2.0 applies the following
 
 | Permissions | Conditions | Limitations |
 | :---------- | ---------- | ----------: |
-| Commercial use |
-| Distribution |  | Liability |
-| Modification | License and copyright notice | Trademark use |
+| Commercial use | | Liability |
+| Distribution |   License and copyright notice | Trademark use |
+| Modification | State changes | Warranty |
 | Patent use | State changes | Warranty |
-| Private use |  |
-| :---------- | ---------- | ----------: |
+| Private use | | |
 
 Summarised this means that commercial and private use, distribution and modification are all allowed. A user can also use parts of the code covered by a patent, should there be any, without paying royalties. A user has to attach the original license and copyright notices to any derived product they want to distribute, as well as stating any changes made. Finally, the software creator cannot be held liable for damages and they share the product "as is" with no warranty and the license does not grant trademark rights.
 
@@ -94,36 +91,35 @@ You can see the license online at
 
 > Licensor - ARC Centre of Excellence for Climate Extremes (CLEX) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail coecss@unsw.edu.au
 > Author: "author name" <"author-email">
-
 > Licensed Material - <dataset title> (version 1.0)
-
 > Creative Commons Attribution 4.0 International Public License
-
 > By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons ....
 
 The license.txt file then will be available both in the dataset local directory and on the NCI dataset catalogue together with the files. Also, we will use the appropriate license link to the Creative Commons website in the files global attributes and in the metadata records we produce.
 
 When publishing or even simply sharing our software, the license is both available in the code repository as a license.txt file and included in the actual files.
 
->#!/usr/bin/env python
-># Copyright 2019 ARC Centre of Excellence for Climate Extremes
-># author: "author name" <"author-email">
-># 
-># Licensed under the Apache License, Version 2.0 (the "License");
-># you may not use this file except in compliance with the License.
-># You may obtain a copy of the License at
-># 
->#     http://www.apache.org/licenses/LICENSE-2.0
-># 
-># Unless required by applicable law or agreed to in writing, software
-># distributed under the License is distributed on an "AS IS" BASIS,
-># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-># See the License for the specific language governing permissions and
-># limitations under the License.
+```python
+ #!/usr/bin/env python
+ # Copyright 2019 ARC Centre of Excellence for Climate Extremes
+ # author: "author name" <"author-email">
+ # 
+ # Licensed under the Apache License, Version 2.0 (the "License");
+ # you may not use this file except in compliance with the License.
+ # You may obtain a copy of the License at
+ # 
+ #     http://www.apache.org/licenses/LICENSE-2.0
+ # 
+ # Unless required by applicable law or agreed to in writing, software
+ # distributed under the License is distributed on an "AS IS" BASIS,
+ # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ # See the License for the specific language governing permissions and
+ # limitations under the License.
+```
 
 It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.
 
-(this section definitely needs to be updated with more genric content!!!!)
+(this section definitely needs to be updated with more generic content!!!!)
 More on intellectual property and copyrights by institution
 ANU
 
@@ -145,9 +141,8 @@ The license is enforceable in court, clearly that's an extreme step, usually peo
 * How can my license be valid if CLEX or myself act as licensor when the copyright belongs to my institution?
  If you are the creator of the data/code then you can apply a license on behalf of your institution, they won't mind as long as the license you are using is in line with their recommendations. Most of Australian universities and the ARC, which funds most projects, require open access for any research product (unless there is a valid reason not to).
 
-#### References
-* Creative Commons FAQ
+* [Creative Commons FAQ](https://creativecommons.org/faq/)
 
-* Apache 2.0 FAQ
+* [Apache 2.0 FAQ](http://www.apache.org/foundation/license-faq.html)
 
  
