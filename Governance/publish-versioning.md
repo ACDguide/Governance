@@ -2,7 +2,7 @@
 
 Versioning is the process of creating and managing multiple releases, each labelled by a version, of a research output, such as a dataset or code. Applying versions consistently and clearly is really important, as different releases can have fairly different characteristics and their applications can produce very different results. There are several discussion groups and documents dedicated to the topic of versioning, here we are trying to cover only the essential aspects. 
 
-### Code versioning
+## Code versioning
 Versions are really important to identify your code, even if you are using already a version control system. Even if you are not planning new releases it’s fairly common to have updates with code. Consider following the [Semantic Versioning convention](https://semver.org/), this scheme uses a 3 part version number,
 
      MAJOR.MINOR.PATCH  as in v1.3.0
