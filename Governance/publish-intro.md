@@ -1,5 +1,5 @@
 # Guidelines to publishing a data
 
-### Scope of the guidelines
+## Scope of the guidelines
 
-###Index
+##Index
