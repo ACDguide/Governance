@@ -27,10 +27,11 @@ The following two points apply only to software:
 * State changes: any changes made must be documented
 Finally licenses usually contain a disclaimer to cover warranty and liability, i.e. that the data or software is provided "as is" and that the copyright owner cannot be considered responsible for any damages derived by using the product.
 
+````
 ```{admonition} CC-BY 4.0
 As you can see there are a lot of different flavours possible. Usually, any license will cover "attribution" which is the most common reason to apply a license: to get your work recognised! If you are unsure which license to use, we advise using the International CC-BY 4.0 license.
 ```
- 
+````
 ## Dataset license
 While we consider both datasets and code as a form of data, from a licensing point of view they are treated differently. For datasets we suggest the Creative Commons licenses (CC). As well as the international version, there is also an Australian Creative Commons. These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an online tool to help you choose between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user's country of origin.
 
@@ -45,9 +46,11 @@ Check this 5 minutes video to learn more on the available combinations:
 [CC kiwi video](https://creativecommons.org/about/videos/creative-commons-kiwi/)
 
 
+````
 ```{admonition} Non-commercial license
 In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.
 ```
+````
 
 ## Software licenses
 For software, you can refer to the Open Source initiative and the Software Sustainability Institute, SSI. They both offer a good introduction, SSI also lists several other websites covering available licenses in a human-readable way and useful comparison tools. Among these:
@@ -92,14 +95,15 @@ You can see the license online at
 
 > Licensor - ARC Centre of Excellence for Climate Extremes (CLEX) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail coecss@unsw.edu.au
 > Author: "author name" <"author-email">
-> Licensed Material - <dataset title> (version 1.0)
-> Creative Commons Attribution 4.0 International Public License
-> By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons ....
+>  Licensed Material - <dataset title> (version 1.0)
+>  Creative Commons Attribution 4.0 International Public License
+>  By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons ....
 
 The license.txt file then will be available both in the dataset local directory and on the NCI dataset catalogue together with the files. Also, we will use the appropriate license link to the Creative Commons website in the files global attributes and in the metadata records we produce.
 
 When publishing or even simply sharing our software, the license is both available in the code repository as a license.txt file and included in the actual files.
 
+````
 ```python
  #!/usr/bin/env python
  # Copyright 2019 ARC Centre of Excellence for Climate Extremes
@@ -117,6 +121,7 @@ When publishing or even simply sharing our software, the license is both availab
  # See the License for the specific language governing permissions and
  # limitations under the License.
 ```
+````
 
 It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.
 

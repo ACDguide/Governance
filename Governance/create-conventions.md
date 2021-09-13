@@ -21,9 +21,11 @@ packages for units' standards
 >"Air temperature is the bulk temperature of the air, not the surface (skin) temperature."
 > with K or equivalent units, regardless of the way the actual variable is
 named in the file. 
+````
 ```{warning}
 Standard_name is a very useful attribute but should be applied with attention. It is better to leave it out if a suitable one is not available.
 ```
+````
 There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their [wiki](http://climate-cms.wikis.unsw.edu.au/CF_checker).    
 
 ## **Attribute Convention for Data Discovery**
@@ -36,10 +38,12 @@ ACDD extends these to include all the information related to the publication of 
 
 When publishing several files as part of the same dataset these attributes should all share the same values, as attributes like "title" should define the "title" of the dataset not of the file itself.NCI requires both CF and ACDD conventions to be applied, they will run a CF/ACDD checker against your files. The CF checker linked above aims to reproduce their process, and can also be used to check against the ACDD conventions. 
 
+````
 ```{warning}
 Conventions are useful only if the file creator provide the correct values. When you generate a new file from an existing one, the new file will inherit its attributes. It is up to you to make sure they are still valid. If you want to preserve some of the
 information from the original file, you can change the attribute name by using a suffix as "source_" or "original_" , so as to clarify they apply to the source file not to the current version.
 ```
+````
 
 ## **Conventions specific to sub-domains and/or projects**
 We collect here other conventions which apply to sub-domains of climate science or specific

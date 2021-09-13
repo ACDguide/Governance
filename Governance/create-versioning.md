@@ -38,6 +38,8 @@ As a DOI should always refer to exactly the same object there is not consensus o
 
 Publishing the data at regular time intervals, i.e. every year. This is done at times delaying the data release, so the data is always covered by one DOI or updating the data continuously and leaving gaps in the DOI coverage. In both cases each new DOI will be reflected in a new version
 Publishing the DOI and updating the data continuously until a change in data production warrant the creation of a new version. Users are then required to add a timestamp indicating when the data was accessed in the dataset citation.
+````
 ```{admonition} Know your publishing tool
 Depending on the data portal you will be using to publish, a version update might be imposed when you make changes. For example, if you are using Zenodo adding or removing files will force a new version to be created.
 ```
+````
