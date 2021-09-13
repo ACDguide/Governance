@@ -28,11 +28,10 @@ The following two points apply only to software:
 Finally licenses usually contain a disclaimer to cover warranty and liability, i.e. that the data or software is provided "as is" and that the copyright owner cannot be considered responsible for any damages derived by using the product.
 
 ```{admonition} CC-BY 4.0
-As you can see there are a lot of different flavours possible. Usually, any license will cover "attribution" which is the most common reason to apply a license: to get your work recognised!
-If you are unsure which license to use, we advise using the International CC-BY 4.0 license.
+As you can see there are a lot of different flavours possible. Usually, any license will cover "attribution" which is the most common reason to apply a license: to get your work recognised! If you are unsure which license to use, we advise using the International CC-BY 4.0 license.
 ```
  
-## Datasets license
+## Dataset license
 While we consider both datasets and code as a form of data, from a licensing point of view they are treated differently. For datasets we suggest the Creative Commons licenses (CC). As well as the international version, there is also an Australian Creative Commons. These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an online tool to help you choose between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user's country of origin.
 
 Creative Commons use abbreviation for each of the options:
