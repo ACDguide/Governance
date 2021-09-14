@@ -13,7 +13,7 @@ parts:
   - caption: Publishing climate data
     chapters:
     - file: publish-intro
-    - file: publish-options-considerations
+    - file: publish-repositories-catalogues
     - file: publish-keywords
     - file: publish-license
     - file: publish-versioning
