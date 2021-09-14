@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Working Group Goals &#8212; Climate Data Guidelines</title>
+    <title>Data repositories, catalogues and records &#8212; Climate Data Guidelines</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Guidelines to create a dataset" href="create-intro.html" />
+    <link rel="next" title="Controlled vocabularies" href="publish-keywords.html" />
+    <link rel="prev" title="Guidelines to publishing a data" href="publish-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,8 +83,8 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="goals.html">
    Working Group Goals
   </a>
  </li>
@@ -120,14 +121,14 @@
   Publishing climate data
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="publish-intro.html">
    Guidelines to publishing a data
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-repositories-catalogues.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Data repositories, catalogues and records
   </a>
  </li>
@@ -199,7 +200,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/goals.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/publish-repositories-catalogues.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -219,10 +220,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fgoals.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish-repositories-catalogues.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/goals.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish-repositories-catalogues.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -248,18 +249,23 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ultimate-goal">
-   Ultimate Goal:
+  <a class="reference internal nav-link" href="#csiro-dap">
+   CSIRO DAP
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#steps-to-achieve-our-goal">
-   Steps to achieve our goal:
+  <a class="reference internal nav-link" href="#zenodo">
+   Zenodo
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#engagement-with-wider-community">
-   Engagement with wider community
+  <a class="reference internal nav-link" href="#nci-data-catalogue-managed-data-collections">
+   NCI data catalogue / managed data collections
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figshare">
+   figshare
   </a>
  </li>
 </ul>
@@ -273,34 +279,27 @@
         
               <div>
                 
-  <div class="section" id="working-group-goals">
-<h1>Working Group Goals<a class="headerlink" href="#working-group-goals" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="ultimate-goal">
-<h2>Ultimate Goal:<a class="headerlink" href="#ultimate-goal" title="Permalink to this headline">¶</a></h2>
-<p><strong>Provide guidelines to create, manage and share climate data in order to have a common approach across the Australian climate research community.</strong></p>
+  <div class="section" id="data-repositories-catalogues-and-records">
+<h1>Data repositories, catalogues and records<a class="headerlink" href="#data-repositories-catalogues-and-records" title="Permalink to this headline">¶</a></h1>
+<p>Once your data is created and ready for publication, you will need to decide <strong>where</strong> to publish it. There are two main components of this decision: DOI/catalogue record, and data location. Note that these may be the same, but not necessarily.</p>
+<p>For each dataset, a DOI must be generated, which creates a persistent identifier and functions similar to a journal article DOI. Along with the DOI, you will need to include metadata-level details about the dataset, including: author list, license, geospatial extent, etc.</p>
+<p>Additionally, each dataset must be stored either in a repository, or available through a web server (e.g. THREDDS, OpenDAP).</p>
+<p>In this section we will cover the main data catalogues and repositories. Most (many?) of these options can store your data for open access, mint DOIs, and provide landing pages for the publication record.</p>
+<div class="section" id="csiro-dap">
+<h2>CSIRO DAP<a class="headerlink" href="#csiro-dap" title="Permalink to this headline">¶</a></h2>
+<p>CSIRO-only, data upload (&lt;1TB), DOI mint/service record. Bowen Research Cloud for OpenDAP access a possibility for larger datasets.</p>
 </div>
-<div class="section" id="steps-to-achieve-our-goal">
-<h2>Steps to achieve our goal:<a class="headerlink" href="#steps-to-achieve-our-goal" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Individuate guidelines themes</p></li>
-<li><p>Research current applicable requirements, services and existing guidelines</p></li>
-<li><p>Based on above information and tools define what applies to climate data and how standards/requirements etc can be applied</p></li>
-<li><p>If necessary allow for different application depedning on institutions</p></li>
-<li><p>Release guidelines</p></li>
-<li><p>Seek feedback from community</p></li>
-</ul>
+<div class="section" id="zenodo">
+<h2>Zenodo<a class="headerlink" href="#zenodo" title="Permalink to this headline">¶</a></h2>
+<p>Public, CLEX library, data service, DOI mint/service record?</p>
 </div>
-<div class="section" id="engagement-with-wider-community">
-<h2>Engagement with wider community<a class="headerlink" href="#engagement-with-wider-community" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Communicating with other working groups</p></li>
-</ul>
+<div class="section" id="nci-data-catalogue-managed-data-collections">
+<h2>NCI data catalogue / managed data collections<a class="headerlink" href="#nci-data-catalogue-managed-data-collections" title="Permalink to this headline">¶</a></h2>
+<p>NCI-managed only, OpenDAP access through NCI project on Gadi, DOI mint/service record</p>
 </div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
+<div class="section" id="figshare">
+<h2>figshare<a class="headerlink" href="#figshare" title="Permalink to this headline">¶</a></h2>
+<p>Public, data service, DOI mint/service record?</p>
 </div>
 </div>
 
@@ -333,11 +332,20 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="publish-intro.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Guidelines to publishing a data</p>
+            </div>
+        </a>
+    </div>
      <div id="next">
-        <a class="right-next" href="create-intro.html" title="next page">
+        <a class="right-next" href="publish-keywords.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Guidelines to create a dataset</p>
+                <p class="prevnext-title">Controlled vocabularies</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
