@@ -6,17 +6,25 @@ root: goals
 parts:
   - caption: Creating climate data 
     chapters:
-    - file: create-intro
-    - file: create-conventions
-    - file: create-pids
-    - file: create-drs
+    - file: create/create-intro
+    - file: create/create-conventions
+    - file: create/create-pids
+    - file: create/create-drs
   - caption: Publishing climate data
     chapters:
-    - file: publish-intro
-    - file: publish-options-considerations
-    - file: publish-keywords
-    - file: publish-license
-    - file: publish-versioning
+    - file: publish/publish-intro
+    - file: publish/publish-options-considerations
+      sections:
+      - file: publish/publish-nci
+      - file: publish/publish-csiro
+      - file: publish/publish-clex
+    - file: publish/publish-keywords
+    - file: publish/publish-license
+    - file: publish/publish-versioning
   - caption: Retiring dataset
     chapters:
-    - file: retire-intro
+    - file: retire/retire-intro
+  - caption: Appendix 
+    chapters:
+    - file: appendix/concepts.md
+    - file: appendix/acronyms.md

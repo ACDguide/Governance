@@ -9,6 +9,7 @@ Conventions help achieving this in two ways:
 Conventions are also convenient for anyone using them, as they provide and easy to adopt template for your data and you do not need to invent a new data model with every new project. What's more they help you being consistent, and you are less likely to mis-interpret your own data later on. Some conventions are universally adopted as the metric unit system, and we all use them without even noticing anymore. Others are community specific and are developed to tackle specific data formats and need of a scientific discipline.
 To read more about why data standards are important there is this [article from the ARDC](https://ardc.edu.au/resources/community-endorsed-data-standards/). The climate research community uses mostly [NetCDF (Network Common Data Format)](https://www.unidata.ucar.edu/software/netcdf/) as a data format. NetCDF is a self-describing binary format which means that metadata information is stored with the data itself. The Climate and Forecast Conventions (CF Conventions) were developed to standardise this metadata. 
 
+(cf-conventions)=
 ## **CF Conventions**
 The [CF conventions](https://cfconventions.org) are specifically designed to facilitate the processing and sharing of NetCDF files. They are based on the older [COARDS conventions](https://ferret.pmel.noaa.gov/noaa\_coop/coop\_cdf\_profile.html), which they extend. The first version (v1.0) of the CF Conventions was released in 2003, the current version (in 2021) is v1.8. Each new version tries, as much as possible, to be compatible with older versions. The first versions, as the name implied were focusing on climate and forecast data, since then they broaden their scope to earth
 data in general, including observational data.
@@ -26,6 +27,7 @@ Standard_name is a very useful attribute but should be applied with attention. I
 ```
 There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their [wiki](http://climate-cms.wikis.unsw.edu.au/CF_checker).    
 
+(ACDD-conventions)=
 ## **Attribute Convention for Data Discovery**
 The [Attribute Convention for Data Discovery](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) covers mostly global attributes which are used to correctly describe shared and published data and to increase its discoverability in data portals. CF conventions recommends only 6 global attributes to define the file content. 
 ACDD extends these to include all the information related to the publication of a dataset, adding attributes like: doi, keywords, creator, publisher, etc. The ACDD divides the attributes in three groups: 
