@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publishing with CSIRO &#8212; Climate Data Guidelines</title>
+    <title>Publishing climate data with NCI &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Publishing with CLEX" href="publish-clex.html" />
-    <link rel="prev" title="Publishing climate data with NCI" href="publish-with-nci.html" />
+    <link rel="next" title="Publishing with CSIRO" href="publish-csiro.html" />
+    <link rel="prev" title="Publishing options" href="publish-options-considerations.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -137,13 +137,13 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-with-nci.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Publishing climate data with NCI
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="publish-csiro.html">
      Publishing with CSIRO
     </a>
    </li>
@@ -239,7 +239,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/publish/publish-csiro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/publish/publish-with-nci.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -259,10 +259,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/publish-csiro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/publish-with-nci.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/publish-csiro.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/publish-with-nci.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -282,6 +282,63 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-data-can-you-publish-with-nci">
+   What data can you publish with NCI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-project">
+   Data project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generic-procedure-to-publish-with-nci">
+   generic procedure to publish with NCI
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-geonetwork-record">
+     Creating a geonetwork record
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#preparing-the-files">
+     Preparing the files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#existing-data-collections">
+   Existing data collections
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clex">
+     CLEX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#csiro">
+     CSIRO
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bom">
+     BoM
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -290,8 +347,54 @@
         
               <div>
                 
-  <div class="section" id="publishing-with-csiro">
-<h1>Publishing with CSIRO<a class="headerlink" href="#publishing-with-csiro" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="publishing-climate-data-with-nci">
+<h1>Publishing climate data with NCI<a class="headerlink" href="#publishing-climate-data-with-nci" title="Permalink to this headline">¶</a></h1>
+<p>NCI provides web services to publish data and metadata:</p>
+<ul class="simple">
+<li><p>a <a class="reference external" href="https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/home">dataset catalogue</a> based on <a class="reference internal" href="../appendix/acronyms.html#geonetwork"><span class="std std-ref">GeoNetwork</span></a> to describe your dataset (i.e. a metadata repository) and associated DOI.  This will be the landing page for the DOI and will include a link to access the dataset.</p></li>
+<li><p>a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS Data Server</a> (TDS) this is a public data repository that provides access to the data. <a class="reference internal" href="../appendix/acronyms.html#thredds"><span class="std std-ref">THREDDS</span></a> offer a variety of protocols, files can be downloaded from here or accessed via the <a class="reference internal" href="../appendix/acronyms.html#opendap"><span class="std std-ref">OPeNDAP protocol</span></a>.</p></li>
+</ul>
+<div class="section" id="what-data-can-you-publish-with-nci">
+<h2>What data can you publish with NCI<a class="headerlink" href="#what-data-can-you-publish-with-nci" title="Permalink to this headline">¶</a></h2>
+<p>Publishing with NCI is a good option when you want to publish a big dataset and/or data in NetCDF format. Obvious candidates are outputs of model simulation run on Gadi.
+The THREDDS was developed for and it is well suited to NetCDF files, publishing on a THREDDS server means that your data can also be avaialble by OPeNDAP. This is really useful if you are publishing a big dataset or the data is stored in big files. OPeNDAP allows remote access, a user can subset the data which avoids downloading the entire dataset. OPeNDAP protocol can be used with several analysis softwares.</p>
+</div>
+<div class="section" id="data-project">
+<h2>Data project<a class="headerlink" href="#data-project" title="Permalink to this headline">¶</a></h2>
+<p>NCI manages storage and computational resources via projects. To publish your datas with them you need a project setup exclusively for this scope. Depending on who you are affiliated with you might have access to an existing “publishing” data project you can contribute to. This is a good option if your dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the CLEX collection which uses project ks32.</p>
+<p>If your dataset is big enough to have its own project then you can contact the NCI data team, you can create a helpdesk ticket to do so, and discuss your options with them. If NCI agrees you will have to provide details of the dataset and usually funding for the disk storage.</p>
+</div>
+<div class="section" id="generic-procedure-to-publish-with-nci">
+<h2>generic procedure to publish with NCI<a class="headerlink" href="#generic-procedure-to-publish-with-nci" title="Permalink to this headline">¶</a></h2>
+<p>Currently NCI is in the process of updating some of their data procedures, there is no official documentation on how to publish data with them, the following information is based on our experiences.</p>
+<div class="section" id="creating-a-geonetwork-record">
+<h3>Creating a geonetwork record<a class="headerlink" href="#creating-a-geonetwork-record" title="Permalink to this headline">¶</a></h3>
+<p>The first step is to create a DMP to collect information on the dataset. Currently NCI uses their confluence website to do so. Once you contacted them and agreed to publish with them, they will create a confluence page for you to access with a form to fill.  (put template in separate page).<br />
+Once the form is ready NCI will use the content to create a geonetwork record and mint a DOI for the new dataset. The geonetwork record will provide the landing page for the DOI and will be visible only once the files are available on THREDDS.</p>
+</div>
+<div class="section" id="preparing-the-files">
+<h3>Preparing the files<a class="headerlink" href="#preparing-the-files" title="Permalink to this headline">¶</a></h3>
+<p>The actual files has to be organised in a <dataset-folder> with a license.txt and readme.txt file plus sub-folders for the actual files. How the data is organised will depend on the actual dataset, see DRS page. The readme.txt file will only contain a reference to the geonetwork record.
+The files should follow both <a class="reference internal" href="../create/create-conventions.html#cf-conventions"><span class="std std-ref">CF</span></a> and <a class="reference internal" href="../create/create-conventions.html#acdd-conventions"><span class="std std-ref">ACDD</span></a> conventions. Once the files are ready NCI will run a QC check, as well as checking for CF/ACDD compliance, they will check that the files are accessible by widely used software like ncview, nco etc.
+If the files passed the tests then they will the dataset to THREDDS and activate the DOI. If not they will send a detailed report of the QC results so you can fix the files where possible.
+CLEX CMS team has installed the IOOS CF-checker NCI uses and created a simple python wrapper that create a similar report to NCI. You can use these to check your files before submitting them to NCI. Details are on the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">CLEX CMS wiki</a>.</p>
+</div>
+</div>
+<div class="section" id="existing-data-collections">
+<h2>Existing data collections<a class="headerlink" href="#existing-data-collections" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="clex">
+<h3>CLEX<a class="headerlink" href="#clex" title="Permalink to this headline">¶</a></h3>
+<p>CLEX has its own data collection in project ks32, anyone associated with CLEX can publish a dataset in this collection.
+The CLEX CMS wiki has plenty of information on the process. CLEX currently manages a DMP web tool, so they use that to collect information on the dataset. The relevant parts of the DMP are then used to generate directly a geonetwork xml file that can be directly uploade by NCI.
+In this way there is no need to fill ina the form in confluence. However, this might change in the future as NCI is trying to have a reference page on confluence for each dataset.</p>
+</div>
+<div class="section" id="csiro">
+<h3>CSIRO<a class="headerlink" href="#csiro" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bom">
+<h3>BoM<a class="headerlink" href="#bom" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -324,19 +427,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="publish-with-nci.html" title="previous page">
+        <a class="left-prev" href="publish-options-considerations.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Publishing climate data with NCI</p>
+                <p class="prevnext-title">Publishing options</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="publish-clex.html" title="next page">
+        <a class="right-next" href="publish-csiro.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Publishing with CLEX</p>
+                <p class="prevnext-title">Publishing with CSIRO</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
