@@ -15,7 +15,7 @@ parts:
     - file: publish/publish-intro
     - file: publish/publish-options-considerations
       sections:
-      - file: publish/publish-nci
+      - file: publish/publish-with-nci
       - file: publish/publish-csiro
       - file: publish/publish-clex
     - file: publish/publish-keywords
