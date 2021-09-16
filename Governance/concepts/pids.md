@@ -4,6 +4,7 @@ Persistent identifiers provide a globally unique, internet based handle to ident
 
 A persistent identifier consists of a handle (a url) that remains always the same and associated metadata that can change over time. The ARDC (Australian Research Data Commons) has a lot of resources on this subject on their [website](https://ardc.edu.au/resources/working-with-data/citation-identifiers/).
 
+(doi)=
 ## Digital Object Identifier
 Digital Object Identifiers, DOI, were initially used for papers but now their application has been extended to other research products such as dataset and software. A DOI is basically a persistent url that resolves to a metadata record. This record should have a link to the actual research object. The way a research output is made available online can then change over time without it affecting the DOI itself. Even if eventually a dataset or paper is retired and is not anymore available, a DOI will still point to its associated metadata and provide information on how it can be obtained.
 
@@ -18,6 +19,7 @@ Keeping track of the identity of individual researchers across global informatio
 
 To allow the discovery of research outputs that share a common researcher or research group, a common public identifier is needed for referencing. A researcher ID is a unique identifier which you can add to anything which defines you as a researcher: papers, blogs, published datasets, web-pages, code repositories etc. It will help other researchers to identify you more easily and it will make it easier to discover any aspect of your work.
 
+(orcid)=
 ### ORCID
 There are several providers for researcher-ID, however, most Australian Institutions now recommend to use the Open Researcher and Contributor ID (ORCID). [ORCID](http://orcid.org/) is an open, non-profit, community based initiative, used globally. With an ORCID you can now automatically populate your [RMS profile](https://www.arc.gov.au/grants/rms-information/rms-auto-population-research-outputs) (Research Management  System) when applying for an ARC grant.
 

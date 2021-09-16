@@ -55,6 +55,11 @@ see definition in [key concepts](fair)
 [NCSS](http://www.unidata.ucar.edu/software/thredds/current/tds/reference/NetcdfSubsetServiceReference.html) allows subsetting certain CDM datasets in coordinate space, using a REST API. Gridded data subsets can be returned in CF-compliant netCDF3 or netCDF4. Point data subsets can be returned in CSV, XML, or [CF-DSG](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries) NetCDF files.
 ```
 
+(nectar)=
+```{dropdown} **Nectar - ARDC Nectar Research Cloud**
+[Nectar](https://ardc.edu.au/services/nectar-research-cloud/)
+```
+
 ```{dropdown} **OGC - the Open Geospatial Consortium**
 [OGC](https://www.ogc.org/) is an international consortium whose aim is to create free, publicly available geospatial standards to improve access to geospatial data. Examples are WCS, WMS and WFS described below.
 ```

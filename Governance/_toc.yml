@@ -7,23 +7,44 @@ parts:
   - caption: Creating climate data 
     chapters:
     - file: create/create-intro
-    - file: create/create-conventions
-    - file: create/create-pids
-    - file: create/create-drs
   - caption: Publishing climate data
     chapters:
     - file: publish/publish-intro
-    - file: publish/publish-options-considerations
+    - file: publish/publish-options
       sections:
       - file: publish/publish-with-nci
+      - file: publish/publish-bom
       - file: publish/publish-csiro
       - file: publish/publish-clex
-    - file: publish/publish-keywords
-    - file: publish/publish-license
-    - file: publish/publish-versioning
-  - caption: Retiring dataset
+  - caption: Updating datasets
+    chapters:
+    - file: update/update-intro
+  - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
+  - caption: Concepts 
+    chapters:
+    - file: concepts/concept-intro.md
+      sections:
+      - file: concepts/controlled-vocab.md
+      - file: concepts/conventions.md
+      - file: concepts/cf-conventions.md
+      - file: concepts/acdd-conventions.md
+      - file: concepts/other-conventions.md
+      - file: concepts/pids.md
+      - file: concepts/license.md
+      - file: concepts/license-data.md
+      - file: concepts/license-code.md
+      - file: concepts/license-qa.md
+      - file: concepts/license-institution.md
+  - caption: Technical guide 
+    chapters:
+    - file: tech/conventions.md
+    - file: tech/drs.md
+      sections:
+      - file: tech/filenames.md
+    - file: tech/keywords.md
+    - file: tech/versioning.md
   - caption: Appendix 
     chapters:
     - file: appendix/concepts.md
