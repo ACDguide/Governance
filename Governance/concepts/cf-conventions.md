@@ -1,5 +1,5 @@
 (cf-conventions)=
-## **CF Conventions**
+# CF Conventions
 The [CF conventions](https://cfconventions.org) are specifically designed to facilitate the processing and sharing of NetCDF files. They are based on the older [COARDS conventions](https://ferret.pmel.noaa.gov/noaa\_coop/coop\_cdf\_profile.html), which they extend. The first version (v1.0) of the CF Conventions was released in 2003, the current version (in 2021) is v1.8. Each new version tries, as much as possible, to be compatible with older versions. The first versions, as the name implied were focusing on climate and forecast data, since then they broaden their scope to earth
 data in general, including observational data.
 CF is now widely adopted as the main standard both in the production of NetCDF related code and for the publication of NetCDF data. As the initial focus was to allow interoperability of NetCDF based software packages, the conventions main aim is to define clearly each variable and the spatial and temporal properties of the data. Applying these Conventions to your NetCDF files makes them more re-usable.

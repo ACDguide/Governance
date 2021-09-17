@@ -1,5 +1,5 @@
 (ACDD-conventions)=
-## **Attribute Convention for Data Discovery**
+# Attribute Convention for Data Discovery
 The [Attribute Convention for Data Discovery](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3) covers mostly global attributes which are used to correctly describe shared and published data and to increase its discoverability in data portals. CF conventions recommends only 6 global attributes to define the file content. 
 ACDD extends these to include all the information related to the publication of a dataset, adding attributes like: doi, keywords, creator, publisher, etc. The ACDD divides the attributes in three groups: 
 * highly recommend - which can be define for any dataset (as 'title') 

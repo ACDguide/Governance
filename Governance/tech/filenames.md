@@ -1,4 +1,4 @@
-## Naming
+# Naming
 You can use your filenames to include information, here is some you can consider:
 
 * project, simulation and/or experiment acronyms, you might have to use a combination of them.
@@ -10,7 +10,7 @@ You can use your filenames to include information, here is some you can consider
 * version: this is really important if you are sharing the data even if only 1 version exists at the time
 * correct file extension
 
-## Tips for machine-readable files
+# Tips for machine-readable files
 * avoid special characters: ~ ! @ # $ % ^ & * ( ) ` ; < > ? , [ ] { } ‘ “
 * do not use spaces to separate words use underscores "_" or dashes "-" or CamelCase
 * use YYYYMMDD for dates, it will sort your files in chronological order, absolutely avoid "Jan, Feb, .." for months as they are much harder to code for.
@@ -19,7 +19,7 @@ You can use your filenames to include information, here is some you can consider
 * avoid having a large number of files in a single directory … but also an excessive number of directories with one file each
 * always include file extension, some software can recognise files from their header, but this is not always the case
 
-### Online Resources
+## Online Resources
 We partially based this page on the resources listed below, we recommend to check them for more insight and advice.
 
 * [Best practice to organise your data](https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/) - part of an Open reproducible science course from the University of Colorado 

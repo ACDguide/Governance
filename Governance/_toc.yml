@@ -23,29 +23,42 @@ parts:
     chapters:
     - file: retire/retire-intro
   - caption: Concepts 
+    maxdepth: 1
     chapters:
     - file: concepts/concept-intro.md
       sections:
       - file: concepts/controlled-vocab.md
       - file: concepts/conventions.md
-      - file: concepts/cf-conventions.md
-      - file: concepts/acdd-conventions.md
-      - file: concepts/other-conventions.md
-      - file: concepts/pids.md
+        sections:
+        - file: concepts/cf-conventions.md
+        - file: concepts/acdd-conventions.md
+        - file: concepts/other-conventions.md
+          title: Other conventions
       - file: concepts/license.md
-      - file: concepts/license-data.md
-      - file: concepts/license-code.md
-      - file: concepts/license-qa.md
-      - file: concepts/license-institution.md
+        sections:
+        - file: concepts/license-data.md
+        - file: concepts/license-code.md
+        - file: concepts/license-qa.md
+        - file: concepts/license-institution.md
+      - file: concepts/pids.md
+      - file: concepts/journal.md
   - caption: Technical guide 
+    maxdepth: 1
     chapters:
-    - file: tech/conventions.md
-    - file: tech/drs.md
+    - file: tech/tech-intro.md
       sections:
-      - file: tech/filenames.md
-    - file: tech/keywords.md
-    - file: tech/versioning.md
+      - file: tech/conventions.md
+      - file: tech/drs.md
+        sections:
+        - file: tech/filenames.md
+      - file: tech/keywords.md
+      - file: tech/versioning.md
   - caption: Appendix 
     chapters:
-    - file: appendix/concepts.md
-    - file: appendix/acronyms.md
+    - file: appendix/appendix-intro.md
+      sections:
+      - file: appendix/concepts.md
+      - file: appendix/acronyms.md
+      - file: appendix/forcodes.md
+        title: ANZSRC-FoR-2020
+      - file: appendix/journals.md
