@@ -1,4 +1,4 @@
-# Guidelines to create a dataset
+# Guidelines to create a climate dataset
 
 ## Scope of the guidelines
 

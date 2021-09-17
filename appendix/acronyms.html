@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ANZSRC Field of Research (FoR) codes 2020" href="forcodes.html" />
     <link rel="prev" title="Key concepts" href="concepts.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -96,22 +97,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../create/create-intro.html">
-   Guidelines to create a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-conventions.html">
-   Conventions and standards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-pids.html">
-   Persistent identifiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-drs.html">
-   Choosing a directory structure (DRS) and filenames
+   Guidelines to create a climate dataset
   </a>
  </li>
 </ul>
@@ -123,11 +109,11 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publishing a data
+   Guidelines to publish climate data
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options-considerations.html">
+  <a class="reference internal" href="../publish/publish-options.html">
    Publishing options
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -142,6 +128,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-bom.html">
+     Publishing with BoM
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../publish/publish-csiro.html">
      Publishing with CSIRO
     </a>
@@ -153,25 +144,22 @@
    </li>
   </ul>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Updating datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-keywords.html">
-   Controlled vocabularies
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-license.html">
-   Open Access License
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-versioning.html">
-   Versioning
+  <a class="reference internal" href="../update/update-intro.html">
+   Guidelines to update climate dataset
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Retiring dataset
+  Retiring datasets
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -183,19 +171,185 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../concepts/concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/license.html">
+     Open Access License
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-data.html">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/journal.html">
+     Journal requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tech/tech-intro.html">
+   Technical tips
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/conventions.html">
+     Applying conventions to your files
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tech/drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tech/filenames.html">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/versioning.html">
+     Versioning
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Appendix
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="concepts.html">
-   Key concepts
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="appendix-intro.html">
+   Supplemental material
   </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Acronyms
-  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="forcodes.html">
+     ANZSRC-FoR-2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="journals.html">
+     Journal publishers data policies
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -298,7 +452,7 @@
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><a class="reference external" href="https://ardc.edu.au/">ARDC</a> is a <a class="reference internal" href="#ncris"><span class="std std-ref">NCRIS</span></a> project aimed to enable the Australian research community and industry access to nationally significant, data intensive digital research infrastructure, platforms, skills and collections of high quality data. ARDC now also manages the <span class="xref myst">NeCTAR</span> infrastructure.</p>
+<p class="card-text"><a class="reference external" href="https://ardc.edu.au/">ARDC</a> is a <a class="reference internal" href="#ncris"><span class="std std-ref">NCRIS</span></a> project aimed to enable the Australian research community and industry access to nationally significant, data intensive digital research infrastructure, platforms, skills and collections of high quality data. ARDC now also manages the <a class="reference internal" href="#nectar"><span class="std std-ref">NeCTAR</span></a> infrastructure.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -316,7 +470,7 @@
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><a class="reference external" href="https://creativecommons.org/">CC</a> is a non-profit organisation that produces licenses to encourage sharing of knowledge, commonly used for data products. See also the <a class="reference internal" href="../publish/publish-license.html#data-license"><span class="std std-ref">open access license</span></a> book page.</p>
+<p class="card-text"><a class="reference external" href="https://creativecommons.org/">CC</a> is a non-profit organisation that produces licenses to encourage sharing of knowledge, commonly used for data products. See also the <a class="reference internal" href="../concepts/license-data.html#data-license"><span class="std std-ref">open access license</span></a> book page.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -333,7 +487,7 @@
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text">CF are conventions used to set metadata attributes in NetCDF files. See <a class="reference internal" href="../create/create-conventions.html#cf-conventions"><span class="std std-ref">relevant page in book</span></a></p>
+<p class="card-text">CF are conventions used to set metadata attributes in NetCDF files. See <a class="reference internal" href="../concepts/cf-conventions.html#cf-conventions"><span class="std std-ref">relevant page in book</span></a></p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3" id="cosima">
 <summary class="summary-title card-header">
@@ -405,6 +559,15 @@
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/tds/reference/NetcdfSubsetServiceReference.html">NCSS</a> allows subsetting certain CDM datasets in coordinate space, using a REST API. Gridded data subsets can be returned in CF-compliant netCDF3 or netCDF4. Point data subsets can be returned in CSV, XML, or <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries">CF-DSG</a> NetCDF files.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3" id="nectar">
+<summary class="summary-title card-header">
+<strong>Nectar - ARDC Nectar Research Cloud</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><a class="reference external" href="https://ardc.edu.au/services/nectar-research-cloud/">Nectar</a></p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -535,6 +698,15 @@
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="forcodes.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">ANZSRC Field of Research (FoR) codes 2020</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

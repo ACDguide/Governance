@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Choosing a directory structure (DRS) and filenames &#8212; Climate Data Guidelines</title>
+    <title>Dataset license &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Guidelines to publishing a data" href="../publish/publish-intro.html" />
-    <link rel="prev" title="Persistent identifiers" href="create-pids.html" />
+    <link rel="next" title="Software licenses" href="license-code.html" />
+    <link rel="prev" title="Open Access License" href="license.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,25 +94,10 @@
   Creating climate data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="create-intro.html">
-   Guidelines to create a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-conventions.html">
-   Conventions and standards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-pids.html">
-   Persistent identifiers
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Choosing a directory structure (DRS) and filenames
+  <a class="reference internal" href="../create/create-intro.html">
+   Guidelines to create a climate dataset
   </a>
  </li>
 </ul>
@@ -124,11 +109,11 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publishing a data
+   Guidelines to publish climate data
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options-considerations.html">
+  <a class="reference internal" href="../publish/publish-options.html">
    Publishing options
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -143,6 +128,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-bom.html">
+     Publishing with BoM
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../publish/publish-csiro.html">
      Publishing with CSIRO
     </a>
@@ -154,25 +144,22 @@
    </li>
   </ul>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Updating datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-keywords.html">
-   Controlled vocabularies
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-license.html">
-   Open Access License
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-versioning.html">
-   Versioning
+  <a class="reference internal" href="../update/update-intro.html">
+   Guidelines to update climate dataset
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Retiring dataset
+  Retiring datasets
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -184,19 +171,185 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="license.html">
+     Open Access License
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="journal.html">
+     Journal requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tech/tech-intro.html">
+   Technical tips
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/conventions.html">
+     Applying conventions to your files
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tech/drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tech/filenames.html">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/versioning.html">
+     Versioning
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Appendix
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../appendix/concepts.html">
-   Key concepts
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/appendix-intro.html">
+   Supplemental material
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../appendix/acronyms.html">
-   Acronyms
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/acronyms.html">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/forcodes.html">
+     ANZSRC-FoR-2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/journals.html">
+     Journal publishers data policies
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -239,7 +392,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/create/create-drs.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/concepts/license-data.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -259,10 +412,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fcreate/create-drs.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fconcepts/license-data.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/create/create-drs.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/concepts/license-data.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -288,31 +441,9 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-considerations">
-   General considerations
+  <a class="reference internal nav-link" href="#how-to-apply-a-license">
+   How to apply a license
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming">
-   Naming
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#drs">
-   DRS
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-machine-readable-files">
-   Tips for machine-readable files
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#online-resources">
-     Online Resources
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -325,63 +456,41 @@
         
               <div>
                 
-  <div class="section" id="choosing-a-directory-structure-drs-and-filenames">
-<h1>Choosing a directory structure (DRS) and filenames<a class="headerlink" href="#choosing-a-directory-structure-drs-and-filenames" title="Permalink to this headline">¶</a></h1>
-<p>The names you choose for files and directories and generally the way you organise your data, i.e. your directory structure (DRS) can help navigating the data and provide extra information, avoid confusion and the user ending up accessing the wrong data. As for many other cases the best file organisation will depend on the specific research project and the actual server where the data is stored. Here we are just listing a few guidelines and tips to help you decide.</p>
-<div class="section" id="general-considerations">
-<h2>General considerations<a class="headerlink" href="#general-considerations" title="Permalink to this headline">¶</a></h2>
-<p>Familiarise yourself with the storage system, make sure you are storing the files in the most appropriate place, get to know if the storage is backed up or not, what is your allocation, and also what rules or best practices apply.
-Take into account how yourself or others might want to use the data, this is particularly important when deciding the DRS but also how to divide data across files for big dataset as model output. Doing so at the start of the project will spare you lots of time you might otherwise spend re-processing all your files.
-Be consistent, this applies both to the organisation and the naming, consistency is essential for the data to be machine-readable, i.e. data which is easy to access by coding. In fact, use community standards and/or controlled vocabularies wherever possible.
-Consider adding a readme file in the main directory (we always do that for data we publish), including an explanation of the DRS and the naming conventions, abbreviation and/or codes you used. If you used standards and controlled vocabularies all you have to do is to include a link to them.</p>
-</div>
-<div class="section" id="naming">
-<h2>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h2>
-<p>You can use your filenames to include information here is some you can consider:</p>
+  <div class="section" id="dataset-license">
+<span id="data-license"></span><h1>Dataset license<a class="headerlink" href="#dataset-license" title="Permalink to this headline">¶</a></h1>
+<p>While we consider both datasets and code as a form of data, from a licensing point of view they are treated differently. For datasets we suggest the Creative Commons licenses (CC). As well as the international version, there is also an Australian Creative Commons. These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an online tool to help you choose between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user’s country of origin.</p>
+<p>Creative Commons use abbreviation for each of the options:</p>
 <ul class="simple">
-<li><p>project, simulation and/or experiment acronyms, you might have to use a combination of them.</p></li>
-<li><p>spatial coverage: the region or coordinates range covered by the data, could also be a specific domain for climate model data, i.e. ocean, land etc.</p></li>
-<li><p>grid: could be either a grid label or spatial resolution</p></li>
-<li><p>temporal coverage: a specific year/date or a temporal range</p></li>
-<li><p>temporal frequency: monthly, daily etc</p></li>
-<li><p>type of data: again this depends on context, if the same directory contains data from different instrumentations it is important to specify the instrument in the name. For coupled model output this could be the model component, if you are using one file per variable the variable name.</p></li>
-<li><p>version: this is really important if you are sharing the data even if only 1 version exists at the time</p></li>
-<li><p>correct file extension</p></li>
+<li><p>BY - for attribution which is always present, the right to distribute is also implicit in any CC license</p></li>
+<li><p>NC - for not commercial</p></li>
+<li><p>SA - for share alike</p></li>
+<li><p>ND - for not derivatives
+Check this 5 minutes video to learn more on the available combinations:</p></li>
 </ul>
+<p><a class="reference external" href="https://creativecommons.org/about/videos/creative-commons-kiwi/">CC kiwi video</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Non-commercial license
+In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.</p>
 </div>
-<div class="section" id="drs">
-<h2>DRS<a class="headerlink" href="#drs" title="Permalink to this headline">¶</a></h2>
-<p><img alt="Example of directory structure" src="../_images/example_drs.png" /></p>
-<p>The figure above shows an example of an organised working directory for a model output, things to consider:</p>
-<ul class="simple">
-<li><p>try to organise files in directories based on type and how you process them
-for the final output think also about how other might use them: are they going to be used for analysis or they could be used as forcing or restart files for a model?</p></li>
-<li><p>think of the way you would access these directories in a code, as an example having the variable directories using exactly the same name as the actual variable</p></li>
-<li><p>make sure your code is separate from your data, you want to be able to use something like git to version control it and possibly GitHub to back it up easily</p></li>
-<li><p>have at least one readme file with detailed metadata, possibly more if you have a lot of directories/files. You cannot use git for keep manage versions of data but you can use git to version control your readme files.</p></li>
-<li><p>review at regular intervals what you are keeping, what needs to be removed and how things are organised</p></li>
-</ul>
+<div class="section" id="how-to-apply-a-license">
+<h2>How to apply a license<a class="headerlink" href="#how-to-apply-a-license" title="Permalink to this headline">¶</a></h2>
+<p>Once you have decided which license to apply it is usually fairly easy to apply it to your dataset or code.</p>
+<p>If publishing a dataset set you can create a license.txt file which contains the chosen license legal text.</p>
+<p>At the top of the file specify the dataset title ( referred to as “licensed material”) and the owner of the work you are licensing (referred to as “licensor”). Please note that in the example below CLEX is acting as licensor on behalf of the author and/or their institution.</p>
+<p>You can see the license online at</p>
+<p><a class="reference external" href="http://creativecommons.org/licenses/by/4.0/legalcode">http://creativecommons.org/licenses/by/4.0/legalcode</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Example license header
+Licensor - ARC Centre of Excellence for Climate Extremes (CLEX) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail <a class="reference external" href="mailto:coecss&#37;&#52;&#48;unsw&#46;edu&#46;au">coecss<span>&#64;</span>unsw<span>&#46;</span>edu<span>&#46;</span>au</a>
+Author: “author name” &lt;”author-email”&gt;
+Licensed Material - <dataset title> (version 1.0)
+Creative Commons Attribution 4.0 International Public License
+By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons ….</p>
 </div>
-<div class="section" id="tips-for-machine-readable-files">
-<h2>Tips for machine-readable files<a class="headerlink" href="#tips-for-machine-readable-files" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>avoid special characters: ~ ! &#64; # $ % ^ &amp; * ( ) ` ; &lt; &gt; ? , [ ] { } ‘ “</p></li>
-<li><p>do not use spaces to separate words use underscores “_” or dashes “-” or CamelCase</p></li>
-<li><p>use YYYYMMDD for dates, it will sort your files in chronological order, absolutely avoid “Jan, Feb, ..” for months as they are much harder to code for.</p></li>
-<li><p>or number sequence use leading zeros: so 001, 002, 020, 103  rather than 1, 2,.. 20, .. 103</p></li>
-<li><p>try to avoid overly long names, for a single file, directory keep it under 255 characters, for paths 30000.</p></li>
-<li><p>avoid having a large number of files in a single directory … but also an excessive number of directories with one file each</p></li>
-<li><p>always include file extension, some software can recognise files from their header, but this is not always the case</p></li>
-</ul>
-<div class="section" id="online-resources">
-<h3>Online Resources<a class="headerlink" href="#online-resources" title="Permalink to this headline">¶</a></h3>
-<p>We partially based this page on the resources listed below, we recommend to check them for more insight and advice.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/">Best practice to organise your data</a> - part of an Open reproducible science course from the University of Colorado</p></li>
-<li><p><a class="reference external" href="https://youtu.be/3MEJ38BO6Mo">Software Carpentry video covering DRS best practices</a></p></li>
-<li><p><a class="reference external" href="https://stanford.box.com/shared/static/yl5a04udc7hff6a61rc0egmed8xol5yd.pdf">Best file naming practice handout (pdf) from Standford University</a></p></li>
-</ul>
-</div>
+<p>The license.txt file then will be available both in the dataset local directory and on the NCI dataset catalogue together with the files. Also, we will use the appropriate license link to the Creative Commons website in the files global attributes and in the metadata records we produce.</p>
+<p>It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.</p>
 </div>
 </div>
 
@@ -398,7 +507,7 @@ for the final output think also about how other might use them: are they going t
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./create"
+            path: "./concepts"
         },
         predefinedOutput: true
     }
@@ -415,19 +524,19 @@ for the final output think also about how other might use them: are they going t
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="create-pids.html" title="previous page">
+        <a class="left-prev" href="license.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Persistent identifiers</p>
+                <p class="prevnext-title">Open Access License</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../publish/publish-intro.html" title="next page">
+        <a class="right-next" href="license-code.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Guidelines to publishing a data</p>
+                <p class="prevnext-title">Software licenses</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

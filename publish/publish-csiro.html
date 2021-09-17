@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Publishing with CLEX" href="publish-clex.html" />
-    <link rel="prev" title="Publishing climate data with NCI" href="publish-with-nci.html" />
+    <link rel="prev" title="Publishing with BoM" href="publish-bom.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -97,22 +97,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../create/create-intro.html">
-   Guidelines to create a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-conventions.html">
-   Conventions and standards
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-pids.html">
-   Persistent identifiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-drs.html">
-   Choosing a directory structure (DRS) and filenames
+   Guidelines to create a climate dataset
   </a>
  </li>
 </ul>
@@ -124,11 +109,11 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="publish-intro.html">
-   Guidelines to publishing a data
+   Guidelines to publish climate data
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="publish-options-considerations.html">
+  <a class="reference internal" href="publish-options.html">
    Publishing options
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -140,6 +125,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="publish-with-nci.html">
      Publishing climate data with NCI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="publish-bom.html">
+     Publishing with BoM
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -154,25 +144,22 @@
    </li>
   </ul>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Updating datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="publish-keywords.html">
-   Controlled vocabularies
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-license.html">
-   Open Access License
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-versioning.html">
-   Versioning
+  <a class="reference internal" href="../update/update-intro.html">
+   Guidelines to update climate dataset
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Retiring dataset
+  Retiring datasets
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -184,19 +171,185 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../concepts/concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/license.html">
+     Open Access License
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-data.html">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/journal.html">
+     Journal requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tech/tech-intro.html">
+   Technical tips
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/conventions.html">
+     Applying conventions to your files
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tech/drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tech/filenames.html">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/versioning.html">
+     Versioning
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Appendix
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../appendix/concepts.html">
-   Key concepts
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/appendix-intro.html">
+   Supplemental material
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../appendix/acronyms.html">
-   Acronyms
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/acronyms.html">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/forcodes.html">
+     ANZSRC-FoR-2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/journals.html">
+     Journal publishers data policies
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -324,11 +477,11 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="publish-with-nci.html" title="previous page">
+        <a class="left-prev" href="publish-bom.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Publishing climate data with NCI</p>
+                <p class="prevnext-title">Publishing with BoM</p>
             </div>
         </a>
     </div>

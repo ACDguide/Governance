@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Persistent identifiers &#8212; Climate Data Guidelines</title>
+    <title>Naming &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Choosing a directory structure (DRS) and filenames" href="create-drs.html" />
-    <link rel="prev" title="Conventions and standards" href="create-conventions.html" />
+    <link rel="next" title="Choosing keywords" href="keywords.html" />
+    <link rel="prev" title="Choosing a directory structure (DRS) and filenames" href="drs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,25 +94,10 @@
   Creating climate data
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="create-intro.html">
-   Guidelines to create a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-conventions.html">
-   Conventions and standards
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Persistent identifiers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-drs.html">
-   Choosing a directory structure (DRS) and filenames
+  <a class="reference internal" href="../create/create-intro.html">
+   Guidelines to create a climate dataset
   </a>
  </li>
 </ul>
@@ -124,11 +109,11 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publishing a data
+   Guidelines to publish climate data
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options-considerations.html">
+  <a class="reference internal" href="../publish/publish-options.html">
    Publishing options
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -143,6 +128,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-bom.html">
+     Publishing with BoM
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../publish/publish-csiro.html">
      Publishing with CSIRO
     </a>
@@ -154,25 +144,22 @@
    </li>
   </ul>
  </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Updating datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-keywords.html">
-   Controlled vocabularies
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-license.html">
-   Open Access License
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-versioning.html">
-   Versioning
+  <a class="reference internal" href="../update/update-intro.html">
+   Guidelines to update climate dataset
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Retiring dataset
+  Retiring datasets
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -184,19 +171,185 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../concepts/concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/license.html">
+     Open Access License
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-data.html">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/journal.html">
+     Journal requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="tech-intro.html">
+   Technical tips
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="conventions.html">
+     Applying conventions to your files
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="versioning.html">
+     Versioning
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   Appendix
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../appendix/concepts.html">
-   Key concepts
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/appendix-intro.html">
+   Supplemental material
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../appendix/acronyms.html">
-   Acronyms
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/acronyms.html">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/forcodes.html">
+     ANZSRC-FoR-2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/journals.html">
+     Journal publishers data policies
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -239,7 +392,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/create/create-pids.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/tech/filenames.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -259,10 +412,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fcreate/create-pids.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/filenames.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/create/create-pids.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/filenames.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -287,41 +440,19 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#digital-object-identifier">
-   Digital Object Identifier
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Naming
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#researcher-id">
-   Researcher ID
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-for-machine-readable-files">
+   Tips for machine-readable files
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#orcid">
-     ORCID
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-identifiers">
-   Other identifiers
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#raid-research-activity-identifier">
-     RAiD: Research Activity Identifier
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ror-research-organization-registry">
-     ROR - Research Organization Registry
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#grants">
-     Grants
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#online-resources">
+     Online Resources
     </a>
    </li>
   </ul>
@@ -337,42 +468,39 @@
         
               <div>
                 
-  <div class="section" id="persistent-identifiers">
-<h1>Persistent identifiers<a class="headerlink" href="#persistent-identifiers" title="Permalink to this headline">¶</a></h1>
-<p>Persistent identifiers provide a globally unique, internet based handle to identify uniquely a research product. They are widely used, DOIs have been used for years for scientific papers, but now identifiers are also issued for data, code, researchers, research project and the institutions themselves.</p>
-<p>A persistent identifier consists of a handle (a url) that remains always the same and associated metadata that can change over time. The ARDC (Australian Research Data Commons) has a lot of resources on this subject on their <a class="reference external" href="https://ardc.edu.au/resources/working-with-data/citation-identifiers/">website</a>.</p>
-<div class="section" id="digital-object-identifier">
-<h2>Digital Object Identifier<a class="headerlink" href="#digital-object-identifier" title="Permalink to this headline">¶</a></h2>
-<p>Digital Object Identifiers, DOI, were initially used for papers but now their application has been extended to other research products such as dataset and software. A DOI is basically a persistent url that resolves to a metadata record. This record should have a link to the actual research object. The way a research output is made available online can then change over time without it affecting the DOI itself. Even if eventually a dataset or paper is retired and is not anymore available, a DOI will still point to its associated metadata and provide information on how it can be obtained.</p>
-<p>They are managed at the global level by the <a class="reference external" href="https://www.doi.org/">International DOI Foundation</a> (IDF).</p>
-<p><a class="reference external" href="https://datacite.org/value.html">DataCite</a>, a non-profit organisation, is one of the DOI registration agencies, with an aim to record DOI for data. Other organisations can join DataCite as members to enable them to mint DOIs. In Australia, ARDC is a member of DataCite and can help other organisations setting up a DOI minting service.</p>
-<p>NCI can mint a DOI for your dataset as part of their data publication process.</p>
+  <div class="section" id="naming">
+<h1>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h1>
+<p>You can use your filenames to include information, here is some you can consider:</p>
+<ul class="simple">
+<li><p>project, simulation and/or experiment acronyms, you might have to use a combination of them.</p></li>
+<li><p>spatial coverage: the region or coordinates range covered by the data, could also be a specific domain for climate model data, i.e. ocean, land etc.</p></li>
+<li><p>grid: could be either a grid label or spatial resolution</p></li>
+<li><p>temporal coverage: a specific year/date or a temporal range</p></li>
+<li><p>temporal frequency: monthly, daily etc</p></li>
+<li><p>type of data: again this depends on context, if the same directory contains data from different instrumentations it is important to specify the instrument in the name. For coupled model output this could be the model component, if you are using one file per variable the variable name.</p></li>
+<li><p>version: this is really important if you are sharing the data even if only 1 version exists at the time</p></li>
+<li><p>correct file extension</p></li>
+</ul>
 </div>
-<div class="section" id="researcher-id">
-<h2>Researcher ID<a class="headerlink" href="#researcher-id" title="Permalink to this headline">¶</a></h2>
-<p>Keeping track of the identity of individual researchers across global information systems presents many challenges. A researcher may use different variations of their name and several researchers may share the same name. Confusion arises when a researcher moves from one institution to another. An institution may even have the same researcher listed more than once in their own records. Similar problems emerge with groups of researchers.</p>
-<p>To allow the discovery of research outputs that share a common researcher or research group, a common public identifier is needed for referencing. A researcher ID is a unique identifier which you can add to anything which defines you as a researcher: papers, blogs, published datasets, web-pages, code repositories etc. It will help other researchers to identify you more easily and it will make it easier to discover any aspect of your work.</p>
-<div class="section" id="orcid">
-<h3>ORCID<a class="headerlink" href="#orcid" title="Permalink to this headline">¶</a></h3>
-<p>There are several providers for researcher-ID, however, most Australian Institutions now recommend to use the Open Researcher and Contributor ID (ORCID). <a class="reference external" href="http://orcid.org/">ORCID</a> is an open, non-profit, community based initiative, used globally. With an ORCID you can now automatically populate your <a class="reference external" href="https://www.arc.gov.au/grants/rms-information/rms-auto-population-research-outputs">RMS profile</a> (Research Management  System) when applying for an ARC grant.</p>
-<p>While this is not compulsory it will speed up your application process and make it easier to include all your research output including published data and codes.  If you have more than one researcher ID you can often link them together, though it is easier to manage only one. On the <a class="reference external" href="https://ardc.edu.au/news/adopting-orcid-identifier-in-australia/">ARDC website</a> you can find information on how the Australian research sector is planning to adopt ORCID nationally as the official research identifier.</p>
-<p>This short <a class="reference external" href="https://vimeo.com/97150912">video</a> shows how a ORCID works and why it is important to have one.</p>
-</div>
-</div>
-<div class="section" id="other-identifiers">
-<h2>Other identifiers<a class="headerlink" href="#other-identifiers" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="raid-research-activity-identifier">
-<h3>RAiD: Research Activity Identifier<a class="headerlink" href="#raid-research-activity-identifier" title="Permalink to this headline">¶</a></h3>
-<p>In Australia the ARDC manages <a class="reference external" href="https://www.raid.org.au/">RAiD, a Research Activity Identifier</a>. A RAiD record will list all the persistent identifiers associated to a particular project. Any research project and activity can be listed with RAiD. While it is not a global identifier RAiD is a useful tool to have all your research project outputs like paper, data and code together with project inputs as researcher and grants.</p>
-</div>
-<div class="section" id="ror-research-organization-registry">
-<h3>ROR - Research Organization Registry<a class="headerlink" href="#ror-research-organization-registry" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://ror.org/">ROR</a> is a community project aiming to create an open global registry for research organizations. It provides a unique identifier that can be used to link reseacrh products to a specific organization. It is also a useful tool to find out about other organisations working in a field of interest. As an example this is what is returned by <a class="reference external" href="https://ror.org/search?query=climate">querying for “climate”</a>.</p>
-</div>
-<div class="section" id="grants">
-<h3>Grants<a class="headerlink" href="#grants" title="Permalink to this headline">¶</a></h3>
-<p>For grants, identifiers are usually assigned by the funders themselves, notably in Australia by the ARC. This means there are no global unique identifiers developed as yet. Often data services have mappings of funders that you can use to select the funding agency and then the grant-id depending on the funder itself. The ARC maintains a <a class="reference external" href="https://dataportal.arc.gov.au/NCGP/Web/Grant/Grants">portal</a> where you can query their grants registry and discover information on projects they fund.</p>
-</div>
+<div class="section" id="tips-for-machine-readable-files">
+<h1>Tips for machine-readable files<a class="headerlink" href="#tips-for-machine-readable-files" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>avoid special characters: ~ ! &#64; # $ % ^ &amp; * ( ) ` ; &lt; &gt; ? , [ ] { } ‘ “</p></li>
+<li><p>do not use spaces to separate words use underscores “_” or dashes “-” or CamelCase</p></li>
+<li><p>use YYYYMMDD for dates, it will sort your files in chronological order, absolutely avoid “Jan, Feb, ..” for months as they are much harder to code for.</p></li>
+<li><p>or number sequence use leading zeros: so 001, 002, 020, 103  rather than 1, 2,.. 20, .. 103</p></li>
+<li><p>try to avoid overly long names, for a single file, directory keep it under 255 characters, for paths 30000.</p></li>
+<li><p>avoid having a large number of files in a single directory … but also an excessive number of directories with one file each</p></li>
+<li><p>always include file extension, some software can recognise files from their header, but this is not always the case</p></li>
+</ul>
+<div class="section" id="online-resources">
+<h2>Online Resources<a class="headerlink" href="#online-resources" title="Permalink to this headline">¶</a></h2>
+<p>We partially based this page on the resources listed below, we recommend to check them for more insight and advice.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/">Best practice to organise your data</a> - part of an Open reproducible science course from the University of Colorado</p></li>
+<li><p><a class="reference external" href="https://youtu.be/3MEJ38BO6Mo">Software Carpentry video covering DRS best practices</a></p></li>
+<li><p><a class="reference external" href="https://stanford.box.com/shared/static/yl5a04udc7hff6a61rc0egmed8xol5yd.pdf">Best file naming practice handout (pdf) from Standford University</a></p></li>
+</ul>
 </div>
 </div>
 
@@ -389,7 +517,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./create"
+            path: "./tech"
         },
         predefinedOutput: true
     }
@@ -406,19 +534,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="create-conventions.html" title="previous page">
+        <a class="left-prev" href="drs.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Conventions and standards</p>
+                <p class="prevnext-title">Choosing a directory structure (DRS) and filenames</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="create-drs.html" title="next page">
+        <a class="right-next" href="keywords.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Choosing a directory structure (DRS) and filenames</p>
+                <p class="prevnext-title">Choosing keywords</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
