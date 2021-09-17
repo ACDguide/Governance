@@ -30,6 +30,20 @@ This will automatically push your build to the `gh-pages` branch. More informati
 NB this should be now automated using github action defined in .github/workflows/deploy.yml
 Any commit to the main branch should trigger thsi action
 
+## Structure
+Currently the book is comprised of 7 parts
+
+1) Guidelines to create a dataset
+2) Guidelines to publish a dataset
+3) Guidelines to update a dataset (new versions and errata)
+4) Guidelines to retire a dataset
+5) A section covering data management related concepts: conventions, controlled vocabularies, DMPs etc
+6) A section covering technical aspects of data management: compression, chunking, interaction between metadata attributes and software, directory structure, filenames etc.
+7) An appendix section for extra materials 
+
+Only the top level of Parts 5 and 6 will be shown in the main table of contents on the book sidebar. So a table of contents is available in the first page of the book to function as an index.
+The Guidelines (parts 1-4) will have refernce to the concepts and technical information where appropriate. 
+
 ## Contributors
 
 We welcome and recognize all contributions. You can see a list of current contributors in the [contributors tab](https://github.com/ACDguide/Governance/graphs/contributors).

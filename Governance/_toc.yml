@@ -7,24 +7,58 @@ parts:
   - caption: Creating climate data 
     chapters:
     - file: create/create-intro
-    - file: create/create-conventions
-    - file: create/create-pids
-    - file: create/create-drs
   - caption: Publishing climate data
     chapters:
     - file: publish/publish-intro
-    - file: publish/publish-options-considerations
+    - file: publish/publish-options
       sections:
       - file: publish/publish-with-nci
+      - file: publish/publish-bom
       - file: publish/publish-csiro
       - file: publish/publish-clex
-    - file: publish/publish-keywords
-    - file: publish/publish-license
-    - file: publish/publish-versioning
-  - caption: Retiring dataset
+  - caption: Updating datasets
+    chapters:
+    - file: update/update-intro
+  - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
+  - caption: Concepts 
+    maxdepth: 1
+    chapters:
+    - file: concepts/concept-intro.md
+      sections:
+      - file: concepts/controlled-vocab.md
+      - file: concepts/conventions.md
+        sections:
+        - file: concepts/cf-conventions.md
+        - file: concepts/acdd-conventions.md
+        - file: concepts/other-conventions.md
+          title: Other conventions
+      - file: concepts/license.md
+        sections:
+        - file: concepts/license-data.md
+        - file: concepts/license-code.md
+        - file: concepts/license-qa.md
+        - file: concepts/license-institution.md
+      - file: concepts/pids.md
+      - file: concepts/journal.md
+  - caption: Technical guide 
+    maxdepth: 1
+    chapters:
+    - file: tech/tech-intro.md
+      sections:
+      - file: tech/conventions.md
+      - file: tech/drs.md
+        sections:
+        - file: tech/filenames.md
+      - file: tech/keywords.md
+      - file: tech/versioning.md
   - caption: Appendix 
     chapters:
-    - file: appendix/concepts.md
-    - file: appendix/acronyms.md
+    - file: appendix/appendix-intro.md
+      sections:
+      - file: appendix/concepts.md
+      - file: appendix/acronyms.md
+      - file: appendix/forcodes.md
+        title: ANZSRC-FoR-2020
+      - file: appendix/journals.md
