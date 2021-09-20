@@ -26,22 +26,232 @@ Some of the AGU journals also have their specific data guidance:
 * Software is required
 ```
 
-American_Meteorological_Society - AMC
+```{dropdown} American_Meteorological_Society - AMC
+**Journals**
 
-CSIRO_Publishing - CSIRO
+* Bulletin of the American Meteorological Society
+* Journal of Climate
+* Journal of Hydrometeorology
+* Journal of Physical Oceanography
 
-Elsevier
+**Open data policy**
+* [Data policy and guidelines](https://www.ametsoc.org/ams/index.cfm/publications/ethical-guidelines-and-ams-policies/data-policy-and-guidelines/)
 
-European_Geophysical_Union - EGU Copernicus publisher
+**Guidelines**
 
-IOPscience
+* [COPDESS author guidelines](http://www.copdess.org/enabling-fair-data-project/author-guidelines/)
 
-MDPI
+**Requirements**
+* Data Availiability Statement is required
+* DOI is  required, if possible, for both data and software
+* Software is required wherever is central to the research
+```
 
-Nature
+```{dropdown}CSIRO_Publishing - CSIRO
+**Journals**
+* Journal of Southern Hemisphere Earth Systems Science
 
-Royal_Meteorological_Society - RMetS
+**Open data policy**
+* [CSIRO Data Policy](https://www.publish.csiro.au/es/PublishingPolicies#6)
 
-Springer
+**Guidelines**
 
-Wiley_Blackwell - Wiley
+* [COPDESS author guidelines](http://www.copdess.org/enabling-fair-data-project/author-guidelines/)
+
+**Requirements**
+* No supplement is required, but data can be provided as supplementary material
+* DOI is not explicitly required
+* Software is required
+* Data Availiability Statement is required
+```
+
+```{dropdown}Elsevier
+**Journals**
+* Journal of Hydrology
+* Ocean Modelling
+* Open data policy
+
+* [Research data policy](https://www.elsevier.com/about/our-business/policies/research-data)
+
+**Guidelines**
+* [Research data guidelines](https://www.elsevier.com/authors/tools-and-resources/research-data/data-guidelines)
+
+**Requirements**
+* No supplement is required, preferred approach is to share your data on repository with DOI or publish in data journal
+* DOI is explicitly required
+* Software is not explicitly required
+```
+
+```{dropdown}European_Geophysical_Union - EGU Copernicus publisher
+**Journals**
+* Biogeosciences
+* Climate of the Past
+* Geoscientific Model Development
+
+**Open data policy** 
+For this publisher the policy depends on the journal
+
+* [Biogeosciences](https://www.biogeosciences.net/about/data_policy.html)
+
+* [Climate of the Past](https://www.climate-of-the-past.net/about/data_policy.html)
+* [Geoscientific Model Development](https://www.geoscientific-model-development.net/about/code_and_data_policy.html)
+
+**Guidelines**
+* [COPDESS author guidelines](http://www.copdess.org/enabling-fair-data-project/author-guidelines/)
+
+**Requirements**
+* No supplement is required if code/data is available from archive with DOI identifier
+* DOI is explicitly required
+* Software is required
+* Data Availability Statement required
+* If you have data you want to publish, they recommend submitting it to their partner journal Earth System Science Data (ESSD)
+```
+
+```{dropdown}IOPscience
+**Journals**
+* Environmental Research Letters
+
+**Open data policy**
+IOP journals have a data  policy that will be listed in the ‘about the journal’ section of their website. These will follow one of the following data policies:
+
+* [Standard data policy](http://publishingsupport.iopscience.iop.org/iop-publishing-standard-data-policy/)
+* [Data availability policy](http://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/)
+
+For Environmental Research Letters the Data availiability policy applies
+
+**Guidelines**
+* [Authors guidelines](https://publishingsupport.iopscience.iop.org/?category=authors&step=0)
+
+* [Supplementary material and data guidelines](https://publishingsupport.iopscience.iop.org/questions/supplementary-material-and-data-in-journal-articles/)
+
+**Requirements**
+
+* Supplementary data files are strongly recommended if their size is small (< 10 MB) otherwise use of a data repository is recommended.
+* DOI is not explicitly required but encouraged
+* Software is not explicitly required but encouraged
+```
+
+```{dropdown}MDPI
+**Journals**
+* Atmosphere
+* Applied Sciences
+
+**Open data policy**
+MDPI does not have its own data policy, data requirements are covered as supplemental material.
+These requirements are based on the [Transparency and Openness Promotion guidelines](https://www.cos.io/initiatives/top-guidelines)
+
+**Guidelines**
+* [Instructions on supplemental materials](https://www.mdpi.com/journal/atmosphere/instructions#suppmaterials)
+
+**Requirements**
+* No supplement is required, but data can be provided as supplementary material if size is small (< 60 MB)
+* DOI is not explicitly required
+* Software is required
+* Data Availiability Statement is required
+```
+
+```{dropdown}Nature
+**Journals**
+* Nature 
+* Nature Climate Change 
+* Scientific Reports 
+
+**Open data policy** 
+* [Springer Nature Research Data Policy](https://www.springernature.com/gp/authors/research-data-policy)
+This covers 4 different kind of data policies:
+1. Data sharing and data citation is encouraged
+2. Data sharing and evidence of data sharing encouraged   
+3. Data sharing encouraged and statements of data availability required
+4.  Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see [Data policies](http://www.nature.com/sdata/policies/data-policies))
+
+* Specific journal policies are listed for each journal under editorial policies, they are in line with the main Springer Nature data policy, linked above.
+The following is an example for Nature journal:
+ [Nature reporting data](https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards#data)
+
+**Guidelines**
+* [Data policy guidance for authors](https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf)
+* [Recommended repositories](https://www.nature.com/sdata/policies/repositories#envgeo)
+
+Specifically for software, some journals will peer review code:
+* [Guidelines for authors submitting Code](https://www.nature.com/documents/GuidelinesCodePublication.pdf)
+
+**Requirements**
+* No supplement is required but Nature Research journals encourage authors to consider the publication of a Data Descriptor in Scientific Data to increase transparency and enhance the re-use value of data sets used in their papers.
+* DOI is not explicitly required
+* Software is explicitly required
+* Data Availiability Statement is required
+```
+
+```{dropdown}Royal_Meteorological_Society - RMetS
+**Journals**
+* International Journal of Climatology
+* Quarterly Journal of the Royal Meteorological Society
+
+**Open data policy**
+* [Rmets Data Policy](https://protect-au.mimecast.com/s/UsmmCWLJ2zfnZlxZczEI_i?domain=rmets.onlinelibrary.wiley.com)
+
+**Guidelines**
+ NA
+
+**Requirements**
+* No supplement is required
+* DOI is not explicitly required
+* Model code or software is seen as metadata rather than data
+* Data should be deposited in repositories that are permanent or have plans for succession
+```
+
+```{dropdown}Springer
+**Journals**
+* Climate Dynamics
+* Climatic Change
+
+**Open data policy** 
+* [Springer Nature Research Data Policy](https://www.springernature.com/gp/authors/research-data-policy)
+This covers 4 different kind of data policies:
+1. Data sharing and data citation is encouraged
+2. Data sharing and evidence of data sharing encouraged   
+3. Data sharing encouraged and statements of data availability required
+4.  Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see [Data policies](http://www.nature.com/sdata/policies/data-policies))
+
+* Specific journal policies are listed for each journal under "Submission guidelines". They are usually in line with the type 3 data policy, as an example:
+
+ [Climate Dynamics Research Data Policy](https://www.springer.com/journal/382/submission-guidelines#Instructions%20for%20Authors_Research%20Data%20Policy%20and%20Data%20Availability%20Statements)
+
+**Guidelines**
+* [Springer manuscript guidelines](https://www.springer.com/authors/manuscript+guidelines?SGWID=0-40162-6-795522-0)
+* [Recommended repositories](https://www.nature.com/sdata/policies/repositories#envgeo)
+
+**Requirements**
+DOI is not explicitly required
+Software is not explicitly required
+Data Availiability Statement is required
+```
+
+```{dropdown}Wiley_Blackwell - Wiley
+**Journals**
+* Global Change Biology
+
+**Open data policy**
+* [Open Access data sharing policy](https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html)
+
+This details 4 different levels of data sharing:
+1. Expects Data Sharing
+2. Mandates Data Sharing
+3. Mandates Data Sharing and Peer Reviews Data
+4. Information on which level is adopted is provided for each journal in the "Author guidelines: Editorial policies and Ethical Consideration" section.
+
+The following is an example for Global Change Biology journal, which Mandates data sharing:
+
+  [Global Change Biology data sharing policy](https://protect-au.mimecast.com/s/PnhxCYWL4BsymGgmHx7Uyu?domain=onlinelibrary.wiley.com)
+
+**Guidelines**
+
+* [Data policy guidance for authors](https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf)
+
+* [Recommended repositories](https://www.nature.com/sdata/policies/repositories#envgeo)
+
+**Requirements**
+* DOI is not explicitly required
+* Software is explicitly required in some of the policies
+* Data Availiability Statement is required in some of the policies
+```
