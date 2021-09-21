@@ -47,7 +47,7 @@ Some of the AGU journals also have their specific data guidance:
 * Software is required wherever is central to the research
 ```
 
-```{dropdown}CSIRO_Publishing - CSIRO
+```{dropdown} CSIRO_Publishing - CSIRO
 **Journals**
 * Journal of Southern Hemisphere Earth Systems Science
 
@@ -65,7 +65,7 @@ Some of the AGU journals also have their specific data guidance:
 * Data Availiability Statement is required
 ```
 
-```{dropdown}Elsevier
+```{dropdown} Elsevier
 **Journals**
 * Journal of Hydrology
 * Ocean Modelling
@@ -82,7 +82,7 @@ Some of the AGU journals also have their specific data guidance:
 * Software is not explicitly required
 ```
 
-```{dropdown}European_Geophysical_Union - EGU Copernicus publisher
+```{dropdown} European_Geophysical_Union - EGU Copernicus publisher
 **Journals**
 * Biogeosciences
 * Climate of the Past
@@ -107,7 +107,7 @@ For this publisher the policy depends on the journal
 * If you have data you want to publish, they recommend submitting it to their partner journal Earth System Science Data (ESSD)
 ```
 
-```{dropdown}IOPscience
+```{dropdown} IOPscience
 **Journals**
 * Environmental Research Letters
 
@@ -131,7 +131,7 @@ For Environmental Research Letters the Data availiability policy applies
 * Software is not explicitly required but encouraged
 ```
 
-```{dropdown}MDPI
+```{dropdown} MDPI
 **Journals**
 * Atmosphere
 * Applied Sciences
@@ -150,7 +150,7 @@ These requirements are based on the [Transparency and Openness Promotion guideli
 * Data Availiability Statement is required
 ```
 
-```{dropdown}Nature
+```{dropdown} Nature
 **Journals**
 * Nature 
 * Nature Climate Change 
@@ -182,7 +182,7 @@ Specifically for software, some journals will peer review code:
 * Data Availiability Statement is required
 ```
 
-```{dropdown}Royal_Meteorological_Society - RMetS
+```{dropdown} Royal_Meteorological_Society - RMetS
 **Journals**
 * International Journal of Climatology
 * Quarterly Journal of the Royal Meteorological Society
@@ -200,7 +200,7 @@ Specifically for software, some journals will peer review code:
 * Data should be deposited in repositories that are permanent or have plans for succession
 ```
 
-```{dropdown}Springer
+```{dropdown} Springer
 **Journals**
 * Climate Dynamics
 * Climatic Change
@@ -227,7 +227,7 @@ Software is not explicitly required
 Data Availiability Statement is required
 ```
 
-```{dropdown}Wiley_Blackwell - Wiley
+```{dropdown} Wiley_Blackwell - Wiley
 **Journals**
 * Global Change Biology
 
