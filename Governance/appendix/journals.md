@@ -1,6 +1,6 @@
 # Journal publishers data policies
 
-As you still need to know what the specific requirements are, we collected some information on each publisher data policy and summarised our findings in a list available from the Appendix. 
+Here is a summary of relevant journal publishers data policies. Please note that while we do our best to interpret the policies and review these summaries, we cannot guarantee that they are always correct and up to date. 
 
 ```{dropdown} American_Geophycal_Union - AGU
 **Journals**
