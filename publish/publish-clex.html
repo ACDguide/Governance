@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.png" class="logo" alt="logo">
       
@@ -186,6 +190,11 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../concepts/controlled-vocab.html">
      Controlled vocabularies
     </a>
@@ -254,6 +263,43 @@
      Persistent identifiers
     </a>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../concepts/journal.html">
      Journal requirements
@@ -272,8 +318,8 @@
   <a class="reference internal" href="../tech/tech-intro.html">
    Technical tips
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -287,8 +333,8 @@
     <a class="reference internal" href="../tech/drs.html">
      Choosing a directory structure (DRS) and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,8 +369,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -499,7 +545,7 @@
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

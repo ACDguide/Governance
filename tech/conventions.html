@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.png" class="logo" alt="logo">
       
@@ -186,6 +190,11 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../concepts/controlled-vocab.html">
      Controlled vocabularies
     </a>
@@ -254,6 +263,43 @@
      Persistent identifiers
     </a>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../concepts/journal.html">
      Journal requirements
@@ -272,8 +318,8 @@
   <a class="reference internal" href="tech-intro.html">
    Technical tips
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -287,8 +333,8 @@
     <a class="reference internal" href="drs.html">
      Choosing a directory structure (DRS) and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,8 +369,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -435,6 +481,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coordinate-system">
+   Coordinate system
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-attributes">
+   Variable attributes
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -445,6 +509,84 @@
                 
   <div class="section" id="applying-conventions-to-your-files">
 <h1>Applying conventions to your files<a class="headerlink" href="#applying-conventions-to-your-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="coordinate-system">
+<h2>Coordinate system<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h2>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+coordinate variable<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">A coordinate variable is a one-dimensional variable with the same name as a dimension, which names the coordinate values of the dimension. It must not have any missing data (for example, no _FillValue or missing_value attributes) and must be strictly monotonic (values increasing or decreasing). A two-dimensional variable of type char is a string-valued coordinate variable if it has the same name as its first dimension, e.g.: char time( time, time_len); all of its strings must be unique. A variable’s coordinate system is the set of coordinate variables used by the variable. Coordinates that refer to physical space are called spatial coordinates, ones that refer to physical time are called time coordinates, ones that refer to either physical space or time are called spatio\ temporal coordinates.
+Make coordinate variables for every dimension possible (except for string length dimensions).
+Give each coordinate variable at least unit and long_name attributes to document its meaning.
+Use an existing netCDF Convention for your coordinate variables, especially to identify spatio-temporal coordinates.
+Use shared dimensions to indicate that two variables use the same coordinates along that dimension. If two variables’ dimensions are not related, create separate dimensions for them, even if they happen to have the same length.</p>
+</div>
+</details></div>
+<div class="section" id="variable-attributes">
+<h2>Variable attributes<a class="headerlink" href="#variable-attributes" title="Permalink to this headline">¶</a></h2>
+<p>The CF Conventions provides a complete <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#attribute-appendix">list of variable attributes</a> it covers.
+Here we are covering only the ones we beleive are more critical</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+units<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">CF -</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+standard_name<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">CF -</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+calendar<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">CF -</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+long_name<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">CF - highly reccommended
+long_name is not standardes, so it it not used by software. Nonetheless it is very useful has provides a chance to give a more complete description of the variable, highlighting aspect that cannot be specified in other attributes.
+For example if the variable is adimensional: percentage, 0-1, etc then the official units is “1”. You can then specify what kind of adimensional units in the long_name.
+It is also essential if a standard_name is not available. standard_name are generic, usually they are not sufficient to describe fully a variable.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+missing_value<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">CF -</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+cell_methods<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">CF -</p>
+</div>
+</details></div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -499,7 +641,7 @@
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

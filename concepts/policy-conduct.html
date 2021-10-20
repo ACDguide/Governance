@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CF Conventions &#8212; Climate Data Guidelines</title>
+    <title>Responsible Conduct of Research &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Attribute Convention for Data Discovery" href="acdd-conventions.html" />
-    <link rel="prev" title="Conventions and standards" href="conventions.html" />
+    <link rel="next" title="Australian Research Council data policy" href="policy-arc.html" />
+    <link rel="prev" title="Data policies" href="policies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -199,18 +199,18 @@
      Controlled vocabularies
     </a>
    </li>
-   <li class="toctree-l2 current active has-children">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="conventions.html">
      Conventions and standards
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cf-conventions.html">
        CF Conventions
       </a>
      </li>
@@ -263,18 +263,18 @@
      Persistent identifiers
     </a>
    </li>
-   <li class="toctree-l2 has-children">
+   <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="policies.html">
      Data policies
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="policy-conduct.html">
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Responsible Conduct of Research
       </a>
      </li>
@@ -438,7 +438,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/concepts/cf-conventions.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/concepts/policy-conduct.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -458,10 +458,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fconcepts/cf-conventions.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fconcepts/policy-conduct.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/concepts/cf-conventions.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/concepts/policy-conduct.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -489,28 +489,20 @@
         
               <div>
                 
-  <div class="section" id="cf-conventions">
-<span id="id1"></span><h1>CF Conventions<a class="headerlink" href="#cf-conventions" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference external" href="https://cfconventions.org">CF conventions</a> are specifically designed to facilitate the processing and sharing of NetCDF files. They are based on the older <a class="reference external" href="https://ferret.pmel.noaa.gov/noaa%5C_coop/coop%5C_cdf%5C_profile.html">COARDS conventions</a>, which they extend. The first version (v1.0) of the CF Conventions was released in 2003, the current version (in 2021) is v1.8. Each new version tries, as much as possible, to be compatible with older versions. The first versions, as the name implied were focusing on climate and forecast data, since then they broaden their scope to earth
-data in general, including observational data.
-CF is now widely adopted as the main standard both in the production of NetCDF related code and for the publication of NetCDF data. As the initial focus was to allow interoperability of NetCDF based software packages, the conventions main aim is to define clearly each variable and the spatial and temporal properties of the data. Applying these Conventions to your NetCDF files makes them more re-usable.
-Most software used in Climate science will know how to open and process correctly the files. The metadata required will describe clearly the characteristic of the data in the files, making it easier to identify correctly the variables and compare them to similar data. CF Conventions focus mostly on the variable and dimensions description, the full Conventions document is quite long but, in most cases, you will be using the same attributes. This <a class="reference external" href="https://climate-cms.org/2018/10/26/Setting-up-NetCDF-file-attributes.html">CMS Blog</a> provides an example on how to apply them to your data, covering the attributes most commonly required.</p>
-<p>Important elements of the Conventions are:</p>
-<ul class="simple">
-<li><p>the <a class="reference external" href="https://ncics.org/portfolio/other-resources/udunits2/">UDUNITS2</a>
-packages for units’ standards</p></li>
-<li><p>the <a class="reference external" href="https://cfconventions.org/Data/cf-standard-names/77/build/cf-standard-name-table.html">standard_name</a> whose scope is to provide a common terminology for variables names. For example, every variable with the standard_name <strong>air_temperature</strong> can be defined as</p></li>
-</ul>
-<blockquote>
-<div><p>“Air temperature is the bulk temperature of the air, not the surface (skin) temperature.”
-with K or equivalent units, regardless of the way the actual variable is
-named in the file.</p>
-</div></blockquote>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Standard_name is a very useful attribute but should be applied with attention. It is better to leave it out if a suitable one is not available.</p>
-</div>
-<p>There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">wiki</a>.</p>
+  <div class="section" id="responsible-conduct-of-research">
+<h1>Responsible Conduct of Research<a class="headerlink" href="#responsible-conduct-of-research" title="Permalink to this headline">¶</a></h1>
+<p>The Australian Code for the Responsible Conduct of Research, 2018 was first developed for medical sciences to establish a framework for responsible research conduct. It is now applied to all disciplines and has been adopted by most institutions, as its aim is to make sure scientific research is of high-quality, trustworthy and ethical. Potential breaches of the code are investigated following the Investigation guide.</p>
+<p>More information is available on the NHMRC website, including the supplementary guides developed with the ARC and Universities Australia. Each supplementary guide focuses on one aspect of research work. The guides clearly define institutional and researcher responsibilities.</p>
+<p>In regard to producing and publishing data and software the most relevant is the Management of Data and Information in Research guide. This is just an extract of the researcher responsibilities:</p>
+<p>In accordance with the Code, researchers must adhere to their institution’s policies related to management of data and information, relevant laws, regulations and guidelines, and research discipline-specific practices and standards.</p>
+<p>The responsibilities of researchers with respect to management of data and information in research should be clear from the beginning of a research project. The development of a data management plan for this purpose is strongly encouraged.</p>
+<p>Under the Code, researchers will:</p>
+<p>R22 - Retain clear, accurate, secure and complete records of all research including research data and primary materials. Where possible and appropriate, allow access and reference to these by interested parties.</p>
+<p>Each guide also clearly states it is a researcher responsibility to engage with relevant training.</p>
+<p>Other relevant guides are:</p>
+<p>Authorship<br />
+Collaborative Research
+Publication and dissemination of research</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -543,19 +535,19 @@ named in the file.</p>
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="conventions.html" title="previous page">
+        <a class="left-prev" href="policies.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Conventions and standards</p>
+                <p class="prevnext-title">Data policies</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="acdd-conventions.html" title="next page">
+        <a class="right-next" href="policy-arc.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Attribute Convention for Data Discovery</p>
+                <p class="prevnext-title">Australian Research Council data policy</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

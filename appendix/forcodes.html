@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.png" class="logo" alt="logo">
       
@@ -186,6 +190,11 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../concepts/controlled-vocab.html">
      Controlled vocabularies
     </a>
@@ -254,6 +263,43 @@
      Persistent identifiers
     </a>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../concepts/journal.html">
      Journal requirements
@@ -272,8 +318,8 @@
   <a class="reference internal" href="../tech/tech-intro.html">
    Technical tips
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -287,8 +333,8 @@
     <a class="reference internal" href="../tech/drs.html">
      Choosing a directory structure (DRS) and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,8 +369,8 @@
   <a class="reference internal" href="appendix-intro.html">
    Supplemental material
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -450,60 +496,175 @@ If you have ever published a dataset or software, you were probably asked to bro
 FoR codes are used by repositories to classify the dataset or code they list. Associated search tools will used them as keywords. While you can usually add other kind of keywords to your record, FoR codes, by providing an official classification, are more likely to be used by someone searching for data associated to a specific field. Therefore, they will make your dataset or software more visible to others.
 To avoid confusion between the two systems the codes where completely redefined. Most of the codes useful to our community will still be found under the Earth Science division, but the division itself is now identify by the code “37” while in the previous standard from 2008 its code was “04”.</p>
 <p>In the previous version, most Climate science related codes were grouped under Atmospheric Science. The new classification includes also a new Climate Change Science group.</p>
-<p>|3702 Climate Change Science |
-|Code	Subject
-|370201	| Climate change processes |
-|370202	| Climatology |
-|370203	| Greenhouse gas inventories and fluxes |
-|370299	| Climate change science not elsewhere classified |</p>
+<p><strong>3702   Climate Change Science</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>370201</p></td>
+<td class="text-align:right"><p>Climate change processes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370202</p></td>
+<td class="text-align:right"><p>Climatology</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>370203</p></td>
+<td class="text-align:right"><p>Greenhouse gas inventories and fluxes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370299</p></td>
+<td class="text-align:right"><p>Climate change science not elsewhere classified</p></td>
+</tr>
+</tbody>
+</table>
 <p>Other relevant groups in the Earth Science divisions are:</p>
-<p>|3701 Atmospheric sciences |
-|Code |	Subject |
-|————–|
-|370101	| Adverse weather events |
-|370102	| Air pollution processes and air quality measurement |
-|370103	| Atmospheric aerosols |
-|370104	| Atmospheric composition, chemistry and processes |
-|370105	| Atmospheric dynamics |
-|370106	| Atmospheric radiation |
-|370107	| Cloud physics |
-|370108	| Meteorology |
-|370109	| Tropospheric and stratospheric physics |
-|370199	| Atmospheric sciences not elsewhere classified |</p>
-<p>|3704 Geoinformatics |
-|Code |	Subject |
-|————–|
-|370401	Computational modelling and simulation in earth sciences |</p>
-<p>|3707 Hydrology |
-|Code |	Subject |
-|————–|
-|370703	Groundwater hydrology |
-|370704	Surface water hydrology |</p>
-<p>|3708 Oceanography |
-|Code |	Subject |
-|————–|
-|370801	Biological oceanography |
-|370802	Chemical oceanography |
-|370803	Physical oceanography |
-|370899	Oceanography not elsewhere classified |</p>
-<p>|3709 Physical geography and environmental geoscience |
-|Code |	Subject |
-|————–|
-|370904	Palaeoclimatology |</p>
+<p><strong>3701   Atmospheric sciences</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>370101</p></td>
+<td class="text-align:right"><p>Adverse weather events</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370102</p></td>
+<td class="text-align:right"><p>Air pollution processes and air quality measurement</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>370103</p></td>
+<td class="text-align:right"><p>Atmospheric aerosols</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370104</p></td>
+<td class="text-align:right"><p>Atmospheric composition, chemistry and processes</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>370105</p></td>
+<td class="text-align:right"><p>Atmospheric dynamics</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370106</p></td>
+<td class="text-align:right"><p>Atmospheric radiation</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>370107</p></td>
+<td class="text-align:right"><p>Cloud physics</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370108</p></td>
+<td class="text-align:right"><p>Meteorology</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>370109</p></td>
+<td class="text-align:right"><p>Tropospheric and stratospheric physics</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370199</p></td>
+<td class="text-align:right"><p>Atmospheric sciences not elsewhere classified</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>3704   Geoinformatics</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>370401</p></td>
+<td class="text-align:right"><p>Computational modelling and simulation in earth sciences</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>3707   Hydrology</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>370703</p></td>
+<td class="text-align:right"><p>Groundwater hydrology</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370704</p></td>
+<td class="text-align:right"><p>Surface water hydrology</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Oceanography  3708</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>370801</p></td>
+<td class="text-align:right"><p>Biological oceanography</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370802</p></td>
+<td class="text-align:right"><p>Chemical oceanography</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>370803</p></td>
+<td class="text-align:right"><p>Physical oceanography</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>370899</p></td>
+<td class="text-align:right"><p>Oceanography not elsewhere classified</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>3709   Physical geography and environmental geoscience</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>37090</p></td>
+<td class="text-align:right"><p>Palaeoclimatology</p></td>
+</tr>
+</tbody>
+</table>
 <p>And under the Environmental Science division , identified by “41”</p>
-<p>|4101 Climate change impacts and adaptation |
-|Code |	Subject |
-|————–|
-|410101	| Carbon sequestration science |
-|410102	| Ecological impacts of climate change and ecological adaptation |
-|410103	| Human impacts of climate change and human adaptation |</p>
-<p>|4106  Soil sciences |
-|Code |	Subject |
-|————–|
-|410601	| Land capability and soil productivity |
-|410604	| Soil chemistry and soil carbon sequestration (excl. carbon sequestration science) |
-|410605	| Soil physics |
-|410699	| Soil sciences not elsewhere classified |</p>
+<p><strong>4101   Climate change impacts and adaptation</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>410101</p></td>
+<td class="text-align:right"><p>Carbon sequestration science</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>410102</p></td>
+<td class="text-align:right"><p>Ecological impacts of climate change and ecological adaptation</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>410103</p></td>
+<td class="text-align:right"><p>Human impacts of climate change and human adaptation</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>4106   Soil sciences</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Code</p></th>
+<th class="text-align:right head"><p>Subject</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>410601</p></td>
+<td class="text-align:right"><p>Land capability and soil productivity</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>410604</p></td>
+<td class="text-align:right"><p>Soil chemistry and soil carbon sequestration (excl. carbon sequestration science)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>410605</p></td>
+<td class="text-align:right"><p>Soil physics</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>410699</p></td>
+<td class="text-align:right"><p>Soil sciences not elsewhere classified</p></td>
+</tr>
+</tbody>
+</table>
 <p>You can always refer to the <a class="reference external" href="https://www.abs.gov.au/AUSSTATS/abs&#64;.nsf/DetailsPage/1297.02020?OpenDocument">official documentation</a> if none of these apply to your study.</p>
 </div>
 
@@ -559,7 +720,7 @@ To avoid confusion between the two systems the codes where completely redefined.
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

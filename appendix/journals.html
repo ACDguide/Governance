@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -69,6 +69,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.png" class="logo" alt="logo">
       
@@ -185,6 +189,11 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../concepts/controlled-vocab.html">
      Controlled vocabularies
     </a>
@@ -253,6 +262,43 @@
      Persistent identifiers
     </a>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../concepts/journal.html">
      Journal requirements
@@ -271,8 +317,8 @@
   <a class="reference internal" href="../tech/tech-intro.html">
    Technical tips
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -286,8 +332,8 @@
     <a class="reference internal" href="../tech/drs.html">
      Choosing a directory structure (DRS) and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -322,8 +368,8 @@
   <a class="reference internal" href="appendix-intro.html">
    Supplemental material
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -444,7 +490,7 @@
                 
   <div class="section" id="journal-publishers-data-policies">
 <h1>Journal publishers data policies<a class="headerlink" href="#journal-publishers-data-policies" title="Permalink to this headline">¶</a></h1>
-<p>As you still need to know what the specific requirements are, we collected some information on each publisher data policy and summarised our findings in a list available from the Appendix.</p>
+<p>Here is a summary of relevant journal publishers data policies. Please note that while we do our best to interpret the policies and review these summaries, we cannot guarantee that they are always correct and up to date.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 American_Geophycal_Union - AGU<div class="summary-down docutils">
@@ -480,17 +526,323 @@ American_Geophycal_Union - AGU<div class="summary-down docutils">
 <li><p class="card-text">Software is required</p></li>
 </ul>
 </div>
-</details><p>American_Meteorological_Society - AMC</p>
-<p>CSIRO_Publishing - CSIRO</p>
-<p>Elsevier</p>
-<p>European_Geophysical_Union - EGU Copernicus publisher</p>
-<p>IOPscience</p>
-<p>MDPI</p>
-<p>Nature</p>
-<p>Royal_Meteorological_Society - RMetS</p>
-<p>Springer</p>
-<p>Wiley_Blackwell - Wiley</p>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+American_Meteorological_Society - AMC<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Bulletin of the American Meteorological Society</p></li>
+<li><p class="card-text">Journal of Climate</p></li>
+<li><p class="card-text">Journal of Hydrometeorology</p></li>
+<li><p class="card-text">Journal of Physical Oceanography</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.ametsoc.org/ams/index.cfm/publications/ethical-guidelines-and-ams-policies/data-policy-and-guidelines/">Data policy and guidelines</a></p></li>
+</ul>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">Data Availiability Statement is required</p></li>
+<li><p class="card-text">DOI is  required, if possible, for both data and software</p></li>
+<li><p class="card-text">Software is required wherever is central to the research</p></li>
+</ul>
 </div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+CSIRO_Publishing - CSIRO<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Journal of Southern Hemisphere Earth Systems Science</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.publish.csiro.au/es/PublishingPolicies#6">CSIRO Data Policy</a></p></li>
+</ul>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">No supplement is required, but data can be provided as supplementary material</p></li>
+<li><p class="card-text">DOI is not explicitly required</p></li>
+<li><p class="card-text">Software is required</p></li>
+<li><p class="card-text">Data Availiability Statement is required</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Elsevier<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Journal of Hydrology</p></li>
+<li><p class="card-text">Ocean Modelling</p></li>
+<li><p class="card-text">Open data policy</p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.elsevier.com/about/our-business/policies/research-data">Research data policy</a></p></li>
+</ul>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.elsevier.com/authors/tools-and-resources/research-data/data-guidelines">Research data guidelines</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">No supplement is required, preferred approach is to share your data on repository with DOI or publish in data journal</p></li>
+<li><p class="card-text">DOI is explicitly required</p></li>
+<li><p class="card-text">Software is not explicitly required</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+European_Geophysical_Union - EGU Copernicus publisher<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Biogeosciences</p></li>
+<li><p class="card-text">Climate of the Past</p></li>
+<li><p class="card-text">Geoscientific Model Development</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong>
+For this publisher the policy depends on the journal</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.biogeosciences.net/about/data_policy.html">Biogeosciences</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.climate-of-the-past.net/about/data_policy.html">Climate of the Past</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.geoscientific-model-development.net/about/code_and_data_policy.html">Geoscientific Model Development</a></p></li>
+</ul>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">No supplement is required if code/data is available from archive with DOI identifier</p></li>
+<li><p class="card-text">DOI is explicitly required</p></li>
+<li><p class="card-text">Software is required</p></li>
+<li><p class="card-text">Data Availability Statement required</p></li>
+<li><p class="card-text">If you have data you want to publish, they recommend submitting it to their partner journal Earth System Science Data (ESSD)</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+IOPscience<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Environmental Research Letters</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong>
+IOP journals have a data  policy that will be listed in the ‘about the journal’ section of their website. These will follow one of the following data policies:</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="http://publishingsupport.iopscience.iop.org/iop-publishing-standard-data-policy/">Standard data policy</a></p></li>
+<li><p class="card-text"><a class="reference external" href="http://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/">Data availability policy</a></p></li>
+</ul>
+<p class="card-text">For Environmental Research Letters the Data availiability policy applies</p>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://publishingsupport.iopscience.iop.org/?category=authors&amp;step=0">Authors guidelines</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://publishingsupport.iopscience.iop.org/questions/supplementary-material-and-data-in-journal-articles/">Supplementary material and data guidelines</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">Supplementary data files are strongly recommended if their size is small (&lt; 10 MB) otherwise use of a data repository is recommended.</p></li>
+<li><p class="card-text">DOI is not explicitly required but encouraged</p></li>
+<li><p class="card-text">Software is not explicitly required but encouraged</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+MDPI<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Atmosphere</p></li>
+<li><p class="card-text">Applied Sciences</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong>
+MDPI does not have its own data policy, data requirements are covered as supplemental material.
+These requirements are based on the <a class="reference external" href="https://www.cos.io/initiatives/top-guidelines">Transparency and Openness Promotion guidelines</a></p>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.mdpi.com/journal/atmosphere/instructions#suppmaterials">Instructions on supplemental materials</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">No supplement is required, but data can be provided as supplementary material if size is small (&lt; 60 MB)</p></li>
+<li><p class="card-text">DOI is not explicitly required</p></li>
+<li><p class="card-text">Software is required</p></li>
+<li><p class="card-text">Data Availiability Statement is required</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Nature<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Nature</p></li>
+<li><p class="card-text">Nature Climate Change</p></li>
+<li><p class="card-text">Scientific Reports</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.springernature.com/gp/authors/research-data-policy">Springer Nature Research Data Policy</a>
+This covers 4 different kind of data policies:</p></li>
+</ul>
+<ol class="simple">
+<li><p class="card-text">Data sharing and data citation is encouraged</p></li>
+<li><p class="card-text">Data sharing and evidence of data sharing encouraged</p></li>
+<li><p class="card-text">Data sharing encouraged and statements of data availability required</p></li>
+<li><p class="card-text">Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see <a class="reference external" href="http://www.nature.com/sdata/policies/data-policies">Data policies</a>)</p></li>
+</ol>
+<ul class="simple">
+<li><p class="card-text">Specific journal policies are listed for each journal under editorial policies, they are in line with the main Springer Nature data policy, linked above.
+The following is an example for Nature journal:
+<a class="reference external" href="https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards#data">Nature reporting data</a></p></li>
+</ul>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf">Data policy guidance for authors</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
+</ul>
+<p class="card-text">Specifically for software, some journals will peer review code:</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.nature.com/documents/GuidelinesCodePublication.pdf">Guidelines for authors submitting Code</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">No supplement is required but Nature Research journals encourage authors to consider the publication of a Data Descriptor in Scientific Data to increase transparency and enhance the re-use value of data sets used in their papers.</p></li>
+<li><p class="card-text">DOI is not explicitly required</p></li>
+<li><p class="card-text">Software is explicitly required</p></li>
+<li><p class="card-text">Data Availiability Statement is required</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Royal_Meteorological_Society - RMetS<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">International Journal of Climatology</p></li>
+<li><p class="card-text">Quarterly Journal of the Royal Meteorological Society</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://protect-au.mimecast.com/s/UsmmCWLJ2zfnZlxZczEI_i?domain=rmets.onlinelibrary.wiley.com">Rmets Data Policy</a></p></li>
+</ul>
+<p class="card-text"><strong>Guidelines</strong>
+NA</p>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">No supplement is required</p></li>
+<li><p class="card-text">DOI is not explicitly required</p></li>
+<li><p class="card-text">Model code or software is seen as metadata rather than data</p></li>
+<li><p class="card-text">Data should be deposited in repositories that are permanent or have plans for succession</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Springer<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Climate Dynamics</p></li>
+<li><p class="card-text">Climatic Change</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.springernature.com/gp/authors/research-data-policy">Springer Nature Research Data Policy</a>
+This covers 4 different kind of data policies:</p></li>
+</ul>
+<ol class="simple">
+<li><p class="card-text">Data sharing and data citation is encouraged</p></li>
+<li><p class="card-text">Data sharing and evidence of data sharing encouraged</p></li>
+<li><p class="card-text">Data sharing encouraged and statements of data availability required</p></li>
+<li><p class="card-text">Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see <a class="reference external" href="http://www.nature.com/sdata/policies/data-policies">Data policies</a>)</p></li>
+</ol>
+<ul class="simple">
+<li><p class="card-text">Specific journal policies are listed for each journal under “Submission guidelines”. They are usually in line with the type 3 data policy, as an example:</p></li>
+</ul>
+<p class="card-text"><a class="reference external" href="https://www.springer.com/journal/382/submission-guidelines#Instructions%20for%20Authors_Research%20Data%20Policy%20and%20Data%20Availability%20Statements">Climate Dynamics Research Data Policy</a></p>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.springer.com/authors/manuscript+guidelines?SGWID=0-40162-6-795522-0">Springer manuscript guidelines</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong>
+DOI is not explicitly required
+Software is not explicitly required
+Data Availiability Statement is required</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Wiley_Blackwell - Wiley<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="card-text">Global Change Biology</p></li>
+</ul>
+<p class="card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html">Open Access data sharing policy</a></p></li>
+</ul>
+<p class="card-text">This details 4 different levels of data sharing:</p>
+<ol class="simple">
+<li><p class="card-text">Expects Data Sharing</p></li>
+<li><p class="card-text">Mandates Data Sharing</p></li>
+<li><p class="card-text">Mandates Data Sharing and Peer Reviews Data</p></li>
+<li><p class="card-text">Information on which level is adopted is provided for each journal in the “Author guidelines: Editorial policies and Ethical Consideration” section.</p></li>
+</ol>
+<p class="card-text">The following is an example for Global Change Biology journal, which Mandates data sharing:</p>
+<p class="card-text"><a class="reference external" href="https://protect-au.mimecast.com/s/PnhxCYWL4BsymGgmHx7Uyu?domain=onlinelibrary.wiley.com">Global Change Biology data sharing policy</a></p>
+<p class="card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf">Data policy guidance for authors</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
+</ul>
+<p class="card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="card-text">DOI is not explicitly required</p></li>
+<li><p class="card-text">Software is explicitly required in some of the policies</p></li>
+<li><p class="card-text">Data Availiability Statement is required in some of the policies</p></li>
+</ul>
+</div>
+</details></div>
 
     <script type="text/x-thebe-config">
     {
@@ -535,7 +887,7 @@ American_Geophycal_Union - AGU<div class="summary-down docutils">
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

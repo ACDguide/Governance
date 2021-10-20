@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CF Conventions &#8212; Climate Data Guidelines</title>
+    <title>Data collaboration agreement &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Attribute Convention for Data Discovery" href="acdd-conventions.html" />
-    <link rel="prev" title="Conventions and standards" href="conventions.html" />
+    <link rel="next" title="Controlled vocabularies" href="controlled-vocab.html" />
+    <link rel="prev" title="Key concepts in data management" href="concept-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -189,8 +189,8 @@
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="collaboration-agreement.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Data collaboration agreement
     </a>
    </li>
@@ -199,18 +199,18 @@
      Controlled vocabularies
     </a>
    </li>
-   <li class="toctree-l2 current active has-children">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="conventions.html">
      Conventions and standards
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="cf-conventions.html">
        CF Conventions
       </a>
      </li>
@@ -438,7 +438,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/concepts/cf-conventions.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/concepts/collaboration-agreement.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -458,10 +458,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fconcepts/cf-conventions.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fconcepts/collaboration-agreement.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/concepts/cf-conventions.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/concepts/collaboration-agreement.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -481,6 +481,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#minimum-requirements">
+   Minimum requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-include">
+   What to include
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -489,28 +507,42 @@
         
               <div>
                 
-  <div class="section" id="cf-conventions">
-<span id="id1"></span><h1>CF Conventions<a class="headerlink" href="#cf-conventions" title="Permalink to this headline">¶</a></h1>
-<p>The <a class="reference external" href="https://cfconventions.org">CF conventions</a> are specifically designed to facilitate the processing and sharing of NetCDF files. They are based on the older <a class="reference external" href="https://ferret.pmel.noaa.gov/noaa%5C_coop/coop%5C_cdf%5C_profile.html">COARDS conventions</a>, which they extend. The first version (v1.0) of the CF Conventions was released in 2003, the current version (in 2021) is v1.8. Each new version tries, as much as possible, to be compatible with older versions. The first versions, as the name implied were focusing on climate and forecast data, since then they broaden their scope to earth
-data in general, including observational data.
-CF is now widely adopted as the main standard both in the production of NetCDF related code and for the publication of NetCDF data. As the initial focus was to allow interoperability of NetCDF based software packages, the conventions main aim is to define clearly each variable and the spatial and temporal properties of the data. Applying these Conventions to your NetCDF files makes them more re-usable.
-Most software used in Climate science will know how to open and process correctly the files. The metadata required will describe clearly the characteristic of the data in the files, making it easier to identify correctly the variables and compare them to similar data. CF Conventions focus mostly on the variable and dimensions description, the full Conventions document is quite long but, in most cases, you will be using the same attributes. This <a class="reference external" href="https://climate-cms.org/2018/10/26/Setting-up-NetCDF-file-attributes.html">CMS Blog</a> provides an example on how to apply them to your data, covering the attributes most commonly required.</p>
-<p>Important elements of the Conventions are:</p>
+  <div class="section" id="data-collaboration-agreement">
+<h1>Data collaboration agreement<a class="headerlink" href="#data-collaboration-agreement" title="Permalink to this headline">¶</a></h1>
+<p>When you are starting a collaboration with someone else, be it a single researcher, a research group, a different institution or a stakeholder, you need to have a clear agreement around data.</p>
+<p>The context and the scope of the collaboration project will determine what you might need to do. In any case you should have a clear understanding of how data is expected to be managed and shared by anyone in the project.</p>
+<div class="section" id="minimum-requirements">
+<h2>Minimum requirements<a class="headerlink" href="#minimum-requirements" title="Permalink to this headline">¶</a></h2>
+<p>Draft a data management plan and get everyone to agree to it, while this won’t have legal standing:</p>
 <ul class="simple">
-<li><p>the <a class="reference external" href="https://ncics.org/portfolio/other-resources/udunits2/">UDUNITS2</a>
-packages for units’ standards</p></li>
-<li><p>the <a class="reference external" href="https://cfconventions.org/Data/cf-standard-names/77/build/cf-standard-name-table.html">standard_name</a> whose scope is to provide a common terminology for variables names. For example, every variable with the standard_name <strong>air_temperature</strong> can be defined as</p></li>
+<li><p>it is something anyone can get back to easily;</p></li>
+<li><p>it will work as a guideline around data for anyone in the project;</p></li>
+<li><p>it will avoid future disagreements, or should some arise help in solving them;</p></li>
+<li><p>it will help individuating potential issues with your data before you even start the project;</p></li>
+<li><p>it is something concrete you can show to a legal department or data expert in your institution, should you be in doubt of what is acceptable.
+Make sure all policies are respected
+List all policies and requirements that are applicable to the project and make sure the DMP is aligned with and satisfy all of them.</p></li>
 </ul>
-<blockquote>
-<div><p>“Air temperature is the bulk temperature of the air, not the surface (skin) temperature.”
-with K or equivalent units, regardless of the way the actual variable is
-named in the file.</p>
-</div></blockquote>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Standard_name is a very useful attribute but should be applied with attention. It is better to leave it out if a suitable one is not available.</p>
+<p>Depending on the scope and size of the project, you might have to draft a legal agreement for the project collaboration, in that case make sure that data is also covered by this agreement. Consult with your legal department and do this as early as possible, it might help if even at this stage you have written down first what you want to be included.</p>
 </div>
-<p>There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">wiki</a>.</p>
+<div class="section" id="what-to-include">
+<h2>What to include<a class="headerlink" href="#what-to-include" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>the copyright/ownership of the data should be clearly stated;</p></li>
+<li><p>any ethical or security considerations;</p></li>
+<li><p>license to be used for data research output;</p></li>
+<li><p>where the data produced by the project will be stored and how the access to this storage is managed;</p></li>
+<li><p>how the data will be published at the end of the project: what subset, which repository, format etc;</p></li>
+<li><p>where the data will be archived at the end of the project: what subset of the data should be kept and for how long, which archive and how the access will be managed;</p></li>
+<li><p>if there is going to be any embargo, both at the end of the project or to share data internally.</p></li>
+</ul>
+<p>If the project has many collaborators, then it is also worth to set up some rules or template to define how data is contributed to the project, in particular if more than one person is likely to work on the same data:</p>
+<ul class="simple">
+<li><p>rules around directory structure and file naming conventions;</p></li>
+<li><p>which format/metadata should be used when creating a file;</p></li>
+<li><p>permissions to apply to file/directory.</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -543,19 +575,19 @@ named in the file.</p>
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="conventions.html" title="previous page">
+        <a class="left-prev" href="concept-intro.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Conventions and standards</p>
+                <p class="prevnext-title">Key concepts in data management</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="acdd-conventions.html" title="next page">
+        <a class="right-next" href="controlled-vocab.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Attribute Convention for Data Discovery</p>
+                <p class="prevnext-title">Controlled vocabularies</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

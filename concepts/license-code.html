@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,10 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.png" class="logo" alt="logo">
       
@@ -186,6 +190,11 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="controlled-vocab.html">
      Controlled vocabularies
     </a>
@@ -254,6 +263,43 @@
      Persistent identifiers
     </a>
    </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="journal.html">
      Journal requirements
@@ -272,8 +318,8 @@
   <a class="reference internal" href="../tech/tech-intro.html">
    Technical tips
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -287,8 +333,8 @@
     <a class="reference internal" href="../tech/drs.html">
      Choosing a directory structure (DRS) and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -323,8 +369,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -440,81 +486,9 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Software licenses
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-apply-a-license">
    How to apply a license
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#copyright-2019-arc-centre-of-excellence-for-climate-extremes">
-   Copyright 2019 ARC Centre of Excellence for Climate Extremes
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#author-author-name-author-email">
-   author: “author name” &lt;”author-email”&gt;
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#licensed-under-the-apache-license-version-2-0-the-license">
-   Licensed under the Apache License, Version 2.0 (the “License”);
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#you-may-not-use-this-file-except-in-compliance-with-the-license">
-   you may not use this file except in compliance with the License.
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#you-may-obtain-a-copy-of-the-license-at">
-   You may obtain a copy of the License at
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#http-www-apache-org-licenses-license-2-0">
-   http://www.apache.org/licenses/LICENSE-2.0
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#unless-required-by-applicable-law-or-agreed-to-in-writing-software">
-   Unless required by applicable law or agreed to in writing, software
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#distributed-under-the-license-is-distributed-on-an-as-is-basis">
-   distributed under the License is distributed on an “AS IS” BASIS,
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#without-warranties-or-conditions-of-any-kind-either-express-or-implied">
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#see-the-license-for-the-specific-language-governing-permissions-and">
-   See the License for the specific language governing permissions and
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limitations-under-the-license">
-   limitations under the License.
   </a>
  </li>
 </ul>
@@ -574,58 +548,29 @@
 </table>
 <p>Summarised this means that commercial and private use, distribution and modification are all allowed. A user can also use parts of the code covered by a patent, should there be any, without paying royalties. A user has to attach the original license and copyright notices to any derived product they want to distribute, as well as stating any changes made. Finally, the software creator cannot be held liable for damages and they share the product “as is” with no warranty and the license does not grant trademark rights.</p>
 <p>A good insight is again given by <a class="reference external" href="https://opensource.com/article/18/2/how-make-sense-apache-2-patent-license">this article</a> from the <a class="reference external" href="https://opensource.com/">opensource.com</a> website.</p>
-</div>
 <div class="section" id="how-to-apply-a-license">
-<h1>How to apply a license<a class="headerlink" href="#how-to-apply-a-license" title="Permalink to this headline">¶</a></h1>
+<h2>How to apply a license<a class="headerlink" href="#how-to-apply-a-license" title="Permalink to this headline">¶</a></h2>
 <p>When publishing or even simply sharing our software, the license is both available in the code repository as a license.txt file and included in the actual files.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Example of code with license header
-#!/usr/bin/env python</p>
-</div>
+<p>Example of code with license header:</p>
+<blockquote>
+<div><p>#!/usr/bin/env python <br>
+# Copyright 2019 ARC Centre of Excellence for Climate Extremes  <br>
+# author: “author name” &lt;”author-email”&gt;  <br>
+#  <br>
+# Licensed under the Apache License, Version 2.0 (the “License”);  <br>
+# you may not use this file except in compliance with the License.  <br>
+# You may obtain a copy of the License at  <br>
+#  <br>
+#     <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>  <br>
+#  <br>
+# Unless required by applicable law or agreed to in writing, software  <br>
+# distributed under the License is distributed on an “AS IS” BASIS,  <br>
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  <br>
+# See the License for the specific language governing permissions and  <br>
+# limitations under the License.</p>
+</div></blockquote>
 <p>It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.</p>
 </div>
-<div class="section" id="copyright-2019-arc-centre-of-excellence-for-climate-extremes">
-<h1>Copyright 2019 ARC Centre of Excellence for Climate Extremes<a class="headerlink" href="#copyright-2019-arc-centre-of-excellence-for-climate-extremes" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="author-author-name-author-email">
-<h1>author: “author name” &lt;”author-email”&gt;<a class="headerlink" href="#author-author-name-author-email" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="id1">
-<h1><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="licensed-under-the-apache-license-version-2-0-the-license">
-<h1>Licensed under the Apache License, Version 2.0 (the “License”);<a class="headerlink" href="#licensed-under-the-apache-license-version-2-0-the-license" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="you-may-not-use-this-file-except-in-compliance-with-the-license">
-<h1>you may not use this file except in compliance with the License.<a class="headerlink" href="#you-may-not-use-this-file-except-in-compliance-with-the-license" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="you-may-obtain-a-copy-of-the-license-at">
-<h1>You may obtain a copy of the License at<a class="headerlink" href="#you-may-obtain-a-copy-of-the-license-at" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="id2">
-<h1><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="http-www-apache-org-licenses-license-2-0">
-<h1><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a><a class="headerlink" href="#http-www-apache-org-licenses-license-2-0" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="id3">
-<h1><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="unless-required-by-applicable-law-or-agreed-to-in-writing-software">
-<h1>Unless required by applicable law or agreed to in writing, software<a class="headerlink" href="#unless-required-by-applicable-law-or-agreed-to-in-writing-software" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="distributed-under-the-license-is-distributed-on-an-as-is-basis">
-<h1>distributed under the License is distributed on an “AS IS” BASIS,<a class="headerlink" href="#distributed-under-the-license-is-distributed-on-an-as-is-basis" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="without-warranties-or-conditions-of-any-kind-either-express-or-implied">
-<h1>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<a class="headerlink" href="#without-warranties-or-conditions-of-any-kind-either-express-or-implied" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="see-the-license-for-the-specific-language-governing-permissions-and">
-<h1>See the License for the specific language governing permissions and<a class="headerlink" href="#see-the-license-for-the-specific-language-governing-permissions-and" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="limitations-under-the-license">
-<h1>limitations under the License.<a class="headerlink" href="#limitations-under-the-license" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -680,7 +625,7 @@
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
