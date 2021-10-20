@@ -27,6 +27,7 @@ parts:
     chapters:
     - file: concepts/concept-intro.md
       sections:
+      - file: concepts/collaboration-agreement.md 
       - file: concepts/controlled-vocab.md
       - file: concepts/conventions.md
         sections:
@@ -41,6 +42,13 @@ parts:
         - file: concepts/license-qa.md
         - file: concepts/license-institution.md
       - file: concepts/pids.md
+      - file: concepts/policies.md
+        sections:
+        - file: concepts/policy-conduct.md
+        - file: concepts/policy-arc.md
+        - file: concepts/policy-bom.md
+        - file: concepts/policy-clex.md
+        - file: concepts/policy-csiro.md
       - file: concepts/journal.md
   - caption: Technical guide 
     maxdepth: 1

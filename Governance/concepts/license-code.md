@@ -28,26 +28,26 @@ Summarised this means that commercial and private use, distribution and modifica
 A good insight is again given by [this article](https://opensource.com/article/18/2/how-make-sense-apache-2-patent-license) from the [opensource.com](https://opensource.com/) website.
 
  
-# How to apply a license
+## How to apply a license
 
 When publishing or even simply sharing our software, the license is both available in the code repository as a license.txt file and included in the actual files.
 
-```{note} Example of code with license header
- #!/usr/bin/env python
- # Copyright 2019 ARC Centre of Excellence for Climate Extremes
- # author: "author name" <"author-email">
- # 
- # Licensed under the Apache License, Version 2.0 (the "License");
- # you may not use this file except in compliance with the License.
- # You may obtain a copy of the License at
- # 
- #     http://www.apache.org/licenses/LICENSE-2.0
- # 
- # Unless required by applicable law or agreed to in writing, software
- # distributed under the License is distributed on an "AS IS" BASIS,
- # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- # See the License for the specific language governing permissions and
- # limitations under the License.
-```
+Example of code with license header:
+
+> \#!/usr/bin/env python <br>
+> \# Copyright 2019 ARC Centre of Excellence for Climate Extremes  <br>
+> \# author: "author name" <"author-email">  <br>
+> \#  <br>
+> \# Licensed under the Apache License, Version 2.0 (the "License");  <br>
+> \# you may not use this file except in compliance with the License.  <br>
+> \# You may obtain a copy of the License at  <br>
+> \#  <br>
+> \#     http://www.apache.org/licenses/LICENSE-2.0  <br>
+> \#  <br>
+> \# Unless required by applicable law or agreed to in writing, software  <br>
+> \# distributed under the License is distributed on an "AS IS" BASIS,  <br>
+> \# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  <br>
+> \# See the License for the specific language governing permissions and  <br>
+> \# limitations under the License.
 
 It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.
