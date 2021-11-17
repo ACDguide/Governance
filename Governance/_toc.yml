@@ -2,7 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 format: jb-book
-root: goals 
+root: introduction
+- file:  goals
 parts:
   - caption: Creating climate data 
     chapters:
