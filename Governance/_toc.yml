@@ -24,9 +24,9 @@ parts:
     - file: retire/retire-intro
   - caption: About us
     chapters:
-    - file: goals
-    - file: working-group-governance
-    - file: how-to-contribute
+    - file: about-us/goals
+    - file: about-us/working-group-governance
+    - file: about-us/how-to-contribute
   - caption: Concepts 
     maxdepth: 1
     chapters:
