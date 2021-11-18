@@ -3,8 +3,9 @@
 #
 format: jb-book
 root: introduction
-- file:  goals
 parts:
+    chapters:
+    - file: goals
   - caption: Creating climate data 
     chapters:
     - file: create/create-intro
