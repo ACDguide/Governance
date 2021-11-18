@@ -4,8 +4,6 @@
 format: jb-book
 root: introduction
 parts:
-    chapters:
-    - file: goals
   - caption: Creating climate data 
     chapters:
     - file: create/create-intro
@@ -24,6 +22,11 @@ parts:
   - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
+  - caption: About us
+    chapters:
+    - file: goals
+    - file: working-group-governance
+    - file: how-to-contribute
   - caption: Concepts 
     maxdepth: 1
     chapters:
