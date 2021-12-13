@@ -8,7 +8,7 @@
 * Individuate guidelines themes 
 * Research current applicable requirements, services and existing guidelines 
 * Based on above information and tools define what applies to climate data and how standards/requirements etc can be applied 
-* If necessary allow for different application depedning on institutions
+* If necessary allow for different applications depending on institutions
 * Release guidelines
 * Seek feedback from community
 

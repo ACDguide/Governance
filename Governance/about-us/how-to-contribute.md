@@ -6,7 +6,6 @@ The Jupyter Book is hosted on Github and can be edited by creating a pull reques
 How to collaborate with pull requests on Github: https://docs.github.com/en/github/collaborating-with-pull-requests. Jupyter Book documentation: https://jupyterbook.org/intro.html.
 
 
-
 ## Outline of steps to contribute
 1. Open an issue with any updates you think are needed. This is helpful to keep track of changes being made to the book.
 2. Make the updates/edits (see steps below) as a PR from your local fork to the base repo.
@@ -29,7 +28,7 @@ How to collaborate with pull requests on Github: https://docs.github.com/en/gith
   - `Publishing climate data`: Paola (@paolap)
   - `Updateing published data`: Claire (@hot007)
   - `Retiring published data`: Claire? (@hot007)
-  - `Computations with large datasets`: Scott (@ScottWales)
+  - `Computations with large datasets`: see [Guide for Working with Big/Challenging Data Collections](https://github.com/ACDguide/BigData)
   - any other pages, for structural changes, or if you are unsure who to assign: Chloe (@chloemackallah)
 
 - You can also assign multiple reviewers if you think your PR would benefit from other/more reviewers.
