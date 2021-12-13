@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 format: jb-book
-root: goals 
+root: introduction
 parts:
   - caption: Creating climate data 
     chapters:
@@ -22,6 +22,11 @@ parts:
   - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
+  - caption: About us
+    chapters:
+    - file: about-us/goals
+    - file: about-us/working-group-governance
+    - file: about-us/how-to-contribute
   - caption: Concepts 
     maxdepth: 1
     chapters:
