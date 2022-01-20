@@ -6,7 +6,7 @@ These guidelines are applicable to all levels of data sharing, from peer-to-peer
 
 If you intend to share your data with colleagues for simple purposes, such as sanity checking and comparisons, some level of provenance and metadata preparation is likely to be useful, so feel free to pick and choose the parts of this book that are relevant for your use case. However, if your data is to be published or shared widely/publicly, it should follow FAIR principles and meet the minimum set of formatting and metadata recommendations as described in this book.
 
-#
+
 ## Chapter index
 
 ### **[Creating climate data](create/create-intro.md)**
@@ -22,7 +22,7 @@ As with all scientific outputs, errors and inconsistencies can be found in clima
 ### **[Retiring published climate data](retire/retire-intro.md)**
 Data does last forever, usually becoming outdated or obsolete within 5-10 years; this of course is simply the nature of scientific research. In this chapter, recommendations are presented on how to go about retiring a published datase without breaking citations or removing identifiers, while retaining the value of your research data. 
 
-#
+
 ## FAIR(ER) Principles
 Research data that is intended for sharing should follow some general principles of data management and stewardship. The guiding principles often used in data governance are the [FAIR principles](https://www.go-fair.org/fair-principles/) of data sharing -- Findable, Accessible, Interoperable, and Reusable. An extension to these are the [FAIRER principles](https://www.spatialised.net/fairer-data/) which add Ethical and Revisable to the acronym and is described in the book ['Good Data'](https://networkcultures.org/blog/publication/tod-29-good-data/). These principles are very generalised, and it is not always easy to translate their meanings into relevant practices for climate data.
 
