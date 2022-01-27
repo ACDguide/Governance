@@ -41,7 +41,7 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -468,7 +468,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -504,7 +504,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -512,36 +512,31 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#under-development">
-   UNDER DEVELOPMENT
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#scope-of-the-guidelines">
    Scope of the guidelines
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#index">
-   Index
-  </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#general-principles-of-data-retirement">
-     General principles of data retirement
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#doi-persistence-requirements">
-     DOI persistence requirements
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-archiving">
-     Data archiving
+    <a class="reference internal nav-link" href="#index">
+     Index
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-principles-of-data-retirement">
+   General principles of data retirement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doi-persistence-requirements">
+   DOI persistence requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-archiving">
+   Data archiving
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#further-information">
@@ -556,36 +551,85 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Guidelines to manage the retirement of a dataset</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope-of-the-guidelines">
+   Scope of the guidelines
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#index">
+     Index
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-principles-of-data-retirement">
+   General principles of data retirement
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#doi-persistence-requirements">
+   DOI persistence requirements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-archiving">
+   Data archiving
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-information">
+   Further information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="section" id="guidelines-to-manage-the-retirement-of-a-dataset">
 <h1>Guidelines to manage the retirement of a dataset<a class="headerlink" href="#guidelines-to-manage-the-retirement-of-a-dataset" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="under-development">
-<h2>UNDER DEVELOPMENT<a class="headerlink" href="#under-development" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes it becomes necessary to “retire” a published dataset. This page covers some of the cases and considerations that come into play.</p>
+<p>Sometimes it becomes necessary to “retire” a dataset. This page covers some of the cases and considerations that come into play.</p>
 <p>For the purposes of scientific reproducibility, in an ideal world we would never need to retire data. However, data centres are not infinite and thus we may find ourselves needing to remove data from a publication or filesystem.</p>
-</div>
 <div class="section" id="scope-of-the-guidelines">
 <h2>Scope of the guidelines<a class="headerlink" href="#scope-of-the-guidelines" title="Permalink to this headline">¶</a></h2>
-<p>This page is intended to provide guidance on</p>
+<p>This page is intended to provide general guidance on</p>
 <ul class="simple">
 <li><p>data that has been superceded by a new version</p></li>
 <li><p>data that contains a serious error</p></li>
 <li><p>data associated with a project that is no longer active</p></li>
 <li><p>data that was never published but needs to be archived or replaced</p></li>
 </ul>
-<p>The process may be similar in many cases, but it is important to give consideration to how others may be using a published dataset before acting, as well as any maintenance obligations associated with having published the data.</p>
-</div>
+<p>The process may be similar in many cases, but it is important to give consideration to how others may be using a dataset before acting, as well as any maintenance obligations associated with having published the data.</p>
 <div class="section" id="index">
-<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<h3>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>General principles of data retirement</p></li>
 <li><p>DOI persistence requirements</p></li>
 <li><p>Data archiving</p></li>
+<li><p>References and further information</p></li>
 </ul>
+</div>
+</div>
 <div class="section" id="general-principles-of-data-retirement">
-<h3>General principles of data retirement<a class="headerlink" href="#general-principles-of-data-retirement" title="Permalink to this headline">¶</a></h3>
+<h2>General principles of data retirement<a class="headerlink" href="#general-principles-of-data-retirement" title="Permalink to this headline">¶</a></h2>
 <p>It may be necessary to retire a dataset when a new version of the data becomes available.</p>
 <p>The new version may be</p>
 <ul class="simple">
@@ -593,12 +637,19 @@
 <li><p>because of an error in the metadata associated with the previous version, or</p></li>
 <li><p>because of an error in the data itself.</p></li>
 </ul>
-<p>Having published data with a DOI, we are obliged to maintain the landing page of that DOI indefinitely - this persistence of URLs is what data publishers like Zenodo, NCI and DAP provide. However, there are times when we need to delete the old data because it was seriously flawed and should not be used. In this case, <strong>consideration must be given to the importance of reproducibility of science using the flawed dataset</strong>.</p>
-<p>If data is to be unpublished, we need to consider whether a copy of the old version can and should be archived on a tape store (e.g. NCI’s MDSS) or if it is safe to delete the data.</p>
-<p>For very large datasets, it may not be possible to store a copy of all versions of the data, and the data may have to be replaced. In this case, <strong>an errata statement explaining what change was made needs to be issued, and made available on the DOI landing page of the dataset</strong>.</p>
-<p>When a project that funded creation of a dataset ends, it is often necessesary to have published data associated with the project, however, no ongoing funding from the project is available to maintain the data or the storage hosting it. Currently the cost of ongoing hosting of published datasets is borne by the research institutions, however it is hoped that in the future research grants and funded projects will give consideration to storage costs during and after the project.
+<p>The first case defines the updated dataset as being a new <em>version</em> of the data (e.g. v1 -&gt; v2) which would require a new DOI if published. The second case reflects what in software would be considered a <em>minor release</em> (e.g. v1.1), it will attract a new metadata record but not a new dataset version number or DOI. The final case may require a full retraction of the original data and metadata, moving any publication landing page to a “tombstone page” and archiving the data, with a new DOI being minted for the updated dataset.</p>
+<p><strong>If we publish data with a DOI</strong> (or equivalent persistent identifier), we are obliged to maintain the landing page of that DOI indefinitely - this persistence of URLs is what data publishers like Zenodo, NCI and DAP provide. However, there are times when we need to delete the old data because it was seriously flawed and should not be used. In this case, <strong>consideration must be given to the importance of reproducibility of science using the flawed dataset</strong>.</p>
+<p>If data is to be unpublished, we need to consider whether a copy of the old version can and should be archived on a tape store (e.g. NCI’s MDSS) or if it is safe to delete the data. <strong>In general, a copy of all published data should always be kept by the publisher, even if it contains errors</strong>.</p>
+<p>For very large datasets, it may not be possible to store a copy of all versions of the data, and the data may have to be replaced. In this case, <strong>an errata statement explaining what change was made needs to be issued, and made available on the DOI landing page of the dataset</strong>. Many publishers do not offer an errata service (see links in Further Information), preferring instead to keep all data, but for very large scale climate simulation data, for example, the <a class="reference external" href="https://errata.es-doc.org/static/index.html">Earth System Documentation errata service</a> provides a record of all known issues and where appropriate, data withdrawal and republication. For smaller scale data, <a class="reference external" href="https://research.jcu.edu.au/data/published/1507eae78675ccfb3843eb9d004cbb96/">here is an example</a> of a data retraction.</p>
+<p>When a project that funded creation of a dataset ends, it is often necessesary to have published data associated with the project, however, no <strong>ongoing funding</strong> from the project is available to maintain the data or the storage hosting it. Currently the cost of ongoing hosting of published datasets is borne by the research institutions, however it is hoped that in the future research grants and funded projects will give consideration to storage costs during and after the project.
 We have not yet dealt with the situation of a dataset needing to be retired because no funding was available to support its ongoing hosting, but it is a consideration we may need to bear in mind.</p>
-<p>Sometimes an unpublished dataset needs to be retired (removed from a shared filesystem) because it is no longer used, for example because the researchers who used the dataset are no longer working with it, the researchers who created data have left the field, or the dataset has become obsolete due to newer datasets which support the same research. THis is a difficult situation to navigate because it can be hard to identify who may still be using the data on a filesystem, and whose workflows would be affected if the data is removed. Nevertheless, it is important to assess effective use of a dataset. A suggested workflow for this case might be:</p>
+<p>Sometimes a <strong>dataset needs to be retired</strong> (removed from a shared filesystem, from which it has not been published) because it is no longer used, for example because</p>
+<ul class="simple">
+<li><p>the researchers who used the dataset are no longer working with it,</p></li>
+<li><p>the researchers who created data have left the field, or</p></li>
+<li><p>the dataset has become obsolete due to newer datasets which support the same research.</p></li>
+</ul>
+<p>This is a difficult situation to navigate because it can be hard to identify who may still be using the data on a filesystem, and whose workflows would be affected if the data is removed. Nevertheless, it is important to assess effective use of a dataset and value of the cost of ongoing storage. A suggested workflow for this case might be:</p>
 <ol class="simple">
 <li><p>Check the latest access time (<code class="docutils literal notranslate"><span class="pre">atime</span></code>) of the files (using the <code class="docutils literal notranslate"><span class="pre">stat</span></code> command) to see when a file was last accessed. Note that many operations can affect <code class="docutils literal notranslate"><span class="pre">atime</span></code> so it’s important to do this before moving the data anywhere.</p></li>
 <li><p>Announce to users with data access the anticipated retirement of the dataset. If the data appears to be unused, move to a “quarantine” area nearby where users may still find the data and notify the data managers that it is still required.</p></li>
@@ -608,21 +659,31 @@ We have not yet dealt with the situation of a dataset needing to be retired beca
 <p>The same process may be appropriate for removal of a previously published dataset, though usually a published dataset would be replaced with a new/corrected version, rather than simply removed.</p>
 </div>
 <div class="section" id="doi-persistence-requirements">
-<h3>DOI persistence requirements<a class="headerlink" href="#doi-persistence-requirements" title="Permalink to this headline">¶</a></h3>
+<h2>DOI persistence requirements<a class="headerlink" href="#doi-persistence-requirements" title="Permalink to this headline">¶</a></h2>
 <p>Digital Object Identifiers (DOIs) are minted so that data can be found reliably from a single source. The landing page of the persistent URL associated with the DOI should be a metadata page describing the dataset, and if public, providing access to the data.</p>
 <p>If data is retracted or replaced with an updated version, the DOI associated with the original version needs to still resolve. It is possible, in cases of data error, to add a note on the metadata landing page indicating that the dataset has been withdrawn.</p>
 <p>It is not permissible to simply remove a DOI, though it may be necessary to redirect to a “tombstone page” which resolves to a page that explicitly states that the dataset is no longer here.</p>
 <p>Every new version of a dataset (e.g. due to changes in the data) requires a new DOI.</p>
 </div>
 <div class="section" id="data-archiving">
-<h3>Data archiving<a class="headerlink" href="#data-archiving" title="Permalink to this headline">¶</a></h3>
+<h2>Data archiving<a class="headerlink" href="#data-archiving" title="Permalink to this headline">¶</a></h2>
 <p>When practicable to do so, retired datasets should be archived to a deep store, which may be slow to access and not appropriate for web serving, nevertheless it enables, if necessary, analyses conducted on the retired data to be repeated, that is, reproducible science.</p>
 <p>Most data facilities (including NCI and CSIRO) have tape archives where data can be backed up or stored when it is no longer required. However, there is still some cost associated with this storage, and it is not infinite in scale, so it is not always an appopriate solution, but it should be used when viable to do so.</p>
 </div>
-</div>
 <div class="section" id="further-information">
 <h2>Further information<a class="headerlink" href="#further-information" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://support.datacite.org/docs/what-is-a-doi">DataCite</a> provides authoritative guidance on DOIs and associated processes.</p>
+<p><a class="reference external" href="https://support.datacite.org/docs/what-is-a-doi">DataCite</a> provides the authoritative guidance on DOIs and associated processes.</p>
+<p>Each data publisher should have a policy on how to manage data withdrawals. Some examples are provided here.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://confluence.csiro.au/display/dap/Withdraw+a+Public+Collection">CSIRO DAP “Withdraw a Public Collection”</a> (visible to CSIRO staff only) retains data on the system but permits limiting visibility.</p></li>
+<li><p>NCI’s policy is not known/not publicly available at this time.</p></li>
+<li><p><a class="reference external" href="https://about.zenodo.org/policies/">Zenodo “Removal” policy</a> views withdrawal as an “exceptional action” and serves a Tombstone page in the place of the original landing page.</p></li>
+<li><p><a class="reference external" href="https://help.figshare.com/article/can-i-edit-or-delete-my-research-after-it-has-been-made-public">Figshare</a> permits versioning but not deletion.</p></li>
+<li><p><a class="reference external" href="https://datadryad.org/stash/faq">Dryad</a> views data removal as an “exceptional action” which should only occur “if there are concerns over privacy or data ownership”.</p></li>
+<li><p>The Australian Ocean Data Network does not have a public policy on data withdrawal but uses the same method as many other publishers of retaining all data but using versioning where required. They strongly discourage uploading data until the researcher is positive it is in its final state.</p></li>
+<li><p><a class="reference external" href="https://researchdata.reading.ac.uk/preservation_policy.html">University of Reading (UK)</a> withdraw data from public view but do not delete, and use versions. <a class="reference external" href="https://researchdata.bbk.ac.uk/policies.html#withdrawalpolicy">Birkbeck (UK)</a> have a similar policy.</p></li>
+</ul>
+<p>In all cases, the course of action if needing to remove a published dataset is to contact the data publishing host (NCI, CSIRO etc) and discuss how to proceed on their platform, as well as any errata requirements to populate the Tombstone page.</p>
 </div>
 </div>
 
@@ -648,8 +709,8 @@ We have not yet dealt with the situation of a dataset needing to be retired beca
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../update/update-intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -666,19 +727,17 @@ We have not yet dealt with the situation of a dataset needing to be retired beca
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By ACD Working Group<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By ACD Working Group<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
