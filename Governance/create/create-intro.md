@@ -10,3 +10,5 @@ Often new datasets start as a by product of a research project, as a consequence
   * essential metadata that should accompain your data
   * following conventions to make the files more accessible
   * organising files and directories to improve discoverability and provenance 
+Use cases
+dmp
