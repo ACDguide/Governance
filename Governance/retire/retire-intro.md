@@ -13,12 +13,13 @@ This page is intended to provide general guidance on
 * replicated data that has become obsolete
 * data that was never published but needs to be archived or replaced
 
-The process may be similar in many cases, but it is important to give consideration to how others may be using a dataset before acting, as well as any maintenance obligations associated with having published the data.
+The process may be similar in many cases, but it is important to consider how others may be using a dataset before acting, as well as any maintenance obligations associated with having published the data.
 For simplicity when referring to a published dataset in the guidelines we intend from now on a dataset for which you are the primary publisher.
 
 ### Index
 * General principles of data retirement
 * Use case: published dataset
-* 
+* Use case: replica dataset 
+* Use case: unpublished data ???
 * References and further information
 
