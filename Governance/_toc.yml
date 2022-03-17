@@ -22,6 +22,10 @@ parts:
   - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
+    - file: retire/retire-principles
+    - file: retire/retire-published
+    - file: retire/retire-replica
+    - file: retire/retire-references
   - caption: About us
     chapters:
     - file: about-us/working-group-governance
