@@ -8,7 +8,8 @@ parts:
     chapters:
     - file: create/create-intro
   - caption: Publishing climate data
-    chapters:
+- file: publish/publish-examples
+chapters:
     - file: publish/publish-intro
     - file: publish/publish-options
       sections:
