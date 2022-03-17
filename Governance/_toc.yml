@@ -36,6 +36,7 @@ parts:
     chapters:
     - file: concepts/concept-intro.md
       sections:
+      - file: concepts/fairer-principles.md
       - file: concepts/collaboration-agreement.md 
       - file: concepts/controlled-vocab.md
       - file: concepts/conventions.md
