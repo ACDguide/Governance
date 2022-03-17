@@ -10,8 +10,8 @@ If you'd like to develop on and build the Climate Data Guidelines book, you shou
 - Run `pip install -r requirements.txt` (it is recommended you do this within a virtual environment)
 - (Recommended) Remove the existing `Governance/_build/` directory
    You can do this with
-   `jupyter-book clean Goverance/`
-   `jupyter-book clean Goverance/ -all` will also remove the cache
+   `jupyter-book clean Governance/`
+   `jupyter-book clean Governance/ -all` will also remove the cache
 - Run `jupyter-book build Governance/`
 
 A fully-rendered HTML version of the book will be built in `Governance/_build/html/`.
