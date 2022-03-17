@@ -1,4 +1,4 @@
-## Further information
+# Further information
 
 [DataCite](https://support.datacite.org/docs/what-is-a-doi) provides the authoritative guidance on DOIs and associated processes.
 

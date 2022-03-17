@@ -49,7 +49,8 @@ Many publishers do not offer an errata service (see links in Further Information
 An example of errata service is the [Earth System Documentation errata service](https://errata.es-doc.org/static/index.html). It provides a record of all known issues and where appropriate, data withdrawal and republication. 
 
 It would be cumbersome to produce a plan for each dataset we manage. However, as most datasets particularly if they are replicas, can follow the same procedure it is worth to have at list a document explaining when and how the data might be retired without going into specific. An example of this is in the policies for the [CLEX collection on Zenodo](https://zenodo.org/communities/arc-coe-clex-data/about/#retention_policy).
-{{{ once we have a similar policy for the ACS reference collection we could maybe use that as an example instead}}}
+
+COMMENT!!!! once we have a similar policy for the ACS reference collection we could maybe use that as an example instead !!!
 
 A retirement plan should include:
 - in which circumstances the data might be retired
