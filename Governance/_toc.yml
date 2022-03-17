@@ -8,9 +8,9 @@ parts:
     chapters:
     - file: create/create-intro
   - caption: Publishing climate data
-- file: publish/publish-examples
 chapters:
     - file: publish/publish-intro
+    - file: publish/publish-examples
     - file: publish/publish-options
       sections:
       - file: publish/publish-with-nci
