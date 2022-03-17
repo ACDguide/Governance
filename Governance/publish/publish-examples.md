@@ -9,3 +9,5 @@ OceanMAPS? - doesn't have a DOI - https://geonetwork.nci.org.au/geonetwork/srv/e
 AUSWAVE - ? 
 
 ACCESS-{R, C, etc}, 
+
+Durrant, Thomas; Hemer, Mark; Smith, Grant; Trenham, Claire; Greenslade, Diana (2019): CAWCR Wave Hindcast - Aggregated Collection. v5. CSIRO. Service Collection. http://hdl.handle.net/102.100.100/137152?index=1
