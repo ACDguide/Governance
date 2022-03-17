@@ -4,13 +4,13 @@ This book, '**[Climate Dataset Guidelines](https://acdguide.github.io/Governance
 
 These guidelines are applicable to all levels of data sharing, from peer-to-peer sharing with colleagues to full publication in a public repository. 
 
-If you intend to share your data with colleagues for simple purposes, such as sanity checking and comparisons, some level of provenance and metadata preparation is likely to be useful, so feel free to pick and choose the parts of this book that are relevant for your use case. However, if your data is to be published or shared widely/publicly, it should follow FAIR principles and meet the minimum set of formatting and metadata recommendations as described in this book.
+If you intend to share your data with colleagues for simple purposes, such as sanity checking and comparisons, some level of provenance and metadata preparation is likely to be useful, so feel free to pick and choose the parts of this book that are relevant for your use case. However, if your data is to be published or shared widely/publicly, it should follow [FAIR principles](concepts/fairer-principles.md)  and meet the minimum set of formatting and metadata recommendations as described in this book.
 
-#
-### This book covers the follow topics:
+
+## Chapter index
 
 ### **[Creating climate data](create/create-intro.md)**
-Creating datasets that are fit for publication can be a daunting process, with many technical aspects to consider. This chapter will outline the ways to ensure that your data meets the broad [FAIR principles](https://ardc.edu.au/resources/working-with-data/fair-data/) of data sharing, along with specific requrirements and recommendations for climate-related data that will aid in the use and reproducibility of your data by the Australian, and international, climate community.
+Creating datasets that are fit for publication can be a daunting process, with many technical aspects to consider. This chapter will outline the ways to ensure that your data meets the broad [FAIR principles](concepts/fairer-principles.md) of data sharing, along with specific requrirements and recommendations for climate-related data that will aid in the use and reproducibility of your data by the Australian, and international, climate community.
 
 ### **[Publishing climate data](publish/publish-intro.md)**
 Publishing data involves uploading them to an accessible respository, and having a persistent identifier (e.g. a [DOI](https://www.doi.org/)) attached in a similar manner to publishing a research paper. This data can then be used and references by other researchers, increasing the scientific impact your dataresearch-ready data can have. Additionally, many journals now require that data on which a paper is based be published in this manner. In this chapter, the various pathways to data publication are presented, with a focus on recommendations for those at Australian research institutions.

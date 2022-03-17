@@ -1,12 +1,33 @@
 # Guidelines to create a climate dataset
-Often new datasets start as a by product of a research project, as a consequence there is no much planning in regard to the files themselves. It is important instead to start thinking of how the way we are structuring the files will impact their usability, accessibility etc. In short we should be concerned about producing FAIR data from the start of the process.
+
+## UNDER DEVELOPMENT
 
 ## Scope of the guidelines
- This section aims to give tips on how to create and organise your data in a way that will make it easier to analyse it and, later on, to share it with others and/or publish it.
 
 
 ## Index
-  * choosing the best format for your data (file and grid format)
-  * essential metadata that should accompain your data
-  * following conventions to make the files more accessible
-  * organising files and directories to improve discoverability and provenance 
+
+### Draft ideas
+
+#### Potential 'start' points
+
+- You have 'raw' data (e.g. model output) that is not ready for publication, and requires reformatting and metadata input.
+
+- You have performed analysis/evaluation/etc on published/replicated data, and want to publish your derived results/data.
+
+#### Potential use cases
+
+- These are for 'CREATE':
+
+    - For yourself!
+
+    - You want to share your data with colleagues and throughout your institution for collaboration but not citation. Basic needs.
+
+- These are for 'PUBLISH'
+    - You want to publish data that underpins a manuscript publication (i.e. supporting data). Standard publication needs.
+
+    - You want to publish data into a large multi-institutional inter-comparison project (e.g. CORDEX-CMIP6). Must meet strict standards.
+
+#### Steps to creating datasets
+
+-
