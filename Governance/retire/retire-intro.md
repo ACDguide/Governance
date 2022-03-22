@@ -20,6 +20,6 @@ For simplicity, when referring to a published dataset in the guidelines we are r
 * General principles of data retirement
 * Use case: published dataset
 * Use case: replica dataset 
-<!-- * Use case: unpublished data ??? -->
 * References and further information
+<!-- * Use case: unpublished data ??? -->
 
