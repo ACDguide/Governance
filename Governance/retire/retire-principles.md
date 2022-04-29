@@ -6,7 +6,7 @@ It may be necessary to retire a dataset for several reasons:
 - the data is not used by our community anymore
 - we need to prioritise how we are using our storage
 
-In any case we must proceed carefully and make sure we have considered all the implications of doing so. As we mentioned in the introduction the most important factor is if the data is published.
+In any case we must proceed carefully and make sure we have considered all the implications of removing the data. As we mentioned in the introduction the most important factor is if the data is published.
 
 ## DOI persistence requirements
 
@@ -50,7 +50,7 @@ A retirement plan can be a dedicated errata service or simply a retirement polic
 Many publishers do not offer an errata service (see links in Further Information), preferring instead to keep all data. In this case, **an errata statement explaining what change was made needs to be issued and made available on the DOI landing page of the dataset**. [Here is an example](https://research.jcu.edu.au/data/published/1507eae78675ccfb3843eb9d004cbb96/) of a data retraction.
 An example of errata service is the [Earth System Documentation errata service](https://errata.es-doc.org/static/index.html). It provides a record of all known issues and where appropriate, data withdrawal and republication. 
 
-It would be cumbersome to produce a plan for each dataset we manage. However, as most datasets particularly if they are replicas, can follow the same procedure it is worth to have at list a document explaining when and how the data might be retired without going into specific. An example of this is in the policies for the [CLEX collection on Zenodo](https://zenodo.org/communities/arc-coe-clex-data/about/#retention_policy).
+It would be cumbersome to produce a plan for each dataset we manage. However, as most datasets particularly if they are replicas, can follow the same procedure it is worth to have at least a document explaining when and how the data might be retired without going into specifics. An example of this is in the policies for the [CLEX collection on Zenodo](https://zenodo.org/communities/arc-coe-clex-data/about/#retention_policy).
 
 <!-- COMMENT!!!! once we have a similar policy for the ACS reference collection we could maybe use that as an example instead !!! -->
 
@@ -59,13 +59,13 @@ A retirement plan should include:
 - how and if the data will still be available elsewhere or by request
 - a timeline of the changes, including enough time for comments to be dealt with 
 
-It is much easier to make clear from the start what responsibility you assume when providing a dataset for other to use, rather than dealing with disappointed users down the track.
+It is much easier to make clear from the start what responsibility you assume when providing a dataset for others to use, rather than dealing with disappointed users down the track.
 
 Similarly, once you start the retirement process you should:
 * Inform the community as widely as possible, and at regular intervals via email, if possible.
 * If the data or metadata is available online, add a highly visible notice of the impending retirement.
-* Have a period of quarantine when the data is not more accessible but hasn't been deleted or archived yet. There are always users who will notice the data is gone just when trying to use it, no matter how many times you try to inform them.
+* Have a period of quarantine when the data is no longer accessible but hasn't been deleted or archived yet. There are always users who will notice the data is gone just when trying to use it, no matter how many times you try to inform them.
 * Make sure that you include information on alternative data sources and explain the reasons for the retirement.
 
-In some cases, it is appropriate consulting with the community before making a final decision for data retirement. This is usually the case when dealing with replicated data and shortage of storage and it will be covered in that use case section. 
+In some cases, it is appropriate to consult with the community before making a final decision for data retirement. This is usually the case when dealing with replicated data and shortage of storage and it will be covered in that use case section. 
 
