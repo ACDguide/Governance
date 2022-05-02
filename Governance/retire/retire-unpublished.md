@@ -15,7 +15,7 @@ How each of these scenarios is handled will typically be determined on a project
 **If compute is readily available but storage is limited**
 
 1. Maintain a database or wiki of model runs
-2. Create zip archives of model configurationsand move to slow access tape storage if they are required to be kept for reproducibility 
+2. Create zip archives of model configurations and move to slow access tape storage if they are required to be kept for reproducibility 
 3. If model run failed, remove data immediately
 4. If model run was successful and post-processing has been completed (and if bit-reproducibility across systems is not a concern), then data can be removed, perhaps after an initial quarantine period for data validation
 5. Intermediate data products and collaborative data can be retired at the end of their active projects, following a quaratine period
