@@ -26,4 +26,4 @@ How each of these scenarios is handled will typically be determined on a project
 
 Repeat steps 1-3 as above.
 
-4. Following post-processing and validation, or at project close, data should be tarred and trasnferred to a deep storage system
+4. Following post-processing and validation, or at project close, data should be tarred and transferred to a deep storage system
