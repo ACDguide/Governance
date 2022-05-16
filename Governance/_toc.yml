@@ -26,6 +26,7 @@ parts:
     - file: retire/retire-principles
     - file: retire/retire-published
     - file: retire/retire-replica
+    - file: retire/retire-unpublished
     - file: retire/retire-references
   - caption: About us
     chapters:
