@@ -599,14 +599,15 @@
 <div class="section" id="suggested-procedures">
 <h2>Suggested procedures<a class="headerlink" href="#suggested-procedures" title="Permalink to this headline">¶</a></h2>
 <p><strong>If compute is readily available but storage is limited</strong></p>
-<ol class="simple">
+<ol>
 <li><p>Maintain a database or wiki of model runs</p></li>
 <li><p>Create zip archives of model configurations and move to slow access tape storage if they are required to be kept for reproducibility</p></li>
 <li><p>If model run failed, remove data immediately</p></li>
 <li><p>If model run was successful and post-processing has been completed (and if bit-reproducibility across systems is not a concern), then data can be removed, perhaps after an initial quarantine period for data validation</p></li>
-<li><p>Intermediate data products and collaborative data can be retired at the end of their active projects, following a quaratine period</p></li>
+<li><p>Intermediate data products and collaborative data can be retired at the end of their active projects, following a quaratine period</p>
+<p>a. Some intermediate data may not have a logical project end, such as regridded CMIP data - such data might follow a similar approach as the replicated data use case.</p>
+</li>
 </ol>
-<p>5a. Some intermediate data may not have a logical project end, such as regridded CMIP data - such data might follow a similar approach as the replciated data use case.</p>
 <p><strong>If compute is limited but deep storage is readily available</strong></p>
 <p>Repeat steps 1-3 as above.</p>
 <ol class="simple">

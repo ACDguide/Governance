@@ -13,7 +13,9 @@ This is because it is hard in the first place to choose which data, or data subs
 
 Assessing data usage is probably the hardest part of the process. Unless the data can be accessed only in one way, for example for published data that can only be accessed online, is hard to find a reliable measure of active data usage.
 In most cases you will have to use a combination of the methods which are available.
+
 Some methods are machine-driven, where you use any available statistics automatically saved by the data server or filesystem. These can be useful when managing a big dataset where you have set rules from the start, so that ongoing retirement of data subsets are anticipated and part of the regular management. Here we called these "automated methods".
+
 Even if you have a reliable automatic measure of data access it is always a good idea to consult the community. Automated methods can only record actual usage, to make an informed decision you also need to assess future and other potential usage. It is also important to have an idea of how the data is used, if an obscure variable is needed to produce a dataset that is widely used by the community, deciding to retire it because there is only one person using it is not a good idea.
 
 ### Automated methods
@@ -35,6 +37,6 @@ Even if you have a reliable automatic measure of data access it is always a good
 1. Using one or more automated methods to collect statistics on actual data usage.
 2. Announce to users with data access the anticipated retirement of the dataset. If the data appears to be unused, move to a "quarantine" area nearby where users may still find the data and notify the data managers that it is still required.
 3. If no objection is heard, the data can be staged for deletion. On the other hand, if objection is heard, then a dialogue must be started with the affected users to identify an alternative support mechanism for the dataset.
-3a. An alternative mechanism to save disk space while data is still required for infrequent access is to maintain the dataset on tape storage
+    a. An alternative mechanism to save disk space while data is still required for infrequent access is to maintain the dataset on tape storage
 4. After some agreed period, the data can be removed from the filesystem.
 
