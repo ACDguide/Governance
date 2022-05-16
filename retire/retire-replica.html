@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retiring replicated data &#8212; Climate Data Guidelines</title>
+    <title>Use case: replicated data &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -192,7 +192,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Retiring replicated data
+   Use case: replicated data
   </a>
  </li>
  <li class="toctree-l1">
@@ -557,8 +557,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#suggested-workflow">
-     Suggested workflow
+    <a class="reference internal nav-link" href="#suggested-procedure">
+     Suggested procedure
     </a>
    </li>
   </ul>
@@ -573,7 +573,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Retiring replicated data</h1>
+                <h1>Use case: replicated data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -599,8 +599,8 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#suggested-workflow">
-     Suggested workflow
+    <a class="reference internal nav-link" href="#suggested-procedure">
+     Suggested procedure
     </a>
    </li>
   </ul>
@@ -614,19 +614,19 @@
             
               <div>
                 
-  <div class="section" id="retiring-replicated-data">
-<h1>Retiring replicated data<a class="headerlink" href="#retiring-replicated-data" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="use-case-replicated-data">
+<h1>Use case: replicated data<a class="headerlink" href="#use-case-replicated-data" title="Permalink to this headline">¶</a></h1>
 <p>Replicated data is usually retired to prioritise storage usage, occasionally because the data is flawed.</p>
-<p>If the data contains a serious error you might want to block access to it as early as possible, as for published data. It might be useful to also quarantine the data, so remove access immediately but not deleting or archiving the data yet.
-This is for reproducibility reasons, in particular if the dataset is complicated to re-download. However, as you are not the primary publisher it should generally be ok to remove the data entirely in a short time.</p>
+<p>If the data contains a serious error, we might need to block access to it as early as possible, as for published data. It might be useful to also quarantine the data, so removing access immediately but not deleting or archiving the data yet.
+This is for reproducibility reasons, in particular if the dataset is complicated to re-download. However, as we are not the primary publisher it should generally be ok to remove the data entirely in a short time.</p>
 <p>If the data needs to be retired to prioritise storage usage, then it is more complicated.
 This is because it is hard in the first place to choose which data, or data subset, to retire, as this is based on your community needs.</p>
 <div class="section" id="how-to-assess-data-usage">
 <h2>How to assess data usage<a class="headerlink" href="#how-to-assess-data-usage" title="Permalink to this headline">¶</a></h2>
-<p>Assessing data usage is probably the hardest part of the process. Unless the data can be accessed only in one way, for example for published data that has to be downloaded, is really hard to find a reliable measure of active data usage.
+<p>Assessing data usage is probably the hardest part of the process. Unless the data can be accessed only in one way, for example for published data that can only be accessed online, is hard to find a reliable measure of active data usage.
 In most cases you will have to use a combination of the methods which are available.
-Some methods are automated (!!!any better word???), where you use any available statistics automatically saved by the data server or filesystem. These can be useful when managing a big dataset where you have set rules from the start, so that ongoing retirement of data subsets are anticipated and part of the regular management.
-Even if you have a reliable automatic measure of data access it is always a good idea to consult the community. Automated methods can only record actual usage, to make an inform decision you also need to assess future and other potential usage. It is also important to have an idea of how the data is used, if an obscure variable is needed to produce a dataset that is widely used by the community, decide to retire it because there is only one person using it is not a good idea.</p>
+Some methods are machine-driven, where you use any available statistics automatically saved by the data server or filesystem. These can be useful when managing a big dataset where you have set rules from the start, so that ongoing retirement of data subsets are anticipated and part of the regular management. Here we called these “automated methods”.
+Even if you have a reliable automatic measure of data access it is always a good idea to consult the community. Automated methods can only record actual usage, to make an informed decision you also need to assess future and other potential usage. It is also important to have an idea of how the data is used, if an obscure variable is needed to produce a dataset that is widely used by the community, deciding to retire it because there is only one person using it is not a good idea.</p>
 <div class="section" id="automated-methods">
 <h3>Automated methods<a class="headerlink" href="#automated-methods" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -634,29 +634,27 @@ Even if you have a reliable automatic measure of data access it is always a good
 <li><p>Project user number: where users need to sign up to use the data (as for NCI project) you can easily get an idea of users’ number and distribution. A limit of this is that it doesn’t tell you who is actively using the data or which subset of the data is being used.</p></li>
 <li><p>Database queries: this can be used of course only if the data can be queried or accessed via a tool and this tool keeps logs of the queries. It is still imprecise as a user might be querying some data but not necessarily using it.</p></li>
 <li><p>Online downloads: usually data servers keep tracks of downloads of online data, as well as views. If the data is on Zenodo these stats are accessible to anyone, in other cases you might have to ask the data server administrators to collect them for you, if they don’t do that automatically.</p></li>
+<li><p>Automated download of updated datasets: when a dataset is maintained from a 3rd party host automatically, then new versions can be automatically detected and downloaded and older versions or data with identified serious errata removed. This process is in place for NCI’s CMIP replica data using the <code class="docutils literal notranslate"><span class="pre">synda</span></code> tool.</p></li>
 <li><p>…???</p></li>
 </ul>
 </div>
 <div class="section" id="community-feedback">
 <h3>Community feedback<a class="headerlink" href="#community-feedback" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>E-mail communication: this is possible where your community is well defined, so if users need to sign up to a group/project or if there are well defined community of potential users. For example, if the data is on NCI you can use <a class="reference external" href="http://my.nci.org.au">my.nci.org.au</a> to contact projects’ users. This might be sufficient when you have already identified a likely candidate.</p></li>
-<li><p>Survey: this can be useful when you need to evaluate several datasets at one time or work out which subset of a a big dataset could be retired.</p></li>
+<li><p>E-mail communication: this is possible where your community is well defined, so if users need to sign up to a group/project or if there are well defined community of potential users. For example, if the data is on NCI, you can use <a class="reference external" href="http://my.nci.org.au">my.nci.org.au</a> to contact projects’ users. This might be sufficient when you have already identified a likely candidate for removal.</p></li>
+<li><p>Survey: this can be useful when you need to evaluate several datasets at one time or work out which subset of a big dataset could be retired.</p></li>
+<li><p>Project dependence: if a dataset was replicated as part of a particular research project, then it can be considered for removal on completion of that project unless input data is required for reproducibility for some specified period.</p></li>
 <li><p>…???</p></li>
 </ul>
 </div>
-<div class="section" id="suggested-workflow">
-<h3>Suggested workflow<a class="headerlink" href="#suggested-workflow" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="suggested-procedure">
+<h3>Suggested procedure<a class="headerlink" href="#suggested-procedure" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>Using one or more automated methods to collect statistics on actual data usage.</p></li>
 <li><p>Announce to users with data access the anticipated retirement of the dataset. If the data appears to be unused, move to a “quarantine” area nearby where users may still find the data and notify the data managers that it is still required.</p></li>
-<li><p>If no objection is heard, the data can be staged for deletion. On the other hand if objection is heard, then a dialogue must be started with the affected users to identify an alternative support mechanism for the dataset.</p></li>
+<li><p>If no objection is heard, the data can be staged for deletion. On the other hand, if objection is heard, then a dialogue must be started with the affected users to identify an alternative support mechanism for the dataset.
+3a. An alternative mechanism to save disk space while data is still required for infrequent access is to maintain the dataset on tape storage</p></li>
 <li><p>After some agreed period, the data can be removed from the filesystem.</p></li>
-</ol>
-<p>COMMENT!!!! The following is a list of topics I feel we should also cover here but I’m not sure how to integrate them:</p>
-<ol class="simple">
-<li><p>CMIP like cases where the strategy should be a adopting a “continuous retirement”, I mentioned that in the principles but maybe should be expanded there or here</p></li>
-<li><p>having to move data on tape, so you’re not fully retiring the data and you’re not archiving it either. As for BARRA, data is on tape but probably not in complicated tarballs still structured in such a way is accessible “relatively” easily. It would cover the option where you are running out of storage but the data is still of use. So you can split it into priority data still on disk and less commonly used data on tape.</p></li>
 </ol>
 </div>
 </div>
