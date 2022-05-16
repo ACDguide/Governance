@@ -546,6 +546,11 @@
    Data archiving
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suggested-procedure">
+   Suggested procedure
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -571,6 +576,11 @@
    Data archiving
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suggested-procedure">
+   Suggested procedure
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -585,12 +595,23 @@
 <p><strong>If we publish data with a DOI</strong> (or equivalent persistent identifier), we are obliged to maintain the landing page of that DOI indefinitely - this persistence of URLs is what data publishers like Zenodo, NCI and DAP provide.
 However, there are times when we need to delete the old data because it was seriously flawed and should not be used. In this case, <strong>consideration must be given to the importance of reproducibility of science using the flawed dataset</strong>.</p>
 <p>If data is to be unpublished, we need to consider whether a copy of the old version can and should be archived on a tape store (e.g. NCI’s MDSS) or if it is safe to delete the data. <strong>In general, a copy of all published data should always be kept by the publisher, even if it contains errors</strong>.</p>
-<p>It is not permissible to simply remove a DOI, though it may be necessary to redirect to a “tombstone page” which resolves to a page that explicitly states that the dataset is no longer here.</p>
+<p>It is not permissible to simply remove a DOI, though it may be necessary to redirect to a <a class="reference external" href="https://support.datacite.org/docs/tombstone-pages">“tombstone page”</a> which resolves to a page that explicitly states that the dataset is no longer here.</p>
 <p>Every new version of a dataset (e.g. due to changes in the data) requires a new DOI.</p>
 <div class="section" id="data-archiving">
 <h2>Data archiving<a class="headerlink" href="#data-archiving" title="Permalink to this headline">¶</a></h2>
 <p>When practicable to do so, retired datasets should be archived to a deep store, which may be slow to access and not appropriate for web serving, nevertheless it enables, if necessary, analyses conducted on the retired data to be repeated, that is, reproducible science.</p>
 <p>Most data facilities (including NCI and CSIRO) have tape archives where data can be backed up or stored when it is no longer required. However, there is still some cost associated with this storage, and it is not infinite in scale, so it is not always an appropriate solution, but it should be used when viable to do so.</p>
+</div>
+<div class="section" id="suggested-procedure">
+<h2>Suggested procedure<a class="headerlink" href="#suggested-procedure" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Create errata statement or description of new dataset version explaining reason for retirement of this dataset</p></li>
+<li><p>Circulate notice of retirement to registered users (e.g. project members)</p></li>
+<li><p>Update DOI landing page with errata statement and notice of removal/new version</p></li>
+<li><p>Quarantine data, removing read access but leaving a README document including the errata statement</p></li>
+<li><p>Create a deep archive copy of the dataset</p></li>
+<li><p>After some pre-defined period, data can be removed from the filesystem, though as we are the original ublisher, if at all possible the deep archive copy must be retained.</p></li>
+</ol>
 </div>
 </div>
 
