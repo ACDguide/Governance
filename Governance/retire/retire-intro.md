@@ -17,9 +17,9 @@ The process may be similar in many cases, but it is important to consider how ot
 For simplicity, when referring to a published dataset in the guidelines we are referring to a dataset for which you are the primary publisher.
 
 ### Index
-* General principles of data retirement
-* Use case: published dataset
-* Use case: replica dataset 
-* Use case: unpublished (e.g. model output) data
-* References and further information
+* [General principles of data retirement](retire-principles.md)
+* [Use case: published dataset](retire-published.md)
+* [Use case: replica dataset](retire-replica.md)
+* [Use case: unpublished](retire-unpublished.md) (e.g. model output)
+* [References and further information](retire-references.md)
 

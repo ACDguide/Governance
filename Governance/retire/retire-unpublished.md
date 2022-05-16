@@ -20,7 +20,7 @@ How each of these scenarios is handled will typically be determined on a project
 4. If model run was successful and post-processing has been completed (and if bit-reproducibility across systems is not a concern), then data can be removed, perhaps after an initial quarantine period for data validation
 5. Intermediate data products and collaborative data can be retired at the end of their active projects, following a quaratine period
 
-5a. Some intermediate data may not have a logical project end, such as regridded CMIP data - such data might follow a similar approach as the replciated data use case.
+    a. Some intermediate data may not have a logical project end, such as regridded CMIP data - such data might follow a similar approach as the replicated data use case.
 
 **If compute is limited but deep storage is readily available**
 
