@@ -10,13 +10,13 @@ parts:
   - caption: Publishing climate data
     chapters:
     - file: publish/publish-intro
-    - file: publish/publish-examples
     - file: publish/publish-options
       sections:
-      - file: publish/publish-with-nci
-      - file: publish/publish-bom
-      - file: publish/publish-csiro
-      - file: publish/publish-clex
+      - file: publish/publish-nci-geonetwork
+      - file: publish/publish-csiro-dap
+      - file: publish/publish-zenodo
+      - file: publish/publish-esgf
+    - file: publish/publish-examples
   - caption: Updating datasets
     chapters:
     - file: update/update-intro
