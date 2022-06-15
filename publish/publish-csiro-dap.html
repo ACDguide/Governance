@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publishing with CLEX &#8212; Climate Data Guidelines</title>
+    <title>CSIRO Data Access Portal (DAP) &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Guidelines to update climate dataset" href="../update/update-intro.html" />
-    <link rel="prev" title="Publishing with CSIRO" href="publish-csiro.html" />
+    <link rel="next" title="Publishing with Zenodo" href="publish-zenodo.html" />
+    <link rel="prev" title="Publishing climate data with NCI" href="publish-nci-geonetwork.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,11 +119,6 @@
    Guidelines to publish climate data
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="publish-options.html">
    Publishing options
@@ -135,26 +130,31 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="publish-with-nci.html">
+    <a class="reference internal" href="publish-nci-geonetwork.html">
      Publishing climate data with NCI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-bom.html">
-     Publishing with BoM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-csiro.html">
-     Publishing with CSIRO
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Publishing with CLEX
+     CSIRO Data Access Portal (DAP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="publish-zenodo.html">
+     Publishing with Zenodo
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="publish-esgf.html">
+     ESGF publishing procedure
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="publish-examples.html">
+   Best Practice Published Data Records
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -498,7 +498,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/publish/publish-clex.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/publish/publish-csiro-dap.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -518,10 +518,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/publish-clex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/publish-csiro-dap.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/publish-clex.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/publish-csiro-dap.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -548,7 +548,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Publishing with CLEX</h1>
+                <h1>CSIRO Data Access Portal (DAP)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -559,8 +559,16 @@
             
               <div>
                 
-  <div class="section" id="publishing-with-clex">
-<h1>Publishing with CLEX<a class="headerlink" href="#publishing-with-clex" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="csiro-data-access-portal-dap">
+<h1>CSIRO Data Access Portal (DAP)<a class="headerlink" href="#csiro-data-access-portal-dap" title="Permalink to this headline">¶</a></h1>
+<p>Data, software and links to external data holdings (such as NCI) can be added to the <a class="reference external" href="https://data.csiro.au/">CSIRO Data Access Portal</a> (DAP) by <strong>CSIRO staff</strong> only. More information on creating metadata records and uploading files to the CSIRO DAP can be found on the <a class="reference external" href="https://confluence.csiro.au/display/dap/Deposit+and+Manage+Data">DAP Help Guide</a> (staff only access).</p>
+<p>CSIRO-affiliated data can be published in the DAP and the lead creator does not have to be CSIRO staff member.</p>
+<p>!!!COMMENT: at the moment this is identical to what we have in the Publishing option pages for CSIRO. I’m leaving this here for the moment in case we want to add something more, like:</p>
+<ul class="simple">
+<li><p>summary of the procedure with pros and cons?</p></li>
+<li><p>Something which is not covered in the official documentation but could be useful?</p></li>
+<li><p>a reminder to follow discipline specific best practices even if they aren’t encessarily required?</p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -588,17 +596,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="publish-csiro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="publish-nci-geonetwork.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Publishing with CSIRO</p>
+            <p class="prev-next-title">Publishing climate data with NCI</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../update/update-intro.html" title="next page">
+    <a class='right-next' id="next-link" href="publish-zenodo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Guidelines to update climate dataset</p>
+        <p class="prev-next-title">Publishing with Zenodo</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

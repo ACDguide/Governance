@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Publishing with BoM &#8212; Climate Data Guidelines</title>
+    <title>ESGF publishing procedure &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Publishing with CSIRO" href="publish-csiro.html" />
-    <link rel="prev" title="Publishing climate data with NCI" href="publish-with-nci.html" />
+    <link rel="next" title="Best Practice Published Data Records" href="publish-examples.html" />
+    <link rel="prev" title="Publishing with Zenodo" href="publish-zenodo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,11 +119,6 @@
    Guidelines to publish climate data
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="publish-options.html">
    Publishing options
@@ -135,26 +130,31 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="publish-with-nci.html">
+    <a class="reference internal" href="publish-nci-geonetwork.html">
      Publishing climate data with NCI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="publish-csiro-dap.html">
+     CSIRO Data Access Portal (DAP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="publish-zenodo.html">
+     Publishing with Zenodo
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Publishing with BoM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-csiro.html">
-     Publishing with CSIRO
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-clex.html">
-     Publishing with CLEX
+     ESGF publishing procedure
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="publish-examples.html">
+   Best Practice Published Data Records
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -498,7 +498,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/publish/publish-bom.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/publish/publish-esgf.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -518,10 +518,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/publish-bom.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/publish-esgf.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/publish-bom.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/publish-esgf.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -541,6 +541,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cmip6-use-case">
+   CMIP6 use case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cordex-use-case">
+   CORDEX use case
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -548,19 +566,43 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Publishing with BoM</h1>
+                <h1>ESGF publishing procedure</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cmip6-use-case">
+   CMIP6 use case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cordex-use-case">
+   CORDEX use case
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="section" id="publishing-with-bom">
-<h1>Publishing with BoM<a class="headerlink" href="#publishing-with-bom" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="esgf-publishing-procedure">
+<h1>ESGF publishing procedure<a class="headerlink" href="#esgf-publishing-procedure" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="cmip6-use-case">
+<h2>CMIP6 use case<a class="headerlink" href="#cmip6-use-case" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="cordex-use-case">
+<h2>CORDEX use case<a class="headerlink" href="#cordex-use-case" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -588,17 +630,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="publish-with-nci.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="publish-zenodo.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Publishing climate data with NCI</p>
+            <p class="prev-next-title">Publishing with Zenodo</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="publish-csiro.html" title="next page">
+    <a class='right-next' id="next-link" href="publish-examples.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Publishing with CSIRO</p>
+        <p class="prev-next-title">Best Practice Published Data Records</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

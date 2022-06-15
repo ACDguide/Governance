@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Publishing climate data with NCI" href="publish-with-nci.html" />
-    <link rel="prev" title="Best Practice Published Data Records" href="publish-examples.html" />
+    <link rel="next" title="Publishing climate data with NCI" href="publish-nci-geonetwork.html" />
+    <link rel="prev" title="Guidelines to publish climate data" href="publish-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,11 +119,6 @@
    Guidelines to publish climate data
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Publishing options
@@ -135,26 +130,31 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="publish-with-nci.html">
+    <a class="reference internal" href="publish-nci-geonetwork.html">
      Publishing climate data with NCI
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="publish-bom.html">
-     Publishing with BoM
+    <a class="reference internal" href="publish-csiro-dap.html">
+     CSIRO Data Access Portal (DAP)
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="publish-csiro.html">
-     Publishing with CSIRO
+    <a class="reference internal" href="publish-zenodo.html">
+     Publishing with Zenodo
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="publish-clex.html">
-     Publishing with CLEX
+    <a class="reference internal" href="publish-esgf.html">
+     ESGF publishing procedure
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="publish-examples.html">
+   Best Practice Published Data Records
+  </a>
  </li>
 </ul>
 <p class="caption">
@@ -541,6 +541,51 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bom">
+   BoM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csiro">
+   CSIRO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clex-or-university">
+   CLEX or university
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clex-data-collection-on-nci">
+     CLEX Data Collection on NCI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#institutional-repository">
+     Institutional repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zenodo-figshare-mendeley">
+     Zenodo, Figshare, Mendeley
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discipline-specific-data-portal">
+   Discipline specific data portal
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -553,6 +598,51 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bom">
+   BoM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csiro">
+   CSIRO
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clex-or-university">
+   CLEX or university
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clex-data-collection-on-nci">
+     CLEX Data Collection on NCI
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#institutional-repository">
+     Institutional repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zenodo-figshare-mendeley">
+     Zenodo, Figshare, Mendeley
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discipline-specific-data-portal">
+   Discipline specific data portal
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -561,7 +651,53 @@
                 
   <div class="section" id="publishing-options">
 <h1>Publishing options<a class="headerlink" href="#publishing-options" title="Permalink to this headline">¶</a></h1>
-<p>Once your data is created and ready for publication, you will need to decide <strong>where</strong> to publish it. There are two main components of this decision: DOI/catalogue record, and data location. Note that these may be the same, but not necessarily.</p>
+<p>Once the data is created and ready for publication, <strong>where</strong> can be published it?</p>
+<p>One of the main factors is what services are available, this is largely determined by the researcher’s institution and/or organization.
+In some cases, there might be the option of contributing to a large-scale project that has its own publishing procedure established.
+Here we are covering the most common use cases for our community.</p>
+<div class="section" id="bom">
+<h2>BoM<a class="headerlink" href="#bom" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="csiro">
+<h2>CSIRO<a class="headerlink" href="#csiro" title="Permalink to this headline">¶</a></h2>
+<p>Data, software and links to external data holdings (such as NCI) can be added to the <a class="reference external" href="https://data.csiro.au/">CSIRO Data Access Portal</a> (DAP) by <strong>CSIRO staff</strong> only. More information on creating metadata records and uploading files to the CSIRO DAP can be found on the <a class="reference external" href="https://confluence.csiro.au/display/dap/Deposit+and+Manage+Data">DAP Help Guide</a> (staff only access).</p>
+<p>CSIRO-affiliated data can be published in the DAP and the lead creator does not have to be CSIRO staff member.</p>
+</div>
+<div class="section" id="clex-or-university">
+<h2>CLEX or university<a class="headerlink" href="#clex-or-university" title="Permalink to this headline">¶</a></h2>
+<p>We are looking here at CLEX as an example but as basically CLEX is only a collaboration project among universities, a lot of what applies here it is also usually applicable for anyone who works/studies in another university. Researchers working for a university have potentially more freedom in terms of where they can publish data. Unless they are working for a project which is covered by a data agreement and has specific licensing and/or data distribution requirements, the approach is to follow the FAIR principle and they are usually expected to share data openly.
+Part of making data FAIR is to make it discoverable, so sharing data in a discipline specific collection is to be preferred when possible. This could be a collection of climate data, or of a related discipline, i.e., paleoclimate data, oceanographic data, etc.</p>
+<div class="section" id="clex-data-collection-on-nci">
+<h3>CLEX Data Collection on NCI<a class="headerlink" href="#clex-data-collection-on-nci" title="Permalink to this headline">¶</a></h3>
+<p>This is the best option if the data is in NetCDF format and could be useful for other researchers, as it will be part of a climate data collection. It is also the only option if the size of the data is substantial, in the order of hundreds of GB or more. NCI has more storage capacity than other repositories and services which are designed around the NetCDF format.
+NCI requires the data to be documented and follow conventions, which will make the data easier to use.</p>
+</div>
+<div class="section" id="institutional-repository">
+<h3>Institutional repository<a class="headerlink" href="#institutional-repository" title="Permalink to this headline">¶</a></h3>
+<p>This is adequate if the data is small and its reuse by others is unlikely. For example, data published only to reproduce the figures in a paper. While institutions offer some data curation, they usually will not check that the data is well described, consistent and user friendly, as they cannot be expert in every field. The data will get a DOI assigned but no added value. Institutional repositories might also have size restrictions.
+An institutional repository might not be able to publish big datasets effectively.</p>
+</div>
+<div class="section" id="zenodo-figshare-mendeley">
+<h3>Zenodo, Figshare, Mendeley<a class="headerlink" href="#zenodo-figshare-mendeley" title="Permalink to this headline">¶</a></h3>
+<p>These services are free, and anyone can create an account, create a record for their data and get a DOI easily and quickly. These repositories also publish different kind of materials. This can be useful if publishing code together with data, for example code and data to produce a specific figure required to publish a paper.
+Another advantage is that these services are widely used and so you are more likely to reach an international audience.</p>
+<p>However, there are no standards required or anyone checking the metadata. It is left to the researcher to make sure their data is as FAIR as possible. As the record won’t be part of a discipline repository or collection, it is important to use keywords in an effective manner to make the data Findable. It is also important to have enough metadata and apply discipline standards and conventions to make the data Accessible, Interoperable and Reusable.</p>
+<p>Finally, as for institutional repositories, the data size is limited to 50-100 GB and files can only be downloaded.
+For CLEX researchers, students and associates, the CMS team offers advice and can review a record, as well as add it to their Zenodo Data Collection to improve discoverability.</p>
+</div>
+</div>
+<div class="section" id="discipline-specific-data-portal">
+<h2>Discipline specific data portal<a class="headerlink" href="#discipline-specific-data-portal" title="Permalink to this headline">¶</a></h2>
+<p>In some cases, the data might be fit to be published to a specific data portal or as part of a larger initiative.
+Of these we are covering only the ESGF case more closely, as it provides an example of a comprehensive publishing process. For the others refer to their websites for more information or there might be some relevant examples at the end of this guidelines.
+Keep in mind that some of these options can be an extra distribution option for your data even if it is already published elsewhere.</p>
+<p><a class="reference external" href="https://esgf.llnl.gov">ESGF</a> - the Earth System Grid Federation is a collaborative project responsible for the publication and distribution of climate model output as CMIP, CORDEX and other associated datasets. We are covering in detail the <a class="reference internal" href="publish-esgf.html"><span class="doc std std-doc">procedure to publish CMIP and CORDEX data with ESGF</span></a> (usually via NCI). Even if you are not contributing officially to one of these projects, the post-processing part of this procedure can still be applicable to generic ACCESS model output or “unofficial” CORDEX simulations. It also provides a good overview of what you should consider when publishing any kind of model output, in particular at a collaborative project level.</p>
+<p>IMOS</p>
+<p>TERN</p>
+<p>AURIN</p>
+<p>Paeloclimate</p>
+<p>CDS</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -591,14 +727,14 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="publish-examples.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="publish-intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Best Practice Published Data Records</p>
+            <p class="prev-next-title">Guidelines to publish climate data</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="publish-with-nci.html" title="next page">
+    <a class='right-next' id="next-link" href="publish-nci-geonetwork.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Publishing climate data with NCI</p>
