@@ -1,5 +1,5 @@
 # Publishing options
-Once the data is created and ready for publication, **where** can be published it? 
+Once the data is created and ready for publication, **where** can it be published? 
 
 One of the main factors is what services are available, this is largely determined by the researcher's institution and/or organization.
 In some cases, there might be the option of contributing to a large-scale project that has its own publishing procedure established.
