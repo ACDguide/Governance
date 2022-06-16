@@ -13,9 +13,9 @@ parts:
     - file: publish/publish-options
       sections:
       - file: publish/publish-nci-geonetwork
+      - file: publish/publish-esgf
       - file: publish/publish-csiro-dap
       - file: publish/publish-zenodo
-      - file: publish/publish-esgf
     - file: publish/publish-examples
   - caption: Updating datasets
     chapters:
