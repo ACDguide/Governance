@@ -58,15 +58,18 @@ Keep in mind that some of these options can be an extra distribution option for 
 
 [ESGF](https://esgf.llnl.gov) - the Earth System Grid Federation is a collaborative project responsible for the publication and distribution of climate model output as CMIP, CORDEX and other associated datasets. We are covering in detail the [procedure to publish CMIP and CORDEX data with ESGF](publish-esgf.md) (usually via NCI). Even if you are not contributing officially to one of these projects, the post-processing part of this procedure can still be applicable to generic ACCESS model output or "unofficial" CORDEX simulations. It also provides a good overview of what you should consider when publishing any kind of model output, in particular at a collaborative project level. 
 
-IMOS
+**Australian data portals**
 
-TERN
+ - [Integrated Marine Observing System - IMOS](https://imos.org.au)
+ - [Terrestrial Ecosystem Research Network - TERN](https://www.tern.org.au)
+ - [Australian Urban Research Infrastructure Network - AURIN](https://aurin.org.au)
 
-AURIN
+**International data portals**
 
-Paeloclimate
-
-Copernicus CDS/C3S
+ - [NOAA World Data Service for Paleoclimatology](https://www.ncei.noaa.gov/access/paleo-search/)
+ - [Copernicus Climate Data Store - CDS](https://cds.climate.copernicus.eu)
+ - [Copernicus Climate Change Services - C3S](https://www.copernicus.eu/en/copernicus-services/climate-change)
+<br>Both Copernicus services work with a tender system, so they do not accept requests to publish datasets unless they fit into products they have an open tender for.
 :::
 
 ::::

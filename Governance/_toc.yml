@@ -17,6 +17,7 @@ parts:
       - file: publish/publish-csiro-dap
       - file: publish/publish-zenodo
     - file: publish/publish-examples
+    - file: publish/journals.md
   - caption: Updating datasets
     chapters:
     - file: update/update-intro
@@ -81,4 +82,3 @@ parts:
       - file: appendix/acronyms.md
       - file: appendix/forcodes.md
         title: ANZSRC-FoR-2020
-      - file: appendix/journals.md
