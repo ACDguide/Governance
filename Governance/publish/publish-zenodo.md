@@ -1,6 +1,6 @@
 # Publishing with Zenodo
 
-Zenodo is an initiative funded by CERN that allows anyone to share their research outputs and mint a DOI for them. Zenodo is funded for at least the next 20 years and so it offers a good long-term solution, as well as been widely used internationally.
+Zenodo is an initiative funded by CERN that allows anyone to share their research outputs and mint a DOI for them. Zenodo is funded for at least the next 20 years and so it offers a good long-term solution, as well as being widely used internationally.
 
 ## How to publish
 Publishing a dataset is easy and quick as long as the data is reasonably organised and has a detailed provenance.
