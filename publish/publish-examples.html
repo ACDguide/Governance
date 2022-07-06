@@ -561,13 +561,25 @@
                 
   <div class="section" id="best-practice-published-data-records">
 <h1>Best Practice Published Data Records<a class="headerlink" href="#best-practice-published-data-records" title="Permalink to this headline">¶</a></h1>
-<p>BoM data published at NCI</p>
-<p>Seasonal Prediction ACCESS-S2 Reanalysis (1981-2018) - <a class="reference external" href="http://dx.doi.org/10.25914/60627ad8878e2">http://dx.doi.org/10.25914/60627ad8878e2</a></p>
-<p>AGCD - <a class="reference external" href="http://dx.doi.org/10.25914/6009600786063">http://dx.doi.org/10.25914/6009600786063</a></p>
-<p>OceanMAPS? - doesn’t have a DOI - <a class="reference external" href="https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/metadata/f7465_7260_5879_1239">https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/metadata/f7465_7260_5879_1239</a></p>
-<p>AUSWAVE - ?</p>
-<p>ACCESS-{R, C, etc},</p>
-<p>Durrant, Thomas; Hemer, Mark; Smith, Grant; Trenham, Claire; Greenslade, Diana (2019): CAWCR Wave Hindcast - Aggregated Collection. v5. CSIRO. Service Collection. <a class="reference external" href="http://hdl.handle.net/102.100.100/137152?index=1">http://hdl.handle.net/102.100.100/137152?index=1</a></p>
+<p>The climate community is in better position with respect to best practice data management than many other groups due to the self-describing data format of <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a> and community modelling projects such as <a class="reference external" href="https://www.wcrp-climate.org/wgcm-cmip">CMIP</a>/<a class="reference external" href="https://cordex.org/">CORDEX</a>/<a class="reference external" href="https://pcmdi.github.io/obs4MIPs/">Obs4MIPS</a> enforcing a strict standard. There are lots of climate-tools in wide use across the community that make use of this fact, including modifying the history attribute to document what was done to the data.</p>
+<p>What does best practice look like? Certainly, it DOES look like including all metadata, ensuring data is <a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR</a>(ER?) <a class="footnote-reference brackets" href="#id2" id="id1">1</a>, documenting data processing and publishing that as well, undertaking QA/QC and documenting the process.</p>
+<p>It is near impossible to get all this right and even with strict standards like CMIP/CORDEX we still find mistakes in the metadata due to the complexity of the standards. I agree that we will never get this perfect but aim for a best effort and as our tooling (software/workflows) improve over time so will our compliance.</p>
+<p>How do we walk the line between showing people what their data should look like, and not putting them off from making any effort at all by suggesting they have to get it perfect?</p>
+<p>For examples of best practice, we suggest looking at the following:</p>
+<ul class="simple">
+<li><p>Bureau of Meteorology (2021): Seasonal Prediction ACCESS-S2 Reanalysis (1981-2018). NCI <a class="reference external" href="http://doi.org/10.25914/60627ad8878e2">http://doi.org/10.25914/60627ad8878e2</a></p></li>
+<li><p>Bureau of Meteorology (2021): Australian Gridded Climate Data (AGCD) v2. NCI <a class="reference external" href="http://doi.org/10.25914/6009600786063">http://doi.org/10.25914/6009600786063</a></p></li>
+<li><p>Dix, Martin; Bi, Dave; Dobrohotoff, Peter; et. al (2019): ACCESS-CM2 model output prepared for CMIP6 under ‘ScenarioMIP’. v2. CSIRO. Service Collection. <a class="reference external" href="http://hdl.handle.net/102.100.100/422393?index=1">http://hdl.handle.net/102.100.100/422393?index=1</a></p></li>
+<li><p>Durrant, Thomas; Hemer, Mark; Smith, Grant; Trenham, Claire; Greenslade, Diana (2019): CAWCR Wave Hindcast - Aggregated Collection. v5. CSIRO. Service Collection. <a class="reference external" href="http://hdl.handle.net/102.100.100/137152?index=1">http://hdl.handle.net/102.100.100/137152?index=1</a></p></li>
+<li><p>Earth System Grid Federation (ESGF) Australian CMIP6-era Datasets (2021)
+NCI. <a class="reference external" href="http://doi.org/10.25914/5e6acd0492b39">http://doi.org/10.25914/5e6acd0492b39</a></p></li>
+</ul>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Trenham, Claire; Steer, Adam. The Good Data Manifesto. In: Daly, Angela; Devitt, Kate; Mann, Monique, editor/s. Good Data. Amsterdam: Institute of Network Cultures (INC) Publications; 2019. 37-53. <a class="reference external" href="https://networkcultures.org/blog/publication/tod-29-good-data/">https://networkcultures.org/blog/publication/tod-29-good-data/</a>.</p>
+</dd>
+</dl>
 </div>
 
     <script type="text/x-thebe-config">
