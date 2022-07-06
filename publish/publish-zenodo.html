@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ESGF publishing procedure" href="publish-esgf.html" />
+    <link rel="next" title="Best Practice Published Data Records" href="publish-examples.html" />
     <link rel="prev" title="CSIRO Data Access Portal (DAP)" href="publish-csiro-dap.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -135,6 +135,11 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="publish-esgf.html">
+     ESGF publishing procedure
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="publish-csiro-dap.html">
      CSIRO Data Access Portal (DAP)
     </a>
@@ -144,16 +149,16 @@
      Publishing with Zenodo
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-esgf.html">
-     ESGF publishing procedure
-    </a>
-   </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="publish-examples.html">
    Best Practice Published Data Records
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="journals.html">
+   Journal publishers data policies
   </a>
  </li>
 </ul>
@@ -450,11 +455,6 @@
      ANZSRC-FoR-2020
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/journals.html">
-     Journal publishers data policies
-    </a>
-   </li>
   </ul>
  </li>
 </ul>
@@ -547,8 +547,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-public-free-services">
-   Other public free services
+  <a class="reference internal nav-link" href="#how-to-publish">
+   How to publish
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-tips">
+   Useful tips
   </a>
  </li>
 </ul>
@@ -572,8 +577,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#other-public-free-services">
-   Other public free services
+  <a class="reference internal nav-link" href="#how-to-publish">
+   How to publish
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-tips">
+   Useful tips
   </a>
  </li>
 </ul>
@@ -587,8 +597,33 @@
                 
   <div class="section" id="publishing-with-zenodo">
 <h1>Publishing with Zenodo<a class="headerlink" href="#publishing-with-zenodo" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="other-public-free-services">
-<h2>Other public free services<a class="headerlink" href="#other-public-free-services" title="Permalink to this headline">¶</a></h2>
+<p>Zenodo is an initiative funded by CERN that allows anyone to share their research outputs and mint a DOI for them. Zenodo is funded for at least the next 20 years and so it offers a good long-term solution, as well as being widely used internationally.</p>
+<div class="section" id="how-to-publish">
+<h2>How to publish<a class="headerlink" href="#how-to-publish" title="Permalink to this headline">¶</a></h2>
+<p>Publishing a dataset is easy and quick as long as the data is reasonably organised and has a detailed provenance.</p>
+<ul class="simple">
+<li><p>Create a Zenodo account, ORCID can be used to login.</p></li>
+<li><p>Read and follow the Zenodo <a class="reference external" href="https://about.zenodo.org/policies/">policy</a> and <a class="reference external" href="https://about.zenodo.org/terms/">terms of use</a>.</p></li>
+<li><p>Create a Zenodo record for the dataset, uploading the relevant files. CLEX has prepared a <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/images/1/10/Publish_your_data.pdf">step-by-step guide</a> on how to do this, which also cover the kind of information you should include.</p></li>
+</ul>
+</div>
+<div class="section" id="useful-tips">
+<h2>Useful tips<a class="headerlink" href="#useful-tips" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A dataset can have several authors, they all should agree to the dataset publication and to list the record on Zenodo. All authors should have made a significant contribution to the data.</p></li>
+<li><p>Make sure the files:</p>
+<ul>
+<li><p>are following any relevant standards, if they are netcdf files they should follow both <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF</span></a> and <a class="reference internal" href="../concepts/acdd-conventions.html"><span class="doc std std-doc">ACDD</span></a> conventions.</p></li>
+<li><p>have <a class="reference internal" href="../tech/filenames.html"><span class="doc std std-doc">descriptive names</span></a> and are organised in <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">directories</span></a> in a way that facilitate their access and use;</p></li>
+<li><p>have a <a class="reference internal" href="../tech/versioning.html#versioning-data"><span class="std std-ref">version</span></a> and a <a class="reference internal" href="../concepts/license-data.html"><span class="doc std std-doc">license</span></a> assigned.</p></li>
+</ul>
+</li>
+<li><p>Use <a class="reference internal" href="../concepts/controlled-vocab.html"><span class="doc std std-doc">keywords and controlled vocabularies</span></a> in the metadata to increase discoverability.</p></li>
+<li><p>If the data has already been published elsewhere, a record on Zenodo can still be added to improve visibility. In such case use the existing DOI, <strong>do not create a new DOI for the same data</strong>. Instead of uploading the actual data files, a Readme file can be uploaded and links to the original records added for data download.</p></li>
+<li><p>Remember only datasets which are less than 50GB can be published. Exceptions are possible, see the relevant information in the <a class="reference external" href="https://help.zenodo.org">Zenodo’s FAQs</a></p></li>
+<li><p>It’s easier to zip the files and upload them as one file. An alternative if you have many files is to use the <a class="reference external" href="https://developers.zenodo.org">Zenodo API</a>.</p></li>
+<li><p>A community can be chosen if there is one that is relevant to the record. This will improve discoverability. The community administrators will receive a notification and either approve the record or contact the main author if they need extra information. Remember the data can be listed in more than one community.</p></li>
+</ul>
 </div>
 </div>
 
@@ -624,10 +659,10 @@
             <p class="prev-next-title">CSIRO Data Access Portal (DAP)</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="publish-esgf.html" title="next page">
+    <a class='right-next' id="next-link" href="publish-examples.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ESGF publishing procedure</p>
+        <p class="prev-next-title">Best Practice Published Data Records</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
