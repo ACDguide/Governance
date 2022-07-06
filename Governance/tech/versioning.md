@@ -15,6 +15,7 @@ If you are using GitHub, produce a release before publishing. While a commit url
 
 Most of all it is important to be consistent and versions should always progress from lower to higher.
 
+(versioning-data)=
 ## Dataset versioning
 As for code even if you are not planning any new version of the dataset, you might change idea or need to extend or correct the data in the future.
 
