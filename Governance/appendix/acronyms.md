@@ -18,7 +18,7 @@
 ```
 
 ```{dropdown} **CF - Climate and Forecast conventions**
-CF are conventions used to set metadata attributes in NetCDF files. See [relevant page in book](cf-conventions)
+CF are conventions used to set metadata attributes in NetCDF files. See [relevant page in book](../concepts/cf-conventions.md)
 ```
 
 (cosima)=
