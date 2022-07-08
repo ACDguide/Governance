@@ -28,7 +28,7 @@ If you wish to disable this automation, you may remove the GitHub actions workfl
 This will automatically push your build to the `gh-pages` branch. More information on this hosting process can be found [here](https://jupyterbook.org/publish/gh-pages.html#manually-host-your-book-with-github-pages).
 
 NB this should be now automated using github action defined in .github/workflows/deploy.yml
-Any commit to the main branch should trigger thsi action
+Any commit to the main branch should trigger this action.
 
 ## Structure
 Currently the book is comprised of 7 parts
