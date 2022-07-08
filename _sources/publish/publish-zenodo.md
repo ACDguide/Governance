@@ -7,7 +7,7 @@ Publishing a dataset is easy and quick as long as the data is reasonably organis
 
 * Create a Zenodo account, ORCID can be used to login.
 * Read and follow the Zenodo [policy](https://about.zenodo.org/policies/) and [terms of use](https://about.zenodo.org/terms/).
-* Create a Zenodo record for the dataset, uploading the relevant files. CLEX has prepared a [step-by-step guide](http://climate-cms.wikis.unsw.edu.au/images/1/10/Publish_your_data.pdf) on how to do this, which also cover the kind of information you should include.
+* Create a Zenodo record for the dataset, uploading the relevant files. CLEX has prepared a [step-by-step guide](../appendix/zenodo.md) on how to do this, which also cover the kind of information you should include.
 
 ## Useful tips 
 
