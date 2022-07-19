@@ -18,9 +18,9 @@ parts:
       - file: publish/publish-zenodo
     - file: publish/publish-examples
     - file: publish/journals.md
-  - caption: Updating datasets
+  - caption: Managing datasets
     chapters:
-    - file: update/update-intro
+    - file: manage/manage-intro
   - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
