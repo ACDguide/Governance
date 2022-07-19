@@ -5,11 +5,6 @@ Some of examples we show here are NCI based as this is where we managed most of 
 data custodians and stewards in technical data management at NCI:
 
 Project handling 
-  writers group creation
-  use of posix permissions
-  use of ACLs
-  caveats with ACLs - what breaks them and when do they break?
-Note, this is NCI specific content - on CSIRO internal resources e.g., access mgmt is governed by windows ACLs - email schelp for advice.
 
 DRS
 
@@ -17,8 +12,6 @@ DRS
 Documentation, local and online
 
 Updates: automatic and ad hoc
-  creating a new version
-  update logs
 
 Maintaining different versions??
 

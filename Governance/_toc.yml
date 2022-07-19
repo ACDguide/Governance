@@ -21,6 +21,11 @@ parts:
   - caption: Managing datasets
     chapters:
     - file: manage/manage-intro
+    - file: manage/manage-project
+    - file: manage/manage-file
+    - file: manage/manage-update
+    - file: manage/manage-docs
+    - file: manage/manage-ausref
   - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
