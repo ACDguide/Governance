@@ -17,7 +17,7 @@ and it is also useful:
 ## Creating a Data Management Plan
 
 It is best to create a DMP as early as you can in your project. Some institutions will provide ttols and/or guidance o0n how to create a DMP.
-CLEX for example provides CLEX_Roadmap a DMP webtool which you can use to create, store and share DMPs, as well as for guidance on how to structure one. 
+CLEX for example provides [CLEX_Roadmap](https://clex.dmponline.cloud.edu.au) a DMP webtool which you can use to create, store and share DMPs, as well as for guidance on how to structure one. 
 
 Here a distinction between three data management levels is made: personal, group and public. 
 
@@ -35,7 +35,7 @@ At this stage a plan can help design the experiment:
 
 It is also never too early to start to work on your project [provenance](provenance.md):
 
-* applying where possible relevant metadata conventions to any data produced, it is easier when done from the first analysis steps rather than having to update the metadata subsequently.
+* applying where possible relevant [metadata conventions](conventions.md) to any data produced, it is easier when done from the first analysis steps rather than having to update the metadata subsequently.
 * adopting a version control for your code
 * building references to data/code sources
 
@@ -71,14 +71,13 @@ If research is part of a collaboration project:
 * long-term storage strategy
 * any other specific requirements that the chosen repository might have, must be addressed.
 
-## Tips
 As a DMP is documenting and describing your data output as a paper documents and describes your research output, some tips about writing research papers can be applied to DMP, too. We collected a few we found online below.
 
 :::{admonition} **Tips**
-...Pitfalls include using complicated jargon, including unnecessary details, and writing for your highly specialized colleagues instead of a wider audience. ...
-Only abbreviations firmly established in the field are eligible, … avoiding those which are not broadly used ...
-… when looking for keywords, avoid words with a broad meaning and words already included in the title.
-… you need to include detailed information so a knowledgeable reader can reproduce the experiment. However, do not repeat the details of established methods; use References and Supporting Materials to indicate the previously published procedures.
-… indicate uses and extensions if appropriate. Moreover, you can suggest future experiments and point out those that are underway ...
-Effective research articles are interesting and useful to a broad audience, including scientists in other fields.
-use standard systems … conventions
+...Pitfalls include using complicated jargon, including unnecessary details, and writing for your highly specialized colleagues instead of a wider audience. ...<br>
+Only abbreviations firmly established in the field are eligible, … avoiding those which are not broadly used ...<br>
+… when looking for keywords, avoid words with a broad meaning and words already included in the title.<br>
+… you need to include detailed information so a knowledgeable reader can reproduce the experiment. However, do not repeat the details of established methods; use References and Supporting Materials to indicate the previously published procedures.<br>
+… indicate uses and extensions if appropriate. Moreover, you can suggest future experiments and point out those that are underway ...<br>
+Effective research articles are interesting and useful to a broad audience, including scientists in other fields.<br>
+use standard systems … conventions<br>
