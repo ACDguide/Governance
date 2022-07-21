@@ -47,6 +47,7 @@ parts:
     - file: concepts/concept-intro.md
       sections:
       - file: concepts/fairer-principles
+      - file: concepts/provenance
       - file: concepts/dmp
       - file: concepts/collaboration-agreement 
       - file: concepts/availability-statement 

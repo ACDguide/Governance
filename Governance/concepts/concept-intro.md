@@ -5,6 +5,7 @@ In this section of the book we are covering the key concepts associated with dat
 **index**
 
 * [FAIRER data](fairer-principles.md)
+* [](provenance.md)
 * [](dmp.md)
 * [](collaboration-agreement.md)
 * [](availability-statement.md)
