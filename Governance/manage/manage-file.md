@@ -1,12 +1,13 @@
 # File handling
 
-This part covers how to manage the actual files and directories, starting from the download process. It applies mostly to replicated datasets, as how to name and organise the files of a new dataset is covered already in the Creating dataset guidelines. 
+This part covers how to manage the actual files and directories, starting from the download process. It applies mostly to replicated datasets, how to name and organise the files of a new dataset is covered already in the [Creating dataset guidelines](../create/create-intro.md). 
 
 ## Managing downloads
 
-How to manage downloads depends mostly on how the original data is distributed. Often servers offer more than one option to download the data. It will depend also on how big the dataset is, in some cases it's possible that a dataset is composed of one or few files that could easily be downloaded from a web interface. 
-Even in such simple cases and where regular updates are not needed is good practice to create a code. A code is a way to document exactly where the data was downloaded from and how. 
-Bash scripts are fine if the downloads are quite simple, as in the above example of few files that we can retrieve with a simple `wget` or `curl`. If there is a lot of shuffling of files and directories to do, soon a bash script would become complicated and unreadable, in these cases you should use a proper coding language. 
+How to manage downloads depends mostly on how the original data is distributed and on how big the dataset is. Often servers offer more than one option to download the data. 
+It is good practice to always create a dedicated code, as this is also a way to document exactly where the data was downloaded from and how. 
+Even if a dataset is composed of one or few files that could easily be downloaded from a web interface and regular updates are not needed.
+Bash scripts are fine if the downloads are quite simple, as in the above example of few files that we can retrieve with a simple `wget` or `curl`. If there is a lot of shuffling of files and directories to do, a bash script can become quickly complicated and unreadable, in these cases a proper coding language should be sued. 
 Python is a good choice for a scripting language as it has lots of modules that can help with downloads, for example:
    * ftplib - to handle FTP servers
    * requests - to handle HTTP, FTP requests including authentication
@@ -22,12 +23,15 @@ A good code should be:
   * if authentication is needed, passwords should be loaded from an environment variable or passed as an argument and not hardcoded
   * depending on the dataset, it should include a way to check if a file needs updating. This can be achieved by checking the local and remote last modified date and/or checksum, depending on what information the remote server shares. If it is not possible to get either of these from the remote server than it is useful to create a file listing them as they are locally after the first download. This can then be used as reference.  
 
-Finally some servers offer APIs or can generate a code you can download based on a specific requests. While these are usually not sufficient to handle the full download they provide a useful starting point.
-Always have the code under version control.
+Finally, some servers offer APIs or can generate a code based on a specific request. While these are usually not sufficient to handle the full download, they provide a useful starting point.
+
+```{warning}
+Always have the code under version control!
+```
 
 ## File and directory organisation
 
-While all the generic advice on how to organise and name your files is still applicable, when you replicated a dataset it is important to also consider the original data organisation. 
+While all the generic advice on [how to organise and name files](../tech/drs.md) is still applicable, when replicating a dataset it is important to also consider the original data organisation. 
 
 ### Naming files
 

@@ -4,8 +4,8 @@
 Note, this is NCI specific content.
 ```
 
-On the NCI server, disk allocations are managed via projects. Any dataset will be associated to a project, ideally this should be a data specific project, i.e., a project set up to share one or more datasets. It is not ideal to share data via a computational project as all the project users will have writing access and it would be harder to guarantee a set disk quota for the dataset collection.
-If this is unavoidable and the data is hosted on a project with multiple uses, then try to separate the working area from the data collection part.
+On the NCI server, disk storage allocations are managed via projects. Any dataset will be associated to a project, ideally this should be a data specific project, i.e., a project set up to share one or more datasets. It is not ideal to share data via a computational project as all the project users will have writing access and it would be harder to guarantee a set disk quota for the dataset collection.
+If this is unavoidable, and the data is hosted on a project with multiple uses, then try to separate the working area from the data collection part.
 The data files should be stored on the `gdata` disk, i.e., /g/data/<project-id>. Never use the /scratch filesystem for dataset as /scratch is only meant as a temporary filesystem with fast access, files that have not been accessed for 100 days are quarantined and eventually removed.
 
 ## Starting a new project
@@ -28,7 +28,7 @@ Mancini shows how much allocation the project is using and allows the Lead CI an
  
 ## Setting permissions
 NCI uses the [POSIX](posix) to set permissions.
-By default project directories
+By default the class `other` doesn't have access to project directories /g/data/<project-id>`. This means that every prospective data user will have to become a member of the project to access the data. 
 Data projects are usually organised in two main directories:
 - `admin`/`code` is the working area containing codes and logs. Only the data managers should have writing access to this, but it helps trasparency letting the users having read access. 
 - `data`/`replicas` is where the actual data resides. Users belonging to the group should have `read` permission everywhere and `execute` permission for the directories (without this they wouldn't be able to access the files in the directory) 
@@ -39,18 +39,14 @@ If the data is hosted in a data project it is possible to ask NCI to create an a
 This is particularly useful where there is more than one user managing the data. If there is only one data manager then having a writer group is redundant as different permissions can be easily set for the `user` and the `group`. Writer groups are meant to be used in conjunction with [Access Control List (ACLs)](acls). 
 All the files should be owned by the project group with `read` and `execute` (at least for folders) permissions. The ACLs are then used to give `write` permission only to the writers group.
 
-##
-If not using a writer group, the same approach is possible but giving `write` permission to each manager using their username. This is less ideal as it is more likely to break the ACLs when updating or adding new files.
+If not using a writer group, the same approach is possible but giving `write` permission to each manager using their username. This is less ideal as it is more likely to break the [ACLs](acls) when updating or adding new files.
 
-  caveats with ACLs - what breaks them and when do they break?
-
-On CSIRO internal resources, access mgmt is governed by windows ACLs - email schelp for advice.
-
+{{{On CSIRO internal resources, access mgmt is governed by windows ACLs - email schelp for advice.}}}
 
 ## Backup
 `gdata` is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a [backup plan](../tech/backup.md). If the files are an authoritative copy it might be worth to back up the data on a separate system. 
-The only option to back up data at NCI is to use to archive the data on the tape system also known as `massdata`.
-....
+The only option to back up data at NCI is to use to archive the data on the tape system also known as `[massdata](massdata)`.
+
 If the dataset are a replica and they can be easily retrieved, or are frequently changing than backing up the data might be redundant.
 
 ## Accounting
