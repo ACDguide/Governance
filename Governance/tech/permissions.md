@@ -37,29 +37,31 @@ drwxrwxrwx   1 pxp581 ua8  512 Sep 13 20:45 worldwriteable/
 
 Most of this section is taken from the [NCI user guide](https://opus.nci.org.au/display/Help/File+Access+Permissions)
 
-In addition to the 9 bits required to store the user, group, and other permissions of a file, there are three kinds of "additional permissions" that are rarely used but are extremely important to understand. The additional permissions are known as the setuid bit, setgid bit, and sticky bit. Each special bit has a different function depending on where it is used:
-
-When the the special bits are used on regular files:
+In addition to the 9 bits required to store the user, group, and other permissions of a file, there are three kinds of "additional permissions" that are rarely used but are extremely important to understand. The additional permissions are known as the `setuid bit`, `setgid bit`, and `sticky bit. Each special bit has a different function depending on where it is used.
 
 **setuid**
 The setuid bit on an executable file means that the file will run as the userid of the file's owner as opposed to the userid of the user executing the file. 
 It is considered as a security hazard and will have no effect when setting the execute bit to `s` in the user owner triad on Gadi.
 
-*setgid*
+**setgid**
 The setgid bit is similar to the setuid bit, but set the permissions for its group owner. It enables a command to be run as the project that owns the file rather than the user's default project. On Gadi, again, for security concerns, it is ignored when set on standard files but it can be used on directories to force new files and directories created inside them to inherit their group ownership.
 
+```{code}
 chmod g+s / g-s 
+```
 
 **sticky bit**
 When a directory has the sticky bit set, its files can be deleted or renamed only by the file owner, directory owner and the root user. The command below shows how the sticky bit can be set.
 
+```{code}
 chmod +t / -t
+```
 
 This is useful when you want to keep writing permissions for anyone in the group but avoid someone accidentally deleting a file they don't own.
 
 **umask**
 The default permission for newly created files is set in the umask value. On Gadi, `umask 022` is the default configuration in the system .bashrc file. User can overwrite it in their own file ~/.bashrc. 
-umask
+
 The command `umask` sets the inverse mask of the default file access permissions. The OS restricts the permissions of newly created files to no more than the defined permissions by the umask value. 
 
 ### What happens when a file is created on Gadi
@@ -72,22 +74,29 @@ Everytime a new file or directory is created the first set of permissions is aut
 - if a file is created by running a program with active setuid and setgid, then they will determine the permissions
 - if the file is in a directory with the `sticky bit` activated then only the file owner, directory owner or root will be able to remove the file, regardless of other permissions.
 
-
 ### Changing permissions
 
-A file/directory owner is the only user that can set and change permissions (aside from a system administrator). 
-To change permissions chmod, to change group chgrp, chown is the command to change file owner but can only be used by a NCI administrator. A request can be made to the NCI helpdesk and both the current and new owner should be cc-ed, occasionally NCI might want also the Lead CI of the project to authorise the transaction. 
+A file/directory owner is the only user that can set and change a file permissions and/or group (aside from a system administrator). 
+Unix commands are:
+* `chmod` To change permissions; 
+* `chgrp` to change group `chgrp`;
+* `chown` to change owner.
+
+```{warning}
+chown can only be used by a NCI system administrator. A request can be made to the NCI helpdesk and both the current and new owner should be cc-ed, occasionally NCI might want also the Lead CI of the project to authorise the transaction. 
+```
+
 In most cases just using the posix permission system is sufficient to handle who can view or write a specific file. The limitations of this system are obvious when there is the need to set different level of permissions for different groups of users. 
 In that case the distinction between `other` and `group` might not be sufficient.
 
 An example of this is when managing a data collection at NCI, by NCI policy only users in the group can view a project files. It is not allowed to have a `other` reading permission at the main project directory level.
 This means that it is not possible to have only a subset of the group users (i.e. the data managers) having writing permission.
-This is whereACLs enter into play, as with ACLs is possible to set permissions for a different group and/or user.
-In the data management context this usually happens by setting a writers group which can be joined by all the managers and that will be assigned writing permission.
+This is where Access Control Lists (ACLs) enter into play, as with ACLs is possible to set permissions for a different group and/or user.
+In the data management context this usually happens by setting a writers group which can be joined by all the managers and then using ACLs to give this group writing permission.
 
 (acls)=
 ## Access Control Lists
-[Access Control Lists](https://en.wikipedia.org/wiki/Access-control_list) (ACLs) are used to impose a finer level of permissions control on files and directories.
+[Access Control Lists](https://www.redhat.com/sysadmin/linux-access-control-lists) (ACLs) are used to impose a finer level of permissions control on files and directories.
 
 ### ACLs cheat sheet
 
@@ -379,7 +388,9 @@ The solution in rsync is to use the --chmod option. From the rsync man page (in 
 To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the --perms option is off and use --chmod=ugo=rwX (which ensures that all non-masked bits get enabled).
 
 
-Reference:
+```{admonition} References
 
-https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/gruenbacher/gruenbacher.pdf
-https://opus.nci.org.au/display/Help/File+Access+Permissions
+1. Andreas Gru ̈nbacher, [POSIX Access Control Lists on Linux](https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/gruenbacher/gruenbacher.pdf)
+2. [NCI user guide](https://opus.nci.org.au/display/Help/File+Access+Permissions)
+3. [RedHat guide to Linux Access Control Lists](https://www.redhat.com/sysadmin/linux-access-control-lists)
+```

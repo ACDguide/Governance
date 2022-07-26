@@ -34,7 +34,7 @@ Backup automated jobs can also fail, so make sure regularly you can access your 
 
 ## What backup options are available?
 
-###University IT services
+### University IT services
 
 Most universities will provide shared storage on their local network that can be used to setup automatic backups. These services are robust and properly managed storage, so they are an excellent choice. You can easily select files from your laptop to backup and is usually fast to retrieve them should you need to. This is also useful if you are switching to a new computer. Check what is already being backed up by your local IT support, they may be backing up some part of their servers by default. For instance, NCI backups user home directories on their servers.
 
