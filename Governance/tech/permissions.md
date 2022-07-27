@@ -271,7 +271,7 @@ If this is run in a directory with ACLs set, all permissions not included in the
 ```
 
 ````{dropdown} **cp**
-`cp` will preserve the same permissions of the original file, but it will change the group depending on the setgid bit of the destination folder.
+`cp` will preserve the permissions of the original file, but it will change the group depending on the setgid bit of the destination folder.
 
 As an example:
 ```{code}
@@ -323,6 +323,8 @@ other::---
 The group changed to ua8 as expected but the original file POSIX permissions are setting a mask to `---` which gets mapped to the ua8_nfs user and the group permissions.
 
 ````
+Finally, in the case the file to copy has ACLs set, running `cp -a` will preserve the permissions in the copy regardless that the destination has or not ACLs set.
+Wuthout the archive flag, the copy will lose all the ACLs and its permissions will be set depending on the directory settings.  
 
 `````{dropdown} **mv**
 Move (mv) behaves as an attribute-preserving copy followed by a deletion (rm), as far as permissions are concerned.
@@ -353,6 +355,7 @@ user::rw-
 group::---
 other::---
 ```
+Finally, in the case the file to move has ACLs set, running `mv` will preserve the permissions regardless that the destination has or not ACLs set.
 
 ```{warning}
 Moving a file across the same file-system means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!
