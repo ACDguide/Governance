@@ -7,8 +7,6 @@ These guidelines are applicable to all levels of data sharing, from peer-to-peer
 If you intend to share your data with colleagues for simple purposes, such as sanity checking and comparisons, some level of provenance and metadata preparation is likely to be useful, so feel free to pick and choose the parts of this book that are relevant for your use case. However, if your data is to be published or shared widely/publicly, it should follow [FAIR principles](concepts/fairer-principles.md)  and meet the minimum set of formatting and metadata recommendations as described in this book.
 
 
-## Chapter index
-
 ### **[Creating climate data](create/create-intro.md)**
 Creating datasets that are fit for publication can be a daunting process, with many technical aspects to consider. This section will outline the ways to ensure that your data meets the broad [FAIR principles](concepts/fairer-principles.md) of data sharing, along with specific requrirements and recommendations for climate-related data that will aid in the use and reproducibility of your data by the Australian, and international, climate community.
 
