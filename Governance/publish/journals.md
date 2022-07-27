@@ -13,7 +13,7 @@ Here is a summary of relevant journal publishers data policies. Please note that
 * [AGU Data Policy](https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Policies/Data-policy)
 
 **Guidelines**
-* [Data guidelines from author resources](https://protect-au.mimecast.com/s/NWWkCJypLjFjl0ylCG62Lv?domain=agu.org)
+* [Data guidelines from author resources](https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors)
 * [COPDESS author guidelines](http://www.copdess.org/enabling-fair-data-project/author-guidelines/)
 
 Some of the AGU journals also have their specific data guidance:
@@ -188,7 +188,7 @@ Specifically for software, some journals will peer review code:
 * Quarterly Journal of the Royal Meteorological Society
 
 **Open data policy**
-* [Rmets Data Policy](https://protect-au.mimecast.com/s/UsmmCWLJ2zfnZlxZczEI_i?domain=rmets.onlinelibrary.wiley.com)
+* [Rmets Data Policy](https://rmets.onlinelibrary.wiley.com/pb-assets/hub-assets/rmets/Policy_on_availability_of_data-1508421522713.pdf)
 
 **Guidelines**
  NA
@@ -242,7 +242,7 @@ This details 4 different levels of data sharing:
 
 The following is an example for Global Change Biology journal, which Mandates data sharing:
 
-  [Global Change Biology data sharing policy](https://protect-au.mimecast.com/s/PnhxCYWL4BsymGgmHx7Uyu?domain=onlinelibrary.wiley.com)
+  [Global Change Biology data sharing policy](https://onlinelibrary.wiley.com/page/journal/13652486/homepage/forauthors.html)
 
 **Guidelines**
 
