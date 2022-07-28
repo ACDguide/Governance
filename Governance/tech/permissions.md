@@ -322,9 +322,10 @@ other::---
 ```
 The group changed to ua8 as expected but the original file POSIX permissions are setting a mask to `---` which gets mapped to the ua8_nfs user and the group permissions.
 
-````
 Finally, in the case the file to copy has ACLs set, running `cp -a` will preserve the permissions in the copy regardless that the destination has or not ACLs set.
-Wuthout the archive flag, the copy will lose all the ACLs and its permissions will be set depending on the directory settings.  
+Without the archive flag, the copy will lose all the ACLs and its permissions will be set depending on the directory settings.  
+
+````
 
 `````{dropdown} **mv**
 Move (mv) behaves as an attribute-preserving copy followed by a deletion (rm), as far as permissions are concerned.
