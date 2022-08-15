@@ -7,7 +7,7 @@ This part covers how to manage the actual files and directories, starting from t
 How to manage downloads depends mostly on how the original data is distributed and on how big the dataset is. Often servers offer more than one option to download the data. 
 It is good practice to always create a dedicated code, as this is also a way to document exactly where the data was downloaded from and how. 
 Even if a dataset is composed of one or few files that could easily be downloaded from a web interface and regular updates are not needed.
-Bash scripts are fine if the downloads are quite simple; in the above example we can retrieve files with a simple `wget` or `curl`. If there is a lot of shuffling of files and directories to do, a bash script can become quickly complicated and unreadable, in these cases a proper coding language should be sued. 
+Bash scripts are fine if the downloads are quite simple; in the above example we can retrieve files with a simple `wget` or `curl`. If there is a lot of shuffling of files and directories to do, a bash script can become quickly complicated and unreadable, in these cases a proper coding language should be used. 
 Python is a good choice for a scripting language as it has lots of modules that can help with downloads, for example:
    * ftplib - to handle FTP servers
    * requests - to handle HTTP, FTP requests including authentication
