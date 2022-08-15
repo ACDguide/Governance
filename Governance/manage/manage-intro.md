@@ -1,6 +1,6 @@
 # Guidelines to manage climate dataset
 
-These guidelines are aimed to data custodians and cover all aspects of managing an authoritative or a replicated dataset on a local server.
+These guidelines are aimed to address data custodians and cover all aspects of managing an authoritative or a replicated dataset on a local server.
 These guidelines are NCI based as this is where most of Australian climate data is hosted. Hopefully the advice given here can still be extrapolated to other platforms. 
 
 **Index**
