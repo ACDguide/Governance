@@ -1,6 +1,6 @@
 # File handling
 
-This part covers how to manage the actual files and directories, starting from the download process. It applies mostly to replicated datasets, how to name and organise the files of a new dataset is covered already in the [Creating dataset guidelines](../create/create-intro.md). 
+This part covers how to manage the actual files and directories, starting from the download process, and applies mostly to replicated datasets. A description of how to name and organise the files of a new dataset is covered in the section [Creating dataset guidelines](../create/create-intro.md). 
 
 ## Managing downloads
 
