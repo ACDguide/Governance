@@ -41,7 +41,7 @@ All the files should be owned by the project group with `read` and `execute` (at
 
 If not using a writer group, the same approach is possible but giving `write` permission to each manager using their username. This is less ideal as it is more likely to break the [ACLs](acls) when updating or adding new files.
 
-{{{On CSIRO internal resources, access mgmt is governed by windows ACLs - email schelp for advice.}}}
+{{{On CSIRO internal resources, access mgmt is governed by windows ACLs - email help for advice.}}}
 
 ## Backup
 `gdata` is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a [backup plan](../tech/backup.md). If the files are an authoritative copy it might be worth to back up the data on a separate system. 
