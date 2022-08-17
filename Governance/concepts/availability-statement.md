@@ -2,7 +2,7 @@
 
 A Data Availability Statement is a brief document which details where supporting data are available, and how the data can be accessed and reused. It should list specific restrictions, if any. If the data underlying the study cannot be made available or reused, the Data Availability Statement should describe as completely as possible the process needed to reproduce the results of the study.
 
-A Data Availability Statement is usually required for a journal publication; however, the same concept is very useful at the completion of a project, or your PhD thesis, especially if you are leaving your institution. In such a case is a good idea to also indicate what data will be still available on the local server, how can be accessed who will be managing from now on and where more detailed information on this data, as a [data management plan](dmp.md), is available.
+A Data Availability Statement is usually required for a journal publication; however, the same concept is very useful at the completion of a project, or your PhD thesis, especially if you are leaving your institution. In such a case is a good idea to also indicate what data will be still available on the local server, how can be accessed, who will be managing from now on, and where to find more detailed information on this data, as a [data management plan](dmp.md).
 
 This statement is different from a published data paper which usually includes a lot more information and refers to a specific dataset. A Data Availability Statement includes only how to access the data, but it refers to all the datasets used in the study.
 
