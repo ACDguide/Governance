@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File handling &#8212; Climate Data Guidelines</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Updates to replicated data" href="manage-update-rep.html" />
+    <link rel="prev" title="Project management" href="manage-project.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating climate data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-intro.html">
+   Guidelines to create a climate dataset
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Publishing climate data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/publish-intro.html">
+   Guidelines to publish climate data
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../publish/publish-options.html">
+   Publishing options
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
+     Publishing climate data with NCI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-esgf.html">
+     ESGF publishing procedure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-csiro-dap.html">
+     CSIRO Data Access Portal (DAP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-zenodo.html">
+     Publishing with Zenodo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/publish-examples.html">
+   Best Practice Published Data Records
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/journals.html">
+   Journal publishers data policies
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Managing datasets
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="manage-intro.html">
+   Guidelines to manage climate dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="manage-project.html">
+   Project management
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   File handling
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="manage-update-rep.html">
+     Updates to replicated data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="manage-update-pub.html">
+     Updates to published data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="manage-docs.html">
+   Documentation and provenance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="manage-ausref.html">
+   Australian Community Reference Climate Data Collection @ NCI
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Retiring datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-intro.html">
+   Guidelines to manage the retirement of a dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-principles.html">
+   General principles of data retirement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-published.html">
+   Use case: published data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-replica.html">
+   Use case: replicated data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-unpublished.html">
+   Use case: unpublished data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-references.html">
+   Further information
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About us
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/working-group-governance.html">
+   Working Group Governance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/goals.html">
+   Working Group Goals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/how-to-contribute.html">
+   Guidelines for contributors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../concepts/concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/fairer-principles.html">
+     FAIR(ER) Principles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/provenance.html">
+     Provenance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/dmp.html">
+     Data Management Plan
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/availability-statement.html">
+     Data availability statement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/license.html">
+     Open Access License
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-data.html">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/journal.html">
+     Journal requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../tech/tech-intro.html">
+   Technical tips
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/backup.html">
+     Backup strategy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/backup-checklist.html">
+     Backup checklist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/conventions.html">
+     Applying conventions to your files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/data_formats.html">
+     Data formats
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../tech/drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../tech/filenames.html">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/massdata.html">
+     Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/permissions.html">
+     File permissions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/versioning.html">
+     Versioning
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/appendix-intro.html">
+   Supplemental material
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/acronyms.html">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/forcodes.html">
+     ANZSRC Field of Research (FoR) codes 2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/zenodo.html">
+     Step by step Zenodo guide
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/manage/manage-file.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fmanage/manage-file.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/manage/manage-file.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-downloads">
+   Managing downloads
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-and-directory-organisation">
+   File and directory organisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naming-files">
+     Naming files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directory-organisation">
+     Directory organisation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>File handling</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#managing-downloads">
+   Managing downloads
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-and-directory-organisation">
+   File and directory organisation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#naming-files">
+     Naming files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directory-organisation">
+     Directory organisation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="file-handling">
+<h1>File handling<a class="headerlink" href="#file-handling" title="Permalink to this headline">¶</a></h1>
+<p>This part covers how to manage the actual files and directories, starting from the download process, and applies mostly to replicated datasets. A description of how to name and organise the files of a new dataset is covered in the section <a class="reference internal" href="../create/create-intro.html"><span class="doc std std-doc">Creating dataset guidelines</span></a>.</p>
+<div class="section" id="managing-downloads">
+<h2>Managing downloads<a class="headerlink" href="#managing-downloads" title="Permalink to this headline">¶</a></h2>
+<p>How to manage downloads depends mostly on how the original data is distributed and on how big the dataset is. Often servers offer more than one option to download the data.
+It is good practice to always create a dedicated code, as this is also a way to document exactly where the data was downloaded from and how.
+Even if a dataset is composed of one or few files that could easily be downloaded from a web interface and regular updates are not needed.
+Bash scripts are fine if the downloads are quite simple; in the above example we can retrieve files with a simple <code class="docutils literal notranslate"><span class="pre">wget</span></code> or <code class="docutils literal notranslate"><span class="pre">curl</span></code>. If there is a lot of shuffling of files and directories to do, a bash script can become quickly complicated and unreadable, in these cases a proper coding language should be used.
+Python is a good choice for a scripting language as it has lots of modules that can help with downloads, for example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ftplib</span></code> - to handle FTP servers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code> - to handle HTTP, FTP requests including authentication</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BeautifulSoup</span></code> - to scrape webpages</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">os</span></code> and <code class="docutils literal notranslate"><span class="pre">sys</span></code> - to interact with the file system</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logging</span></code> - to create logs with different levels of severity</p></li>
+<li><p>data structure like dictionaries that help mapping terms</p></li>
+</ul>
+<p>A good code should:</p>
+<ul class="simple">
+<li><p>be efficient</p></li>
+<li><p>be flexible enough to adapt easily to different versions or subsets of the same data</p></li>
+<li><p>log a list of files that were downloaded, updated or that presented errors</p></li>
+<li><p>if authentication is needed, passwords should be loaded from an environment variable or passed as an argument and not hardcoded</p></li>
+<li><p>depending on the dataset, it should include a way to check if a file needs updating. This can be achieved by checking the local and remote last modified date and/or checksum, depending on what information the remote server shares. If it is not possible to get either of these from the remote server than it is useful to create a file listing them as they are locally after the first download. This can then be used as reference.</p></li>
+</ul>
+<p>Finally, some servers offer APIs or can generate a code based on a specific request. While these are usually not sufficient to handle the full download, they provide a useful starting point.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Always have the code under version control!</p>
+</div>
+</div>
+<div class="section" id="file-and-directory-organisation">
+<h2>File and directory organisation<a class="headerlink" href="#file-and-directory-organisation" title="Permalink to this headline">¶</a></h2>
+<p>While all the generic advice on <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">how to organise and name files</span></a> is still applicable, when replicating a dataset it is important to also consider the original data organisation.</p>
+<div class="section" id="naming-files">
+<h3>Naming files<a class="headerlink" href="#naming-files" title="Permalink to this headline">¶</a></h3>
+<p>In most cases there is no need, and in fact it is not a good idea, to rename the files. The only exception is for datasets that are downloaded “by request”, an example of these is the ERA5 reanalysis distributed by the Copernicus Climate Data Store, this data exists on the remote server as a <code class="docutils literal notranslate"><span class="pre">cube</span></code> that can be sliced by submitting a request via their API. The resulting file will have a randomly generated name, or a name specified by the user in the request.
+In such case it is useful to use the API syntax, as variable, resolution, data product and other characteristics will be defined in the API by a DRS.</p>
+</div>
+<div class="section" id="directory-organisation">
+<h3>Directory organisation<a class="headerlink" href="#directory-organisation" title="Permalink to this headline">¶</a></h3>
+<p>Similarly, if the original data is organised in directories already, the first choice should be to replicate this structure. This will make it easier to run future updates and compare what is available remotely and locally.
+However, there are some exceptions when it is sensible to modify or adopt a different directory structure.</p>
+<ul class="simple">
+<li><p>one obvious case is the one illustrated above where a directory structure doesn’t exist to start with</p></li>
+<li><p>if the data distributors dumped all the files in one directory depending on the number of files and their homogeneity it might be useful to subset them, for example by year or by variable.</p></li>
+<li><p>some datasets are updated daily, often big collections of satellite data or observations follow this pattern. In such cases the files often include only one or few timesteps, resulting in a huge number of files which make accessing the data inefficient. Then it is reasonable to concatenate the files in daily or monthly units.</p></li>
+<li><p>it is also important to consider how the data will be accessed or used locally. If it will be mostly accessed following an established workflow then it is sensible to adapt the directory structure to this workflow. On the contrary if a flexible access option is available to the users, i.e., a database or catalogue such as Intake that made the exact location of the files redundant, it might be advantageous to follow the original data directory structure as closely as possible.</p></li>
+</ul>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./manage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="manage-project.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Project management</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="manage-update-rep.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Updates to replicated data</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By ACD Working Group<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
