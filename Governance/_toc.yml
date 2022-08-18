@@ -18,9 +18,16 @@ parts:
       - file: publish/publish-zenodo
     - file: publish/publish-examples
     - file: publish/journals.md
-  - caption: Updating datasets
+  - caption: Managing datasets
     chapters:
-    - file: update/update-intro
+    - file: manage/manage-intro
+    - file: manage/manage-project
+    - file: manage/manage-file
+      sections:
+      - file: manage/manage-update-rep
+      - file: manage/manage-update-pub
+    - file: manage/manage-docs
+    - file: manage/manage-ausref
   - caption: Retiring datasets
     chapters:
     - file: retire/retire-intro
@@ -39,41 +46,49 @@ parts:
     chapters:
     - file: concepts/concept-intro.md
       sections:
-      - file: concepts/fairer-principles.md
-      - file: concepts/collaboration-agreement.md 
-      - file: concepts/controlled-vocab.md
-      - file: concepts/conventions.md
+      - file: concepts/fairer-principles
+      - file: concepts/provenance
+      - file: concepts/dmp
+      - file: concepts/collaboration-agreement 
+      - file: concepts/availability-statement 
+      - file: concepts/controlled-vocab
+      - file: concepts/conventions
         sections:
-        - file: concepts/cf-conventions.md
-        - file: concepts/acdd-conventions.md
-        - file: concepts/other-conventions.md
+        - file: concepts/cf-conventions
+        - file: concepts/acdd-conventions
+        - file: concepts/other-conventions
           title: Other conventions
-      - file: concepts/license.md
+      - file: concepts/license
         sections:
-        - file: concepts/license-data.md
-        - file: concepts/license-code.md
-        - file: concepts/license-qa.md
-        - file: concepts/license-institution.md
-      - file: concepts/pids.md
-      - file: concepts/policies.md
+        - file: concepts/license-data
+        - file: concepts/license-code
+        - file: concepts/license-qa
+        - file: concepts/license-institution
+      - file: concepts/pids
+      - file: concepts/policies
         sections:
-        - file: concepts/policy-conduct.md
-        - file: concepts/policy-arc.md
-        - file: concepts/policy-bom.md
+        - file: concepts/policy-conduct
+        - file: concepts/policy-arc
+        - file: concepts/policy-bom
         - file: concepts/policy-clex.md
-        - file: concepts/policy-csiro.md
-      - file: concepts/journal.md
+        - file: concepts/policy-csiro
+      - file: concepts/journal
   - caption: Technical guide 
     maxdepth: 1
     chapters:
-    - file: tech/tech-intro.md
+    - file: tech/tech-intro
       sections:
-      - file: tech/conventions.md
-      - file: tech/drs.md
+      - file: tech/backup
+      - file: tech/backup-checklist
+      - file: tech/conventions
+      - file: tech/data_formats
+      - file: tech/drs
         sections:
-        - file: tech/filenames.md
-      - file: tech/keywords.md
-      - file: tech/versioning.md
+        - file: tech/filenames
+      - file: tech/keywords
+      - file: tech/massdata
+      - file: tech/permissions
+      - file: tech/versioning
   - caption: Appendix 
     chapters:
     - file: appendix/appendix-intro.md
