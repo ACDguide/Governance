@@ -1,38 +1,29 @@
-# Applying conventions to your files
+useful summary: https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.9.html
+# Writing valid and compliants netCDF files
 
+This page covers the basic netCDF structure and the application of the CF and ACDD conventions to netCDF files. Not all the rules are listed here, this is just a summary of the most common ones, for a complete overview of both conventions refer to their official documentation (see references).
 
 ## Naming conventions
 
+There are no recognised vocabularies for files and variable names, however the ESGF created their own [variable definition tables](https://github.com/PCMDI/cmip6-cmor-tables/tree/master/Tables) for the CMIP output and this is often used by other projects.
+The CF conventions only have some basic requirements and recommendations on how to form the names. 
 
-useful summary: https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.9.html
+**Requirements**
 
-NetCDF files are required to have the file name extension ".nc".
+* NetCDF files are required to have the file name extension ".nc".
+* The dimensions of a variable must all have different names.
+* If the `external_variables` attribute is used, variables with the same names are not allowed in the file.
 
-There are no recognised naming conventions for variable names, but CMIP projects created their own [naming convention]() and this is often used althought it is not recognised as official outside the ESGF projects.
-The iuse of the standard_name attribute described below is an attempt to remediate to this and make it easier for software developer to identify and treat in a special way dimensions and other common variables.
+**Recommendations**
 
-It is required that CF attributes that take string values must be 1D character arrays or single atomic strings.
+* Variable, dimension and attribute names should begin with a letter and be composed of letters, digits, and underscores.
+* No two variable names should be identical when case is ignored.
+
+
 Requirements:
 
 The external_variables attribute is of string type and contains a blank-separated list of variable names.
 
-No variable named by external_variables is allowed in the file.
-
-Recommendations:
-
-Variable, dimension and attribute names should begin with a letter and be composed of letters, digits, and underscores.
-
-No two variable names should be identical when case is ignored.
-
-Requirements:
-
-The dimensions of a variable must all have different names.
-
-Recommendations:
-
-If any or all of the dimensions of a variable have the interpretations (as given by their units or axis attribute) of time (T), height or depth (Z), latitude (Y), or longitude (X) then those dimensions should appear in the relative order T, then Z, then Y, then X in the CDL definition corresponding to the file.
-
-In files that are meant to conform to the COARDS subset of CF, any dimensions of a variable other than space and time dimensions should be added "to the left" of the space and time dimensions as represented in CDL.
 
 
 ````{warning}
@@ -40,28 +31,41 @@ Attribute names commencing with underscore ('_') are reserved for use by the net
 ````
 
 ## Coordinate system
+A coordinate system is described in netCDF files through the combinations of its dimensions, coordinates and projections.
+A `coordinate variable` is a one-dimensional variable representing the dimension values, they share the name. An `auxiliary coordinate variable` is an additional or alternative coordinate for an axis. Finally a `scalar coordinate variable` is a coordinate with no dimension (i.e., of size one). 
+
+```{dropdown} **dimension**
+A dimension has both a name and a length, which is an arbitrary positive integer. The special value of `UNLIMITED` indicates an unlimited or record dimension. A variable with an unlimited dimension can grow to any length along that dimension.<br>
+A netCDF classic dataset can have at most one unlimited dimension, if present this must be the most significant (slowest changing) one and so also the first dimension in a CDL or other array declarations.<br>
+A netCDF-4 file may have multiple unlimited dimensions, and there are no restrictions on their order.
+```
 
 ```{dropdown} **coordinate variable**
 A coordinate variable is a one-dimensional variable with the same name as a dimension, which names the coordinate values of the dimension.
 * It must not have any missing data (for example, no _FillValue or missing_value attributes) and must be strictly monotonic (values increasing or decreasing). 
-* A two-dimensional variable of type char is a string-valued coordinate variable if it has the same name as its first dimension, e.g.: char time( time, time_len); all of its strings must be unique. A variable's coordinate system is the set of coordinate variables used by the variable. Coordinates that refer to physical space are called spatial coordinates, ones that refer to physical time are called time coordinates, ones that refer to either physical space or time are called spatio\ temporal coordinates.
+* A two-dimensional variable of type char is a string-valued coordinate variable if it has the same name as its first dimension, e.g.: char time( time, time_len); all of its strings must be unique.
 * Make coordinate variables for every dimension possible (except for string length dimensions).
 * Give each coordinate variable at least unit and long_name attributes to document its meaning.
-* Use an existing NetCDF Convention for your coordinate variables, especially to identify spatio-temporal coordinates.
+* Use an existing netCDF Convention for your coordinate variables, especially to identify spatio-temporal coordinates.
 * Use shared dimensions to indicate that two variables use the same coordinates along that dimension. If two variables' dimensions are not related, create separate dimensions for them, even if they happen to have the same length. 
 ```
 
-!!! other type of cocrdinates!!!
-scalar coordinate variable
-A scalar variable (i.e. one with no dimensions) that contains coordinate data. Depending on context, it may be functionally equivalent either to a size-one coordinate variable (Section 5.7, "Scalar Coordinate Variables") or to a size-one auxiliary coordinate variable (Section 6.1, "Labels" and Section 9.2, "Collections, instances, and elements").
-
+The most common dimension and coordinates are `time`, `latitude`, `longitude` and a vertical coordinate (`depth` or `height`). These have a special attribute `axis`:  
 
 **Requirements**
 
+* The only legal values of axis are `X`, `Y`, `Z`, and `T` (case insensitive).
+* The axis attribute must be consistent with the coordinate type deduced from units and positive.
+* The axis attribute is not allowed for auxiliary coordinate variables.
+* A data variable must not have more than one coordinate variable with a particular value of the axis attribute.
+* The only legal values for the `positive` attribute, assciated with the Z axis, are `up` or `down` (case insensitive).
 * The time units of a time coordinate variable must contain a reference time.
 * The reference time of a time coordinate variable must be a legal time in the specified calendar.
 
 **Recommendations**
+
+* If any or all of the dimensions of a variable have the interpretations (as given by their units or axis attribute) of time (T), height or depth (Z), latitude (Y), or longitude (X) then those dimensions should appear in the relative order T, then Z, then Y, then X in the CDL definition corresponding to the file.
+* Any dimensions of a variable other than space and time dimensions should be added "to the left" of the space and time dimensions as represented in CDL.
 
 * The use of a reference time in the year 0 to indicate climatological time is deprecated. This restriction only applies to the real-world calendar as used by the udunits package. For more information on how to describe climatological statistics refer to the [CF documentation](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics).
 
@@ -72,6 +76,27 @@ A scalar variable (i.e. one with no dimensions) that contains coordinate data. D
 The [calendar](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#calendar) attribute defines the calendar used by the time coordinate. In order to calculate a time coordinate value from a date/time, or the reverse, one must know the units attribute of the time coordinate variable (containing the time unit of the coordinate values and the reference date/time) and the calendar.<br>
 The choice of calendar defines the set of dates (year-month-day combinations) which are permitted, and therefore it specifies the number of days between the times of 0:0:0 (midnight) on any two dates. Date/times which are not permitted in a given calendar are prohibited in both the encoded time coordinate values, and in the reference date/time string.
 <br>It is recommended that the calendar be specified by the calendar attribute of the time coordinate variable. 
+Requirements:
+
+The attributes calendar, month_lengths, leap_year, and leap_month may only be attached to time coordinate variables.
+
+The standardized values (case insensitive) of the calendar attribute are standard, gregorian (deprecated), proleptic_gregorian, noleap, 365_day, all_leap, 366_day, 360_day, julian, and none. If the calendar attribute is given a non-standard value, then the attribute month_lengths is required, along with leap_year and leap_month as appropriate.
+
+The type of the month_lengths attribute must be an integer array of size 12.
+
+The values of the leap_month attribute must be in the range 1-12.
+
+The values of the leap_year and leap_month attributes are integer scalars.
+
+Recommendations:
+
+A time coordinate variable should have a calendar attribute.
+
+The value standard should be used instead of gregorian in the calendar attribute.
+
+The attribute leap_month should not appear unless the attribute leap_year is present.
+
+The time coordinate should not cross the date 1582-10-15 when the default mixed Gregorian/Julian calendar is in use.
 ```
 
 ## Variable attributes
@@ -111,11 +136,12 @@ Even so, not all variables can be mapped to a standard_name, while this is a req
 ```
 
 ```{dropdown} **cell_methods** 
-CF -
+**CF - recommended**
+[](http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods)
 ```
 
 ```{dropdown} **missing and valid data** 
-CF -
+**CF - recommended**
 `_FillValue`, `missing_value`, `valid_min`, `valid_max`, and `valid_range` attributes are used to indicate missing data. Missing data is allowed in data variables and auxiliary coordinate variables. Generic applications should treat the data as missing where any auxiliary coordinate variables have missing values; special-purpose applications might be able to make use of the data.<br>
 Missing data is not allowed in coordinate variables.
 The [_FillValue](https://docs.unidata.ucar.edu/netcdf-c/current/attribute_conventions.html#autotoc_md89) attribute specifies the fill value used to pre-fill disk space allocated to the variable, it is then returned when reading values which were never written. 
@@ -124,7 +150,7 @@ If not defined the deafult fill value for the type of the variable is used. Howe
 Note that changing the value of this attibute, won't changed previously 'filled' data automatically.<br>
 If valid_range is specified _FillValue should be outside of this range.
 
-The `missing_value` is not treated in any special way by the NetCDF library, but it may be used by specific applications. The missing_value attribute can be a scalar or vector containing values indicating missing data. These values should all be outside the valid range.<br>
+The `missing_value` is not treated in any special way by the netCDF library, but it may be used by specific applications. The missing_value attribute can be a scalar or vector containing values indicating missing data. These values should all be outside the valid range.<br>
 When scale_factor and add_offset are used, the value(s) of the missing_value attribute should be specified in relation to the packed data, so that missing values can be detected before the scale_factor and add_offset are applied.<br>
 If both missing_value and _FillValue are used, they should have the same value.
 
@@ -140,7 +166,7 @@ CF -
 ```
 
 ```{dropdown} **coverage_content_type**
-ACDD - highly recommended 
+**ACDD - highly recommended** 
 ```
 
 ````{warning}
@@ -148,78 +174,79 @@ In xarray variable attributes are kept across operations depending on the value 
 It is important to be aware of this, as particularly for coordinates, units and cell_methods are easily changed by calculations and often inherited attributes become meaningless or worst can cause issues if not updated. The same can also happen with other softwares.
 ````
 
-Important link:
-https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.8.html
 
 exceptions for boundary and climatology variables
 
 The units level, layer, and sigma_level are deprecated.
 
 ## Global attributes
-Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, as DOI, contact, license and references. 
-While global attributes are the most useful when sharing data, for example to increase discoverability, using some key ones from the start of the file creation is important to keep track of the file history. Often this level of information is neglected when saving data to a file, which can make it hard if not impossible reconstruct the analysis workflow later on with some certainty. Also, as global attributes are preserved during most of analysis operations, output files end up containing a legacy of global attributes from the source file which is usually not anymore relevant to the new data.
+Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, as DOI, contact, license and references.<br>
+While global attributes are the most useful when sharing data, for example to increase discoverability, using some key ones from the start of the file creation is important to keep track of the file history. Often this level of information is neglected when saving data to a file, which can make it hard if not impossible to reconstruct the analysis workflow.<br>
+Also, as global attributes are preserved during most of analysis operations, output files end up containing information from the source file which is usually not anymore relevant to the new data.<br>
 Institution, source, references, and comment can also be assigned to individual variables, in such case the variable version has precedence.
 
-Requirements:
+**Requirements**
 
 The title, history, institution, source, references, and comment attributes are all type string.
 
-```{dropdown} Conventions 
-CF - required
+```{dropdown} **Conventions** 
+**CF - required**
 This attribute simply indicates the conventions applied to the file, as such is one of the few required attributes, as it provides the key to correctly interpret all the other attributes. For CF conventions the expected value is `CF-<version>` for example `CF-1.8`. if more than a convention is applied to the file then they should be provided as a list separated by blank spaces or commas.
 ```
 
-```{dropdown} title 
-CF - highly recommended
+```{dropdown} **title** 
+**CF - highly recommended**
 ```
 
-```{dropdown} institution 
-CF - highly recommended
+```{dropdown} **institution** 
+**CF - highly recommended**
 ```
 
-```{dropdown} source 
-CF - highly recommended
-This attribute indicates the method of production of the original data. It should be as detailed as possible so, for example, if the data is model generated also the version and if applicable details of configuration used should be present. It's often easier if the source of the data is complex to use a link to documentation. While this attributes definition focuses on the `method of production`, often source is also used to list the input data, this is because data is actually the product of analysis performed on an existing dataset. In such a case can also be handy to preserve some of the dataset original global attributes but prefacing them with `source_`, for example `source_license`. Alternatively, as a specific attribute for input data does not exist in conventions, `source_data`, `input`, `input_data`, are often used. CMIP conventions uses `parent_` to indicate properties of parent experiments used to initialise model simulations.   
+```{dropdown} **source** 
+**CF - highly recommended**
+**ACDD - recommended**
+This attribute indicates the method of production of the original data. It should be as detailed as possible so, for example, if the data is model generated also the version and if applicable details of configuration used should be present. It's often easier if the source of the data is complex to use a link to documentation.<br>
+While this attribute's definition focuses on the method, often source is also used to list the input data. If a the file is derived directly form another dataset, it is good practice to preserve some of the dataset original global attributes but prefacing them with `source_`, for example `source_license`. Alternatively, as a specific attribute for input data does not exist in conventions, `source_data`, `input`, `input_data`, are often used. CMIP conventions uses `parent_` to indicate properties of parent experiments used to initialise model simulations.   
 ```
 
-```{dropdown} history 
-CF - highly recommended
+```{dropdown} **history** 
+**CF - highly recommended**
 ```
 
 ```{dropdown} references 
-CF - highly recommended
+**CF - highly recommended**
 ```
 
-```{dropdown} comment 
-CF - highly recommended
+```{dropdown} **comment** 
+**CF - highly recommended**
 this can also be used at variable level
 ```
 
-```{dropdown} summary 
-ACDD - highly recommended
+```{dropdown} **summary** 
+**ACDD - highly recommended**
 ```
 
-```{dropdown} keywords
-ACDD - highly recommended
+```{dropdown} **keywords**
+**ACDD - highly recommended**
 ```
 
-```{dropdown} id 
-ACDD - recommended
+```{dropdown} **id** 
+**ACDD - recommended**
 ```
 
-```{dropdown} license 
-ACDD - recommended
+```{dropdown} **license** 
+**ACDD - recommended**
 ```
 
-```{dropdown}  creator_(name/email/url) 
-ACDD - recommended
+```{dropdown}  **creator_(name/email/url)** 
+**ACDD - recommended**
 ```
 
-```{dropdown} geospatial_<>/time_coverage_<> 
-ACDD - recommended
+```{dropdown} **geospatial_<>/time_coverage_<>** 
+**ACDD - recommended**
 ```
 
-```{dropdown} created_date 
-ACDD - recommended
+```{dropdown} **created_date** 
+**ACDD - recommended**
 ```
 

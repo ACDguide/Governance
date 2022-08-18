@@ -5,8 +5,8 @@ NCI provides web services to publish data and metadata:
 * a [THREDDS Data Server](https://dapds00.nci.org.au/thredds/catalog.html) (TDS) this is a public data repository that provides access to the data. [THREDDS](thredds) offer a variety of protocols, files can be downloaded from here or accessed via the [OPeNDAP protocol](opendap).
 
 ## What data can be published with NCI
-Publishing with NCI is a good option when publishing a big dataset and/or data in NetCDF format. Obvious candidates are outputs of model simulation run on Gadi. 
-THREDDS was developed for NetCDF files, publishing on a THREDDS server means that data is also available by OPeNDAP. This is useful when publishing a big dataset or the data is stored in big files. OPeNDAP allows remote access, a user can subset the data which avoids downloading the entire dataset. OPeNDAP protocol can be used with several analysis software. 
+Publishing with NCI is a good option when publishing a big dataset and/or data in netCDF format. Obvious candidates are outputs of model simulation run on Gadi. 
+THREDDS was developed for netCDF files, publishing on a THREDDS server means that data is also available by OPeNDAP. This is useful when publishing a big dataset or the data is stored in big files. OPeNDAP allows remote access, a user can subset the data which avoids downloading the entire dataset. OPeNDAP protocol can be used with several analysis software. 
 
 ## Generic procedure to publish with NCI
 Currently NCI is in the process of updating their data procedures, their [official documentation](https://opus.nci.org.au/display/NDP/NCI+Data+Collections+and+Publishing) does not yet include a detailed description of the process, so the following information is based on our experiences.
