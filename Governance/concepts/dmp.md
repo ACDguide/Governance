@@ -36,7 +36,7 @@ At this stage a plan can help design the experiment:
 It is also never too early to start to work on your project [provenance](provenance.md):
 
 * applying where possible relevant [metadata conventions](conventions.md) to any data produced, it is easier when done from the first analysis steps rather than having to update the metadata subsequently.
-* adopting a version control for your code
+* adopting version control for your code  !!!COMMENT add reference elsewhere in book or see issue 38
 * building references to data/code sources
 
 **Group**
@@ -48,7 +48,7 @@ A DMP should also include:
 
 * list of researchers responsible for the data and all the interested parties
 * all information previously entered in the DMP should be reviewed to make sure it is still applicable
-* directory structure and filenames should be consistent and follows conventions wherever possible, CF standard should be adopted if not already in use.
+* directory structure and filenames should be consistent and follows conventions wherever possible, CF standard or other relevant standards should be adopted if not already in use.
 * data reduction plan: does all model data need to be saved after analysis?
 * data retention plan: when can data be deleted?
 * [backup strategy](../tech/backup.md)

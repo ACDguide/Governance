@@ -3,7 +3,7 @@
 ARC Centre of Excellence for Climate Extremes: Data strategies
 *Released on 26th of March, 2021*
  
-The [ARC Centre of Excellence for Climate Extremes](https://climateextremes.org.au) (CLEX) is publicly funded. We therefore recognize the expectation that we will publish our data in ways that exceed the requirements of journal publishers, the Australian Research Council and Government. This document aims to establish what we mean by “publish our data”; the capacity to publish all data we create does not exist. We will define seven types of data that would be generated in Climate Extremes science and associate these with a data publishing strategy and priority.
+The [ARC Centre of Excellence for Climate Extremes](https://climateextremes.org.au) (CLEX) is publicly funded. We therefore recognize the expectation that we will publish our data in ways that exceed the requirements of journal publishers, the Australian Research Council and Government. This document aims to establish what we mean by “publish our data”; the capacity to publish all data we create does not exist. We will define eight types of data that would be generated in Climate Extremes science and associate these with a data publishing strategy and priority.
  
 While much of this document focusses on the responsibility of a researcher to make their data freely available, we note that by “publishing” [either the data, or the codes to process the data] a contribution is made by the researcher.
  
@@ -14,7 +14,7 @@ Climate Extremes science generates multiple forms of data. Raw data from models 
  
  
 **Type 1. Data that cannot be re-created**
-This would include observations from satellites, ships, airplanes, flux stations etc. CLEX rarely collects primary data. Where we do it is essential that these data be archived and published. We would aim to publish these data through an existing portal such as those hosted by TERM, IMOS etc, or via international data archives. We note that Type 1 data does not include simulation data. All Type 1 data should preferably be published, and in [Figure 1](fig1) all data of this type are above the threshold requiring publication.
+This would include observations from satellites, ships, airplanes, flux stations etc. CLEX rarely collects primary data. Where we do it is essential that these data be archived and published. We would aim to publish these data through an existing portal such as those hosted by TERN, IMOS etc, or via international data archives. We note that Type 1 data does not include simulation data. All Type 1 data should preferably be published, and in [Figure 1](fig1) all data of this type are above the threshold requiring publication.
  
 
 **Type 2. Data that is expensive to recreate**
@@ -23,7 +23,7 @@ Fully coupled climate models, high resolution ocean models and high resolution a
  
 These data may be of broad interest and should be published openly or may be discipline specific and published to just the specific community. The associated metadata should be sufficiently detailed that the data could be recreated by re-running a model if the need arose.
  
-There is no a priori way to define what data is too expensive to recreate relative to cheaper to recreate relative to storing and publishing. However, simulations with a 0.1oocean model, or ensembles of a coupled climate model are examples of data that is likely too expensive to recreate and should therefore be published if they are of community interest. However, there will be cases where the data is extremely expensive to recreate but it is still cheaper than publishing it hence in [Figure 1](fig1) Type 2 data are sometimes above and sometimes below the threshold.
+There is no a priori way to define what data is too expensive to recreate relative to cheaper to recreate relative to storing and publishing. However, simulations with a 0.1 &deg; ocean model, or ensembles of a coupled climate model are examples of data that is likely too expensive to recreate and should therefore be published if they are of community interest. However, there will be cases where the data is extremely expensive to recreate but it is still cheaper than publishing it hence in [Figure 1](fig1) Type 2 data are sometimes above and sometimes below the threshold.
  
 
 **Type 3. Data generated for a community**

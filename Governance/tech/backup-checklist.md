@@ -52,7 +52,7 @@
 Check regularly logs and that you can actually recover the files!!!
 
 ## Options
-* /home on NCI or other institution server
+* `/home` on NCI or other institution server
     * Limited space
     * Backed up - Institutions will have their own strategies
 * University usually offer backup option on shared drives for data on your laptop

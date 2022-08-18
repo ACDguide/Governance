@@ -1,6 +1,6 @@
 # File permissions
 
-Access to files and directories is controlled by setting permissions, on a UNIX system the base permsssions are set using POSIX and can be extended with Access Control Lists (ACLs). 
+Access to files and directories is controlled by setting permissions, on a UNIX system the base permissions are set using POSIX and can be extended with Access Control Lists (ACLs). 
 
 (posix)=
 ## POSIX
@@ -92,7 +92,7 @@ In most cases just using the POSIX permission system is sufficient to handle who
 In that case the distinction between `other` and `group` might not be sufficient.
 
 An example of this is when managing a data collection at NCI, by NCI policy only users in the group can view a project's files. It is not allowed to have a `other` reading permission at the main project directory level.
-This means that it is not possible to have only a subset of the group users (i.e. the data managers) having writing permission.
+This means that it is not possible to have only a subset of the group users (i.e., the data managers) having writing permission.
 This is where Access Control Lists (ACLs) enter into play, as with ACLs is possible to set permissions for a different group and/or user.
 In the data management context this usually happens by setting a writers group which can be joined by all the managers and then using ACLs to give this group writing permission.
 
@@ -125,9 +125,9 @@ getfacl -d somedir
 ```
 Display the default ACLs for *somedir* only
 
-u for user
-g for group
-o for others as in the usual permissions
+`u` for user
+`g` for group
+`o` for others as in the usual permissions
 
 ```{code}
 getfacl --omit-header somedir
@@ -204,7 +204,7 @@ Restore ACLs directives for *somedir* from the *somedir_acls* file
 ````
 
 ```{warning}
-Only the file/directory owner can change ACLs, as for any other permissions. If a user run this command on a directory containing some files they do not own, they will get a warning like “Operation not permitted”. These warnings can be safely ignored, if there are files that they own, the ACLs will be successfully updated for these.
+Only the file/directory owner can change ACLs, as for any other permissions. If a user runs this command on a directory containing some files they do not own, they will get a warning like “Operation not permitted”. These warnings can be safely ignored, if there are files that they own, the ACLs will be successfully updated for these.
 ```
 
 ### Troubleshooting
@@ -229,12 +229,12 @@ default:group::r-x
 default:mask::rwx
 default:other::r-x
 ```
-The first three lines refer to the normal POSIX permissions, in this case we can see that pxp581 is the owner, ua8 the group and that this directory has setgid (flag: s) set. So any new file in it will belong to ua8 too.
+The first three lines refer to the normal POSIX permissions, in this case we can see that pxp581 is the owner, ua8 the group and that this directory has setgid (flag: s) set. So, any new file in it will belong to ua8 too.
 
 The next 5 lines show the POSIX permissions (user, group and other), a permission for user ua8_nfs to `rwx` set by ACLs and the mask also `rwx`.
 What the `mask` does is to set the upper boundary of what permissions can be.
 It has effect only on the permissions of the group and/or any extended user and group added by ACLs. The mask has no effect on other or the main user permissions.
-However, as the directory has setgid set the directory other permissions act as a mask for the file other permissions. So if a file with write permissions was copied in here, the new file will still have only `r-x` permissions, as the file can't get more permissions on 'other' then what the directory other r-x permissions.
+However, as the directory has setgid set the directory other permissions act as a mask for the file other permissions. So, if a file with write permissions was copied in here, the new file will still have only `r-x` permissions, as the file can't get more permissions on 'other' then what the directory other r-x permissions.
 
 ```{admonition} **Order of operations**
 When a process requests access to a file system object, two steps are performed.
@@ -261,10 +261,10 @@ other::r--
 As some process has set the `mask` to `rw-`, the group will have effectively `r--` instead of `r-x` permissions. And similarly, the groups w40 and hh5_w ACL entry contains permissions that are disabled by the mask entry, so `getfacl` adds a comment that shows the effective set of permissions granted by that entry.<br>
 If we grant again writing permissions to the group using `chmod` the mask will change, and the ACLs will be again effective. The ACLs can be disabled but not altered by `chmod`.
 
-Any commands that sets the `mode parameter` can have unexpected effects on ACLs Aside from `setacls` and `chmod`, these are usually commands used to create, move and copy files. 
+Any command that sets the `mode parameter` can have unexpected effects on ACLs Aside from `setacls` and `chmod`, these are usually commands used to create, move, and copy files. 
 
 ```{dropdown} **mkdir**
-Unless otherwise specified, the mkdir command uses a value of 0777 as the mode parameter to the mkdir system call, which it uses for creating the new directory.
+Unless otherwise specified, the `mkdir` command uses a value of 0777 as the mode parameter to the `mkdir` system call, which it uses for creating the new directory.
 This corresponds to `a+rwx,ug-s,-t`. 
 
 If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable effect because the value 0777 used for the mode parameter represents a full set of permissions.
@@ -335,7 +335,7 @@ mv test.txt /g/data/ua8/.
  test.txt file will retain both permissions and group without need of specifying any mode preserving flag. 
 
 ````{warning}
-So after moving files to a new project it's a good idea to run
+So, after moving files to a new project, it's a good idea to run
 ```{code}
  chgrp <new-project-id>
 ```
@@ -359,7 +359,7 @@ other::---
 Finally, in the case the file to move has ACLs set, running `mv` will preserve the permissions regardless that the destination has or not ACLs set.
 
 ```{warning}
-Moving a file across the same file-system means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!
+Moving a file across the same filesystem means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!
 ```
 `````
 
@@ -391,7 +391,7 @@ This tip is from ref (4).
 ````
 
 ```{dropdown} **touch**
-The touch command passes a mode value of 0666 to the kernel for creating the file. So all classes will have `rw-` permissions and the group and ACLs extended classes will be mapped by a `rw-` mask.
+The touch command passes a mode value of 0666 to the kernel for creating the file. So, all classes will have `rw-` permissions and the group and ACLs extended classes will be mapped by a `rw-` mask.
 ```
 
 ```{warning}

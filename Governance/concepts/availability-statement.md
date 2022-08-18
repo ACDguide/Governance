@@ -7,7 +7,7 @@ A Data Availability Statement is usually required for a journal publication; how
 This statement is different from a published data paper which usually includes a lot more information and refers to a specific dataset. A Data Availability Statement includes only how to access the data, but it refers to all the datasets used in the study.
 
 ## Examples
-We copied here a few examples from the [American Meteorological Society website](https://www.ametsoc.org/index.cfm/ams/publications/author-information/formatting-and-manuscript-components/data-availability-statement-examples/), to show what is usually included. If you are doing this at the end of a project and you are leaving behind data on the local server, make sure someone will be managing it and put all relevant information in a data management plan, then list this too.
+We copied here a few examples from the [American Meteorological Society website](https://www.ametsoc.org/index.cfm/ams/publications/author-information/formatting-and-manuscript-components/data-availability-statement-examples/), to show what is usually included. If you are doing this at the end of a project and you are leaving behind data on the local server, appoint a new data custodian, and put all relevant information in a data management plan, then list this too.
 
 1) Datasets are available in a funder-mandated or public (institutional, general, or subject-specific) repository that assigns persistent identifiers to datasets.
     - Example: “All sea ice concentration data created or used during this study are openly available from the NASA National Snow and Ice Data Center Distributed Active Archive Center at https://doi.org/10.5067/8GQ8LZQVL0VL as cited in Cavalieri et al. (1996).”

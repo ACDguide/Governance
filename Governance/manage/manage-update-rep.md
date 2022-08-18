@@ -16,7 +16,7 @@ NB a form of warning could be in the filenames themselves, some data providers i
 
 ## Data downloaded or updated on request
 
-When replicating data from big data collection as CMIP6 or ERA5 it is usual to download only subsets that local users need, rather than the entire collection which would be too big to host. With this use case is important to have a system to handle the requests and to check for specific updates of the subset already downloaded. For datasets ditributed by the ESGF it is possible to use the python module [synda](https://prodiguer.github.io/synda/). Synda is what NCI is using to manage the CMIP5 and CMIP6 collections and it is an example of a database with an associated code that can create, update, and query the database itself.
+When replicating data from big data collection as CMIP6 or ERA5 it is usual to download only subsets that local users need, rather than the entire collection which would be too big to host. With this use case is important to have a system to handle the requests and to check for specific updates of the subset already downloaded. For datasets ditributed by the ESGF it is possible to use the python module [synda](https://prodiguer.github.io/synda/). Synda is what NCI is using to manage the CMIP5 and CMIP6 collections and it is an example of a database with an associated code that can create, update, and query the database itself. A user can put a request via a google form, their helpdesk or CleF (see below) as described on their [confluence CMIP space](https://opus.nci.org.au/display/CMIP/Data+Download+Request). 
 
 Other examples of this approach are:
 *  [CleF](https://zenodo.org/record/4729030#.Ytdh6C8RqRs) which was built to allow NCI users to query ESGF data; 

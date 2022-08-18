@@ -2,7 +2,7 @@
 
 Provenance, also referred to as lineage, is the documentation of a dataset origin. It includes how the data was collected or generated, which methodologies, instruments and/or software were used for its creation. You could think of it as the data workflow from the start of a project to the point a dataset is published and you have the project final product.
 
-Provenance can be complex, as usually data gets through a lot of steps and re-iterations. Given the nature of research itself, the objectives and methods of your analysis might change various times, you might keep some of the steps and modify others. Which is why having a good provenance is so important for the reproducibility of your research. There are tools available to help recording some of the steps automatically, but ultimately none of them will produce a good provenance record without regular manual intervention. It is not enough to track the changes you also need to know why they happened.  
+Provenance can be complex, as usually data goes through a lot of steps and re-iterations. Given the nature of research itself, the objectives and methods of your analysis might change numerous times, you might keep some of the steps and modify others. Which is why having a good provenance is so important for the reproducibility of your research. There are tools available to help recording some of the steps automatically, but ultimately none of them will produce a good provenance record without regular manual intervention. It is not enough to track the changes you also need to know why they happened.  
 
 **Important things to keep track of are:**
 
