@@ -23,9 +23,9 @@ IMOS] has very specific extensions of the CF conventions for different kind of o
 * [NCAR-RAF Conventions for Aircraft Data](http://www.eol.ucar.edu/raf/Software/netCDF.html)
 
 ## Other 
-* [AMBER Trajectory Conventions](http://ambermd.org/netcdf/nctraj.xhtml) for molecular dynamics simulations.
-* [CF Discrete Sampling Geometries Conventions](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries) - CF for observational and point data 
-* [COMODO](https://web.archive.org/web/20160417032300/http://pycomodo.forge.imag.fr/norm.html) ??? still used?
 * [UGRID Conventions](http://ugrid-conventions.github.io/ugrid-conventions/) for unstructured (e.g. triangular, hex) grids. 
 * [SGRID Conventions](http://sgrid.github.io/sgrid/) for staggered, structured (e.g. ROMS, WRF) grids 
 * [UNIDATA netCDF conventions lists](https://www.unidata.ucar.edu/software/netcdf/conventions.html) - including COARDS and other older conventions
+* [AMBER Trajectory Conventions](http://ambermd.org/netcdf/nctraj.xhtml) for molecular dynamics simulations.
+* [CF Discrete Sampling Geometries Conventions](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries) - CF for observational and point data 
+* [COMODO](https://web.archive.org/web/20160417032300/http://pycomodo.forge.imag.fr/norm.html) ??? still used?

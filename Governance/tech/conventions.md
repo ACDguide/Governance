@@ -1,7 +1,13 @@
-useful summary: https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.9.html
-# Writing valid and compliants netCDF files
+# Writing valid and compliant netCDF files
 
 This page covers the basic netCDF structure and the application of the CF and ACDD conventions to netCDF files. Not all the rules are listed here, this is just a summary of the most common ones, for a complete overview of both conventions refer to their official documentation (see references).
+This summary is meant to help setting variables and attributes correctly at file creation, for existing files a CF checker tool can be used. We cover some available tools in the [next page](cf-checker.md).
+
+```{warning}
+While CF checkers programs are useful for a quick assessment of a file, it is important to remember that:
+* None of them can check all the requirements and recommendations, they might miss rules for attributes which are used less often or ones that are too complex to code.
+* A file might satisfy all the rules but have incorrect information, i.e., all variables have units defined, but some of them are incorrect
+```
 
 ## Naming conventions
 
@@ -10,7 +16,7 @@ The CF conventions only have some basic requirements and recommendations on how 
 
 **Requirements**
 
-* NetCDF files are required to have the file name extension ".nc".
+* NetCDF files are required to have the file name extension `.nc`.
 * The dimensions of a variable must all have different names.
 * If the `external_variables` attribute is used, variables with the same names are not allowed in the file.
 
@@ -23,7 +29,6 @@ The CF conventions only have some basic requirements and recommendations on how 
 Requirements:
 
 The external_variables attribute is of string type and contains a blank-separated list of variable names.
-
 
 
 ````{warning}
@@ -67,7 +72,7 @@ The most common dimensions and coordinates are `time`, `latitude`, `longitude` a
 
 ### Time coordinate
 
-The time coordinate is defined by the `units` and the `calendar` attributes. The standard time definition doesn't work for climatological statistics, as a calendar year, month and day of the year are not welld efined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the [CF documentation](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics).
+The time coordinate is well defined by the `units` and the `calendar` attributes. The standard time definition doesn't work for climatological statistics, as a calendar year, month and day of the year are not welld efined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the [CF documentation](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics).
 
 **Requirements**
 * The time units of a time coordinate variable must contain a reference time.
@@ -77,7 +82,7 @@ The time coordinate is defined by the `units` and the `calendar` attributes. The
 
 * A time coordinate variable should have a calendar attribute.
 * The use of a reference time in the year 0 to indicate climatological time is deprecated. 
-* Year and month should not be used as units, because of the potential for mistakes and confusion.
+* Year and month should not be used as `units`, because of the potential for mistakes and confusion.
 
 ```{warning}
 CF standards follows UDUNITS definition of a year to be exactly 365.242198781 days, and a month to be exactly year/12. These are different from a calendar year and a calendar month.
@@ -85,21 +90,21 @@ CF standards follows UDUNITS definition of a year to be exactly 365.242198781 da
 
 ```{dropdown} **calendar** 
 **CF - recommended**<br>
-The [calendar](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#calendar) attribute defines the calendar used by the time coordinate. In order to calculate a time coordinate value from a date/time, or the reverse, one must know the units attribute of the time coordinate variable (containing the time unit of the coordinate values and the reference date/time) and the calendar.<br>
+The [calendar](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#calendar) attribute defines the calendar used by the time coordinate. In order to calculate a time coordinate value from a date/time, or the reverse, one must know the `units` attribute of the time coordinate variable (containing the time unit of the coordinate values and the reference date/time) and the calendar.<br>
 The choice of calendar defines the set of dates (year-month-day combinations) which are permitted, and therefore it specifies the number of days between the times of 0:0:0 (midnight) on any two dates. Date/times which are not permitted in a given calendar are prohibited in both the encoded time coordinate values, and in the reference date/time string.<br>
 
 **Requirements**
 
 * The attributes calendar, month_lengths, leap_year, and leap_month may only be attached to time coordinate variables.
-* The standardized values (case insensitive) of the calendar attribute are standard, gregorian (deprecated), proleptic_gregorian, noleap, 365_day, all_leap, 366_day, 360_day, julian, and none. If the calendar attribute is given a non-standard value, then the attribute month_lengths is required, along with leap_year and leap_month as appropriate.
-* The type of the month_lengths attribute must be an integer array of size 12.
-* The values of the leap_month attribute must be in the range 1-12.
-* The values of the leap_year and leap_month attributes are integer scalars.
+* The standardized values (case insensitive) of the calendar attribute are `standard`, `gregorian` (deprecated), `proleptic_gregorian`, `noleap`, `365_day`, `all_leap`, `366_day`, `360_day`, `julian`, and `none`. 
+* If the calendar attribute is given a non-standard value, then the attribute `month_lengths` is required, along with `leap_year` and `leap_month` as appropriate.
+* The type of the `month_lengths` attribute must be an integer array of size 12.
+* The values of the `leap_month` attribute must be an integer in the range 1-12.
 
 **Recommendations**
 
-* The value standard should be used instead of gregorian in the calendar attribute.
-* The attribute leap_month should not appear unless the attribute leap_year is present.
+* The value `standard` should be used instead of `gregorian` in the calendar attribute.
+* The attribute `leap_month` should not appear unless the attribute `leap_year` is present.
 * The time coordinate should not cross the date 1582-10-15 when the default mixed Gregorian/Julian calendar is in use.
 ```
 
@@ -110,17 +115,17 @@ Here we are covering only the ones we believe are more critical. It is also wort
 
 ````{dropdown} **units** 
 **CF - required**<br>
-Units are essential for all variables representing dimensional quantities.
-This is especially true for dimensions as latitude, longitude, and time coordinates which the netCDF library identifies solely by the value of their units attribute. This identification uses the [UDUNITS package](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#UDUNITS).<br> 
-Vertical coordinates with units of pressure may also be identified by the units attribute. Other vertical coordinates must use the attribute positive which determines whether the direction of increasing coordinate value is up or down. <br>
-CF provides the optional attribute axis for a direct identification of coordinates that correspond to latitude, longitude, vertical, or time axes.<br>
+The attribute [`units`](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#units) is essential for all variables representing dimensional quantities.
+This is especially true for dimensions as latitude, longitude, and time coordinates which the netCDF library identifies solely by the value of their `units` attribute. This identification uses the [UDUNITS package](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#UDUNITS).<br> 
+Vertical coordinates with units of pressure may also be identified by the `units` attribute. Other vertical coordinates must use the attribute positive which determines whether the direction of increasing coordinate value is `up` or `down`. <br>
+CF provides the optional attribute `axis` for a direct identification of coordinates that correspond to latitude, longitude, vertical, or time axes.<br>
 
 **Requirements**
-* The value of the units attribute is a string from the UDUNITS library
-* If the variable is adimensional: percentage, 0-1, etc then the official units is always "1".
+* The value of the `units` attribute is a string from the UDUNITS library
+* If the variable is adimensional: percentage, 0-1, etc then the official value for `units` is always `1`.
 
 **Recommendations**
-* The units level, layer, and sigma_level are allowed for backwards compatibility with COARDS but they are deprecated and shouldn't be used for new files, as dimensionless vertical coordinates do not require a units attribute.
+* The units `level`, `layer`, and `sigma_level` are allowed for backwards compatibility with COARDS but they are deprecated and shouldn't be used for new files, as dimensionless vertical coordinates do not require a `units` attribute.
 
 ```{admonition} Tip
 NCICS provides an online [UDUNITS2 database](https://ncics.org/portfolio/other-resources/udunits2/) including full list of all units and prefixes by name and symbol. 
@@ -132,7 +137,7 @@ NCICS provides an online [UDUNITS2 database](https://ncics.org/portfolio/other-r
 The [long_name](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#long-name) attribute provides a description of the variable. Either long_name or standard_name is expected to be present ideally, they both are.<br>
 Standard_names are designed to described the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
 Long_name provides a chance to give a more complete description of the variable, highlighting aspects that cannot be specified in other attributes.
-For example, adimensional variables have "1" as units. Long_name can be used to specify what kind of adimensional units: percentage, 0-1, ppm etc.<br>
+For example, adimensional variables have `1` as units. Long_name can be used to specify what kind of adimensional units: percentage, 0-1, ppm etc.<br>
 Long_name is also often used to label plots.
 ```
 
@@ -150,7 +155,8 @@ It was introduced to provide an objective definition of a variable. The `long_na
 * The variable definition can be further clarified using [modifiers](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#standard-name-modifiers), modifications due to common statistical operations are expressed via the cell_methods attribute.<br>
 
 ```{warning}
-Even so, not all variables can be mapped to a standard_name, while this is a required attribute for the CF conventions, it should be left out if not existing. Empty strings are not valid.
+NEVER MAKE UP YOUR OWN STANDARD NAME!!! If it's not defined for your variable you must not use this metadata attribute.
+Empty strings are not valid.
 ```
 
 ````
@@ -174,10 +180,10 @@ For example, a precipitation rate could be instantaneous (intensive) or a mean v
 
 ```{dropdown} **missing and valid data** 
 **CF - recommended**<br>
-[`_FillValue`, `missing_value`, `valid_min`, `valid_max`, and `valid_range`](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#missing-data) attributes are used to indicate missing data. Missing data is allowed in data variables and auxiliary coordinate variables. Generic applications should treat the data as missing where any auxiliary coordinate variables have missing values; special-purpose applications might be able to make use of the data.<br>
+[`_FillValue`, `missing_value`, `valid_min`, `valid_max`, and `valid_range`](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#missing-data) attributes are used to indicate missing data. Missing data is allowed in data variables and auxiliary coordinate variables. Generic applications should treat the data as missing where any auxiliary coordinate variables have missing values; it's very important to define this value so that NaNs are properly interpreted by as many tools as possible.<br>
 Missing data is not allowed in coordinate variables.<br>
 
-**-FillValue**<br>
+**_FillValue**<br>
 The [`_FillValue`](https://docs.unidata.ucar.edu/netcdf-c/current/attribute_conventions.html#autotoc_md89) attribute specifies the fill value used to pre-fill disk space allocated to the variable, it is then returned when reading values which were never written. 
 If `_FillValue` is defined then it should be scalar and of the same type as the variable. If the variable is packed using scale_factor and add_offset attributes, the _FillValue attribute should have the data type of the packed data.<br>
 If not defined the deafult fill value for the type of the variable is used. However, use of the default fill value for data type byte is not recommended.<br>
@@ -195,7 +201,7 @@ If the variable is packed, the elements of the actual_range should be defined ba
 If the data is all missing or invalid, the actual_range attribute cannot be used.
 
 **valid_range, valid_min, valid_max**<br>
-The `valid_range` attribute is mutually exclusive with `valid_min` and `valid_max` attributes. If none of them is defined software applications will use `_Fill_value` and the variable type to try to determine a valid range.
+The `valid_range` attribute is mutually exclusive with `valid_min` and `valid_max` attributes. If none of them is defined software applications will use `_FillValue` and the variable type to try to determine a valid range.
 ```
 
 ```{dropdown} **ancillary data**
@@ -211,6 +217,7 @@ In xarray variable attributes are kept across operations depending on the value 
 It is important to be aware of this, as particularly for coordinates, units and cell_methods are easily changed by calculations and often inherited attributes become meaningless or worst can cause issues if not updated. The same can also happen with other softwares.
 ````
 
+There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their [wiki](http://climate-cms.wikis.unsw.edu.au/CF_checker).  
 
 ## Global attributes
 Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, as DOI, contact, license and references.<br>
@@ -273,17 +280,17 @@ this can also be used at variable level
 **ACDD - recommended**
 ```
 
-```{dropdown}  **creator_(name/email/url)** 
+```{dropdown}  **creator_(name/ email/ url)** 
 **ACDD - recommended**
 Respectively, the name, email and a web address (if available) of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.
 ```
 
-```{dropdown}  **publisher_(name/email/url)** 
+```{dropdown}  **publisher_(name/ email/ url)** 
 **ACDD - recommended**
 The name of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.
 
 ```
-```{dropdown} **geospatial_<>/time_coverage_<>** 
+```{dropdown} **geospatial_<> / time_coverage_<>** 
 **ACDD - recommended**
 ```
 
@@ -292,4 +299,7 @@ The name of the person (or other entity specified by the publisher_type attribut
 The date on which this version of the data was created.
 The ISO 8601:2004 extended date format is recommended add example
 ```
+
+**References**<br>
+A useful summarised version of [requirements and recommendations](https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.9.html) for CF conventions.
 

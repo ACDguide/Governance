@@ -81,6 +81,7 @@ parts:
       - file: tech/backup
       - file: tech/backup-checklist
       - file: tech/conventions
+      - file: tech/cf-checker
       - file: tech/data_formats
       - file: tech/drs
         sections:
