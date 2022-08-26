@@ -453,7 +453,12 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/conventions.html">
-     Applying conventions to your files
+     Writing valid and compliant netCDF files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/cf-checker.html">
+     CF compliance checkers
     </a>
    </li>
    <li class="toctree-l2">
@@ -643,7 +648,7 @@
                 
   <div class="section" id="best-practice-published-data-records">
 <h1>Best Practice Published Data Records<a class="headerlink" href="#best-practice-published-data-records" title="Permalink to this headline">¶</a></h1>
-<p>The climate community is in better position with respect to best practice data management than many other groups due to the self-describing data format of <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF</a> and community modelling projects such as <a class="reference external" href="https://www.wcrp-climate.org/wgcm-cmip">CMIP</a>/<a class="reference external" href="https://cordex.org/">CORDEX</a>/<a class="reference external" href="https://pcmdi.github.io/obs4MIPs/">Obs4MIPS</a> enforcing a strict standard. There are lots of climate-tools in wide use across the community that make use of this fact, including modifying the history attribute to document what was done to the data.</p>
+<p>The climate community is in better position with respect to best practice data management than many other groups due to the self-describing data format of <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a> and community modelling projects such as <a class="reference external" href="https://www.wcrp-climate.org/wgcm-cmip">CMIP</a>/<a class="reference external" href="https://cordex.org/">CORDEX</a>/<a class="reference external" href="https://pcmdi.github.io/obs4MIPs/">Obs4MIPS</a> enforcing a strict standard. There are lots of climate-tools in wide use across the community that make use of this fact, including modifying the history attribute to document what was done to the data.</p>
 <p><strong>What does best practice look like?</strong> Certainly, it <em>does</em> look like including all metadata, ensuring data is <a class="reference external" href="https://www.go-fair.org/fair-principles/">FAIR</a>/<a class="reference external" href="https://acdguide.github.io/Governance/concepts/fairer-principles.html">FAIRER</a> <a class="footnote-reference brackets" href="#id2" id="id1">1</a>, documenting data processing and publishing that as well, undertaking QA/QC and documenting the process.</p>
 <p>It is near impossible to get all this right and even with strict standards like CMIP/CORDEX we still find mistakes in the metadata due to the complexity of the standards. We will never get this perfect but aim for a best effort and as our tooling (software/workflows) improve over time so will our compliance.</p>
 <p>How do we walk the line between showing people what their data should look like, and not putting them off from making any effort at all by suggesting they have to get it perfect?</p>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Naming &#8212; Climate Data Guidelines</title>
+    <title>CF compliance checkers &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Choosing keywords" href="keywords.html" />
-    <link rel="prev" title="Choosing a directory structure (DRS) and filenames" href="drs.html" />
+    <link rel="next" title="Data formats" href="data_formats.html" />
+    <link rel="prev" title="Writing valid and compliant netCDF files" href="conventions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -456,8 +456,8 @@
      Writing valid and compliant netCDF files
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cf-checker.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      CF compliance checkers
     </a>
    </li>
@@ -466,18 +466,18 @@
      Data formats
     </a>
    </li>
-   <li class="toctree-l2 current active has-children">
+   <li class="toctree-l2 has-children">
     <a class="reference internal" href="drs.html">
      Choosing a directory structure (DRS) and filenames
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="filenames.html">
        Naming
       </a>
      </li>
@@ -585,7 +585,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tech/filenames.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/tech/cf-checker.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -605,10 +605,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/filenames.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/cf-checker.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/filenames.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/cf-checker.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -633,19 +633,14 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Naming
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-ioos-at-nci">
+   Running IOOS at NCI
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-machine-readable-files">
-   Tips for machine-readable files
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#online-resources">
-     Online Resources
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-multiple-files">
+     Checking multiple files
     </a>
    </li>
   </ul>
@@ -660,7 +655,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Naming</h1>
+                <h1>CF compliance checkers</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -670,19 +665,14 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Naming
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-ioos-at-nci">
+   Running IOOS at NCI
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tips-for-machine-readable-files">
-   Tips for machine-readable files
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#online-resources">
-     Online Resources
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#checking-multiple-files">
+     Checking multiple files
     </a>
    </li>
   </ul>
@@ -696,39 +686,104 @@
             
               <div>
                 
-  <div class="section" id="naming">
-<h1>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h1>
-<p>You can use your filenames to include information, here is some you can consider:</p>
+  <div class="section" id="cf-compliance-checkers">
+<h1>CF compliance checkers<a class="headerlink" href="#cf-compliance-checkers" title="Permalink to this headline">¶</a></h1>
+<p>There are a few options when it comes to check if files are CF compliant. There are online checkers, a netCDF is uplaoded and a report to download is generated for the file, examples are:</p>
 <ul class="simple">
-<li><p>project, simulation and/or experiment acronyms, you might have to use a combination of them.</p></li>
-<li><p>spatial coverage: the region or coordinates range covered by the data, could also be a specific domain for climate model data, i.e. ocean, land etc.</p></li>
-<li><p>grid: could be either a grid label or spatial resolution</p></li>
-<li><p>temporal coverage: a specific year/date or a temporal range</p></li>
-<li><p>temporal frequency: monthly, daily etc</p></li>
-<li><p>type of data: again this depends on context, if the same directory contains data from different instrumentations it is important to specify the instrument in the name. For coupled model output this could be the model component, if you are using one file per variable the variable name.</p></li>
-<li><p>version: this is really important if you are sharing the data even if only 1 version exists at the time</p></li>
-<li><p>correct file extension</p></li>
+<li><p><a class="reference external" href="https://compliance.ioos.us/index.html">https://compliance.ioos.us/index.html</a></p></li>
+<li><p><a class="reference external" href="http://cfconventions.org/compliance-checker.html">http://cfconventions.org/compliance-checker.html</a></p></li>
 </ul>
+<p>This works fine for one small file but when checking a lot of files is better to install and use a checker.<br>
+The IOOS checker is recommended for this, if working at NCI is already installed in the CLEX managed conda environments.
+The IOOS checker is python based, it checks for CF conventions and the ACDD conventions. NCI uses this checker as part of their publishing process, as it covers both CF and ACDD conventions, which are required to publish on their data portal.</p>
+<div class="section" id="running-ioos-at-nci">
+<h2>Running IOOS at NCI<a class="headerlink" href="#running-ioos-at-nci" title="Permalink to this headline">¶</a></h2>
+<p>Using it is very simple, just load the conda module</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module use /g/data/hh5/public/modules
+$ module load conda/analysis3
+</pre></div>
 </div>
-<div class="section" id="tips-for-machine-readable-files">
-<h1>Tips for machine-readable files<a class="headerlink" href="#tips-for-machine-readable-files" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>avoid special characters: ~ ! &#64; # $ % ^ &amp; * ( ) ` ; &lt; &gt; ? , [ ] { } ‘ “</p></li>
-<li><p>do not use spaces to separate words use underscores “_” or dashes “-” or CamelCase</p></li>
-<li><p>use YYYYMMDD for dates, it will sort your files in chronological order, absolutely avoid “Jan, Feb, ..” for months as they are much harder to code for.</p></li>
-<li><p>or number sequence use leading zeros: so 001, 002, 020, 103  rather than 1, 2,.. 20, .. 103</p></li>
-<li><p>try to avoid overly long names, for a single file, directory keep it under 255 characters, for paths 30000.</p></li>
-<li><p>avoid having a large number of files in a single directory … but also an excessive number of directories with one file each</p></li>
-<li><p>always include file extension, some software can recognise files from their header, but this is not always the case</p></li>
-</ul>
-<div class="section" id="online-resources">
-<h2>Online Resources<a class="headerlink" href="#online-resources" title="Permalink to this headline">¶</a></h2>
-<p>We partially based this page on the resources listed below, we recommend to check them for more insight and advice.</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/">Best practice to organise your data</a> - part of an Open reproducible science course from the University of Colorado</p></li>
-<li><p><a class="reference external" href="https://youtu.be/3MEJ38BO6Mo">Software Carpentry video covering DRS best practices</a></p></li>
-<li><p><a class="reference external" href="https://stanford.box.com/shared/static/yl5a04udc7hff6a61rc0egmed8xol5yd.pdf">Best file naming practice handout (pdf) from Standford University</a></p></li>
-</ul>
+<p>And call the checker on a netCDF file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cchecker.py test_file.nc
+
+
+Running Compliance Checker on the datasets from: [&#39;test_file.nc&#39;]
+--------------------------------------------------------------------------------
+                        IOOS Compliance Checker Report                         
+                                    acdd:1.3                                    
+http://wiki.esipfed.org/index.php?title=Category:Attribute_Conventions_Dataset_Discovery
+--------------------------------------------------------------------------------
+                               Corrective Actions                               
+test_file.nc has 4 potential issues
+                               Highly Recommended                               
+--------------------------------------------------------------------------------
+Global Attributes
+* Conventions does not contain &#39;ACDD-1.3&#39;
+* summary not present
+.........
+</pre></div>
+</div>
+<p>As seen from the example, without passing any option, the tool checks for ACDD 1.3 (the latest version) compliance. The report is printed out to screen.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cchecker.py --help
+</pre></div>
+</div>
+<p>will list all the available options, the main ones are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">-</span><span class="n">t</span><span class="o">/--</span><span class="n">test</span>  <span class="n">to</span> <span class="n">choose</span> <span class="n">the</span> <span class="n">test</span><span class="p">;</span>
+
+     <span class="n">ie</span><span class="o">.</span><span class="n">e</span> <span class="o">-</span><span class="n">t</span><span class="o">=</span><span class="n">cf</span>  <span class="n">will</span> <span class="n">test</span> <span class="n">the</span> <span class="n">file</span> <span class="n">against</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">available</span> <span class="n">version</span> <span class="n">of</span> <span class="n">the</span> <span class="n">CF</span> <span class="n">conventions</span><span class="o">.</span>
+
+ <span class="o">-</span><span class="n">l</span><span class="o">/--</span><span class="nb">list</span>  <span class="n">to</span> <span class="nb">list</span> <span class="n">the</span> <span class="n">available</span> <span class="n">tests</span><span class="o">.</span>
+
+ <span class="o">-</span><span class="n">c</span> <span class="o">/--</span> <span class="n">criteria</span> <span class="nb">set</span> <span class="n">the</span> <span class="n">level</span> <span class="n">to</span> <span class="n">which</span> <span class="n">to</span> <span class="n">run</span> <span class="n">the</span> <span class="n">test</span><span class="p">;</span>
+
+      <span class="n">possible</span> <span class="n">options</span> <span class="n">are</span> <span class="o">&lt;</span> <span class="n">lenient</span><span class="p">,</span> <span class="n">normal</span><span class="p">,</span> <span class="n">strict</span> <span class="o">&gt;</span><span class="p">,</span> <span class="n">default</span> <span class="n">to</span> <span class="o">&lt;</span><span class="n">normal</span><span class="o">&gt;</span>
+
+ <span class="o">-</span><span class="n">f</span><span class="o">/--</span><span class="nb">format</span>  <span class="n">the</span> <span class="n">output</span> <span class="nb">format</span><span class="p">;</span>
+
+      <span class="n">possible</span> <span class="n">options</span> <span class="n">are</span> <span class="o">&lt;</span> <span class="n">text</span><span class="p">,</span> <span class="n">html</span><span class="p">,</span> <span class="n">json</span><span class="p">,</span> <span class="n">json_new</span> <span class="o">&gt;</span>
+
+ <span class="o">-</span><span class="n">o</span><span class="o">/--</span><span class="n">output</span> <span class="n">optional</span> <span class="n">file</span><span class="o">/</span><span class="n">s</span> <span class="n">to</span> <span class="n">redirect</span> <span class="n">output</span> <span class="n">to</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="section" id="checking-multiple-files">
+<h3>Checking multiple files<a class="headerlink" href="#checking-multiple-files" title="Permalink to this headline">¶</a></h3>
+<p>You can also run the checker on several files at one time. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cchecker.py -t=cf -c strict -o cf_test.txt test_data/test*.nc 
+</pre></div>
+</div>
+<p>This example shows how to check all the files matching <code class="docutils literal notranslate"><span class="pre">test_data/test*.nc</span></code> against the CF standards, the standard is applied at a <code class="docutils literal notranslate"><span class="pre">strict</span></code> level and the report is written to the file <code class="docutils literal notranslate"><span class="pre">cf_test.txt</span></code>.</p>
+<p>When testing mutiple files, the tools print a report for each file, if there are a lot of files, the report will be long and repetitive.</p>
+<p>The CLEX CMS team created a <a class="reference external" href="https://gist.github.com/paolap/e37447c9c00e8894437b13a76021c857">simple python script</a> that can be run to summarise the report so each error or warning is reported only once.</p>
+<p>This script creates a summary of CF/ACDD tests run by the IOOS checker on multiple files</p>
+<p>First run the checker generating a json output, for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cchecker.py -t=cf -c strict -f json_new -o cf_test.json test_data/test*.nc  
+</pre></div>
+</div>
+<p>Then pass the json file as input to this script</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python parse_checker.py test.json
+</pre></div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Summarised reports<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Results for cf checks
+3 files were checked</p>
+<p class="card-text">High priority results</p>
+<p class="card-text">3 files failed:
+�2.2 Data Types: The variable time failed because the datatype is int64</p>
+<p class="card-text">3 files failed:
+�3.3 Standard Name: Attribute long_name or/and standard_name is highly recommended for variable time</p>
+<p class="card-text">…</p>
+</div>
+</details><p>If you want to save the summary in a file just redirect the output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python parse_checker.py test.json &gt; checks_summary.txt
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -757,17 +812,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="drs.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="conventions.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Choosing a directory structure (DRS) and filenames</p>
+            <p class="prev-next-title">Writing valid and compliant netCDF files</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="keywords.html" title="next page">
+    <a class='right-next' id="next-link" href="data_formats.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Choosing keywords</p>
+        <p class="prev-next-title">Data formats</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

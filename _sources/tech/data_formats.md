@@ -3,7 +3,7 @@
 
 !!! Early draft !!!
 
-netcdf3 vs netcdf4
+netCDF3 vs netCDF4
 IDL 8.0 ships with support for netCDF-4, including support for OPeNDAP remote access.
 
 MATLAB 2012a includes netCDF 4 support with OPeNDAP support turned on, enabling remote access to many kinds of data, as well as use of groups, compression, and chunking. An example is available demonstrating some of the new functions. NCTOOLBOX, uses netCDF-Java to provide read access to datasets in netCDF-4, GRIB, GRIB2 and other formats through Unidata's Common Data Model.

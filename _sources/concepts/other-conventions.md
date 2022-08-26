@@ -17,14 +17,15 @@ IMOS] has very specific extensions of the CF conventions for different kind of o
 * [OceanSITES Data Format](http://www.oceansites.org/docs/oceansites_data_format_reference_manual.pdf) - extension of CF Conventions standard for OceanSITES data 
 * [ARGO netCDF conventions for data centers](http://www.argodatamgt.org/Media/Medias-Argo-Data-Management/Argo-documentation/General-documentation/Data-format)
 * [PMEL-EPIC Conventions](https://www.pmel.noaa.gov/epic/document/convention.htm)
-* [US NCEI NetCDF templates](https://www.ncei.noaa.gov/netcdf-templates) - these templates illustrate how to apply CF and ACDD conventions
+* [US NCEI netCDF templates](https://www.ncei.noaa.gov/netcdf-templates) - these templates illustrate how to apply CF and ACDD conventions
 
 ## Atmosphere 
 * [NCAR-RAF Conventions for Aircraft Data](http://www.eol.ucar.edu/raf/Software/netCDF.html)
 
 ## Other 
-* [AMBER Trajectory Conventions](http://ambermd.org/netcdf/nctraj.xhtml) for molecular dynamics simulations.
-* [CF Discrete Sampling Geometries Conventions](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries) - CF for observational and point data 
 * [UGRID Conventions](http://ugrid-conventions.github.io/ugrid-conventions/) for unstructured (e.g. triangular, hex) grids. 
 * [SGRID Conventions](http://sgrid.github.io/sgrid/) for staggered, structured (e.g. ROMS, WRF) grids 
-* [UNIDATA NetCDF conventions lists](https://www.unidata.ucar.edu/software/netcdf/conventions.html) - including COARDS and other older conventions
+* [UNIDATA netCDF conventions lists](https://www.unidata.ucar.edu/software/netcdf/conventions.html) - including COARDS and other older conventions
+* [AMBER Trajectory Conventions](http://ambermd.org/netcdf/nctraj.xhtml) for molecular dynamics simulations.
+* [CF Discrete Sampling Geometries Conventions](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries) - CF for observational and point data 
+* [COMODO](https://web.archive.org/web/20160417032300/http://pycomodo.forge.imag.fr/norm.html) ??? still used?

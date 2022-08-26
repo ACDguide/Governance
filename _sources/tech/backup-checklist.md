@@ -27,7 +27,7 @@
     * Sizes < 100 MB
     * Not suitable for archives unless bundled into a tar file
     * source code and other text files can be kept under version control
-* Data files - (for ex. NetCDF) 
+* Data files - (for example netCDF) 
     * 1 GB to 100's of GB
     * archive systems like tape are specifically designed for this
 ## How often is updated?

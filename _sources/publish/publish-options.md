@@ -26,7 +26,7 @@ We are looking here at CLEX as an example but as basically CLEX is only a collab
 Part of making data FAIR is to make it discoverable, so sharing data in a discipline specific collection is to be preferred when possible. This could be a collection of climate data, or of a related discipline, i.e., paleoclimate data, oceanographic data, etc. 
   
 **CLEX Data Collection on NCI**
-This is the best option if the data is in NetCDF format and could be useful for other researchers, as it will be part of a climate data collection. It is also the only option if the size of the data is substantial, in the order of hundreds of GB or more. NCI has more storage capacity than other repositories and services which are designed around the NetCDF format.
+This is the best option if the data is in netCDF format and could be useful for other researchers, as it will be part of a climate data collection. It is also the only option if the size of the data is substantial, in the order of hundreds of GB or more. NCI has more storage capacity than other repositories and services which are designed around the netCDF format.
 NCI requires the data to be documented and follow conventions, which will make the data easier to use. 
 
 **Institutional repository**
