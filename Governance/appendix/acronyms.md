@@ -18,7 +18,7 @@
 ```
 
 ```{dropdown} **CF - Climate and Forecast conventions**
-CF are conventions used to set metadata attributes in NetCDF files. See [relevant page in book](../concepts/cf-conventions.md)
+CF are conventions used to set metadata attributes in netCDF files. See [relevant page in book](../concepts/cf-conventions.md)
 ```
 
 (cosima)=
@@ -52,7 +52,7 @@ see definition in [key concepts](fair)
 
 (ncss)=
 ```{dropdown} **NCSS - NetCDF Subset Service**
-[NCSS](http://www.unidata.ucar.edu/software/thredds/current/tds/reference/NetcdfSubsetServiceReference.html) allows subsetting certain CDM datasets in coordinate space, using a REST API. Gridded data subsets can be returned in CF-compliant netCDF3 or netCDF4. Point data subsets can be returned in CSV, XML, or [CF-DSG](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries) NetCDF files.
+[NCSS](http://www.unidata.ucar.edu/software/thredds/current/tds/reference/NetcdfSubsetServiceReference.html) allows subsetting certain CDM datasets in coordinate space, using a REST API. Gridded data subsets can be returned in CF-compliant netCDF3 or netCDF4. Point data subsets can be returned in CSV, XML, or [CF-DSG](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries) netCDF files.
 ```
 
 (nectar)=
