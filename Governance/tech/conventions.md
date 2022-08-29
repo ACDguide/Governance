@@ -72,7 +72,7 @@ The most common dimensions and coordinates are `time`, `latitude`, `longitude` a
 
 ### Time coordinate
 
-The time coordinate is well defined by the `units` and the `calendar` attributes. The standard time definition doesn't work for climatological statistics, as a calendar year, month and day of the year are not welld efined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the [CF documentation](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics).
+The time coordinate is well defined by the `units` and the `calendar` attributes. The standard time definition doesn't work for climatological statistics, as a calendar year, month and day of the year are not well defined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the [CF documentation](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics).
 
 **Requirements**
 * The time units of a time coordinate variable must contain a reference time.
@@ -135,7 +135,7 @@ NCICS provides an online [UDUNITS2 database](https://ncics.org/portfolio/other-r
 ```{dropdown} **long_name** 
 **CF - highly recommended**<br> 
 The [long_name](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#long-name) attribute provides a description of the variable. Either long_name or standard_name is expected to be present ideally, they both are.<br>
-Standard_names are designed to described the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
+Standard_names are designed to describe the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
 Long_name provides a chance to give a more complete description of the variable, highlighting aspects that cannot be specified in other attributes.
 For example, adimensional variables have `1` as units. Long_name can be used to specify what kind of adimensional units: percentage, 0-1, ppm etc.<br>
 Long_name is also often used to label plots.
