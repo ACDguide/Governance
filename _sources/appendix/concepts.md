@@ -39,7 +39,7 @@ A data management plan is a tool to help you manage the data for a specific rese
 ```
 
 ```{dropdown} **Metadata**
-Metadata is the information on data, examples are metadta files accompanying observations with details of instrumentations and location, the attributes of a netCDF file. A metadata record or repositories will contain information on a dataset but not the data itself.
+Metadata is the information on data, examples are metadata files accompanying observations with details of instrumentations and location, the attributes of a netCDF file. A metadata record or repositories will contain information on a dataset but not the data itself.
 ```
 
 ```{dropdown} **Open Access**

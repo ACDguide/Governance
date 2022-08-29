@@ -798,7 +798,7 @@ A netCDF-4 file may have multiple unlimited dimensions, and there are no restric
 </ul>
 <div class="section" id="time-coordinate">
 <h3>Time coordinate<a class="headerlink" href="#time-coordinate" title="Permalink to this headline">¶</a></h3>
-<p>The time coordinate is well defined by the <code class="docutils literal notranslate"><span class="pre">units</span></code> and the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> attributes. The standard time definition doesn’t work for climatological statistics, as a calendar year, month and day of the year are not welld efined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics">CF documentation</a>.</p>
+<p>The time coordinate is well defined by the <code class="docutils literal notranslate"><span class="pre">units</span></code> and the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> attributes. The standard time definition doesn’t work for climatological statistics, as a calendar year, month and day of the year are not well defined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics">CF documentation</a>.</p>
 <p><strong>Requirements</strong></p>
 <ul class="simple">
 <li><p>The time units of a time coordinate variable must contain a reference time.</p></li>
@@ -880,7 +880,7 @@ CF provides the optional attribute <code class="docutils literal notranslate"><s
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>CF - highly recommended</strong><br>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#long-name">long_name</a> attribute provides a description of the variable. Either long_name or standard_name is expected to be present ideally, they both are.<br>
-Standard_names are designed to described the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
+Standard_names are designed to describe the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
 Long_name provides a chance to give a more complete description of the variable, highlighting aspects that cannot be specified in other attributes.
 For example, adimensional variables have <code class="docutils literal notranslate"><span class="pre">1</span></code> as units. Long_name can be used to specify what kind of adimensional units: percentage, 0-1, ppm etc.<br>
 Long_name is also often used to label plots.</p>
