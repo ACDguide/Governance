@@ -89,6 +89,8 @@ parts:
       - file: tech/keywords
       - file: tech/massdata
       - file: tech/permissions
+      - file: tech/tech-readme.md
+      - file: tech/title.md
       - file: tech/versioning
   - caption: Appendix 
     chapters:

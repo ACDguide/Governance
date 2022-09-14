@@ -8,7 +8,7 @@ Another example of controlled vocabulary is the [CF conventions standard_name ta
 
 ## Keywords
 Controlled vocabularies also provide keywords to use when publishing data. Keywords are a powerful instrument when used properly. They can greatly increase the discoverability of a dataset, which is why it is one of the few highly recommended attributes in the [ACDD conventions](http://climate-cms.wikis.unsw.edu.au/Conventions). Unfortunately, there is not yet an agreed controlled vocabulary to be used specifically for climate science. Lots of climate terms are however covered by the [Global Change Master Directory Keywords](https://earthdata.nasa.gov/earth-observation-data/find-data/idn/gcmd-keywords), maintained by NASA.
+For practical advice on how to aplly keywords, see [Choosing keywords](../tech/keywords.md) in the techincal tips section of this book.
 
 ## Research Vocabulary Australia
-
 ARDC manage a controlled vocabulary service [Research Vocabulary Australia](https://vocabs.ardc.edu.au/) (RVA) to list vocabularies used by Australian research community. As well as making it easier to find controlled vocabularies, RVA also allows research organisation to contribute and publish new vocabularies. 

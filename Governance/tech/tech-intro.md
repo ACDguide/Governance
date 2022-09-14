@@ -12,4 +12,6 @@ We are collecting here information on technical aspects of data management, incl
 * [](keywords.md)
 * [](massdata.md)
 * [](permissions.md)
+* [](tech-readme.md)
+* [](title.md)
 * [](versioning.md)

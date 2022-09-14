@@ -26,11 +26,6 @@ The CF conventions only have some basic requirements and recommendations on how 
 * No two variable names should be identical when case is ignored.
 
 
-Requirements:
-
-The external_variables attribute is of string type and contains a blank-separated list of variable names.
-
-
 ````{warning}
 Attribute names commencing with underscore ('_') are reserved for use by the netCDF library.
 ````
@@ -134,6 +129,7 @@ NCICS provides an online [UDUNITS2 database](https://ncics.org/portfolio/other-r
 
 ```{dropdown} **long_name** 
 **CF - highly recommended**<br> 
+**ACDD - highly recommended**
 The [long_name](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#long-name) attribute provides a description of the variable. Either long_name or standard_name is expected to be present ideally, they both are.<br>
 Standard_names are designed to describe the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
 Long_name provides a chance to give a more complete description of the variable, highlighting aspects that cannot be specified in other attributes.
@@ -143,6 +139,7 @@ Long_name is also often used to label plots.
 
 ````{dropdown} **standard_name** 
 **CF - highly  recommended**<br>
+**ACDD - highly recommended**
 The [`standard_name`](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#standard-name) attribute is used to identify the variable content. A list of the approved standard_names is available [here](http://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html).<br>
 It was introduced to provide an objective definition of a variable. The `long_name` attribute was, and still is, useful to provide a description of the variable, but as it is defined ad hoc by the dataset creator it is not possible to use it programmatically to individuate a specific variable, across different files. For example, `standard_name` can be used by online data catalogues to query all datasets that provide a particular variable.<br>
 
@@ -209,7 +206,8 @@ CF -
 ```
 
 ```{dropdown} **coverage_content_type**
-**ACDD - highly recommended** 
+**ACDD - highly recommended**
+This is the only attribute at variable level added by the ACDD conventions. It indicates the source of the data and it is defined using the ISO 19115-1 codes. Valid values are: `image`, `thematicClassification`, `physicalMeasurement`, `auxiliaryInformation`, `qualityInformation`, `referenceInformation`, `modelResult`, or `coordinate`.
 ```
 
 ````{warning}
@@ -217,12 +215,10 @@ In xarray variable attributes are kept across operations depending on the value 
 It is important to be aware of this, as particularly for coordinates, units and cell_methods are easily changed by calculations and often inherited attributes become meaningless or worst can cause issues if not updated. The same can also happen with other softwares.
 ````
 
-There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their [wiki](http://climate-cms.wikis.unsw.edu.au/CF_checker).  
-
 ## Global attributes
 Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, as DOI, contact, license and references.<br>
 While global attributes are the most useful when sharing data, for example to increase discoverability, using some key ones from the start of the file creation is important to keep track of the file history. Often this level of information is neglected when saving data to a file, which can make it hard if not impossible to reconstruct the analysis workflow.<br>
-Also, as global attributes are preserved during most of analysis operations, output files end up containing information from the source file which is usually not anymore relevant to the new data.<br>
+Also, as global attributes are preserved during most of analysis operations, output files end up containing information from the source file which is usually not any more relevant to the new data.<br>
 `institution`, `source`, `references`, and `comment` can also be assigned to individual variables, in such case the variable version has precedence.
 
 **Requirements**
@@ -230,74 +226,97 @@ Also, as global attributes are preserved during most of analysis operations, out
 The `title`, `history`, `institution`, `source`, `references`, and `comment` attributes are all type string.
 
 ```{dropdown} **Conventions** 
-**CF - required**
-This attribute simply indicates the conventions applied to the file, as such is one of the few required attributes, as it provides the key to correctly interpret all the other attributes. For CF conventions the expected value is `CF-<version>` for example `CF-1.8`. if more than a convention is applied to the file then they should be provided as a list separated by blank spaces or commas.
+**CF - required**<br>
+**ACDD - highly recommended**
+This attribute simply indicates the conventions applied to the file, as such is one of the few required attributes, as it provides the key to correctly interpret all the other attributes. For CF conventions the expected value is `CF-<version>` for example `CF-1.8`. if more than a convention is applied to the file then they should be provided as a list separated by blank spaces or commas. For example `CF-1.8, ACDD-1.3`.
 ```
 
 ```{dropdown} **title** 
-**CF - highly recommended**
+**CF - highly recommended**<br>
+**ACDD - highly recommended**<br>
+A short phrase or sentence describing the dataset. When applied to single files the title might simply describe the file content, if the file is published as part of a dataset is better to use this attribute for the dataset official title and use `summary` to add more detail on the spefic file content. 
+If the file is gpoing to be published the title has to be short enough to be displayed easily in dataset catalogue listing. At the same time it is important for this to be descriptive of the data. For suggestions on how to create a title see [Descriptive title](title.md) in this section.
 ```
 
+````{dropdown} **history** 
+**CF - highly recommended**<br>
+**ACDD - recommended**<br>
+The [history]() attribute provides a chronological trace of the modifications applied to the original data. Many netCDF aware software append a line containing: date, time of day, user name, program name and command arguments.'
+Alternatively, a user can append information manually when processing a file.
+```{warning}
+While it is useful to have a program automatically update the file history, some of the appended information can be system dependent, as file paths, could have been inherited from a source file and not been anymore relevant, or finally could be unreadable. An example of the last is when concatenating files with CDO, if you are using a `*` to match many files, the history message will explode the regex and list the path of each file, which make the history attribute hard to read.  
+```
+````
+
 ```{dropdown} **institution** 
-**CF - highly recommended**
-or only recom???
+**CF - recommended**<br>
+**ACDD - recommended**<br>
 The name of the institution principally responsible for originating this data.
+This can also be used at variable level, in which case it takes precendence over the global one for that specific variable.
 ```
 
 ```{dropdown} **source** 
-**CF - highly recommended**
-**ACDD - recommended**
+**CF - recommended**<br>
+**ACDD - recommended**<br>
 This attribute indicates the method of production of the original data. It should be as detailed as possible so, for example, if the data is model generated also the version and if applicable details of configuration used should be present. It's often easier if the source of the data is complex to use a link to documentation.<br>
 While this attribute's definition focuses on the method, often source is also used to list the input data. If a the file is derived directly form another dataset, it is good practice to preserve some of the dataset original global attributes but prefacing them with `source_`, for example `source_license`. Alternatively, as a specific attribute for input data does not exist in conventions, `source_data`, `input`, `input_data`, are often used. CMIP conventions uses `parent_` to indicate properties of parent experiments used to initialise model simulations.   
 ```
 
-```{dropdown} **history** 
-**CF - highly recommended**
-```
-
 ```{dropdown} references 
-**CF - highly recommended**
+**CF - recommended**<br>
+**ACDD - suggested**<br>
+Published or web-based references that describe the data or methods used to produce it.
 ```
 
 ```{dropdown} **comment** 
-**CF - highly recommended**
-this can also be used at variable level
+**CF - highly recommended**<br>
+**ACDD - recommended**<br>
+Miscellaneous information about the data or methods used to produce it. This can also be used at variable level.
 ```
 
 ```{dropdown} **summary** 
-**ACDD - highly recommended**
+**ACDD - highly recommended**<br>
+A short abstract to introduce the dataset. It gives a chance to add more details about the file content. Particularly when the files of a dataset might have different content. For example, if different variables are stored as separate files, the `title` attribute might indicated the dataset title, and would be the same for all files, then `summary` can be used to list the content of each file.
 ```
 
 ```{dropdown} **keywords**
-**ACDD - highly recommended**
+**ACDD - highly recommended**<br>
+The [keywords](https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords) attribute is a comma-separated list of key words and/or phrases. Keywords should be preferably terms from a controlled vocabulary, in that case a reference for this can be added using the "keywords_vocabulary" attribute. Look at the [Choosing keywords](keywords.md) page in this section for suggestion on how to choose effective keywords.
 ```
 
 ```{dropdown} **id** 
-**ACDD - recommended**
+**ACDD - recommended**<br>
+This attribute only applies to published data, it is the dataset identifier, provided by and unique within its naming authority.<br>
+The `id` can be the full persistent identifier, for example:<br>
+`https://doi.org/10.24381/cds.e2161bac`<br>
+Or, when used in combination with the `naming_authority` attribute can be only the unique id in such authority context:<br>
+`find example`<br>
+The id should not include white space characters.
 ```
 
 ```{dropdown} **license** 
-**ACDD - recommended**
+**ACDD - recommended**<br>
+This can be a free text describing the license and/or term of conditions applied to the dataset, or a URL pointing to the same. If using the second it might help to specify the main points as `free access` or `no commercial use` unless they can be easily surmised from the url itself (as with the CC licenses).
 ```
 
 ```{dropdown}  **creator_(name/ email/ url)** 
-**ACDD - recommended**
+**ACDD - recommended**<br>
 Respectively, the name, email and a web address (if available) of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.
 ```
 
 ```{dropdown}  **publisher_(name/ email/ url)** 
-**ACDD - recommended**
+**ACDD - recommended**<br>
 The name of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.
 
 ```
 ```{dropdown} **geospatial_<> / time_coverage_<>** 
-**ACDD - recommended**
+**ACDD - recommended**<br>
 ```
 
 ```{dropdown} **created_date** 
-**ACDD - recommended**
+**ACDD - recommended**<br>`
 The date on which this version of the data was created.
-The ISO 8601:2004 extended date format is recommended add example
+The ISO 8601:2004 extended date format is recommended: `YYYY-MM-DDThh:mm:ss<zone>`.
 ```
 
 **References**<br>
