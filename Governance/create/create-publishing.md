@@ -1,4 +1,4 @@
-# Requirements for publication
+# Preparing files for publication
 
 ## Publishing in a journal
 

@@ -1,6 +1,6 @@
 # New, modified, and derived datasets
 
-## Creating new datasets from scratch (e.g. raw model output)
+## Creating new datasets from raw data
 
 Paola:  
 however rare, we could cover starting from a template, as for a cdl file (i.e. a ncdump output style file)
@@ -17,6 +17,8 @@ at initial level some global attributes/metadata associate file to keep track of
 
 Chloe:  
 Provenance: https://acdguide.github.io/Governance/concepts/provenance.html
+
+Link to ACCESS Archiver
 
 ## Modifying existing files in-situ
 ncatted, etc
