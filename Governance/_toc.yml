@@ -7,6 +7,12 @@ parts:
   - caption: Creating climate data 
     chapters:
     - file: create/create-intro
+    - file: create/create-basics
+    - file: create/create-new-derived
+    - file: create/create-publishing
+    - file: create/create-checklists
+
+
   - caption: Publishing climate data
     chapters:
     - file: publish/publish-intro
