@@ -88,6 +88,7 @@ parts:
         - file: tech/filenames
       - file: tech/keywords
       - file: tech/massdata
+      - file: tech/moving-data.md
       - file: tech/permissions
       - file: tech/tech-readme.md
       - file: tech/title.md
