@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Working Group Governance &#8212; Climate Data Guidelines</title>
+    <title>Dataset creation basics &amp; sharing recommendations &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Working Group Goals" href="goals.html" />
-    <link rel="prev" title="Further information" href="../retire/retire-references.html" />
+    <link rel="next" title="New, modified, and derived datasets" href="create-new-derived.html" />
+    <link rel="prev" title="Guidelines to create a climate dataset" href="create-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,29 +101,29 @@
   Creating climate data
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-intro.html">
+  <a class="reference internal" href="create-intro.html">
    Guidelines to create a climate dataset
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-basics.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Dataset creation basics &amp; sharing recommendations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-new-derived.html">
+  <a class="reference internal" href="create-new-derived.html">
    New, modified, and derived datasets
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-publishing.html">
+  <a class="reference internal" href="create-publishing.html">
    Preparing files for publication
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-checklists.html">
+  <a class="reference internal" href="create-checklists.html">
    Checklists for data management in the project lifecycle
   </a>
  </li>
@@ -273,19 +273,19 @@
   About us
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/working-group-governance.html">
    Working Group Governance
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="goals.html">
+  <a class="reference internal" href="../about-us/goals.html">
    Working Group Goals
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="how-to-contribute.html">
+  <a class="reference internal" href="../about-us/how-to-contribute.html">
    Guidelines for contributors
   </a>
  </li>
@@ -605,7 +605,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/about-us/working-group-governance.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/create/create-basics.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -625,10 +625,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fabout-us/working-group-governance.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fcreate/create-basics.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/about-us/working-group-governance.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/create/create-basics.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -654,23 +654,40 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#statement-of-scope">
-   Statement of Scope
+  <a class="reference internal nav-link" href="#file-formats-metadata-coordinates">
+   File formats, metadata &amp; coordinates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components-of-a-netcdf-file">
+     Components of a NetCDF file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attributes">
+     Attributes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-directory-organisation">
+   File &amp; directory organisation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-group-origins">
-   Working Group Origins
+  <a class="reference internal nav-link" href="#backups-archiving">
+   Backups &amp; archiving
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membership">
-   Membership
+  <a class="reference internal nav-link" href="#data-management-plans-documentation">
+   Data management plans &amp; documentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contact">
-   Contact
+  <a class="reference internal nav-link" href="#code-management-version-control">
+   Code management &amp; version control
   </a>
  </li>
 </ul>
@@ -683,7 +700,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Working Group Governance</h1>
+                <h1>Dataset creation basics & sharing recommendations</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -694,23 +711,40 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#statement-of-scope">
-   Statement of Scope
+  <a class="reference internal nav-link" href="#file-formats-metadata-coordinates">
+   File formats, metadata &amp; coordinates
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components-of-a-netcdf-file">
+     Components of a NetCDF file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attributes">
+     Attributes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-directory-organisation">
+   File &amp; directory organisation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#working-group-origins">
-   Working Group Origins
+  <a class="reference internal nav-link" href="#backups-archiving">
+   Backups &amp; archiving
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#membership">
-   Membership
+  <a class="reference internal nav-link" href="#data-management-plans-documentation">
+   Data management plans &amp; documentation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#contact">
-   Contact
+  <a class="reference internal nav-link" href="#code-management-version-control">
+   Code management &amp; version control
   </a>
  </li>
 </ul>
@@ -722,45 +756,77 @@
             
               <div>
                 
-  <div class="section" id="working-group-governance">
-<h1>Working Group Governance<a class="headerlink" href="#working-group-governance" title="Permalink to this headline">¶</a></h1>
-<p>The “climate dataset guidelines working group” is a collaboration between scientists within the Australian climate community. Participation is self-nominated and voluntary. Anyone is welcome to join the group or contribute independently to this Jupyter Book. This document outlines the governance of the big data working group. The group’s goals is to provide guidelines to create, manage and share climate data in order to have a common approach across the Australian climate research community. The group meets once per month, and works collaboratively to organize and create the Jupyter Book.</p>
-<div class="section" id="statement-of-scope">
-<h2>Statement of Scope<a class="headerlink" href="#statement-of-scope" title="Permalink to this headline">¶</a></h2>
-<p>The goal of this working group is to create and share a best-practices framework for climate-related scientists in Australia who create datasets for the purposes of sharing and publication. The framework will be collated and shared in the form of a Jupyter Book, made using a public github repository (<a class="reference external" href="https://github.com/ACDguide/Governance">https://github.com/ACDguide/Governance</a>).</p>
-<p>Contents include:</p>
+  <div class="section" id="dataset-creation-basics-sharing-recommendations">
+<h1>Dataset creation basics &amp; sharing recommendations<a class="headerlink" href="#dataset-creation-basics-sharing-recommendations" title="Permalink to this headline">¶</a></h1>
+<p>See <a class="reference external" href="https://github.com/ACDguide/Governance/issues/7">https://github.com/ACDguide/Governance/issues/7</a> for discussion and suggestions</p>
+<div class="section" id="file-formats-metadata-coordinates">
+<h2>File formats, metadata &amp; coordinates<a class="headerlink" href="#file-formats-metadata-coordinates" title="Permalink to this headline">¶</a></h2>
+<p>Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills, the variety of metadata fields required to adequately describe the data and its dimensions, the domain-specific scientific knowledge required to make informed decisions about its creation and use, and the technical knoweldge required to produce robust datasets that can be reused by others. (Note that we will use terms and concepts described in <span class="xref myst">Appendix/concepts</span>.)</p>
+<p>By far the most commonly used format in the climate science community is <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a>, an open (i.e. not proprietary), self-describing (i.e. metadata is an in-built feature) array-oriented (i.e. highly structured data such as climate model data) format that is typically used on POSIX systems (Unix-based computing system with a directory structure and command-line input; standard for high-performance computing systems such as <a class="reference external" href="https://nci.org.au/">NCI</a>). See the <span class="xref myst">technical note on data formats</span>.</p>
+<div class="section" id="components-of-a-netcdf-file">
+<h3>Components of a NetCDF file<a class="headerlink" href="#components-of-a-netcdf-file" title="Permalink to this headline">¶</a></h3>
+<p>NetCDF files contain three main components:</p>
 <ul class="simple">
-<li><p>Creating climate data for sharing &amp; publication</p></li>
-<li><p>Publishing climate data &amp; publication options</p></li>
-<li><p>Updating published climate data</p></li>
-<li><p>Retiring published climate</p></li>
-<li><p>Data management concepts</p></li>
+<li><p>Dimensions descibe the overall array structure of the data stored in the file, though not every variable must use all dimensions that exist in the file. Dimensions can be ‘real’ dimensions (such as time, latitude, longitude), or ‘pseudo’ dimensions (such as land-use tiles, or spectral bands). NetCDF dimensions, however, contain no metadata or actual values, which are described using variables with the same name; The dimensions are the base architecture of the file.</p></li>
+<li><p>Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled uing any string or value, however there are some common standards (e.g. CF conventions) that we highly recommend using.</p></li>
+<li><p>Global attributes are key:value pairs that descibe the file at the top-level. While these are typically chosen according to the use case of the data and can vary significantly between modelling realms or scientific need, standards also exist for these. Common global attributes include dataset title, provenance information (i.e. where the data came from), license, and contact information, as well as naming any metadata conventions implemented in the file.</p></li>
 </ul>
+<p>It is likely that the raw scientific data that you are building your datasets around are already highly structured (even in netCDF format already), so your main effort here will be ensuring that the metadata correctly and adequately described your data.</p>
 </div>
-<div class="section" id="working-group-origins">
-<h2>Working Group Origins<a class="headerlink" href="#working-group-origins" title="Permalink to this headline">¶</a></h2>
-<p>This working group grew out of a workshop “Creating a collaborative approach to climate data” at the AMOS (Australian Meteorological and Oceanographic Society) Annual Conference 2021.</p>
-<p>There are three other working groups that are closely related:</p>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>NetCDF attributes are in one of two categories: Machine-readable metadata attributes and human-readable metadata attributes (long names, most global attrs).</p>
 <ul class="simple">
-<li><p>Creation of a single catalogue and/or access point for climate data</p></li>
-<li><p>Enabling access of collections across institutions</p></li>
-<li><p>Working with big/challenging data collections</p></li>
+<li><p>Machine-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> and <code class="docutils literal notranslate"><span class="pre">calendar</span></code>) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common <span class="xref myst">conventions</span> and <span class="xref myst">controlled vocabularies</span>. These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages.</p></li>
+<li><p>Human-readable attributes (e.g. <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">license</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code>) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how is was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of <span class="xref myst">keywords</span> similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.</p></li>
 </ul>
+<p>For a list of recommended attributes to include and define in most climate datasets, see <a class="reference external" href="https://acdguide.github.io/Governance/tech/conventions.html">https://acdguide.github.io/Governance/tech/conventions.html</a>. We recommend implementing these metadata fields into your post-processing workflow so that these are automatically applied by your data creation code/script.</p>
+<p>For a more technical description of the netCDF format and metadata, see <a class="reference external" href="https://acdguide.github.io/BigData/format_metadata.html">https://acdguide.github.io/BigData/format_metadata.html</a>.</p>
 </div>
-<div class="section" id="membership">
-<h2>Membership<a class="headerlink" href="#membership" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="file-directory-organisation">
+<h2>File &amp; directory organisation<a class="headerlink" href="#file-directory-organisation" title="Permalink to this headline">¶</a></h2>
+<p>Climate datasets are complex and can be chopped up and stored in many different ways. For example, datasets can broken up into separate files that contain full timeseries of a single variable, or each file could contain one month of data for all relevant variables. You should structure your data files into a navigable directory structure that sorts your files into some high-level dimensions that make it easier to access and understand what different data your set contains, with a directory tree that is meaningful and interpretable, and keeps the number of individual files in a given directory to below ~1000. Depending on how many files you are going to produce, you also want to make sure you have some directory structure implemented before the number of files become hard to track, so set this early. Some suggestions for directory tree components/dimensions are: variable, frequency, modelling realm, experiment name, or governing project.</p>
+<p>There is a type of complex directory structure known as a ‘<a class="reference external" href="https://acdguide.github.io/Governance/tech/drs.html">Directory Reference Syntax</a>’ (DRS), which is typically standardised through intercomparison projects such as CMIP and CORDEX. The directory tree components are usually very broad and cover many contextual aspects, especially when multiple models or modelling intitutions are using the same directory structure and controlled vocabulary.</p>
+<p>Filenaming is an important consideration here, as confusion can easily arise if you have not named your files with enough verbosity to disentangle similar, but critically different files. A common recommendation is to name your files in a similar way to your directory structure (e.g. if you have both monthly and daily data, put these into two separate sub-directories and include the frequency in the filenames). Other provenance details, such as experiment name and model, should be considered in the filename itself to reduce the risk of confusing different outputs. For example, a file called ‘ocean_2014.nc’ can be misunderstood very easily, but a file called ‘ACCESS-ESM_historical-pacemaker_ocean_monthly_2014.nc’ is much clearer and will reduce the risk of having to rerun models, or misplacing irreplaceable observational data.<br />
+See <a class="reference external" href="https://acdguide.github.io/Governance/tech/filenames.html">https://acdguide.github.io/Governance/tech/filenames.html</a> for some tips to creating a robust filenaming convention for your datasets.</p>
+</div>
+<div class="section" id="backups-archiving">
+<h2>Backups &amp; archiving<a class="headerlink" href="#backups-archiving" title="Permalink to this headline">¶</a></h2>
+<p>Climate data can often be difficult (or impossible) to regenerate, due to large compute costs and non-repeatable conditions. A good backup strategy is vital to ensuring that the risk of data loss is minimised, and storage/compute resources are used efficiently. It is also important to note that NCI’s <code class="docutils literal notranslate"><span class="pre">/g/data</span></code> storage system is NOT backed up.</p>
+<p>Our general recommendations are:</p>
 <ul class="simple">
-<li><p>Chloe Mackallah (CSIRO) - Chair</p></li>
-<li><p>Paola Petrelli (CLEX)</p></li>
-<li><p>Claire Trenham (CSIRO)</p></li>
-<li><p>Alicia Takbash (CSIRO)</p></li>
-<li><p>Avijeet Ramchurn (BoM)</p></li>
-<li><p>Katie Hannan (CSIRO)</p></li>
+<li><p>keep only data intended for sharing in common areas.</p></li>
+<li><p>working data should be restricted to your personal space.</p></li>
+<li><p>ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.</p></li>
+<li><p>raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. onto NCI’s <a class="reference external" href="https://acdguide.github.io/Governance/tech/massdata.html">MDSS</a>) to enable regeneration of processed datasets from the raw data, without having to rerun models.</p></li>
+<li><p>a backup strategy should be set-up and implented early (ideally as part of a data management plan; see next section).</p></li>
 </ul>
+<p>For more detailed guidance on backing up data, see our <a class="reference external" href="https://acdguide.github.io/Governance/tech/backup.html">guide to creating a backup strategy</a> and <a class="reference external" href="https://acdguide.github.io/Governance/tech/backup-checklist.html">backup checklist</a>.</p>
+<p>Moving data between disks (e.g. from NCI’s <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> to <code class="docutils literal notranslate"><span class="pre">/g/data/</span></code>) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using <a class="reference external" href="https://rsync.samba.org/">rsync</a> wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). ** perhaps a tech page on data moving tools would be helpful? **</p>
 </div>
-<div class="section" id="contact">
-<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
-<p>Email working group chair Chloe Mackallah: <a class="reference external" href="mailto:chloe&#46;mackallah&#37;&#52;&#48;csiro&#46;au">chloe<span>&#46;</span>mackallah<span>&#64;</span>csiro<span>&#46;</span>au</a></p>
+<div class="section" id="data-management-plans-documentation">
+<h2>Data management plans &amp; documentation<a class="headerlink" href="#data-management-plans-documentation" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>Claire:<br />
+pick your project: ensure files are created belonging to the correct project, or if they need to be moved after creation, ensure that the correct group and permissions are inherited in the destination (See also ACLs page)</p>
+<p>Create a README at the top level with information about the dataset, when it was created, who to contact, how to use etc as relevant</p>
+<p>Make a data management plan, and consider how your data is to be shared and/or published.</p>
+<p>Paola:<br />
+DMP including basic info as backup, input files, tools used, license of what is used and potential output. This ideally should be part of project planning but might still be worth mentioning it here</p>
+<p>Keep track of changes, workflow etc from the start, even if just in a simple notes text file. Make sure it is regularly updated and details are added accordingly with phase of project, in particular when starting to share data.</p>
+<p>Chloe:<br />
+DMPs: <a class="reference external" href="https://acdguide.github.io/Governance/concepts/dmp.html">https://acdguide.github.io/Governance/concepts/dmp.html</a></p>
+<p>Licensing <a class="reference external" href="https://acdguide.github.io/Governance/concepts/license.html">https://acdguide.github.io/Governance/concepts/license.html</a></p>
+</div>
+<div class="section" id="code-management-version-control">
+<h2>Code management &amp; version control<a class="headerlink" href="#code-management-version-control" title="Permalink to this headline">¶</a></h2>
+<p>Claire:<br />
+If your data is an analysis product, keep the code nearby the data or document where it can be accessed (snapshot the version of the code used to create this dataset)</p>
+<p>Paola:<br />
+Keep code under version control</p>
+<p>Chloe:<br />
+Versioning: <a class="reference external" href="https://acdguide.github.io/Governance/tech/versioning.html">https://acdguide.github.io/Governance/tech/versioning.html</a></p>
 </div>
 </div>
 
@@ -777,7 +843,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./about-us"
+            path: "./create"
         },
         predefinedOutput: true
     }
@@ -789,17 +855,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../retire/retire-references.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="create-intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Further information</p>
+            <p class="prev-next-title">Guidelines to create a climate dataset</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="goals.html" title="next page">
+    <a class='right-next' id="next-link" href="create-new-derived.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Working Group Goals</p>
+        <p class="prev-next-title">New, modified, and derived datasets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
