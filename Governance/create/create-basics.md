@@ -7,7 +7,7 @@ See https://github.com/ACDguide/Governance/issues/7 for discussion and suggestio
 
 Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills, the variety of metadata fields required to adequately describe the data and its dimensions, the domain-specific scientific knowledge required to make informed decisions about its creation and use, and the technical knoweldge required to produce robust datasets that can be reused by others. (Note that we will use terms and concepts described in [Appendix/concepts](appendix/concepts.md).)
 
-By far the most commonly used format in the climate science community is [netCDF](https://www.unidata.ucar.edu/software/netcdf/), a self-describing (i.e. metadata is an in-built feature) array-oriented (i.e. highly structured data such as climate model data) format that is typically used on POSIX systems (Unix-based computing system with a directory structure and command-line input; standard for high-performance computing systems such as [NCI](https://nci.org.au/)). See the [technical note on data formats](tech/data_formats.md).
+By far the most commonly used format in the climate science community is [netCDF](https://www.unidata.ucar.edu/software/netcdf/), an open (i.e. not proprietary), self-describing (i.e. metadata is an in-built feature) array-oriented (i.e. highly structured data such as climate model data) format that is typically used on POSIX systems (Unix-based computing system with a directory structure and command-line input; standard for high-performance computing systems such as [NCI](https://nci.org.au/)). See the [technical note on data formats](tech/data_formats.md).
 
 ### Components of a NetCDF file
 
@@ -23,7 +23,7 @@ It is likely that the raw scientific data that you are building your datasets ar
 
 ### Attributes
 
-NetCDF attributes are in one of two categories: Machine-readable metadata attributes  and Human-readable metadata attributes (long names, most global attrs).
+NetCDF attributes are in one of two categories: Machine-readable metadata attributes and human-readable metadata attributes (long names, most global attrs).
 
 * Machine-readable attributes (e.g., `units`, `standard_name`, `missing_value` and `calendar`) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common [conventions](concepts/conventions.md) and [controlled vocabularies](concepts/controlled-vocab.md). These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages. 
 
