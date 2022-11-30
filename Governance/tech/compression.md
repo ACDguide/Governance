@@ -72,5 +72,10 @@ The `ncfind` utility is used to find NetCDF files and discriminate between compr
 For more information refer to the [original documentation](http://climate-cms.wikis.unsw.edu.au/NetCDF_Compression_Tools#General_guidelines)
 
 
+## Compression by Gathering
+
+This method is described in the CF conventions document:
+
+https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#_reduction_of_dataset_size
 
 
