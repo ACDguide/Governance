@@ -50,11 +50,7 @@ parts:
     chapters:
     - file: concepts/concept-intro.md
       sections:
-      - file: concepts/fairer-principles
-      - file: concepts/provenance
-      - file: concepts/dmp
-      - file: concepts/collaboration-agreement 
-      - file: concepts/availability-statement 
+      - file: concepts/backup
       - file: concepts/controlled-vocab
       - file: concepts/conventions
         sections:
@@ -62,13 +58,9 @@ parts:
         - file: concepts/acdd-conventions
         - file: concepts/other-conventions
           title: Other conventions
-      - file: concepts/license
-        sections:
-        - file: concepts/license-data
-        - file: concepts/license-code
-        - file: concepts/license-qa
-        - file: concepts/license-institution
-      - file: concepts/pids
+      - file: concepts/availability-statement 
+      - file: concepts/collaboration-agreement 
+      - file: concepts/dmp
       - file: concepts/policies
         sections:
         - file: concepts/policy-conduct
@@ -76,15 +68,23 @@ parts:
         - file: concepts/policy-bom
         - file: concepts/policy-clex.md
         - file: concepts/policy-csiro
+      - file: concepts/fairer-principles
       - file: concepts/journal
+      - file: concepts/license
+        sections:
+        - file: concepts/license-data
+        - file: concepts/license-code
+        - file: concepts/license-qa
+        - file: concepts/license-institution
+      - file: concepts/pids
+      - file: concepts/provenance
+      - file: concepts/version-control
   - caption: Technical guide 
     maxdepth: 1
     chapters:
     - file: tech/tech-intro
       sections:
-      - file: tech/backup
       - file: tech/backup-checklist
-      - file: tech/conventions
       - file: tech/cf-checker
       - file: tech/data_formats
       - file: tech/drs
@@ -97,6 +97,7 @@ parts:
       - file: tech/tech-readme.md
       - file: tech/title.md
       - file: tech/versioning
+      - file: tech/conventions
   - caption: Appendix 
     chapters:
     - file: appendix/appendix-intro.md
