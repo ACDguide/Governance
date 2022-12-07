@@ -50,6 +50,7 @@ parts:
     chapters:
     - file: concepts/concept-intro.md
       sections:
+      - file: concepts/backup
       - file: concepts/controlled-vocab
       - file: concepts/conventions
         sections:
@@ -83,7 +84,6 @@ parts:
     chapters:
     - file: tech/tech-intro
       sections:
-      - file: tech/backup
       - file: tech/backup-checklist
       - file: tech/cf-checker
       - file: tech/drs

@@ -4,9 +4,9 @@
 
 Version control is particularly useful with code development, but it can also be used with documents (for example this book!) or pretty much any other file.
 
-We typically use not just local version control, that is, making a history of our code as we develop it, but we pair the use of `git` with a **remote repository** on a server such as GitHub (global cloud), GitLab (e.g. NCI's git hosting instance) or BitBucket (e.g. CSIRO's hosting instance). This means we have at least two copies of our repository so if we do something catastrophic in our local copy, we can always pull a fresh copy from the remote server. It also allows us to pull a copy of the repository to wherever we are working, for example, our work computer, home computer, or a remote machine such as NCI's HPC or cloud.
+You would typically use not just local version control, that is, making a history of our code as you develop it, but pair the use of `git` with a **remote repository** on a server such as GitHub (global cloud), GitLab (e.g. NCI's git hosting instance) or BitBucket (e.g. CSIRO's hosting instance). This means you have at least two copies of your repository so if you do something catastrophic in your local copy, you can always pull a fresh copy from the remote server. It also allows you to pull a copy of the repository to wherever you are working, for example, your work computer, home computer, or a remote machine such as NCI's HPC or cloud.
 
-There are a number of useful concept introductions to version control which we link to here rather than attempting to paraphrase:
+There are a number of useful concept introductions to version control which are linked to here rather than attempting to paraphrase:
 * [Git-SCM's introduction to version control](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) - excellent overview of concepts and a useful resource generally
 * [GitLab's about version control](https://about.gitlab.com/topics/version-control/) - shorter and less depth
 * [Towards Data Science tutorial on getting started with Git](https://towardsdatascience.com/git-and-github-basics-for-data-scientists-b9fd96f8a02a) - hands on examples of setting up a repository
@@ -21,7 +21,7 @@ There are a number of useful concept introductions to version control which we l
 
 Some files are not best suited to being housed in a repository, either because it is inappropriate, or because they may blow out the size of the repository. 
 
-Files we would usually not include in a version control system include compiled binaries (they probably are not portable to other machines), large data files (host them elsewhere if needed for tests), and local settings files.
+Files you would usually not include in a version control system include compiled binaries (they probably are not portable to other machines), large data files (host them elsewhere if needed for tests), and local settings files.
 
 It is okay to have files in your git-managed directory that are not included in the version controlled repository - you can *exclude* files from version control using a `.gitignore` file in git, which is simply a text list of files in the git directory which should not be checked by git for changes or suggested for staging.
 

@@ -35,6 +35,8 @@ Even if you have a reliable automatic measure of data access it is always a good
 1. Use one or more automated method(s) to collect statistics on actual data usage.
 2. Announce to users with data access the anticipated retirement of the dataset. If the data appears to be unused, move to a "quarantine" area nearby where users may still find the data and notify the data managers that it is still required.
 3. If no objection is heard, the data can be staged for deletion (moved to a "for deletion" location and read access to users removed). On the other hand, if objection is heard, then a dialogue must be started with the affected users to identify an alternative support mechanism for the dataset.</br>
-*NOTE* An alternative mechanism to save disk space while data is still required for infrequent access is to maintain the dataset on tape storage
+``` {retire}
+NOTE An alternative mechanism to save disk space while data is still required for infrequent access is to maintain the dataset on tape storage
+```
 4. After some agreed period, the data can be removed from the filesystem.
 
