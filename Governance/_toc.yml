@@ -86,16 +86,16 @@ parts:
       sections:
       - file: tech/backup-checklist
       - file: tech/cf-checker
-      - file: tech/data_formats
       - file: tech/drs
         sections:
         - file: tech/filenames
       - file: tech/keywords
-      - file: tech/massdata
-      - file: tech/moving-data.md
-      - file: tech/permissions
+      - file: tech/data_formats
       - file: tech/tech-readme.md
       - file: tech/title.md
+      - file: tech/permissions
+      - file: tech/massdata
+      - file: tech/moving-data.md
       - file: tech/versioning
       - file: tech/conventions
   - caption: Appendix 

@@ -4,15 +4,16 @@ In this section of the book we are covering the key concepts associated with dat
 
 **index**
 
-* [FAIRER data](fairer-principles.md)
-* [](provenance.md)
-* [](dmp.md)
-* [](collaboration-agreement.md)
-* [](availability-statement.md)
+* [](backup.md)
 * [Controlled vocabulary](controlled-vocab.md) 
 * [Conventions and standards](conventions.md) 
-* [Persistent identifiers](pids.md)
+* [](availability-statement.md)
+* [](collaboration-agreement.md)
+* [](dmp.md)
 * [](policies.md)
-* [Open Access Licenses](license.md)
+* [FAIRER data](fairer-principles.md)
 * [Journal requirements](journal.md)
-
+* [Open Access Licenses](license.md)
+* [Persistent identifiers](pids.md)
+* [](provenance.md)
+* [](version-control.md)

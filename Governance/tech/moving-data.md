@@ -14,7 +14,7 @@ $ scp abc123@gadi-dm.nci.org.au:/path/to/file/on/gadi /path/to/local/destination
 
 You can also transfer data through gadi-dm.nci.org.au using•commands such as sftp, rsync,...•applications such as FileZilla, WinSCP,....•No interactive sessions on any of the data-mover nodes, try interactive copyq jobs
 
-This page covers ssh-keys but alos how to set specila purpouse one for rsync: https://opus.nci.org.au/display/Help/Using+SSH+keys
+This page covers ssh-keys but also how to set a special purpouse one for rsync: https://opus.nci.org.au/display/Help/Using+SSH+keys
 
 ### Moving data from different disk storage
 Moving data among different storage is usually straightforward, just using
