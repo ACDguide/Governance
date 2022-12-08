@@ -51,7 +51,7 @@ A DMP should also include:
 * directory structure and filenames should be consistent and follows conventions wherever possible, CF standard or other relevant standards should be adopted if not already in use.
 * data reduction plan: does all model data need to be saved after analysis?
 * data retention plan: when can data be deleted?
-* [backup strategy](../tech/backup.md)
+* [backup strategy](backup.md)
 
 If research is part of a collaboration project:
 

@@ -18,7 +18,7 @@ This page covers ssh-keys but also how to set a special purpouse one for rsync: 
 
 ### Moving data from different disk storage
 Moving data among different storage is usually straightforward, just using
-the unix `cp`, `mv`, `rsync` commands, except for massdata that has his dedicated mdss commands, covered in the [massdata page]().
+the unix `cp`, `mv`, `rsync` commands, except for massdata that has his dedicated mdss commands, covered in the [massdata page](massdata.md).
 However,  there are differences in the way these commands will act and some consideration on the way the storage is organised
 
 ### OOD ARE

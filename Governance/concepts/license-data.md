@@ -1,10 +1,10 @@
 (data-license)=
 # Dataset license
-Datasets and software are both research products, from a licensing point of view they are treated differently. For datasets we suggest applying one of the Creative Commons licenses (CC). 
+Datasets and software are both research products, from a licensing point of view they are treated differently. For datasets we suggest applying one of the [Creative Commons licenses (CC)](https://creativecommons.org/licenses/). 
  These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an [online tool](https://chooser-beta.creativecommons.org) to help choosing between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user's country of origin.
 
 ```{note}
-As well as the international version, there is also an Australian Creative Commons.
+As well as the international version, there is also an [Australian Creative Commons](https://creativecommons.org.au/).
 ```
 
 Creative Commons uses an abbreviation for each of the options:
@@ -24,7 +24,7 @@ In the last few years there is a push to avoid using the Not Commercial clause a
 ## How to apply a license
 Once decided which license to apply, it is usually easy to apply it to a dataset.
 
-When publishing a dataset add a `license.txt` file which contains the chosen [license legal text](http://creativecommons.org/licenses/by/4.0/legalcode).
+When publishing a dataset add a `license.txt` file which contains the chosen license legal text.
 
 At the top of the file specify the dataset title ( referred to as "licensed material") and the owner of the work you are licensing (referred to as "licensor"). Please note that in the example below CLEX is acting as licensor on behalf of the author and/or their institution.
 
@@ -39,3 +39,8 @@ At the top of the file specify the dataset title ( referred to as "licensed mate
 The `license.txt` file then will be available both in the dataset local directory and on the online data portal together with the files. Also, as netCDF is self-describing the appropriate license link to the Creative Commons website can be added to the files global attributes and/or other metadata records available.
 
 It is important that whichever license is chosen, the owner, author, and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use the data should be using to generate a correct attribution. Ideally, the author should provided the preferred citation.
+
+```{note} CC-BY 4.0
+There are a lot of different flavours possible. Usually, most licenses cover "attribution" which is the most common reason to apply a license: to get your work recognised! If unsure about which license to use, we advise using the [International CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode).
+```
+

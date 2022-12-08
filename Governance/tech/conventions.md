@@ -241,7 +241,7 @@ If the file is gpoing to be published the title has to be short enough to be dis
 ````{dropdown} **history** 
 **CF - highly recommended**<br>
 **ACDD - recommended**<br>
-The [history]() attribute provides a chronological trace of the modifications applied to the original data. Many netCDF aware software append a line containing: date, time of day, user name, program name and command arguments.'
+The [history](https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#description-of-file-contents) attribute provides a chronological trace of the modifications applied to the original data. Many netCDF aware software append a line containing: date, time of day, user name, program name and command arguments.'
 Alternatively, a user can append information manually when processing a file.
 ```{warning}
 While it is useful to have a program automatically update the file history, some of the appended information can be system dependent, as file paths, could have been inherited from a source file and not been anymore relevant, or finally could be unreadable. An example of the last is when concatenating files with CDO, if you are using a `*` to match many files, the history message will explode the regex and list the path of each file, which make the history attribute hard to read.  
