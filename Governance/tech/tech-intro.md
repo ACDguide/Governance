@@ -4,12 +4,17 @@ We are collecting here information on technical aspects of data management, incl
 
 **Index**
 
-* [](backup.md)
 * [](backup-checklist.md)
-* [](conventions.md)
-* [](data_formats.md)
+* [](cf-checker.md)
 * [](drs.md)
 * [](keywords.md)
-* [](massdata.md)
+* [](coding.md)
+* [](data_formats.md)
+* [](tech-readme.md)
+* [](title.md)
 * [](permissions.md)
+* [](massdata.md)
+* [](moving-data.md)
+* [](compression.md)
 * [](versioning.md)
+* [](conventions.md)

@@ -40,7 +40,7 @@ Most universities will provide shared storage on their local network that can be
 
 ### Tape and other institutional data repositories
 
-For anything which is really big, which is quite common in climate science, you can use tape. This is less accessible then other options, but it has a large capacity and it is optimised for storing large files. Tape is also a good choice for archiving however, you should make sure this is its intended use. You can learn more how to do so in the [massdata page](massdata.md).
+For anything which is really big, which is quite common in climate science, you can use tape. This is less accessible then other options, but it has a large capacity and it is optimised for storing large files. Tape is also a good choice for archiving however, you should make sure this is its intended use. You can learn more how to do so in the [massdata page](../tech/massdata.md).
 
 ### Institutional or discipline data repositories
 
@@ -66,3 +66,6 @@ If you are managing cloud servers via NCI cloud or Nectar, take regular snapshot
 
 Version control is a must for your code and for any text files, as they change frequently, and you might want to recover older versions. It is not a good option for data files as they are usually binary. However, you can use it to keep track of changes to your data by using it for readme files describing your workflow. Here you can learn more about git and GitHub 
 
+```{tip}
+The technical tips section has some [back checklists](../tech/backup-checklist.md) that can be useful to build your own strategy.
+```

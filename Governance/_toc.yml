@@ -90,9 +90,14 @@ parts:
         sections:
         - file: tech/filenames
       - file: tech/keywords
+      - file: tech/coding
       - file: tech/data_formats
+      - file: tech/tech-readme.md
+      - file: tech/title.md
       - file: tech/permissions
       - file: tech/massdata
+      - file: tech/moving-data.md
+      - file: tech/compression
       - file: tech/versioning
       - file: tech/conventions
   - caption: Appendix 

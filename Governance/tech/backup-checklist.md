@@ -55,6 +55,9 @@ Check regularly logs and that you can actually recover the files!!!
 * `/home` on NCI or other institution server
     * Limited space
     * Backed up - Institutions will have their own strategies
+```{admonition} to recover file on NCI /home
+If you accidentally deleted files from your /home at NCI they can be recovered from daily snapshots check the [NCI documentation](https://opus.nci.org.au/pages/viewpage.action?pageId=90308816) to see how to.
+```
 * University usually offer backup option on shared drives for data on your laptop
     * reasonably large, but not suitable for huge amount of data
     * quick to retrieve
