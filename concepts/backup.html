@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -504,8 +506,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../tech/coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../tech/data_formats.html">
      Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/title.html">
+     Descriptive title
     </a>
    </li>
    <li class="toctree-l2">
@@ -516,6 +533,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/massdata.html">
      Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/compression.html">
+     NetCDF chunking and compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -911,7 +938,7 @@
 </div>
 <div class="section" id="tape-and-other-institutional-data-repositories">
 <h3>Tape and other institutional data repositories<a class="headerlink" href="#tape-and-other-institutional-data-repositories" title="Permalink to this headline">¶</a></h3>
-<p>For anything which is really big, which is quite common in climate science, you can use tape. This is less accessible then other options, but it has a large capacity and it is optimised for storing large files. Tape is also a good choice for archiving however, you should make sure this is its intended use. You can learn more how to do so in the <span class="xref myst">massdata page</span>.</p>
+<p>For anything which is really big, which is quite common in climate science, you can use tape. This is less accessible then other options, but it has a large capacity and it is optimised for storing large files. Tape is also a good choice for archiving however, you should make sure this is its intended use. You can learn more how to do so in the <a class="reference internal" href="../tech/massdata.html"><span class="doc std std-doc">massdata page</span></a>.</p>
 </div>
 <div class="section" id="institutional-or-discipline-data-repositories">
 <h3>Institutional or discipline data repositories<a class="headerlink" href="#institutional-or-discipline-data-repositories" title="Permalink to this headline">¶</a></h3>
@@ -936,6 +963,10 @@
 <div class="section" id="version-control">
 <h3>Version control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h3>
 <p>Version control is a must for your code and for any text files, as they change frequently, and you might want to recover older versions. It is not a good option for data files as they are usually binary. However, you can use it to keep track of changes to your data by using it for readme files describing your workflow. Here you can learn more about git and GitHub</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The technical tips section has some <a class="reference internal" href="../tech/backup-checklist.html"><span class="doc std std-doc">back checklists</span></a> that can be useful to build your own strategy.</p>
+</div>
 </div>
 </div>
 </div>

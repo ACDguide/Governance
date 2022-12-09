@@ -1,0 +1,895 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dataset readme file template &#8212; Climate Data Guidelines</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Descriptive title" href="title.html" />
+    <link rel="prev" title="Data formats" href="data_formats.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating climate data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-intro.html">
+   Guidelines to create a climate dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-basics.html">
+   Dataset creation basics &amp; sharing recommendations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-new-derived.html">
+   New, modified, and derived datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-publishing.html">
+   Preparing files for publication
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-checklists.html">
+   Checklists for data management in the project lifecycle
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Publishing climate data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/publish-intro.html">
+   Guidelines to publish climate data
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../publish/publish-options.html">
+   Publishing options
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
+     Publishing climate data with NCI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-esgf.html">
+     ESGF publishing procedure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-csiro-dap.html">
+     CSIRO Data Access Portal (DAP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-zenodo.html">
+     Publishing with Zenodo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/publish-examples.html">
+   Best Practice Published Data Records
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/journals.html">
+   Journal publishers data policies
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Managing datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-intro.html">
+   Guidelines to manage climate dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-project.html">
+   Project management
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../manage/manage-file.html">
+   File handling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../manage/manage-update-rep.html">
+     Updates to replicated data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../manage/manage-update-pub.html">
+     Updates to published data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-docs.html">
+   Documentation and provenance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-ausref.html">
+   Australian Community Reference Climate Data Collection @ NCI
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Retiring datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-intro.html">
+   Guidelines to manage the retirement of a dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-principles.html">
+   General principles of data retirement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-published.html">
+   Use case: published data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-replica.html">
+   Use case: replicated data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-unpublished.html">
+   Use case: unpublished data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-references.html">
+   Further information
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About us
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/working-group-governance.html">
+   Working Group Governance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/goals.html">
+   Working Group Goals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/how-to-contribute.html">
+   Guidelines for contributors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../concepts/concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/backup.html">
+     Backup strategy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/availability-statement.html">
+     Data availability statement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/dmp.html">
+     Data Management Plan
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/fairer-principles.html">
+     FAIR(ER) Principles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/journal.html">
+     Journal requirements
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/license.html">
+     Open Access License
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-data.html">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/provenance.html">
+     Provenance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/version-control.html">
+     Version Control
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="tech-intro.html">
+   Technical tips
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="backup-checklist.html">
+     Backup checklist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cf-checker.html">
+     CF compliance checkers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="filenames.html">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_formats.html">
+     Data formats
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="title.html">
+     Descriptive title
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="permissions.html">
+     File permissions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="massdata.html">
+     Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compression.html">
+     NetCDF chunking and compression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="versioning.html">
+     Versioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conventions.html">
+     Writing valid and compliant netCDF files
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/appendix-intro.html">
+   Supplemental material
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/acronyms.html">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/forcodes.html">
+     ANZSRC Field of Research (FoR) codes 2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/zenodo.html">
+     Step by step Zenodo guide
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tech/tech-readme.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/tech-readme.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/tech-readme.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-summary-for-physics-name-ctl-cu-pbl-rad-mps">
+   Table summary for physics
+Name           |   CTL     |   CU      |   PBL     |   RAD    |  MPS
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Dataset readme file template</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-summary-for-physics-name-ctl-cu-pbl-rad-mps">
+   Table summary for physics
+Name           |   CTL     |   CU      |   PBL     |   RAD    |  MPS
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="dataset-readme-file-template">
+<h1>Dataset readme file template<a class="headerlink" href="#dataset-readme-file-template" title="Permalink to this headline">¶</a></h1>
+<p>A good readme file attached to your published data is a useful tool for a potential user. If they have found the data online by downloading the readme file they can keep the data description and publications details together with the data. If they are using the data directly on the server where the data is stored, then they can get the information on the dataset without having to go online.</p>
+<p>More importantly the data description shown on online repository is limited in size and a readme file is useful to add more technical details, direcotry structure and other information that you might have to leave out of the main abstract.</p>
+<p>Readme template and example
+When you are publishing on NCI we provide a Readme file template in the working directory we create for each dataset. here I am using a real readme file from a record we recently published to illustrate the template structure. This particular readme file is quite long as there are a lot of technical details, so it provides a good example to show the kind of information you can include. However, if your dataset is less complex is likely your readme file will be a lot shorter than this.</p>
+<Dataset title and version>
+<p>High-Resolution Modelling of Extreme Storms over the East Coast of Australia v1.0
+<Abstract usually the same as published record></p>
+<p>This dataset includes data of 11 extreme East Coast Lows simulated using a multi-physics (5), multi-resolution (3) approach for 4 different boundary conditions, leading to a total of 660 simulations. All simulations were performed using the Weather Research and Forecasting (WRF v3.6) regional model using a triple nesting approach with different domain sizes.
+The outer domain corresponds to the CORDEX (Coordinated Regional Climate Downscaling Experiment) Australasia domain and is discretized using a 24-km horizontal grid spacing.
+ECMWF ERA Interim (ERAI) reanalysis are use to initialize and drive the model for present climate simulations. For future climate simulations, the Pseudo Global Warming (PGW) approach is used. In this case, initial and boundary conditions are built by adding the climate change signal obtained from a global climate multi-model ensemble from the CMIP5.
+We selected a total of eleven events featuring an extreme east coast low over the eastern coast of Australia. Events were selected based on their impacts around the Sydney area and the selection includes some of the most iconic events in recent times such as the “Pasha Bulker” (June 2007) and the June 2016 storms. All events were simulated for a total of 8 days, starting about 4 days before the storm peaked near the Sydney’s area. A full list of events dates is given below.
+&lt;list of relevant elements of the data as simulations,  data sources etc.&gt;</p>
+<p>Events:
+2007-06-04 to 2007-06-12
+2007-06-13 to 2007-06-21
+2007-06-22 to 2007-06-30
+2001-07-23 to 2001-07-31
+2005-03-18 to 2005-03-26
+2008-09-02 to 2008-9-10
+2015-04-18 to 2015-04-26
+2008-08-18 to 2008-08-26
+2013-02-17 to 2013-02-25
+2016-06-01 to 2016-06-09
+2006-09-03 to 2006-09-11</p>
+<p>Boundary conditions:
+HIST - (ERAI) reanalysis is used as lateral and surface (SST) boundary conditions for present climate simulations
+HIST-BRAN - (ERAI) reanalysis is used as lateral boundary conditions and BRAN for surface (SST), for present climate simulations
+FUT - initial and boundary conditions are built by adding the climate change signal from the CMIP5 RCP8.5 scenario climate multi-model ensemble to ERAI.
+FUT-THERMO - initial and boundary conditions are built by adding the climate change signal from the CMIP5 climate multi-model ensemble to ERAI, but only to thermodynamical variables (temperature and humidity)
+Physics:
+There is one control run (CTL) and four perturbed physics members that include modifications in the cumulus (CU), the surface and planetary boundary layer (PBL), the radiation (RAD) and the microphysics (MPS) schemes. Members are denoted according to the physical scheme that is being changed compared to the CTL run.
+&lt;extra information if necessary as more details on technical aspects, sources etc.&gt;</p>
+<div class="section" id="table-summary-for-physics-name-ctl-cu-pbl-rad-mps">
+<h2>Table summary for physics
+Name           |   CTL     |   CU      |   PBL     |   RAD    |  MPS<a class="headerlink" href="#table-summary-for-physics-name-ctl-cu-pbl-rad-mps" title="Permalink to this headline">¶</a></h2>
+<p>cumulus        | BMJ (2)   | KF (1)    | BMJ (2)   | BMJ (2)  | BMJ (2)
+S/PBL          | YSU (1)   | YSU (1)   | MYJ (2)   | YSU (1)  | YSU (1)
+shortwave rad. | RRTM (2)  | RRTM (2)  | RRTM (2)  | CAM (3)  | RRTM (2)
+longwave rad.  | Dudhia (1)| Dudhia (1)| Dudhia (1)| CAM (3)  | Dudhia (1)
+microphysics   | WSM6 (6)  | WSM6 (6)  | WSM6 (6)  | WSM6 (6) | Thomp. (8)
+Numbers after each of the schemes denote the code used in the WRF namelist.
+MYJ [9]; YSU [8]; KF [12, 11]; BMJ [1, 9, 10]; WSM6 [14]; Dudhia [6], RRTM
+[15]; CAM [4].
+<variables list></p>
+<p>The final data product is the post-processing files of all simulations made following CORDEX standards.
+Names and units of the variables that are available after post-processing. The frequency and the level is also included. Pressure levels are 200, 500, 700, 850 and 925 hPa.
+Surface level variables at 1 hr frequency:
+prm - precipitation rate (mm)
+2m surface variables at 1 hr frequency:
+tas - temperature (K)
+Surface level variables at 3 hrs frequency:
+psl - mean sea level pressure (hPa)
+Near-surface level variables at 3 hrs frequency:
+cape2d - Convective Available Potential Energy - CAPE (J kg-1)
+tpw - total precipitable water (mm)
+2m surface variables at 3 hrs frequency:
+hus - specic humidity (%)
+hurs relative humidity (%)
+10m surface variables at 3 hrs frequency:
+uas - zonal wind (m s-1)
+vas - meridional wind (m s-1)
+Pressure level variables at 6 hrs frequency:
+ta - temperature (K)
+ua - zonal wind (m s-1)
+va - meridional wind (m s-1)
+wa - vertical wind (m s-1)
+zg - gepotential height (m)
+hus - specic humidity (kg kg-1)
+&lt;Dataset creator, grants if relevant, CLEX research program or other project this dataset is an output of&gt;</p>
+<p>This dataset was created by Dr Alejandro Di Luca as part of the Australian Research Council (ARC) Discovery Early Career Researcher Award (DECRA) funded project (DE170101191) and is part of the Centre of Excellence for Climate Extremes (CLEX) Extreme Rainfall research program.
+<where to find the data online and how the data is organised on the server></p>
+<p>The data is available online on the NCI TDS server:
+<a class="reference external" href="https://dapds00.nci.org.au/thredds/catalogs/ks32/CLEX/HiRes-MESECA/HiRes-MESECA.html">https://dapds00.nci.org.au/thredds/catalogs/ks32/CLEX/HiRes-MESECA/HiRes-MESECA.html</a>
+and for NCI users in the ks32 project.
+File organisation:
+/g/data/ks32/CLEX_Data/HiRes-MESECA/v1-0/<resolution>/<event>/<boundary conditions>/<physics>/<frequency>/<variable>/<files>
+where
+<resolution> is WRF24, WRF8 and WRF2 for horizontal grid resolution of 24 km, 8 km and 2 km, respectively
+<event> is the starting date of each event
+<boundary conditions> are FUT, FUT-THERMO, HIST and HIST-BRAN
+<physics> are CONTROL, CU, MPS, PBL and RAD
+<frequency> are 6hr, 3hr, 1hr</p>
+<p>filenames:
+<variable><em>HiRes-MESECA_UNSW-WRF360-i1</em><resolution><em><event></em><boundary conditions><em><physics></em><frequency>_v1-0.nc
+Example: va200_HiRes-MESECA_UNSW-WRF360-i1_WRF2_2001-07-23_FUT_CTL_6hr_v1-0.nc
+&lt; if there is more than one author and/or collaborators list the names and their roles in regard to the data&gt;</p>
+<p>Author:
+· Alejandro Di Luca: designed and performed calculations to generate historical and pseudo-global warming boundary conditions; conceived, designed and performed all simulations; coded and run postprocessing scripts.
+Contributors:
+·        Daniel Argueso (<a class="reference external" href="mailto:d&#46;argueso&#37;&#52;&#48;uib&#46;es">d<span>&#46;</span>argueso<span>&#64;</span>uib<span>&#46;</span>es</a>): designed and performed calculations to generate historical and pseudo-global warming boundary conditions; coded postprocessing scripts.
+·        Nicolas Jourdain (<a class="reference external" href="mailto:nicolas&#46;jourdain&#37;&#52;&#48;univ-grenoble-alpes&#46;fr">nicolas<span>&#46;</span>jourdain<span>&#64;</span>univ-grenoble-alpes<span>&#46;</span>fr</a>): designed and performed calculations to generate pseudo-global warming boundary conditions.
+·        Jason Evans (<a class="reference external" href="mailto:jason&#46;evans&#37;&#52;&#48;unsw&#46;edu&#46;au">jason<span>&#46;</span>evans<span>&#64;</span>unsw<span>&#46;</span>edu<span>&#46;</span>au</a>): installed and setup the model in the NCI supercomputer, helped on the design and performance of simulations.</p>
+<Main contact, if relevant specify a contact for scientific questions and one for file access>
+<p>Contact: <a class="reference external" href="mailto:di_luca&#46;alejandro&#37;&#52;&#48;uqam&#46;ca">di_luca<span>&#46;</span>alejandro<span>&#64;</span>uqam<span>&#46;</span>ca</a> for any question on the dataset content and provenance
+<a class="reference external" href="mailto:paola&#46;petrelli&#37;&#52;&#48;utas&#46;edu&#46;au">paola<span>&#46;</span>petrelli<span>&#64;</span>utas<span>&#46;</span>edu<span>&#46;</span>au</a> for questions or issues with file accessibility
+&lt;Dataset citation, this should always include the dataset doi&gt;</p>
+<p>Citation:
+Di Luca, Alejandro, Argueso, D., Jourdain, N., Evans, J., 2021. High-Resolution Modelling of Extreme Storms over the East Coast of Australia v1.0. NCI National Research Data Collection, doi:10.25914/604eb7628b4e7
+Other information you can include which was not present in this particular example are</p>
+<p>References list, if you are citing other sources in the description
+Associated papers for publications that are based on the dataset</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tech"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="data_formats.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data formats</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="title.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Descriptive title</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By ACD Working Group<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

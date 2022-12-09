@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -504,8 +506,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../tech/coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../tech/data_formats.html">
      Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/title.html">
+     Descriptive title
     </a>
    </li>
    <li class="toctree-l2">
@@ -516,6 +533,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/massdata.html">
      Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/compression.html">
+     NetCDF chunking and compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -659,6 +686,16 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apache-2-0">
+   Apache 2.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mit-license">
+   MIT license
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-apply-a-license">
    How to apply a license
   </a>
@@ -684,6 +721,16 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apache-2-0">
+   Apache 2.0
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mit-license">
+   MIT license
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-apply-a-license">
    How to apply a license
   </a>
@@ -699,17 +746,17 @@
                 
   <div class="section" id="software-licenses">
 <h1>Software licenses<a class="headerlink" href="#software-licenses" title="Permalink to this headline">¶</a></h1>
-<p>For software, you can refer to the Open Source initiative and the Software Sustainability Institute, SSI. They both offer a good introduction, SSI also lists several other websites covering available licenses in a human-readable way and useful comparison tools. Among these:</p>
+<p>The <a class="reference external" href="https://opensource.org/licenses">Open Source initiative</a> and the <a class="reference external" href="https://software.ac.uk/resources/guides/choosing-open-source-licence?_ga=2.23847290.1503282406.1562136302-1313042888.1562136302">Software Sustainability Institute (SSI)</a> offer a good introduction to software licensing. SSI also lists several other websites covering available licenses in a human-readable way and useful comparison tools. Among these:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://choosealicense.com/licenses/">github choose a license tool</a></p></li>
+<li><p><a class="reference external" href="https://choosealicense.com/licenses/">GitHub Choose a license tool</a></p></li>
 <li><p><a class="reference external" href="https://tldrlegal.com/licenses/browse">TLDR Legal license list</a></p></li>
 </ul>
 <p>They both summarise licenses by their “rules”.</p>
-<p>We usually apply the <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> to the code we produce. Creative Commons are not suitable for licensing software, as stated on the Creative Commons website:</p>
-<blockquote>
-<div><p>… Unlike software-specific licenses, CC licenses do not contain specific terms about the distribution of source code, which is often important to ensuring the free reuse and modifiability of software. Many software licenses also address patent rights, which are important to software but may not be applicable to other copyrightable works. Additionally, our licenses are currently not compatible with the major software licenses, so it would be difficult to integrate CC-licensed work with other free software. Existing software licenses were designed specifically for use with software and offer a similar set of rights to the Creative Commons licenses.</p>
-</div></blockquote>
-<p>Most of the differences are due to the collaborative nature of most open access code.</p>
+<p>As for the data, the ARDC has also a <a class="reference external" href="https://ardc.edu.au/resource/research-software-rights-management-guide/">guide to software licensing</a>. It is also worth noticing that the ARDC is running several initiative to facilitate software sharing and publishing.</p>
+<p>Permissive software license, also known as BSD-like or BSD-style licenses, are free-software licenses which carry only minimal restrictions on how the software can be used.
+Two of the most used permissive licenses are the <a class="reference external" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a> and the <a class="reference external" href="https://choosealicense.com/licenses/mit/">MIT license</a>.</p>
+<div class="section" id="apache-2-0">
+<h2>Apache 2.0<a class="headerlink" href="#apache-2-0" title="Permalink to this headline">¶</a></h2>
 <p>Apache 2.0 applies the following</p>
 <table class="colwidths-auto table">
 <thead>
@@ -720,20 +767,20 @@
 </thead>
 <tbody>
 <tr class="row-even"><td class="text-align:left"><p>Commercial use</p></td>
-<td><p></p></td>
+<td><p>License and copyright notice</p></td>
 <td class="text-align:right"><p>Liability</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Distribution</p></td>
-<td><p>License and copyright notice</p></td>
+<td><p>State changes</p></td>
 <td class="text-align:right"><p>Trademark use</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>Modification</p></td>
-<td><p>State changes</p></td>
+<td><p></p></td>
 <td class="text-align:right"><p>Warranty</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Patent use</p></td>
-<td><p>State changes</p></td>
-<td class="text-align:right"><p>Warranty</p></td>
+<td><p></p></td>
+<td class="text-align:right"><p></p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>Private use</p></td>
 <td><p></p></td>
@@ -743,6 +790,37 @@
 </table>
 <p>Summarised this means that commercial and private use, distribution and modification are all allowed. A user can also use parts of the code covered by a patent, should there be any, without paying royalties. A user has to attach the original license and copyright notices to any derived product they want to distribute, as well as stating any changes made. Finally, the software creator cannot be held liable for damages and they share the product “as is” with no warranty and the license does not grant trademark rights.</p>
 <p>A good insight is again given by <a class="reference external" href="https://opensource.com/article/18/2/how-make-sense-apache-2-patent-license">this article</a> from the <a class="reference external" href="https://opensource.com/">opensource.com</a> website.</p>
+</div>
+<div class="section" id="mit-license">
+<h2>MIT license<a class="headerlink" href="#mit-license" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Permissions</p></th>
+<th class="head"><p>Conditions</p></th>
+<th class="text-align:right head"><p>Limitations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Commercial use</p></td>
+<td><p>License and copyright notice</p></td>
+<td class="text-align:right"><p>Liability</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Distribution</p></td>
+<td><p></p></td>
+<td class="text-align:right"><p>Warranty</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Modification</p></td>
+<td><p></p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Private use</p></td>
+<td><p></p></td>
+<td class="text-align:right"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>The MIT license is a short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.</p>
+</div>
 <div class="section" id="how-to-apply-a-license">
 <h2>How to apply a license<a class="headerlink" href="#how-to-apply-a-license" title="Permalink to this headline">¶</a></h2>
 <p>When publishing or even simply sharing our software, the license is both available in the code repository as a license.txt file and included in the actual files.</p>
@@ -765,6 +843,14 @@
 # limitations under the License.</p>
 </div></blockquote>
 <p>It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Creative Commons are not suitable for licensing software, as stated on the Creative Commons website:</p>
+<blockquote>
+<div><p>… Unlike software-specific licenses, CC licenses do not contain specific terms about the distribution of source code, which is often important to ensuring the free reuse and modifiability of software. Many software licenses also address patent rights, which are important to software but may not be applicable to other copyrightable works. Additionally, our licenses are currently not compatible with the major software licenses, so it would be difficult to integrate CC-licensed work with other free software. Existing software licenses were designed specifically for use with software and offer a similar set of rights to the Creative Commons licenses.</p>
+</div></blockquote>
+<p>Most of the differences are due to the collaborative nature of most open access code.</p>
+</div>
 </div>
 </div>
 

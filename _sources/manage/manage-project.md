@@ -46,7 +46,7 @@ On CSIRO internal resources, access mgmt is governed by windows ACLs - email hel
 ```
 
 ## Backup
-`gdata` is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a [backup plan](../tech/backup.md). If the files are an authoritative copy it might be worth to back up the data on a separate system. 
+`gdata` is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a [backup plan](../concepts/backup.md). If the files are an authoritative copy it might be worth to back up the data on a separate system. 
 The only option to back up data at NCI is to use to archive the data on the tape system also known as `[massdata](massdata)`.
 
 If the datasets are a replica and they can be easily retrieved, or are frequently changing than backing up the data might be redundant.

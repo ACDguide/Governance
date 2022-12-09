@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -504,8 +506,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="data_formats.html">
      Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="title.html">
+     Descriptive title
     </a>
    </li>
    <li class="toctree-l2">
@@ -516,6 +533,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="massdata.html">
      Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="compression.html">
+     NetCDF chunking and compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -768,8 +795,6 @@ The CF conventions only have some basic requirements and recommendations on how 
 <li><p>Variable, dimension and attribute names should begin with a letter and be composed of letters, digits, and underscores.</p></li>
 <li><p>No two variable names should be identical when case is ignored.</p></li>
 </ul>
-<p>Requirements:</p>
-<p>The external_variables attribute is of string type and contains a blank-separated list of variable names.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Attribute names commencing with underscore (‘_’) are reserved for use by the netCDF library.</p>
@@ -904,6 +929,7 @@ CF provides the optional attribute <code class="docutils literal notranslate"><s
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>CF - highly recommended</strong><br>
+<strong>ACDD - highly recommended</strong>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#long-name">long_name</a> attribute provides a description of the variable. Either long_name or standard_name is expected to be present ideally, they both are.<br>
 Standard_names are designed to describe the physical quantity, as air_temperature, this is usually not sufficient on its own to describe fully a variable.<br>
 Long_name provides a chance to give a more complete description of the variable, highlighting aspects that cannot be specified in other attributes.
@@ -918,6 +944,7 @@ Long_name is also often used to label plots.</p>
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>CF - highly  recommended</strong><br>
+<strong>ACDD - highly recommended</strong>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#standard-name"><code class="docutils literal notranslate"><span class="pre">standard_name</span></code></a> attribute is used to identify the variable content. A list of the approved standard_names is available <a class="reference external" href="http://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">here</a>.<br>
 It was introduced to provide an objective definition of a variable. The <code class="docutils literal notranslate"><span class="pre">long_name</span></code> attribute was, and still is, useful to provide a description of the variable, but as it is defined ad hoc by the dataset creator it is not possible to use it programmatically to individuate a specific variable, across different files. For example, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> can be used by online data catalogues to query all datasets that provide a particular variable.<br></p>
 <p class="card-text"><strong>Requirements</strong><br></p>
@@ -1003,20 +1030,20 @@ The <code class="docutils literal notranslate"><span class="pre">valid_range</sp
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - highly recommended</strong></p>
+<p class="card-text"><strong>ACDD - highly recommended</strong>
+This is the only attribute at variable level added by the ACDD conventions. It indicates the source of the data and it is defined using the ISO 19115-1 codes. Valid values are: <code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">thematicClassification</span></code>, <code class="docutils literal notranslate"><span class="pre">physicalMeasurement</span></code>, <code class="docutils literal notranslate"><span class="pre">auxiliaryInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">qualityInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">referenceInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">modelResult</span></code>, or <code class="docutils literal notranslate"><span class="pre">coordinate</span></code>.</p>
 </div>
 </details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In xarray variable attributes are kept across operations depending on the value of the <code class="docutils literal notranslate"><span class="pre">keep_attrs</span></code> argument. Its default behaviour is to keep them in unambiguous circumstances. If set to True it will always keep the attributes, if set to False it will discard them.<br>
 It is important to be aware of this, as particularly for coordinates, units and cell_methods are easily changed by calculations and often inherited attributes become meaningless or worst can cause issues if not updated. The same can also happen with other softwares.</p>
 </div>
-<p>There are various tools available to help you check your files against a version of the CF Conventions. The CLEX CMS covered some on their <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">wiki</a>.</p>
 </div>
 <div class="section" id="global-attributes">
 <h2>Global attributes<a class="headerlink" href="#global-attributes" title="Permalink to this headline">¶</a></h2>
 <p>Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, as DOI, contact, license and references.<br>
 While global attributes are the most useful when sharing data, for example to increase discoverability, using some key ones from the start of the file creation is important to keep track of the file history. Often this level of information is neglected when saving data to a file, which can make it hard if not impossible to reconstruct the analysis workflow.<br>
-Also, as global attributes are preserved during most of analysis operations, output files end up containing information from the source file which is usually not anymore relevant to the new data.<br>
+Also, as global attributes are preserved during most of analysis operations, output files end up containing information from the source file which is usually not any more relevant to the new data.<br>
 <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">source</span></code>, <code class="docutils literal notranslate"><span class="pre">references</span></code>, and <code class="docutils literal notranslate"><span class="pre">comment</span></code> can also be assigned to individual variables, in such case the variable version has precedence.</p>
 <p><strong>Requirements</strong></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">history</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">source</span></code>, <code class="docutils literal notranslate"><span class="pre">references</span></code>, and <code class="docutils literal notranslate"><span class="pre">comment</span></code> attributes are all type string.</p>
@@ -1027,8 +1054,9 @@ Also, as global attributes are preserved during most of analysis operations, out
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - required</strong>
-This attribute simply indicates the conventions applied to the file, as such is one of the few required attributes, as it provides the key to correctly interpret all the other attributes. For CF conventions the expected value is <code class="docutils literal notranslate"><span class="pre">CF-&lt;version&gt;</span></code> for example <code class="docutils literal notranslate"><span class="pre">CF-1.8</span></code>. if more than a convention is applied to the file then they should be provided as a list separated by blank spaces or commas.</p>
+<p class="card-text"><strong>CF - required</strong><br>
+<strong>ACDD - highly recommended</strong>
+This attribute simply indicates the conventions applied to the file, as such is one of the few required attributes, as it provides the key to correctly interpret all the other attributes. For CF conventions the expected value is <code class="docutils literal notranslate"><span class="pre">CF-&lt;version&gt;</span></code> for example <code class="docutils literal notranslate"><span class="pre">CF-1.8</span></code>. if more than a convention is applied to the file then they should be provided as a list separated by blank spaces or commas. For example <code class="docutils literal notranslate"><span class="pre">CF-1.8,</span> <span class="pre">ACDD-1.3</span></code>.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1037,30 +1065,10 @@ This attribute simply indicates the conventions applied to the file, as such is 
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong></p>
-</div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>institution</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong>
-or only recom???
-The name of the institution principally responsible for originating this data.</p>
-</div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>source</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong>
-<strong>ACDD - recommended</strong>
-This attribute indicates the method of production of the original data. It should be as detailed as possible so, for example, if the data is model generated also the version and if applicable details of configuration used should be present. It’s often easier if the source of the data is complex to use a link to documentation.<br>
-While this attribute’s definition focuses on the method, often source is also used to list the input data. If a the file is derived directly form another dataset, it is good practice to preserve some of the dataset original global attributes but prefacing them with <code class="docutils literal notranslate"><span class="pre">source_</span></code>, for example <code class="docutils literal notranslate"><span class="pre">source_license</span></code>. Alternatively, as a specific attribute for input data does not exist in conventions, <code class="docutils literal notranslate"><span class="pre">source_data</span></code>, <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">input_data</span></code>, are often used. CMIP conventions uses <code class="docutils literal notranslate"><span class="pre">parent_</span></code> to indicate properties of parent experiments used to initialise model simulations.</p>
+<p class="card-text"><strong>CF - highly recommended</strong><br>
+<strong>ACDD - highly recommended</strong><br>
+A short phrase or sentence describing the dataset. When applied to single files the title might simply describe the file content, if the file is published as part of a dataset is better to use this attribute for the dataset official title and use <code class="docutils literal notranslate"><span class="pre">summary</span></code> to add more detail on the spefic file content.
+If the file is gpoing to be published the title has to be short enough to be displayed easily in dataset catalogue listing. At the same time it is important for this to be descriptive of the data. For suggestions on how to create a title see <a class="reference internal" href="title.html"><span class="doc std std-doc">Descriptive title</span></a> in this section.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1069,7 +1077,38 @@ While this attribute’s definition focuses on the method, often source is also 
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong></p>
+<p class="card-text"><strong>CF - highly recommended</strong><br>
+<strong>ACDD - recommended</strong><br>
+The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#description-of-file-contents">history</a> attribute provides a chronological trace of the modifications applied to the original data. Many netCDF aware software append a line containing: date, time of day, user name, program name and command arguments.’
+Alternatively, a user can append information manually when processing a file.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p class="card-text">While it is useful to have a program automatically update the file history, some of the appended information can be system dependent, as file paths, could have been inherited from a source file and not been anymore relevant, or finally could be unreadable. An example of the last is when concatenating files with CDO, if you are using a <code class="docutils literal notranslate"><span class="pre">*</span></code> to match many files, the history message will explode the regex and list the path of each file, which make the history attribute hard to read.</p>
+</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>institution</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>CF - recommended</strong><br>
+<strong>ACDD - recommended</strong><br>
+The name of the institution principally responsible for originating this data.
+This can also be used at variable level, in which case it takes precendence over the global one for that specific variable.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>source</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>CF - recommended</strong><br>
+<strong>ACDD - recommended</strong><br>
+This attribute indicates the method of production of the original data. It should be as detailed as possible so, for example, if the data is model generated also the version and if applicable details of configuration used should be present. It’s often easier if the source of the data is complex to use a link to documentation.<br>
+While this attribute’s definition focuses on the method, often source is also used to list the input data. If a the file is derived directly form another dataset, it is good practice to preserve some of the dataset original global attributes but prefacing them with <code class="docutils literal notranslate"><span class="pre">source_</span></code>, for example <code class="docutils literal notranslate"><span class="pre">source_license</span></code>. Alternatively, as a specific attribute for input data does not exist in conventions, <code class="docutils literal notranslate"><span class="pre">source_data</span></code>, <code class="docutils literal notranslate"><span class="pre">input</span></code>, <code class="docutils literal notranslate"><span class="pre">input_data</span></code>, are often used. CMIP conventions uses <code class="docutils literal notranslate"><span class="pre">parent_</span></code> to indicate properties of parent experiments used to initialise model simulations.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1078,7 +1117,9 @@ references<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong></p>
+<p class="card-text"><strong>CF - recommended</strong><br>
+<strong>ACDD - suggested</strong><br>
+Published or web-based references that describe the data or methods used to produce it.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1087,8 +1128,9 @@ references<div class="summary-down docutils">
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong>
-this can also be used at variable level</p>
+<p class="card-text"><strong>CF - highly recommended</strong><br>
+<strong>ACDD - recommended</strong><br>
+Miscellaneous information about the data or methods used to produce it. This can also be used at variable level.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1097,7 +1139,8 @@ this can also be used at variable level</p>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - highly recommended</strong></p>
+<p class="card-text"><strong>ACDD - highly recommended</strong><br>
+A short abstract to introduce the dataset. It gives a chance to add more details about the file content. Particularly when the files of a dataset might have different content. For example, if different variables are stored as separate files, the <code class="docutils literal notranslate"><span class="pre">title</span></code> attribute might indicated the dataset title, and would be the same for all files, then <code class="docutils literal notranslate"><span class="pre">summary</span></code> can be used to list the content of each file.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1106,7 +1149,8 @@ this can also be used at variable level</p>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - highly recommended</strong></p>
+<p class="card-text"><strong>ACDD - highly recommended</strong><br>
+The <a class="reference external" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords">keywords</a> attribute is a comma-separated list of key words and/or phrases. Keywords should be preferably terms from a controlled vocabulary, in that case a reference for this can be added using the “keywords_vocabulary” attribute. Look at the <a class="reference internal" href="keywords.html"><span class="doc std std-doc">Choosing keywords</span></a> page in this section for suggestion on how to choose effective keywords.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1115,7 +1159,13 @@ this can also be used at variable level</p>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong></p>
+<p class="card-text"><strong>ACDD - recommended</strong><br>
+This attribute only applies to published data, it is the dataset identifier, provided by and unique within its naming authority.<br>
+The <code class="docutils literal notranslate"><span class="pre">id</span></code> can be the full persistent identifier, for example:<br>
+<code class="docutils literal notranslate"><span class="pre">https://doi.org/10.24381/cds.e2161bac</span></code><br>
+Or, when used in combination with the <code class="docutils literal notranslate"><span class="pre">naming_authority</span></code> attribute can be only the unique id in such authority context:<br>
+<code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">example</span></code><br>
+The id should not include white space characters.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1124,7 +1174,8 @@ this can also be used at variable level</p>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong></p>
+<p class="card-text"><strong>ACDD - recommended</strong><br>
+This can be a free text describing the license and/or term of conditions applied to the dataset, or a URL pointing to the same. If using the second it might help to specify the main points as <code class="docutils literal notranslate"><span class="pre">free</span> <span class="pre">access</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">commercial</span> <span class="pre">use</span></code> unless they can be easily surmised from the url itself (as with the CC licenses).</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1133,7 +1184,7 @@ this can also be used at variable level</p>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong>
+<p class="card-text"><strong>ACDD - recommended</strong><br>
 Respectively, the name, email and a web address (if available) of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -1143,7 +1194,7 @@ Respectively, the name, email and a web address (if available) of the person (or
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong>
+<p class="card-text"><strong>ACDD - recommended</strong><br>
 The name of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -1153,7 +1204,7 @@ The name of the person (or other entity specified by the publisher_type attribut
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong></p>
+<p class="card-text"><strong>ACDD - recommended</strong><br></p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1162,9 +1213,7 @@ The name of the person (or other entity specified by the publisher_type attribut
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong>
-The date on which this version of the data was created.
-The ISO 8601:2004 extended date format is recommended add example</p>
+<p class="card-text"><strong>ACDD - recommended</strong><br><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">date</span> <span class="pre">on</span> <span class="pre">which</span> <span class="pre">this</span> <span class="pre">version</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">data</span> <span class="pre">was</span> <span class="pre">created.</span> <span class="pre">The</span> <span class="pre">ISO</span> <span class="pre">8601:2004</span> <span class="pre">extended</span> <span class="pre">date</span> <span class="pre">format</span> <span class="pre">is</span> <span class="pre">recommended:</span></code>YYYY-MM-DDThh:mm:ss<zone>`.</p>
 </div>
 </details><p><strong>References</strong><br>
 A useful summarised version of <a class="reference external" href="https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.9.html">requirements and recommendations</a> for CF conventions.</p>

@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -504,8 +506,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../tech/coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../tech/data_formats.html">
      Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/title.html">
+     Descriptive title
     </a>
    </li>
    <li class="toctree-l2">
@@ -516,6 +533,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/massdata.html">
      Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/compression.html">
+     NetCDF chunking and compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -699,39 +726,44 @@
                 
   <div class="section" id="dataset-license">
 <span id="data-license"></span><h1>Dataset license<a class="headerlink" href="#dataset-license" title="Permalink to this headline">¶</a></h1>
-<p>While we consider both datasets and code as a form of data, from a licensing point of view they are treated differently. For datasets we suggest the Creative Commons licenses (CC). As well as the international version, there is also an Australian Creative Commons. These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an online tool to help you choose between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user’s country of origin.</p>
-<p>Creative Commons use abbreviation for each of the options:</p>
+<p>Datasets and software are both research products, from a licensing point of view they are treated differently. For datasets we suggest applying one of the <a class="reference external" href="https://creativecommons.org/licenses/">Creative Commons licenses (CC)</a>.
+These licenses are simple to use, they offer 6 different flavours, which cover most use cases and an <a class="reference external" href="https://chooser-beta.creativecommons.org">online tool</a> to help choosing between them. They have a human-readable version as well as the legal text and finally, the International version was created to cover your data independently of the potential user’s country of origin.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As well as the international version, there is also an <a class="reference external" href="https://creativecommons.org.au/">Australian Creative Commons</a>.</p>
+</div>
+<p>Creative Commons uses an abbreviation for each of the options:</p>
 <ul class="simple">
-<li><p>BY - for attribution which is always present, the right to distribute is also implicit in any CC license</p></li>
-<li><p>NC - for not commercial</p></li>
-<li><p>SA - for share alike</p></li>
-<li><p>ND - for not derivatives
-Check this 5 minutes video to learn more on the available combinations:</p></li>
+<li><p><strong>BY</strong> - for attribution which is always present, the right to distribute is also implicit in any CC license</p></li>
+<li><p><strong>NC</strong> - for not commercial</p></li>
+<li><p><strong>SA</strong> - for share alike</p></li>
+<li><p><strong>ND</strong> - for not derivatives
+Check the <a class="reference external" href="https://creativecommons.org/about/videos/creative-commons-kiwi/">CC kiwi video</a> (5 minutes long) to learn more on the available combinations.</p></li>
 </ul>
-<p><a class="reference external" href="https://creativecommons.org/about/videos/creative-commons-kiwi/">CC kiwi video</a></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Non-commercial license
-In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.</p>
+<div class="warning admonition">
+<p class="admonition-title">Not Commercial option</p>
+<p>In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.</p>
 </div>
 <div class="section" id="how-to-apply-a-license">
 <h2>How to apply a license<a class="headerlink" href="#how-to-apply-a-license" title="Permalink to this headline">¶</a></h2>
-<p>Once you have decided which license to apply it is usually fairly easy to apply it to your dataset or code.</p>
-<p>If publishing a dataset set you can create a license.txt file which contains the chosen license legal text.</p>
+<p>Once decided which license to apply, it is usually easy to apply it to a dataset.</p>
+<p>When publishing a dataset add a <code class="docutils literal notranslate"><span class="pre">license.txt</span></code> file which contains the chosen license legal text.</p>
 <p>At the top of the file specify the dataset title ( referred to as “licensed material”) and the owner of the work you are licensing (referred to as “licensor”). Please note that in the example below CLEX is acting as licensor on behalf of the author and/or their institution.</p>
-<p>You can see the license online at</p>
-<p><a class="reference external" href="http://creativecommons.org/licenses/by/4.0/legalcode">http://creativecommons.org/licenses/by/4.0/legalcode</a></p>
+<p><strong>Example license header</strong></p>
+<blockquote>
+<div><p>Licensor - ARC Centre of Excellence for Climate Extremes (CLEX) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail <a class="reference external" href="mailto:coecss&#37;&#52;&#48;unsw&#46;edu&#46;au">coecss<span>&#64;</span>unsw<span>&#46;</span>edu<span>&#46;</span>au</a><br>
+Author: “author name” &lt;”author-email”&gt;<br>
+Licensed Material - <dataset title> (version 1.0)<br>
+Creative Commons Attribution 4.0 International Public License<br>
+By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons ….</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">license.txt</span></code> file then will be available both in the dataset local directory and on the online data portal together with the files. Also, as netCDF is self-describing the appropriate license link to the Creative Commons website can be added to the files global attributes and/or other metadata records available.</p>
+<p>It is important that whichever license is chosen, the owner, author, and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use the data should be using to generate a correct attribution. Ideally, the author should provided the preferred citation.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Example license header
-Licensor - ARC Centre of Excellence for Climate Extremes (CLEX) - Level 4, Mathews Building, University of New South Wales, Sydney, NSW, Australia, 2052, Phone: +61 2 9385 9393, e-mail <a class="reference external" href="mailto:coecss&#37;&#52;&#48;unsw&#46;edu&#46;au">coecss<span>&#64;</span>unsw<span>&#46;</span>edu<span>&#46;</span>au</a>
-Author: “author name” &lt;”author-email”&gt;
-Licensed Material - <dataset title> (version 1.0)
-Creative Commons Attribution 4.0 International Public License
-By exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons ….</p>
+<p>CC-BY 4.0
+There are a lot of different flavours possible. Usually, most licenses cover “attribution” which is the most common reason to apply a license: to get your work recognised! If unsure about which license to use, we advise using the <a class="reference external" href="https://creativecommons.org/licenses/by/4.0/legalcode">International CC-BY 4.0 license</a>.</p>
 </div>
-<p>The license.txt file then will be available both in the dataset local directory and on the NCI dataset catalogue together with the files. Also, we will use the appropriate license link to the Creative Commons website in the files global attributes and in the metadata records we produce.</p>
-<p>It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.</p>
 </div>
 </div>
 

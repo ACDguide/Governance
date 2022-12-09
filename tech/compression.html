@@ -1,0 +1,895 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NetCDF chunking and compression &#8212; Climate Data Guidelines</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Versioning" href="versioning.html" />
+    <link rel="prev" title="Moving data" href="moving-data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduction.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Creating climate data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-intro.html">
+   Guidelines to create a climate dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-basics.html">
+   Dataset creation basics &amp; sharing recommendations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-new-derived.html">
+   New, modified, and derived datasets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-publishing.html">
+   Preparing files for publication
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../create/create-checklists.html">
+   Checklists for data management in the project lifecycle
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Publishing climate data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/publish-intro.html">
+   Guidelines to publish climate data
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../publish/publish-options.html">
+   Publishing options
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
+     Publishing climate data with NCI
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-esgf.html">
+     ESGF publishing procedure
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-csiro-dap.html">
+     CSIRO Data Access Portal (DAP)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publish/publish-zenodo.html">
+     Publishing with Zenodo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/publish-examples.html">
+   Best Practice Published Data Records
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../publish/journals.html">
+   Journal publishers data policies
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Managing datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-intro.html">
+   Guidelines to manage climate dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-project.html">
+   Project management
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../manage/manage-file.html">
+   File handling
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../manage/manage-update-rep.html">
+     Updates to replicated data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../manage/manage-update-pub.html">
+     Updates to published data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-docs.html">
+   Documentation and provenance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../manage/manage-ausref.html">
+   Australian Community Reference Climate Data Collection @ NCI
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Retiring datasets
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-intro.html">
+   Guidelines to manage the retirement of a dataset
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-principles.html">
+   General principles of data retirement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-published.html">
+   Use case: published data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-replica.html">
+   Use case: replicated data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-unpublished.html">
+   Use case: unpublished data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../retire/retire-references.html">
+   Further information
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About us
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/working-group-governance.html">
+   Working Group Governance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/goals.html">
+   Working Group Goals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about-us/how-to-contribute.html">
+   Guidelines for contributors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Concepts
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../concepts/concept-intro.html">
+   Key concepts in data management
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/backup.html">
+     Backup strategy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/controlled-vocab.html">
+     Controlled vocabularies
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/conventions.html">
+     Conventions and standards
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/cf-conventions.html">
+       CF Conventions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/acdd-conventions.html">
+       Attribute Convention for Data Discovery
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/other-conventions.html">
+       Other conventions
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/availability-statement.html">
+     Data availability statement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/collaboration-agreement.html">
+     Data collaboration agreement
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/dmp.html">
+     Data Management Plan
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/policies.html">
+     Data policies
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-conduct.html">
+       Responsible Conduct of Research
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-arc.html">
+       Australian Research Council data policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-bom.html">
+       BoM Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-clex.html">
+       CLEX Data Policy
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/policy-csiro.html">
+       CSIRO Data Policy
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/fairer-principles.html">
+     FAIR(ER) Principles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/journal.html">
+     Journal requirements
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../concepts/license.html">
+     Open Access License
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-data.html">
+       Dataset license
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-code.html">
+       Software licenses
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-qa.html">
+       Q&amp;A
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../concepts/license-institution.html">
+       Specific requirement by institution
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/pids.html">
+     Persistent identifiers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/provenance.html">
+     Provenance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/version-control.html">
+     Version Control
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Technical guide
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="tech-intro.html">
+   Technical tips
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="backup-checklist.html">
+     Backup checklist
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cf-checker.html">
+     CF compliance checkers
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="drs.html">
+     Choosing a directory structure (DRS) and filenames
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="filenames.html">
+       Naming
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="keywords.html">
+     Choosing keywords
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="data_formats.html">
+     Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="title.html">
+     Descriptive title
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="permissions.html">
+     File permissions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="massdata.html">
+     Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     NetCDF chunking and compression
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="versioning.html">
+     Versioning
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conventions.html">
+     Writing valid and compliant netCDF files
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Appendix
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../appendix/appendix-intro.html">
+   Supplemental material
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/concepts.html">
+     Key concepts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/acronyms.html">
+     Acronyms
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/forcodes.html">
+     ANZSRC Field of Research (FoR) codes 2020
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../appendix/zenodo.html">
+     Step by step Zenodo guide
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/tech/compression.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/compression.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/compression.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression">
+   Compression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-compress-netcdf-files">
+     Why compress NetCDF files?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-it-work">
+     How does it work?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-tools">
+   Compression tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-by-gathering">
+   Compression by Gathering
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>NetCDF chunking and compression</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression">
+   Compression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-compress-netcdf-files">
+     Why compress NetCDF files?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-it-work">
+     How does it work?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-tools">
+   Compression tools
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compression-by-gathering">
+   Compression by Gathering
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="netcdf-chunking-and-compression">
+<h1>NetCDF chunking and compression<a class="headerlink" href="#netcdf-chunking-and-compression" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="compression">
+<h2>Compression<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h2>
+<p>The NetCDF4 format also introduced the ability of adding internal compression to the files.</p>
+<div class="section" id="why-compress-netcdf-files">
+<h3>Why compress NetCDF files?<a class="headerlink" href="#why-compress-netcdf-files" title="Permalink to this headline">¶</a></h3>
+<p><strong>Saving storage</strong><br>
+Data if often stored on a shared filesystem, so it is each user’s responsibility to manage the available storage efficiently. Compressing NetCDF data files can shrink them to one third of their original size. This is the equivalent of being given three times as much disk space.</p>
+<p><strong>NetCDF compression is lossless</strong><br>
+The data is exactly as it was when read from disk. It can still be read using the same programming interface. As long as the program reading the data has been compiled with the latest NetCDF library (version 4) then the task of decompressing the data is handled by the library and as far as the programs are concerned there is no difference in the data. The usual tools, such as ncdump, can be used to examine the variables contained within the NetCDF file.</p>
+<p>Compression with tools such as gzip is possible but is not recommended except for archival purposes. It has the disadvantage that the file must be decompressed to be read and then recompressed again when finished, which can be time consuming, not to mention the data in question will take up much more room while it is being analysed.</p>
+</div>
+<div class="section" id="how-does-it-work">
+<h3>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline">¶</a></h3>
+<p>The NetCDF library has several options for compressing data, which all compression programs will use, as they all use the underlying library to perform the compression. There is a more detailed explanation if you wish to understand more, but briefly:</p>
+<p><strong>Deflate level</strong></p>
+<p>This is an integer value from ranging from 0 to 9. A value of 0 means no compression, and 9 is the highest level of compression possible. The higher this value the smaller your file will be once compressed. However, there is a trade-off, the higher the deflate level, the longer it will take to compress, particularly so with very high deflate levels. At deflate level 9 it can take six times longer to compress the data, with only a few percent improvement in compression. The recommended deflate level is 5. This combines good compression with a small increase in compression time.</p>
+<p><strong>Shuffle</strong></p>
+<p>Turn shuffle on. Simple. It usually results in a smaller compressed file with little performance overhead.</p>
+<p>Finally <code class="docutils literal notranslate"><span class="pre">chunking</span></code> also plays a part in the compression process, in order to use NetCDF compression the data must be chunked. Many tools just adopt the NetCDF library default chunking strategy. For many NetCDF versions the default strategy has been to create chunks that are simply the same size as the grid dimensions of the variable and using size 1 for <code class="docutils literal notranslate"><span class="pre">time</span></code> when present. This can be a disastrous choice in terms of performance if the data is also compressed, as the entire variable/grid must be read into memory to be uncompressed even if only a single slice is required.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>COMMENT: to be fixed!!!
+If dealing with a file with contiguous storage, it is necessary to first chunk the file and then apply compression. Otherwise the compression operation will fail.
+The error messag ewill vary depending on the tool used, for example with nccopy
+<code class="docutils literal notranslate"><span class="pre">NetCDF:</span> <span class="pre">Bad</span> <span class="pre">chunk</span> <span class="pre">sizes.</span></code>
+cdo -f nc4 -z zip_5 input-file output-file  might work as cdo will impose chunking before compressing
+Another way around this is to use xarry to rewrite the file with the desire encoding, getting a better control of chunking and compression at the same time</p>
+</div>
+</div>
+</div>
+<div class="section" id="compression-tools">
+<h2>Compression tools<a class="headerlink" href="#compression-tools" title="Permalink to this headline">¶</a></h2>
+<p>There are several tools that can be used to compress NetCDF data, and compression can also be added when creating a fileusing the interfaces to the NetCDF library available for common programming languages like Python, fortran and MatLab.</p>
+<p><strong>nccopy</strong></p>
+<p>One of the standard tools included in a NetCDF installation is <a class="reference external" href="https://docs.unidata.ucar.edu/nug/current/netcdf_utilities_guide.html#guide_nccopy">nccopy</a>. <code class="docutils literal notranslate"><span class="pre">nccopy</span></code> can compress files and define the chunking using a command line argument (-c). nccopy is a good option if your data file structure changes little, so a chunking scheme can be decided upon and hard coded into scripts. It is not so useful if the dimensions and variables change. Another major limitation is that the chunking is defined by dimensions, not variables. If your data file has variables that share dimensions, but have different combinations or numbers of dimensions it is not possible to determine an optimal chunking strategy for each variable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nccopy</span> <span class="o">-</span><span class="n">k</span> <span class="n">nc4</span> <span class="o">-</span><span class="n">d</span> <span class="mi">5</span> <span class="o">-</span><span class="n">s</span> <span class="nb">input</span><span class="o">.</span><span class="n">nc</span> <span class="n">output</span><span class="o">.</span><span class="n">nc</span> 
+</pre></div>
+</div>
+<p><strong>NCO</strong></p>
+<p>The <a class="reference external" href="http://nco.sourceforge.net/nco.html#Compression">NetCDF Operator</a> program suite can compress NetCDF files and has recently included the option to choose different <a class="reference external" href="http://nco.sourceforge.net/nco.html#Chunking">chunking strategies</a>. NCO provides lots of strategies for both chunking and compressing, refer to their doucmentation for more details.
+COMMENT this might not be anymore the case!!!
+However, it is not possible to use their optimised chunking strategy for variables with four dimensions or more.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncks</span> <span class="o">-</span><span class="n">D</span> <span class="mi">5</span> <span class="nb">input</span><span class="o">.</span><span class="n">nc</span> <span class="n">output</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p><strong>CDO</strong></p>
+<p><a class="reference external" href="https://code.mpimet.mpg.de/projects/cdo/embedded/index.html#x1-70001.2.1">Climate Data Operators</a> can also compress NetCDF, <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> is automatically enabled and it offers limited chunking options: auto (default), grid or lines.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="o">-</span><span class="n">f</span> <span class="n">nc4</span> <span class="o">-</span><span class="n">z</span> <span class="n">zip_5</span> <span class="p">{</span><span class="o">-</span><span class="n">k</span> <span class="n">grid</span><span class="p">}</span> <span class="n">copy</span> <span class="n">inpput</span><span class="o">.</span><span class="n">nc</span> <span class="n">output</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p><strong>nccompress</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">nccompress</span></code> package is available at NCI, as part of the CLEX-CMS conda environment. At present it consists of four python-based programs: <code class="docutils literal notranslate"><span class="pre">ncfind</span></code>, <code class="docutils literal notranslate"><span class="pre">nc2nc</span></code>, <code class="docutils literal notranslate"><span class="pre">nccompress</span></code> and <code class="docutils literal notranslate"><span class="pre">ncvarinfo</span></code>. nccompress can copy NetCDF files with compression and an optimised chunking strategy that has reasonable performance for many datasets. Its two main limitations: it is slower than the other programs, and it can only compress NetCDF3 or NetCDF4 classic format. There is more detail in the following sections.
+The <code class="docutils literal notranslate"><span class="pre">ncfind</span></code> utility is used to find NetCDF files and discriminate between compressed and uncompressed ones.
+For more information refer to the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/NetCDF_Compression_Tools#General_guidelines">original documentation</a></p>
+</div>
+<div class="section" id="compression-by-gathering">
+<h2>Compression by Gathering<a class="headerlink" href="#compression-by-gathering" title="Permalink to this headline">¶</a></h2>
+<p>This method is described in the CF conventions document:</p>
+<p><a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#_reduction_of_dataset_size">https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#_reduction_of_dataset_size</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tech"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="moving-data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Moving data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="versioning.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Versioning</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By ACD Working Group<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

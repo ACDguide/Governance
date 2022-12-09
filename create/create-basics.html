@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -504,8 +506,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../tech/coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../tech/data_formats.html">
      Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/title.html">
+     Descriptive title
     </a>
    </li>
    <li class="toctree-l2">
@@ -516,6 +533,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/massdata.html">
      Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/compression.html">
+     NetCDF chunking and compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -766,8 +793,8 @@
 <p>See <a class="reference external" href="https://github.com/ACDguide/Governance/issues/7">https://github.com/ACDguide/Governance/issues/7</a> for discussion and suggestions</p>
 <div class="section" id="file-formats-metadata-coordinates">
 <h2>File formats, metadata &amp; coordinates<a class="headerlink" href="#file-formats-metadata-coordinates" title="Permalink to this headline">¶</a></h2>
-<p>Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills, the variety of metadata fields required to adequately describe the data and its dimensions, the domain-specific scientific knowledge required to make informed decisions about its creation and use, and the technical knoweldge required to produce robust datasets that can be reused by others. (Note that we will use terms and concepts described in <span class="xref myst">Appendix/concepts</span>.)</p>
-<p>By far the most commonly used format in the climate science community is <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a>, an open (i.e. not proprietary), self-describing (i.e. metadata is an in-built feature) array-oriented (i.e. highly structured data such as climate model data) format that is typically used on POSIX systems (Unix-based computing system with a directory structure and command-line input; standard for high-performance computing systems such as <a class="reference external" href="https://nci.org.au/">NCI</a>). See the <span class="xref myst">technical note on data formats</span>.</p>
+<p>Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills, the variety of metadata fields required to adequately describe the data and its dimensions, the domain-specific scientific knowledge required to make informed decisions about its creation and use, and the technical knoweldge required to produce robust datasets that can be reused by others. (Note that we will use terms and concepts described in the appendix <a class="reference internal" href="../concepts/concept-intro.html"><span class="doc std std-doc">Concepts</span></a>.)</p>
+<p>By far the most commonly used format in the climate science community is <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a>, an open (i.e. not proprietary), self-describing (i.e. metadata is an in-built feature) array-oriented (i.e. highly structured data such as climate model data) format that is typically used on POSIX systems (Unix-based computing system with a directory structure and command-line input; standard for high-performance computing systems such as <a class="reference external" href="https://nci.org.au/">NCI</a>). See the <a class="reference internal" href="../tech/data_formats.html"><span class="doc std std-doc">technical note on data formats</span></a>.</p>
 <div class="section" id="components-of-a-netcdf-file">
 <h3>Components of a NetCDF file<a class="headerlink" href="#components-of-a-netcdf-file" title="Permalink to this headline">¶</a></h3>
 <p>NetCDF files contain three main components:</p>
@@ -782,19 +809,19 @@
 <h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
 <p>NetCDF attributes are in one of two categories: Machine-readable metadata attributes and human-readable metadata attributes (long names, most global attrs).</p>
 <ul class="simple">
-<li><p>Machine-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> and <code class="docutils literal notranslate"><span class="pre">calendar</span></code>) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common <span class="xref myst">conventions</span> and <span class="xref myst">controlled vocabularies</span>. These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages.</p></li>
-<li><p>Human-readable attributes (e.g. <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">license</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code>) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how is was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of <span class="xref myst">keywords</span> similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.</p></li>
+<li><p>Machine-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> and <code class="docutils literal notranslate"><span class="pre">calendar</span></code>) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common <a class="reference internal" href="../concepts/conventions.html"><span class="doc std std-doc">conventions</span></a> and <a class="reference internal" href="../concepts/controlled-vocab.html"><span class="doc std std-doc">controlled vocabularies</span></a>. These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages.</p></li>
+<li><p>Human-readable attributes (e.g. <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">license</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code>) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how is was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of <a class="reference internal" href="../tech/keywords.html"><span class="doc std std-doc">keywords</span></a> similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.</p></li>
 </ul>
-<p>For a list of recommended attributes to include and define in most climate datasets, see <a class="reference external" href="https://acdguide.github.io/Governance/tech/conventions.html">https://acdguide.github.io/Governance/tech/conventions.html</a>. We recommend implementing these metadata fields into your post-processing workflow so that these are automatically applied by your data creation code/script.</p>
+<p>For a list of recommended attributes to include and define in most climate datasets and how to apply them, see the <a class="reference internal" href="../tech/conventions.html"><span class="doc std std-doc">conventions page in this book</span></a>. We recommend implementing these metadata fields into your post-processing workflow so that these are automatically applied by your data creation code/script.</p>
 <p>For a more technical description of the netCDF format and metadata, see <a class="reference external" href="https://acdguide.github.io/BigData/format_metadata.html">https://acdguide.github.io/BigData/format_metadata.html</a>.</p>
 </div>
 </div>
 <div class="section" id="file-directory-organisation">
 <h2>File &amp; directory organisation<a class="headerlink" href="#file-directory-organisation" title="Permalink to this headline">¶</a></h2>
 <p>Climate datasets are complex and can be chopped up and stored in many different ways. For example, datasets can broken up into separate files that contain full timeseries of a single variable, or each file could contain one month of data for all relevant variables. You should structure your data files into a navigable directory structure that sorts your files into some high-level dimensions that make it easier to access and understand what different data your set contains, with a directory tree that is meaningful and interpretable, and keeps the number of individual files in a given directory to below ~1000. Depending on how many files you are going to produce, you also want to make sure you have some directory structure implemented before the number of files become hard to track, so set this early. Some suggestions for directory tree components/dimensions are: variable, frequency, modelling realm, experiment name, or governing project.</p>
-<p>There is a type of complex directory structure known as a ‘<a class="reference external" href="https://acdguide.github.io/Governance/tech/drs.html">Directory Reference Syntax</a>’ (DRS), which is typically standardised through intercomparison projects such as CMIP and CORDEX. The directory tree components are usually very broad and cover many contextual aspects, especially when multiple models or modelling intitutions are using the same directory structure and controlled vocabulary.</p>
+<p>There is a type of complex directory structure known as a ‘<a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">Directory Reference Syntax</span></a>’ (DRS), which is typically standardised through intercomparison projects such as CMIP and CORDEX. The directory tree components are usually very broad and cover many contextual aspects, especially when multiple models or modelling intitutions are using the same directory structure and controlled vocabulary.</p>
 <p>Filenaming is an important consideration here, as confusion can easily arise if you have not named your files with enough verbosity to disentangle similar, but critically different files. A common recommendation is to name your files in a similar way to your directory structure (e.g. if you have both monthly and daily data, put these into two separate sub-directories and include the frequency in the filenames). Other provenance details, such as experiment name and model, should be considered in the filename itself to reduce the risk of confusing different outputs. For example, a file called ‘ocean_2014.nc’ can be misunderstood very easily, but a file called ‘ACCESS-ESM_historical-pacemaker_ocean_monthly_2014.nc’ is much clearer and will reduce the risk of having to rerun models, or misplacing irreplaceable observational data.<br />
-See <a class="reference external" href="https://acdguide.github.io/Governance/tech/filenames.html">https://acdguide.github.io/Governance/tech/filenames.html</a> for some tips to creating a robust filenaming convention for your datasets.</p>
+See <a class="reference internal" href="../tech/filenames.html"><span class="doc std std-doc">this page</span></a> for some tips to creating a robust filenaming convention for your datasets.</p>
 </div>
 <div class="section" id="backups-archiving">
 <h2>Backups &amp; archiving<a class="headerlink" href="#backups-archiving" title="Permalink to this headline">¶</a></h2>
@@ -804,15 +831,15 @@ See <a class="reference external" href="https://acdguide.github.io/Governance/te
 <li><p>keep only data intended for sharing in common areas.</p></li>
 <li><p>working data should be restricted to your personal space.</p></li>
 <li><p>ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.</p></li>
-<li><p>raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. onto NCI’s <a class="reference external" href="https://acdguide.github.io/Governance/tech/massdata.html">MDSS</a>) to enable regeneration of processed datasets from the raw data, without having to rerun models.</p></li>
+<li><p>raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. onto NCI’s <a class="reference internal" href="../tech/massdata.html"><span class="doc std std-doc">MDSS</span></a>) to enable regeneration of processed datasets from the raw data, without having to rerun models.</p></li>
 <li><p>a backup strategy should be set-up and implented early (ideally as part of a data management plan; see next section).</p></li>
 </ul>
-<p>For more detailed guidance on backing up data, see our <a class="reference external" href="https://acdguide.github.io/Governance/tech/backup.html">guide to creating a backup strategy</a> and <a class="reference external" href="https://acdguide.github.io/Governance/tech/backup-checklist.html">backup checklist</a>.</p>
+<p>For more detailed guidance on backing up data, see our <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">guide to creating a backup strategy</span></a> and <a class="reference internal" href="../tech/backup-checklist.html"><span class="doc std std-doc">backup checklist</span></a>.</p>
 <p>Moving data between disks (e.g. from NCI’s <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> to <code class="docutils literal notranslate"><span class="pre">/g/data/</span></code>) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using <a class="reference external" href="https://rsync.samba.org/">rsync</a> wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). ** perhaps a tech page on data moving tools would be helpful? **</p>
 </div>
 <div class="section" id="data-management-plans-documentation">
 <h2>Data management plans &amp; documentation<a class="headerlink" href="#data-management-plans-documentation" title="Permalink to this headline">¶</a></h2>
-<hr class="docutils" />
+<p>TOFIX!!!!</p>
 <p>Claire:<br />
 pick your project: ensure files are created belonging to the correct project, or if they need to be moved after creation, ensure that the correct group and permissions are inherited in the destination (See also ACLs page)</p>
 <p>Create a README at the top level with information about the dataset, when it was created, who to contact, how to use etc as relevant</p>

@@ -1,0 +1,10 @@
+.admonition-tip {
+    border-left-color: rgba(0, 246, 16, 1);
+}
+.admonition-tip .admonition-title {
+    background-color: rgba(0, 246, 16, .1);
+}
+.admonition-extra-tip .admonition-title:before {
+    color: rgba(0, 246, 16, 1);
+    content: '\f19d';
+}

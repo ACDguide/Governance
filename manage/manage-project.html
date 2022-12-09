@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -504,8 +506,23 @@
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../tech/coding.html">
+     Coding best practices
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../tech/data_formats.html">
      Data formats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/tech-readme.html">
+     Dataset readme file template
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/title.html">
+     Descriptive title
     </a>
    </li>
    <li class="toctree-l2">
@@ -516,6 +533,16 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/massdata.html">
      Mass Data Storage System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/moving-data.html">
+     Moving data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/compression.html">
+     NetCDF chunking and compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -811,7 +838,7 @@ All the files should be owned by the project group with <code class="docutils li
 </div>
 <div class="section" id="backup">
 <h2>Backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">gdata</span></code> is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a <span class="xref myst">backup plan</span>. If the files are an authoritative copy it might be worth to back up the data on a separate system.
+<p><code class="docutils literal notranslate"><span class="pre">gdata</span></code> is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">backup plan</span></a>. If the files are an authoritative copy it might be worth to back up the data on a separate system.
 The only option to back up data at NCI is to use to archive the data on the tape system also known as <code class="docutils literal notranslate"><span class="pre">[massdata](massdata)</span></code>.</p>
 <p>If the datasets are a replica and they can be easily retrieved, or are frequently changing than backing up the data might be redundant.</p>
 </div>
