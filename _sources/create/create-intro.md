@@ -17,7 +17,7 @@ Additionally, we have identified two main situations you may find yourself in: i
 
 ## Index
 * [Dataset creation basics & sharing recommendations](create-basics.md)  
-This is an overview of the landscape of climate datasets, including the various components of netCDF files and their storage in POXIS systems, and some best practice recommendations for backuping up data and management of the creation process.  
+This is an overview of the landscape of climate datasets, including the various components of netCDF files and their storage in POSIX systems, and some best practice recommendations for the back up of data and management of the creation process.  
 
     * File formats, metadata & coordinates
     * File & directory organisation

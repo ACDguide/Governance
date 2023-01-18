@@ -28,8 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -817,12 +817,12 @@
 <p>NCI provides web services to publish data and metadata:</p>
 <ul class="simple">
 <li><p>a <a class="reference external" href="https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/home">dataset catalogue</a> based on <a class="reference internal" href="../appendix/acronyms.html#geonetwork"><span class="std std-ref">GeoNetwork</span></a> to describe the dataset (i.e. a metadata repository) and associated DOI.  This will be the landing page for the DOI and will include a link to access the dataset.</p></li>
-<li><p>a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS Data Server</a> (TDS) this is a public data repository that provides access to the data. <a class="reference internal" href="../appendix/acronyms.html#thredds"><span class="std std-ref">THREDDS</span></a> offer a variety of protocols, files can be downloaded from here or accessed via the <a class="reference internal" href="../appendix/acronyms.html#opendap"><span class="std std-ref">OPeNDAP protocol</span></a>.</p></li>
+<li><p>a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS Data Server</a> (TDS). This is a public data repository that provides access to the data. <a class="reference internal" href="../appendix/acronyms.html#thredds"><span class="std std-ref">THREDDS</span></a> offer a variety of protocols, and files can be downloaded from here or accessed via the <a class="reference internal" href="../appendix/acronyms.html#opendap"><span class="std std-ref">OPeNDAP protocol</span></a>.</p></li>
 </ul>
 <div class="section" id="what-data-can-be-published-with-nci">
 <h2>What data can be published with NCI<a class="headerlink" href="#what-data-can-be-published-with-nci" title="Permalink to this headline">¶</a></h2>
-<p>Publishing with NCI is a good option when publishing a big dataset and/or data in netCDF format. Obvious candidates are outputs of model simulation run on Gadi.
-THREDDS was developed for netCDF files, publishing on a THREDDS server means that data is also available by OPeNDAP. This is useful when publishing a big dataset or the data is stored in big files. OPeNDAP allows remote access, a user can subset the data which avoids downloading the entire dataset. OPeNDAP protocol can be used with several analysis software.</p>
+<p>Publishing with NCI is a good option when publishing a big dataset and/or data in netCDF format. Obvious candidates are outputs of model simulation runs on Gadi.
+THREDDS was developed for netCDF files. Publishing on a THREDDS server means that data is also available by OPeNDAP. This is useful when publishing a big dataset or the data is stored in big files. OPeNDAP allows remote access, a user can subset the data which avoids downloading the entire dataset. OPeNDAP protocol can be used with several analysis software packages.</p>
 </div>
 <div class="section" id="generic-procedure-to-publish-with-nci">
 <h2>Generic procedure to publish with NCI<a class="headerlink" href="#generic-procedure-to-publish-with-nci" title="Permalink to this headline">¶</a></h2>
@@ -830,7 +830,7 @@ THREDDS was developed for netCDF files, publishing on a THREDDS server means tha
 <div class="section" id="data-project">
 <h3>Data project<a class="headerlink" href="#data-project" title="Permalink to this headline">¶</a></h3>
 <p>NCI manages storage and computational resources via projects. To publish data with them a project setup exclusively for this scope is needed. Depending on the researcher’s affiliation and or the dataset scope, they might be able to contribute to an existing “publishing” data project. This is a good option if the dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the CLEX collection which uses project ks32.</p>
-<p>If the dataset is big enough to have its own project, then the researcher should contact the NCI data team, via the helpdesk, and discuss their options with them. If NCI agrees, the researcher will have to provide details of the dataset and usually funding for the disk storage.</p>
+<p>If the dataset is big enough to have its own project, then the researcher should contact the NCI data team, via the helpdesk, and discuss the options with them. If NCI agrees, the researcher will have to provide details of the dataset and usually funding for the disk storage.</p>
 </div>
 <div class="section" id="creating-a-geonetwork-record">
 <h3>Creating a geonetwork record<a class="headerlink" href="#creating-a-geonetwork-record" title="Permalink to this headline">¶</a></h3>
@@ -839,10 +839,10 @@ Once the form is ready NCI will use the content to create a geonetwork record an
 </div>
 <div class="section" id="preparing-the-files">
 <h3>Preparing the files<a class="headerlink" href="#preparing-the-files" title="Permalink to this headline">¶</a></h3>
-<p>The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme files (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">DRS page</span></a> for examples.
-The files should follow both <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF</span></a> and <a class="reference internal" href="../concepts/acdd-conventions.html"><span class="doc std std-doc">ACDD</span></a> conventions. Once the files are ready NCI will run a QC check, as well as checking for CF/ACDD compliance, they will check that the files are accessible by widely used software like ncview, nco etc.
-If the files passed the tests, then they will the dataset to THREDDS and activate the DOI. If not, they will send a detailed report of the QC results so the files can be fixed where possible.
-CLEX CMS team has installed the IOOS CF-checker NCI uses and created a simple python wrapper that create a similar report to the NCI’s one. These can be used to check the files before submitting them to NCI. Details are on the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">CLEX CMS wiki</a>.</p>
+<p>The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme file (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">DRS page</span></a> for examples.
+The files should follow both <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF</span></a> and <a class="reference internal" href="../concepts/acdd-conventions.html"><span class="doc std std-doc">ACDD</span></a> conventions. Once the files are ready, NCI will run a QC check, CF/ACDD compliance check, and that the files are accessible by widely used software like ncview, nco etc.
+If the files passed the tests, then they will save(?) the dataset to THREDDS and activate the DOI. If not, they will send a detailed report of the QC results so the files can be fixed where possible.
+CLEX CMS team has installed the IOOS CF-checker NCI uses and created a simple python wrapper that creates a similar report to the NCI one. These can be used to check the files before submitting them to NCI. Details are on the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">CLEX CMS wiki</a>.</p>
 </div>
 </div>
 <div class="section" id="existing-data-collections">
@@ -850,8 +850,8 @@ CLEX CMS team has installed the IOOS CF-checker NCI uses and created a simple py
 <div class="section" id="clex">
 <h3>CLEX<a class="headerlink" href="#clex" title="Permalink to this headline">¶</a></h3>
 <p>CLEX has its own data collection in project ks32, anyone associated with CLEX can publish a dataset in this collection.
-The <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/Publishing_with_NCI">CLEX CMS wiki</a> has plenty of information on the process. CLEX currently manages a DMP web tool, so they use that to collect information on the dataset. The relevant parts of the DMP are then used to generate a geonetwork xml file that can be directly uploaded by NCI, instead of filling the spreadsheet form.
-However, this might change in the future as NCI is trying to have a reference page on confluence for each dataset.</p>
+The <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/Publishing_with_NCI">CLEX CMS wiki</a> has plenty of information on the process. CLEX currently manages a DMP web tool, which they use to collect information on the dataset. The relevant parts of the DMP are then used to generate a geonetwork xml file that can be directly uploaded by NCI, instead of populating the spreadsheet form.
+However, this might change in the future, as NCI is working on a reference page on confluence for each dataset.</p>
 </div>
 <div class="section" id="csiro">
 <h3>CSIRO<a class="headerlink" href="#csiro" title="Permalink to this headline">¶</a></h3>

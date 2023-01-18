@@ -1,14 +1,14 @@
 # Checklists for data management in the project lifecycle
 
-These checklist represents what a dataset evolution might look like at different stages of a project.
+These checklists represent what a dataset evolution might look like at different stages of a project.
 The checklists consider three different stages of a project:
 * just starting
 * project consolidation
 * sharing and publishing
 
-The different views of the list highlight in `yellow` what should be accomplish at each stage and in `blue` what should have already happened.
+The different views of the list highlight in `yellow` what should be accomplished at each stage and in `blue` what should have already happened.
 
-Not all of these action will have the same relevance for different projects and some datasets might need further specific actions.
+Not all of these actions will have the same relevance for different projects and some datasets might need further specific actions.
 
 ![Checklist-start](../images/checklist-start.jpg)
 

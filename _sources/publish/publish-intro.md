@@ -1,9 +1,9 @@
 # Guidelines to publish climate data
 
 These guidelines are covering the main steps involved in publishing a climate dataset.
-We tried to list the publishing options available to climate researchers in Australia, based on their organisation and the type of data to publish. 
-We then covered some of these options in detail, highlighting how to prepare a dataset for publication, what to include both in the dataset itself and in the metadata record.
-We focused on institutions and projects we know of that publish climate data. If you are aware of others that we didn't cover please contact us by [creating an issue](https://github.com/ACDguide/Governance/issues/new/choose).
+The publishing options available to climate researchers in Australia are listed, based on their organisation and the type of data to be published. 
+Some of these options are covered in detail, highlighting how to prepare a dataset for publication, what to include both in the dataset itself and in the metadata record.
+The focus was on institutions and projects we know of that publish climate data. If you are aware of others that we didn't cover please contact us by [creating an issue](https://github.com/ACDguide/Governance/issues/new/choose).
 
 **Index**
 

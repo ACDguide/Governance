@@ -1,11 +1,11 @@
 # Publishing options
 Once the data is created and ready for publication, **where** can it be published? 
 
-One of the main factors is what services are available, this is largely determined by the researcher's institution and/or organization.
-Another important consideration is the kind of data, depending on format, size etc. using a public repository might be suitable and at time easier.
-In some cases, depending on the dataset, using a public repository is suitable and often the easiest option. ori
-On the other end of the scale, some data could be produced on purpouse or simply be suitable to contribute to a large-scale project that has its own publishing procedure established.
-Here we are covering the most common use cases for our community.
+One of the main factors is what services are available, which is largely determined by the researcher's institution and/or organisation.
+Another important consideration is the kind of data, depending on format, size etc. 
+In some cases, depending on the dataset, using a public repository is suitable and often the easiest option.
+On the other end of the scale, some data could be produced on purpose or simply be suitable to contribute to a large-scale project that has its own publishing procedure established.
+The most common use cases for our community are covered here.
 
 ::::{tab-set}
 :::{tab-item} BoM 
