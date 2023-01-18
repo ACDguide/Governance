@@ -1,6 +1,6 @@
 # Best Practice Published Data Records
 
-The climate community is in better position with respect to best practice data management than many other groups due to the self-describing data format of [netCDF](https://www.unidata.ucar.edu/software/netcdf/) and community modelling projects such as [CMIP](https://www.wcrp-climate.org/wgcm-cmip)/[CORDEX]( https://cordex.org/)/[Obs4MIPS]( https://pcmdi.github.io/obs4MIPs/) enforcing a strict standard. There are lots of climate-tools in wide use across the community that make use of this fact, including modifying the history attribute to document what was done to the data.
+The climate community is in a better position with respect to best practice data management than many other groups due to the self-describing data format of [netCDF](https://www.unidata.ucar.edu/software/netcdf/) and community modelling projects such as [CMIP](https://www.wcrp-climate.org/wgcm-cmip)/[CORDEX]( https://cordex.org/)/[Obs4MIPS]( https://pcmdi.github.io/obs4MIPs/) enforcing a strict standard. There are lots of climate-tools in wide use across the community that make use of this fact, including modifying the history attribute to document what was done to the data.
 
 **What does best practice look like?** Certainly, it *does* look like including all metadata, ensuring data is [FAIR](https://www.go-fair.org/fair-principles/)/[FAIRER](https://acdguide.github.io/Governance/concepts/fairer-principles.html) [^1], documenting data processing and publishing that as well, undertaking QA/QC and documenting the process.
 

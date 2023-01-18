@@ -2,7 +2,7 @@
 
 Here is a summary of relevant journal publishers data policies. Please note that while we do our best to interpret the policies and review these summaries, we cannot guarantee that they are always correct and up to date. 
 
-```{dropdown} American_Geophycal_Union - AGU
+```{dropdown} American_Geophysical_Union - AGU
 **Journals**
 * Geophysical Research Letters
 * Journal of Geophysical Research: Atmospheres
@@ -42,7 +42,7 @@ Some of the AGU journals also have their specific data guidance:
 * [COPDESS author guidelines](http://www.copdess.org/enabling-fair-data-project/author-guidelines/)
 
 **Requirements**
-* Data Availiability Statement is required
+* Data Availability Statement is required
 * DOI is  required, if possible, for both data and software
 * Software is required wherever is central to the research
 ```
@@ -62,7 +62,7 @@ Some of the AGU journals also have their specific data guidance:
 * No supplement is required, but data can be provided as supplementary material
 * DOI is not explicitly required
 * Software is required
-* Data Availiability Statement is required
+* Data Availability Statement is required
 ```
 
 ```{dropdown} Elsevier
@@ -77,7 +77,7 @@ Some of the AGU journals also have their specific data guidance:
 * [Research data guidelines](https://www.elsevier.com/authors/tools-and-resources/research-data/data-guidelines)
 
 **Requirements**
-* No supplement is required, preferred approach is to share your data on repository with DOI or publish in data journal
+* No supplement is required, preferred approach is to share your data on the repository with DOI or publish in data journal
 * DOI is explicitly required
 * Software is not explicitly required
 ```
@@ -117,7 +117,7 @@ IOP journals have a data  policy that will be listed in the ‘about the journal
 * [Standard data policy](http://publishingsupport.iopscience.iop.org/iop-publishing-standard-data-policy/)
 * [Data availability policy](http://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/)
 
-For Environmental Research Letters the Data availiability policy applies
+For Environmental Research Letters the Data availability policy applies
 
 **Guidelines**
 * [Authors guidelines](https://publishingsupport.iopscience.iop.org/?category=authors&step=0)
@@ -147,7 +147,7 @@ These requirements are based on the [Transparency and Openness Promotion guideli
 * No supplement is required, but data can be provided as supplementary material if size is small (< 60 MB)
 * DOI is not explicitly required
 * Software is required
-* Data Availiability Statement is required
+* Data Availability Statement is required
 ```
 
 ```{dropdown} Nature
@@ -179,7 +179,7 @@ Specifically for software, some journals will peer review code:
 * No supplement is required but Nature Research journals encourage authors to consider the publication of a Data Descriptor in Scientific Data to increase transparency and enhance the re-use value of data sets used in their papers.
 * DOI is not explicitly required
 * Software is explicitly required
-* Data Availiability Statement is required
+* Data Availability Statement is required
 ```
 
 ```{dropdown} Royal_Meteorological_Society - RMetS
@@ -222,9 +222,9 @@ This covers 4 different kind of data policies:
 * [Recommended repositories](https://www.nature.com/sdata/policies/repositories#envgeo)
 
 **Requirements**
-DOI is not explicitly required
-Software is not explicitly required
-Data Availiability Statement is required
+* DOI is not explicitly required
+* Software is not explicitly required
+* Data Availability Statement is required
 ```
 
 ```{dropdown} Wiley_Blackwell - Wiley
@@ -253,5 +253,5 @@ The following is an example for Global Change Biology journal, which Mandates da
 **Requirements**
 * DOI is not explicitly required
 * Software is explicitly required in some of the policies
-* Data Availiability Statement is required in some of the policies
+* Data Availability Statement is required in some of the policies
 ```
