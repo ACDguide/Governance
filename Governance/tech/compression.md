@@ -12,7 +12,7 @@ Compressing netCDF data files can shrink them to one third of their original siz
 
 **NetCDF compression is lossless**<br>
 
-The data is exactly as it was when read from disk. It can still be read using the same programming interface. As long as the program reading the data has been compiled with the latest netCDF library (version 4) then the task of decompressing the data is handled by the library and as far as the programs are concerned there is no difference in the data. The usual tools, such as ncdump, can be used to examine the variables contained within the netCDF file.
+The data is exactly as it was when read from disk. It can still be read using the same programming interface. As long as the program reading the data has been compiled with the latest netCDF library (version 4) then the task of decompressing the data is handled by the library and as far as the programs are concerned there is no difference in the data. The usual tools, such as `ncdump`, can be used to examine the variables contained within the netCDF file.
 
 ```{note}
 Compression with tools such as gzip is possible but is not recommended except for archival purposes. It has the disadvantage that the file must be decompressed to be read and then recompressed again when finished, which can be time consuming, not to mention the data in question will take up much more room while it is being analysed.
@@ -32,13 +32,12 @@ If the numbers we are storing are similar in values there is a high chance that 
 The only case in which shuffling is not a good idea is if neighbouring values differ considerably. Usually turning `shuffle` on results in a smaller compressed file with little performance overhead.
 
 **chunking**
-`chunking` also plays a part in the compression process, in order to use netCDF compression the data must be chunked. Without `chunking` a n-dimensional array representing a variable is stored contiguosly in memory, following the dimension order. Using `chunking` an array is broken in units called `chunks`. Each chunk is stored contiguosly in memory, as if it was a separate array. 
+`chunking` also plays a part in the compression process, to use netCDF compression the data must be chunked. Without `chunking` a n-dimensional array representing a variable is stored contiguously in memory, following the dimension order. Using `chunking` an array is broken in units called `chunks`. Each chunk is stored contiguously in memory, as if it was a separate array. 
 There are several chunking strategies that can be applied, mostly depending on how the data is most frequently accessed. Many tools just adopt the netCDF library default chunking strategy. For many netCDF versions the default strategy has been to create chunks that are simply the same size as the grid dimensions of the variable and using size 1 for `time` when present. The [ACDG guide to BigData](https://acdguide.github.io/BigData/data/data-netcdf.html#what-is-data-chunking) covers the implications of different `chunking` strategies on data analysis. 
 
 ````{warning}
-If dealing with a file with contiguous storage, it is necessary to first chunk the file and then apply compression. Otherwise the compression operation will fail.
-The error message will vary depending on the tool used, for example with nccopy
-`NetCDF: Bad chunk sizes.`
+If dealing with a file with contiguous storage, it is necessary to first chunk the file and then apply compression. Otherwise, the compression operation will fail.
+The error message will vary depending on the tool used, for example with nccopy is `NetCDF: Bad chunk sizes`.
 ```{code}
 cdo -f nc4 -z zip_5 input-file output-file
 ```
@@ -55,7 +54,7 @@ There are several tools that can be used to compress netCDF data, and compressio
 
 **nccopy**
 
-One of the standard tools included in a netCDF installation is [nccopy](https://docs.unidata.ucar.edu/nug/current/netcdf_utilities_guide.html#guide_nccopy). `nccopy` can compress files and define the chunking using a command line argument (-c). `nccopy` is a good option if a data file structure changes little, so a chunking scheme can be decided upon and hard coded into scripts. It is not so useful if the dimensions and variables change. Another major limitation is that the chunking is defined by dimensions, not variables. If a data file has variables that share dimensions, but have different combinations or numbers of dimensions it is not possible to determine an optimal chunking strategy for each variable.
+One of the standard tools included in a netCDF installation is [nccopy](https://docs.unidata.ucar.edu/nug/current/netcdf_utilities_guide.html#guide_nccopy). `nccopy` can compress files and define the chunking using a command line argument (-c). `nccopy` is a good option if a data file structure changes little, so a chunking scheme can be decided upon and hard coded into scripts. It is not so useful if the dimensions and variables change. Another major limitation is that the chunking is defined by dimensions, not variables. If a data file has variables that share dimensions but have different combinations or numbers of dimensions, it is not possible to determine an optimal chunking strategy for each variable.
 
 ```{code}
 nccopy -k nc4 -d 5 -s input.nc output.nc 
@@ -64,7 +63,7 @@ nccopy -k nc4 -d 5 -s input.nc output.nc
 **NCO**
 
 The [NetCDF Operator](http://nco.sourceforge.net/nco.html#Compression) program suite can compress netCDF files and offers several [chunking strategies](http://nco.sourceforge.net/nco.html#Chunking). 
-THis lossless compression is refer to as `deflate` and is usually applied with `shuffle`. The latest versions allows to choose in which order these two operations happen.
+This lossless compression is referred to as `deflate` and is usually applied with `shuffle`. The latest versions allow to choose in which order these two operations happen.
 
 ```{code}
 ncks -D 5 input.nc output.nc
@@ -72,8 +71,8 @@ ncks -D 5 input.nc output.nc
 
 NCO also offers three lossy compression algorithms, that can be used in con junction with `deflate`:
 * Linear packing - a higher precision type is "packed" into a lower precision type, usually NC_SHORT
-And two Precision Preserving Compression (PPC) algorythms where a per-variable precision level is set as:
-* Number of Signifcant Digits (NSD) after the decimal point
+And two Precision Preserving Compression (PPC) algorithms where a per-variable precision level is set as:
+* Number of Significant Digits (NSD) after the decimal point
 * Decimal Significant Digits (DSD) before and after the decimal point
 For more details refer to the NCO documentation listed above.
 
