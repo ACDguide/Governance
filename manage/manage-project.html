@@ -796,7 +796,7 @@ The data files should be stored on the <code class="docutils literal notranslate
 <p>To start a new dedicated project write a proposal to submit to NCI, details on the procedure are available from their <a class="reference external" href="https://opus.nci.org.au/display/Help/How+to+propose+a+new+project">online user guides</a>.</p>
 <div class="section" id="mancini">
 <h3>Mancini<a class="headerlink" href="#mancini" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://my.nci.org.au/mancini/login?next=/mancini/">Mancini</a> is the web interface NCI uses to manage user accounts and allocations. Any NCI users can access it to manage their project memberships. Each project as a Lead CI, who is the main responsible person, sometimes this is a high-level researcher rather than a technical person. In such cases it is possible for the Lead CI to promote one or more members are delegate Lead CIs. They will now receive membership applications and share most of the Lead CI privileges.</p>
+<p><a class="reference external" href="https://my.nci.org.au/mancini/login?next=/mancini/">Mancini</a> is the web interface NCI uses to manage user accounts and allocations. Any NCI user can access it to manage their project memberships. Each project has a Lead CI, who is the main responsible person, sometimes this is a high-level researcher rather than a technical person. In such cases it is possible for the Lead CI to promote one or more members as delegate Lead CIs. They will now receive membership applications and share most of the Lead CI privileges.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>Project Roles</strong><div class="summary-down docutils">
@@ -806,12 +806,12 @@ The data files should be stored on the <code class="docutils literal notranslate
 </summary><div class="summary-content card-body docutils">
 <ul class="simple">
 <li><p class="card-text"><strong>Lead CI</strong> - Project leader. Can approve, reject, promote, demote, and delete all project memberships. Only receives email alerts for membership requests if the project has no delegated lead CIs</p></li>
-<li><p class="card-text"><strong>Delegated Lead CI</strong> -Same as CI but can also promote other members to CI role, demote CIs, and delete CI memberships. Receives email alerts for membership requests.</p></li>
-<li><p class="card-text">**Chief Investigator (CI) - Can approve and reject project membership requests. Can delete “researcher” memberships.</p></li>
+<li><p class="card-text"><strong>Delegated Lead CI</strong> - Same as CI but can also promote other members to CI role, demote CIs, and delete CI memberships. Receives email alerts for membership requests.</p></li>
+<li><p class="card-text"><strong>Chief Investigator (CI)</strong> - Can approve and reject project membership requests. Can delete “researcher” memberships.</p></li>
 <li><p class="card-text"><strong>Researcher</strong> - Ordinary project member. Cannot alter other memberships.</p></li>
 </ul>
 </div>
-</details><p>Mancini shows how much allocation the project is using and allows the Lead CI and delegate Lead CIs to send email to all project members. This is useful to handle important communication about the datasets, as updates, changes in their management and to communicate when a dataset is going to be retired.</p>
+</details><p>Mancini shows how much allocation the project is using and allows the Lead CI and delegate Lead CIs to send email to all project members. This is useful to handle important communication about the datasets, such as updates, changes in their management and to communicate when a dataset is going to be retired.</p>
 </div>
 </div>
 <div class="section" id="setting-permissions">
@@ -820,16 +820,16 @@ The data files should be stored on the <code class="docutils literal notranslate
 By default, the class <code class="docutils literal notranslate"><span class="pre">other</span></code> doesn’t have access to project directories <code class="docutils literal notranslate"><span class="pre">/g/data/&lt;project-id&gt;</span></code>. This means that every prospective data user will have to become a member of the project to access the data.
 Data projects are usually organised in two main directories:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">admin</span></code>/<code class="docutils literal notranslate"><span class="pre">code</span></code> is the working area containing codes and logs. Only the data managers should have writing access to this, but it helps transparency letting the users having read access.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>/<code class="docutils literal notranslate"><span class="pre">replicas</span></code> is where the actual data resides. Users belonging to the group should have <code class="docutils literal notranslate"><span class="pre">read</span></code> permission everywhere and <code class="docutils literal notranslate"><span class="pre">execute</span></code> permission for the directories (without this they wouldn’t be able to access the files in the directory)
-The directory and files permissions should be carefully managed to make sure that users have access to all the data files but cannot accidentally change or remove any of them.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">admin</span></code>/<code class="docutils literal notranslate"><span class="pre">code</span></code> is the working area containing codes and logs. Only the data managers should have writing access to this, but it helps transparency letting the users have read access.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span></code>/<code class="docutils literal notranslate"><span class="pre">replicas</span></code> is where the actual data resides. Users belonging to the group should have <code class="docutils literal notranslate"><span class="pre">read</span></code> permission everywhere and <code class="docutils literal notranslate"><span class="pre">execute</span></code> permission for the directories (without this they wouldn’t be able to access the files in the directory).</p></li>
 </ul>
+<p>The directory and files permissions should be carefully managed to make sure that users have access to all the data files but cannot accidentally change or remove any of them.</p>
 <div class="section" id="writers-group">
 <h3>Writers group<a class="headerlink" href="#writers-group" title="Permalink to this headline">¶</a></h3>
-<p>If the data is hosted in a data project it is possible to ask NCI to create an associate writers’ group, if a project is labelled as <code class="docutils literal notranslate"><span class="pre">ab12</span></code> the associated writers’ group is <code class="docutils literal notranslate"><span class="pre">ab12_w</span></code>.
+<p>If the data is hosted in a data project it is possible to ask NCI to create an associate writers’ group. If a project is labelled as <code class="docutils literal notranslate"><span class="pre">ab12</span></code> the associated writers’ group is <code class="docutils literal notranslate"><span class="pre">ab12_w</span></code>.
 This is particularly useful where there is more than one user managing the data. If there is only one data manager then having a writer group is redundant as different permissions can be easily set for the <code class="docutils literal notranslate"><span class="pre">user</span></code> and the <code class="docutils literal notranslate"><span class="pre">group</span></code>. Writer groups are meant to be used in conjunction with <a class="reference internal" href="../tech/permissions.html#acls"><span class="std std-ref">Access Control List (ACLs)</span></a>.
 All the files should be owned by the project group with <code class="docutils literal notranslate"><span class="pre">read</span></code> and <code class="docutils literal notranslate"><span class="pre">execute</span></code> (at least for folders) permissions. The ACLs are then used to give <code class="docutils literal notranslate"><span class="pre">write</span></code> permission only to the writers’ group.</p>
-<p>If not using a writer group, the same approach is possible but giving <code class="docutils literal notranslate"><span class="pre">write</span></code> permission to each manager using their username. This is less ideal as it is more likely to break the <a class="reference internal" href="../tech/permissions.html#acls"><span class="std std-ref">ACLs</span></a> when updating or adding new files.</p>
+<p>If a writer group is not used, the same approach is possible by giving <code class="docutils literal notranslate"><span class="pre">write</span></code> permission to each manager using their username. This is less ideal as it is more likely to break the <a class="reference internal" href="../tech/permissions.html#acls"><span class="std std-ref">ACLs</span></a> when updating or adding new files.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>On CSIRO internal resources, access mgmt is governed by windows ACLs - email help for advice.</p>
@@ -838,9 +838,9 @@ All the files should be owned by the project group with <code class="docutils li
 </div>
 <div class="section" id="backup">
 <h2>Backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">gdata</span></code> is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">backup plan</span></a>. If the files are an authoritative copy it might be worth to back up the data on a separate system.
-The only option to back up data at NCI is to use to archive the data on the tape system also known as <code class="docutils literal notranslate"><span class="pre">[massdata](massdata)</span></code>.</p>
-<p>If the datasets are a replica and they can be easily retrieved, or are frequently changing than backing up the data might be redundant.</p>
+<p><code class="docutils literal notranslate"><span class="pre">gdata</span></code> is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">backup plan</span></a>. If the files are an authoritative copy it might be worth backing up the data on a separate system.
+The only option to back up data at NCI is to archive the data on the tape system also known as <code class="docutils literal notranslate"><span class="pre">[massdata](massdata)</span></code>.</p>
+<p>If the datasets are a replica and they can be easily retrieved, or are frequently changing, then backing up the data might be redundant.</p>
 </div>
 <div class="section" id="accounting">
 <h2>Accounting<a class="headerlink" href="#accounting" title="Permalink to this headline">¶</a></h2>
