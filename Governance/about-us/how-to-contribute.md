@@ -1,6 +1,6 @@
 # Guidelines for contributors
 
-Contributions to the Jupyter Book are welcomed and encouraged, and we welcome and recognize all contributions. You can see a list of current contributors in the [contributors](https://github.com/ACDguide/Governance/graphs/contributors) tab.
+Contributions to the Jupyter Book are welcomed and encouraged, and we welcome and recognise all contributions. You can see a list of current contributors in the [contributors](https://github.com/ACDguide/Governance/graphs/contributors) tab.
 
 The Jupyter Book is hosted on Github and can be edited by creating a pull request. 
 How to collaborate with pull requests on Github: https://docs.github.com/en/github/collaborating-with-pull-requests. Jupyter Book documentation: https://jupyterbook.org/intro.html.
@@ -26,7 +26,7 @@ How to collaborate with pull requests on Github: https://docs.github.com/en/gith
 - Who should you ask to review your PR? It depends on the page you are updating.
   - `Creating climate data`: Chloe (@chloemackallah)
   - `Publishing climate data`: Paola (@paolap)
-  - `Updateing published data`: Claire (@hot007)
+  - `Updating published data`: Claire (@hot007)
   - `Retiring published data`: Claire? (@hot007)
   - `Computations with large datasets`: see [Guide for Working with Big/Challenging Data Collections](https://github.com/ACDguide/BigData)
   - any other pages, for structural changes, or if you are unsure who to assign: Chloe (@chloemackallah)
