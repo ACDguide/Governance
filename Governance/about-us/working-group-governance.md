@@ -1,8 +1,8 @@
-# Working Group Governance
+# Working group governance
 
-The “climate dataset guidelines working group” is a collaboration between scientists within the Australian climate community. Participation is self-nominated and voluntary. Anyone is welcome to join the group or contribute independently to this Jupyter Book. This document outlines the governance of the big data working group. The group’s goals is to provide guidelines to create, manage and share climate data in order to have a common approach across the Australian climate research community. The group meets once per month, and works collaboratively to organize and create the Jupyter Book.
+The “climate dataset guidelines working group” is a collaboration between scientists within the Australian climate community. Participation is self-nominated and voluntary. Anyone is welcome to join the group or contribute independently to this Jupyter Book. This document outlines the governance of the big data working group. The group’s goals is to provide guidelines to create, manage and share climate data in order to have a common approach across the Australian climate research community. The group meets once per month, and works collaboratively to organise and create the Jupyter Book.
 
-## Statement of Scope
+## Statement of scope
 
 The goal of this working group is to create and share a best-practices framework for climate-related scientists in Australia who create datasets for the purposes of sharing and publication. The framework will be collated and shared in the form of a Jupyter Book, made using a public github repository (https://github.com/ACDguide/Governance). 
 
@@ -13,7 +13,7 @@ Contents include:
 - Retiring published climate
 - Data management concepts
 
-## Working Group Origins
+## Working group origins
 This working group grew out of a workshop “Creating a collaborative approach to climate data” at the AMOS (Australian Meteorological and Oceanographic Society) Annual Conference 2021. 
 
 There are three other working groups that are closely related:
