@@ -1,6 +1,6 @@
 # Use case: unpublished data
 
-This use case addresses the plethora of data that is associated with published data creation. That is, storage use including, but not limited to:
+This use case addresses the plethora of data that is associated with unpublished data creation. That is, storage use including, but not limited to:
 
 - Model configuration data
 - Failed model run output

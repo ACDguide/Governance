@@ -2,8 +2,8 @@
 
 Sometimes it becomes necessary to "retire" a dataset. This page covers some of the cases and considerations that come into play.
 
-For the purposes of scientific reproducibility, in an ideal world we would never need to retire data. However, data centres are not infinite and sometimes datasets contain critical errors, thus we may find ourselves needing to remove data from a publication or filesystem.
-It is important when doing so to follow a procedure to make sure that users are not affected by the changes. Ideally a dataset retirement procedure should be established and advertised before the data is even made available. This procedure will vary depending on each dataset's characteristics and the community's needs, the most important factor is if we are the primary data publisher or if we are managing a replica.  
+For the purposes of scientific reproducibility, in an ideal world we would never need to retire data. However, data centres are not infinite and sometimes datasets contain critical errors, which necessitates removing data from a publication or filesystem.
+It is important when doing so to follow a procedure to make sure that users are not affected by the changes. Ideally a dataset retirement procedure should be established and advertised before the data is even made available. This procedure will vary depending on each dataset's characteristics and the community's needs. The most important factor is whether the user the primary data publisher or managing a replica.  
 
 ## Scope of the guidelines
 
