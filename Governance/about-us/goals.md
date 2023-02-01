@@ -1,6 +1,6 @@
-# Working Group Goals
+# Working group goals
 
-## Ultimate Goal:
+## Ultimate goal:
 **Provide guidelines to create, manage and share climate data in order to have a common approach across the Australian climate research community.**
 
 
