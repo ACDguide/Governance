@@ -6,7 +6,7 @@ It may be necessary to retire a dataset for several reasons:
 - the data is not used by our community anymore
 - need to prioritise how storage is being used
 
-In any case we must proceed carefully and make sure we have considered all the implications of removing the data. As mentioned in the introduction, the most important factor is if the data is published.
+In any case it is vital proceed carefully and consider all the implications of removing the data. As mentioned in the introduction, the most important factor is if the data is published.
 
 ## DOI persistence requirements
 
