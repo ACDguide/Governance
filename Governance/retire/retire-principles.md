@@ -2,15 +2,15 @@
 
 It may be necessary to retire a dataset for several reasons:
 
-- the data is seriously flawed and we want to remove access to it
+- the data is seriously flawed and access to it needs to be removed
 - the data is not used by our community anymore
-- we need to prioritise how we are using our storage
+- need to prioritise how storage is being used
 
-In any case we must proceed carefully and make sure we have considered all the implications of removing the data. As we mentioned in the introduction the most important factor is if the data is published.
+In any case it is vital proceed carefully and consider all the implications of removing the data. As mentioned in the introduction, the most important factor is if the data is published.
 
 ## DOI persistence requirements
 
-**If we publish data with a DOI** (or equivalent persistent identifier), we are obliged to maintain the landing page of that DOI indefinitely - this persistence of URLs is what data publishers like Zenodo, NCI and the CSIRO Data Access Portal provide. 
+**If data is published with a DOI** (or equivalent persistent identifier), there is an obligation to maintain the landing page of that DOI indefinitely - this persistence of URLs is what data publishers like Zenodo, NCI and the CSIRO Data Access Portal provide. 
 
 Digital Object Identifiers (DOIs) are minted so that data can be found reliably from a single source. The landing page of the persistent URL associated with the DOI should be a metadata page describing the dataset, and if public, providing access to the data.
 
@@ -50,7 +50,7 @@ A retirement plan can be a dedicated errata service or simply a retirement polic
 Many publishers do not offer an errata service (see links in Further Information), preferring instead to keep all data. In this case, **an errata statement explaining what change was made needs to be issued and made available on the DOI landing page of the dataset**. [Here is an example](https://research.jcu.edu.au/data/published/1507eae78675ccfb3843eb9d004cbb96/) of a data retraction.
 An example of errata service is the [Earth System Documentation errata service](https://errata.es-doc.org/static/index.html). It provides a record of all known issues and where appropriate, data withdrawal and republication. 
 
-It would be cumbersome to produce a plan for each dataset we manage. However, as most datasets particularly if they are replicas, can follow the same procedure it is worth to have at least a document explaining when and how the data might be retired without going into specifics. An example of this is in the policies for the [CLEX collection on Zenodo](https://zenodo.org/communities/arc-coe-clex-data/about/#retention_policy).
+It would be cumbersome to produce a plan for each dataset managed. However, as most datasets particularly if they are replicas, can follow the same procedure it is beneficial to have at least a document explaining when and how the data might be retired without going into specifics. An example of this is in the policies for the [CLEX collection on Zenodo](https://zenodo.org/communities/arc-coe-clex-data/about/#retention_policy).
 
 <!-- COMMENT!!!! once we have a similar policy for the ACS reference collection we could maybe use that as an example instead !!! -->
 
