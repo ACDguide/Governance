@@ -15,7 +15,9 @@ Compressing netCDF data files can shrink them to one third of their original siz
 The data is exactly as it was when read from disk. It can still be read using the same programming interface. As long as the program reading the data has been compiled with the latest netCDF library (version 4) then the task of decompressing the data is handled by the library and as far as the programs are concerned there is no difference in the data. The usual tools, such as `ncdump`, can be used to examine the variables contained within the netCDF file.
 
 ```{note}
-Compression with tools such as gzip is possible but is not recommended except for archival purposes. It has the disadvantage that the file must be decompressed to be read and then recompressed again when finished, which can be time consuming, not to mention the data in question will take up much more room while it is being analysed.
+Compression with tools such as gzip is possible but is not recommended except for archival purposes. 
+It has the disadvantage that the file must be decompressed to be read and then recompressed again when finished, 
+ which can be time consuming, not to mention the data in question will take up much more room while it is being analysed.
 ```
 
 ### How does it work?
@@ -36,7 +38,8 @@ The only case in which shuffling is not a good idea is if neighbouring values di
 There are several chunking strategies that can be applied, mostly depending on how the data is most frequently accessed. Many tools just adopt the netCDF library default chunking strategy. For many netCDF versions the default strategy has been to create chunks that are simply the same size as the grid dimensions of the variable and using size 1 for `time` when present. The [ACDG guide to BigData](https://acdguide.github.io/BigData/data/data-netcdf.html#what-is-data-chunking) covers the implications of different `chunking` strategies on data analysis. 
 
 ````{warning}
-If dealing with a file with contiguous storage, it is necessary to first chunk the file and then apply compression. Otherwise, the compression operation will fail.
+If dealing with a file with contiguous storage, it is necessary to first chunk the file and then apply compression. 
+Otherwise, the compression operation will fail.
 The error message will vary depending on the tool used, for example with nccopy is `NetCDF: Bad chunk sizes`.
 ```{code}
 cdo -f nc4 -z zip_5 input-file output-file
@@ -46,7 +49,8 @@ Another way around this is to use xarray to rewrite the file with the desire enc
 ````
 
 ```{note}
-This [post](https://earthscience.stackexchange.com/questions/12527/regarding-compression-shuffle-filter-of-netcdf4) has a clear representation of how `shuffle` and `chunking` work.
+This post: https://earthscience.stackexchange.com/questions/12527/regarding-compression-shuffle-filter-of-netcdf4 
+ has a clear representation of how `shuffle` and `chunking` work.
 ```
 ## Compression tools
 
@@ -97,5 +101,6 @@ This method is described in the CF conventions document:
 https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#_reduction_of_dataset_size
 
 ```{admonition} **xbitinfo**
-[`xbitinfo`](https://xbitinfo.readthedocs.io/en/latest/) is an xarray-wrapper around [BitInformation.jl](https://github.com/milankl/BitInformation.jl) to retrieve and apply bitrounding from within python. It performs bitwise information analysis and manipulation so that data can be rounded efficiently based on actual information content.
+`xbitinfo` (https://xbitinfo.readthedocs.io/en/latest/) is an xarray-wrapper around BitInformation.jl (https://github.com/milankl/BitInformation.jl) to retrieve and apply bitrounding from within python. 
+It performs bitwise information analysis and manipulation so that data can be rounded efficiently based on actual information content.
 ```
