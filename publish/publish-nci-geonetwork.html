@@ -542,7 +542,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/compression.html">
-     NetCDF chunking and compression
+     NetCDF compression
     </a>
    </li>
    <li class="toctree-l2">
@@ -702,7 +702,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-a-geonetwork-record">
-     Creating a geonetwork record
+     Creating a GeoNetwork record
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -730,6 +730,11 @@
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bom">
      BoM
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nci">
+     NCI
     </a>
    </li>
   </ul>
@@ -771,7 +776,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-a-geonetwork-record">
-     Creating a geonetwork record
+     Creating a GeoNetwork record
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -801,6 +806,11 @@
      BoM
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nci">
+     NCI
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -821,43 +831,54 @@
 </ul>
 <div class="section" id="what-data-can-be-published-with-nci">
 <h2>What data can be published with NCI<a class="headerlink" href="#what-data-can-be-published-with-nci" title="Permalink to this headline">¶</a></h2>
-<p>Publishing with NCI is a good option when publishing a big dataset and/or data in netCDF format. Obvious candidates are outputs of model simulation runs on Gadi.
-THREDDS was developed for netCDF files. Publishing on a THREDDS server means that data is also available by OPeNDAP. This is useful when publishing a big dataset or the data is stored in big files. OPeNDAP allows remote access, a user can subset the data which avoids downloading the entire dataset. OPeNDAP protocol can be used with several analysis software packages.</p>
+<p>Publishing with NCI is a good option when publishing a big dataset and/or data in netCDF format, with obvious candidates being outputs of model simulation runs on Gadi.
+THREDDS was developed for netCDF files, and publishing on a THREDDS server means that data is also available by OPeNDAP, which can be used with several analysis software packages. This is useful when publishing a big dataset or the data is stored in big files, since OPeNDAP allows remote access where a user can subset the data and avoid downloading the entire dataset.</p>
 </div>
 <div class="section" id="generic-procedure-to-publish-with-nci">
 <h2>Generic procedure to publish with NCI<a class="headerlink" href="#generic-procedure-to-publish-with-nci" title="Permalink to this headline">¶</a></h2>
-<p>Currently NCI is in the process of updating their data procedures, their <a class="reference external" href="https://opus.nci.org.au/display/NDP/NCI+Data+Collections+and+Publishing">official documentation</a> does not yet include a detailed description of the process, so the following information is based on our experiences.</p>
+<p>Currently NCI is in the process of updating their data procedures, their <a class="reference external" href="https://opus.nci.org.au/display/NDP/Data+Management">official documentation</a> does not yet include a detailed description of the process, so the following information is based on our experiences.</p>
 <div class="section" id="data-project">
 <h3>Data project<a class="headerlink" href="#data-project" title="Permalink to this headline">¶</a></h3>
 <p>NCI manages storage and computational resources via projects. To publish data with them a project setup exclusively for this scope is needed. Depending on the researcher’s affiliation and or the dataset scope, they might be able to contribute to an existing “publishing” data project. This is a good option if the dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the CLEX collection which uses project ks32.</p>
-<p>If the dataset is big enough to have its own project, then the researcher should contact the NCI data team, via the helpdesk, and discuss the options with them. If NCI agrees, the researcher will have to provide details of the dataset and usually funding for the disk storage.</p>
+<p>If the dataset is big enough to have its own project, then the researcher should contact the NCI data team, via the helpdesk, and discuss the options with them. If NCI agrees to proceed with the publication, the researcher will have to provide details of the dataset and usually funding for the disk storage.</p>
 </div>
 <div class="section" id="creating-a-geonetwork-record">
-<h3>Creating a geonetwork record<a class="headerlink" href="#creating-a-geonetwork-record" title="Permalink to this headline">¶</a></h3>
-<p>The first step is to create a DMP to collect information on the dataset. Currently NCI uses google spreadsheet to do so. Once NCI has agreed to publish the dataset, they will create a spreadsheet to fill. An example from the publication of a satellite dataset is available <a class="reference external" href="https://docs.google.com/spreadsheets/d/1Rt-bKNfjNRi-kB_pFrhLE9-XwqvmkpLfu5i4_sdzfQ4/edit#gid=0">here</a>.<br />
-Once the form is ready NCI will use the content to create a geonetwork record and mint a DOI for the new dataset. The geonetwork record will provide the landing page for the DOI and will be visible only once the files are available on THREDDS.</p>
+<h3>Creating a GeoNetwork record<a class="headerlink" href="#creating-a-geonetwork-record" title="Permalink to this headline">¶</a></h3>
+<p>The first step is to create a DMP to collect information on the dataset. Once NCI has agreed to publish the dataset, they will create a page on their confluence site for the specified project, containing a table to be populated with the dataset information.
+These pages are only visible to interested parties, therefore we provide an <a class="reference external" href="https://docs.google.com/spreadsheets/d/1Rt-bKNfjNRi-kB_pFrhLE9-XwqvmkpLfu5i4_sdzfQ4/edit#gid=0">example</a> from the publication of a satellite dataset, using a google spreadsheet instead.
+Once the DMP is ready NCI will use the content to create a geonetwork record and mint a DOI for the new dataset. The GeoNetwork record will provide the landing page for the DOI and will be visible only once the files are available on THREDDS.</p>
 </div>
 <div class="section" id="preparing-the-files">
 <h3>Preparing the files<a class="headerlink" href="#preparing-the-files" title="Permalink to this headline">¶</a></h3>
 <p>The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme file (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">DRS page</span></a> for examples.
 The files should follow both <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF</span></a> and <a class="reference internal" href="../concepts/acdd-conventions.html"><span class="doc std std-doc">ACDD</span></a> conventions. Once the files are ready, NCI will run a QC check, CF/ACDD compliance check, and that the files are accessible by widely used software like ncview, nco etc.
-If the files passed the tests, then they will save(?) the dataset to THREDDS and activate the DOI. If not, they will send a detailed report of the QC results so the files can be fixed where possible.
-CLEX CMS team has installed the IOOS CF-checker NCI uses and created a simple python wrapper that creates a similar report to the NCI one. These can be used to check the files before submitting them to NCI. Details are on the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">CLEX CMS wiki</a>.</p>
+If the files passed the tests, then they will add the dataset to THREDDS and activate the DOI. If not, they will send a detailed report of the QC results so the files can be fixed where possible.</p>
+<div class="admonition-cf-checker admonition">
+<p class="admonition-title">CF-checker</p>
+<p>CLEX CMS team has installed the IOOS CF-checker NCI uses and created a simple python wrapper that creates a similar report to the NCI one. These can be used to check the files before submitting them to NCI. Details are on the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/CF_checker">CLEX CMS wiki</a>.</p>
+</div>
 </div>
 </div>
 <div class="section" id="existing-data-collections">
 <h2>Existing data collections<a class="headerlink" href="#existing-data-collections" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="clex">
 <h3>CLEX<a class="headerlink" href="#clex" title="Permalink to this headline">¶</a></h3>
-<p>CLEX has its own data collection in project ks32, anyone associated with CLEX can publish a dataset in this collection.
-The <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/Publishing_with_NCI">CLEX CMS wiki</a> has plenty of information on the process. CLEX currently manages a DMP web tool, which they use to collect information on the dataset. The relevant parts of the DMP are then used to generate a geonetwork xml file that can be directly uploaded by NCI, instead of populating the spreadsheet form.
-However, this might change in the future, as NCI is working on a reference page on confluence for each dataset.</p>
+<p>CLEX has its own data collection in project <a class="reference external" href="https://my.nci.org.au/mancini/project/ks32">ks32</a>, anyone associated with CLEX can publish a dataset in this collection.<br />
+The <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/Publishing_with_NCI">CLEX CMS wiki</a> has plenty of information on the process. CLEX currently manages a DMP web tool, which they use to collect information on the dataset. The relevant parts of the DMP are then used to generate a geonetwork xml file that can be directly uploaded by NCI, instead of populating the DMP on a confluence page.</p>
 </div>
 <div class="section" id="csiro">
 <h3>CSIRO<a class="headerlink" href="#csiro" title="Permalink to this headline">¶</a></h3>
+<p>The Australian contribution to CMIP6 is published in project <a class="reference external" href="https://my.nci.org.au/mancini/project/fs38">fs38</a>, and to CMIP5 in project <a class="reference external" href="https://my.nci.org.au/mancini/project/rr3">rr3</a></p>
 </div>
 <div class="section" id="bom">
 <h3>BoM<a class="headerlink" href="#bom" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="https://my.nci.org.au/mancini/project/iu04">Australian Water Outlook Service Data Collection</a> is published in project iu04.<br />
+The <a class="reference external" href="https://my.nci.org.au/mancini/project/zv2">Australian Gridded Climate Data (AGCD) Collection</a> is published in project zv2.</p>
+</div>
+<div class="section" id="nci">
+<h3>NCI<a class="headerlink" href="#nci" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://my.nci.org.au/mancini/project/qv56">Reference Datasets for Climate Model Analysis/Forcing</a>, in project qv56 which includes Obs4MIPs and input4MIPs.<br />
+The MERRA2 6-hourly reanalysis data is stored in project <a class="reference external" href="https://my.nci.org.au/mancini/project/rr7">rr7</a></p>
 </div>
 </div>
 </div>
