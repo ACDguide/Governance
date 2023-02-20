@@ -5,7 +5,7 @@ ARC Centre of Excellence for Climate Extremes: Data strategies
  
 The [ARC Centre of Excellence for Climate Extremes](https://climateextremes.org.au) (CLEX) is publicly funded. We therefore recognize the expectation that we will publish our data in ways that exceed the requirements of journal publishers, the Australian Research Council and Government. This document aims to establish what we mean by “publish our data”; the capacity to publish all data we create does not exist. We will define eight types of data that would be generated in Climate Extremes science and associate these with a data publishing strategy and priority.
  
-While much of this document focusses on the responsibility of a researcher to make their data freely available, we note that by “publishing” [either the data, or the codes to process the data] a contribution is made by the researcher.
+While much of this document focusses on the responsibility of a researcher to make their data freely available, we note that by “publishing” (either the data, or the codes to process the data), a contribution is made by the researcher.
  
 This contribution needs to be recorded and acknowledged. The process of obtaining a doi means that the data set can be recorded on the researchers’ CV as a “publication” and can be cited and win citations. The publication of some codes can also generate useful metrics to a researcher that can be recorded on a CV. There are also awards now for researchers who publish data. In short, care and attention to the publishing of data and code can have very significant personal benefits to a researcher.
  
