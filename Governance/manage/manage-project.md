@@ -57,6 +57,6 @@ Covering the accounting tools available to handle storage allocations at NCI is 
 
 ```{warning}
 On older `gdata` filesystems at NCI, data can be assigned to a project different from the group folder where it is located. This can be identified by the `nci-files-report` command as it shows both project and group folder usage.
-As a result, data can be transferred to count against the quota of a different project than where it lives, and cause the target project to reach its storage quota. This can cause unforeseen issues for data projects who tipically have a lot of users and can result in automatic dataset update to fail for lack of storage.
+As a result, data can be transferred to count against the quota of a different project than where it lives, and cause the target project to reach its storage quota. This can cause unforeseen issues for data projects who typically have a lot of users and can result in automatic dataset update to fail for lack of storage.
 From `gdata5` on, it is not possible to assign data to a project different from the group folder.
 ```
