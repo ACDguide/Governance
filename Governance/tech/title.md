@@ -7,7 +7,7 @@ Most people querying a repository will skim quickly through the list of returned
 ## What to include
 Keeping in mind that the title words are used as keywords, a good rule of thumb is to include the sort of information that a potential user might choose for a search. The most important are probably the kind of data, the region, temporal coverage and frequency of the data. 
 Where it is relevant the source of the data should also be included, for example if this is a dataset derived from CMIP6, it might be interesting for anyone searching for CMIP6 data. If it is a model output, the name and version of the model would give a lot of useful information to understand the potential use of the data.
-If publishing data or code underlining a paper publication usually this is clearly stated in the title. Similarly, it can be useful to mention the project associated to the research output, as giving the context in which the data or code was created can also clarify potential future use for them.
+If publishing data or code underlining a paper publication usually this is clearly stated in the title. Similarly, it can be useful to mention the project associated to the research output, as giving the context in which the data or code was created can also clarify potential future use.
 
 If publishing code, it is important to include its scope and how it can be run, so including the language on which is based and potentially a specific environment for which it was created.
 
