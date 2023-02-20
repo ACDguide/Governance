@@ -1,9 +1,9 @@
 # Responsible Conduct of Research
-The [Australian Code for the Responsible Conduct of Research, 2018](https://www.nhmrc.gov.au/sites/default/files/documents/attachments/grant%20documents/The-australian-code-for-the-responsible-conduct-of-research-2018.pdf) was first developed for medical sciences to establish a framework for responsible research conduct. It is now applied to all disciplines and has been adopted by most institutions, as its aim is to make sure scientific research is of high-quality, trustworthy and ethical. Potential breaches of the code are investigated following the Investigation guide.
+The [Australian Code for the Responsible Conduct of Research, 2018](https://www.nhmrc.gov.au/sites/default/files/documents/attachments/grant%20documents/The-australian-code-for-the-responsible-conduct-of-research-2018.pdf) was first developed for medical sciences to establish a framework for responsible research conduct. It is now applied to all disciplines and has been adopted by most institutions, as its aim is to make sure scientific research is of high-quality, trustworthy and ethical. Potential breaches of the code are investigated following the Investigation guide (is there a link for this?).
 
 More information is available on the NHMRC website, including the supplementary guides developed with the ARC and Universities Australia. Each supplementary guide focuses on one aspect of research work. The guides clearly define institutional and researcher responsibilities. 
 
-In regard to producing and publishing data and software the most relevant is the Management of Data and Information in Research guide. This is just an extract of the researcher responsibilities:
+In regard to producing and publishing data and software the most relevant is the Management of Data and Information in Research guide (link??). This is just an extract of the researcher responsibilities:
 
 In accordance with the Code, researchers must adhere to their institution’s policies related to management of data and information, relevant laws, regulations and guidelines, and research discipline-specific practices and standards.
 
@@ -15,8 +15,8 @@ Under the Code, researchers will:
 
 Each guide also clearly states it is a researcher responsibility to engage with relevant training.
 
-Other relevant guides are:
+Other relevant guides are (links for below??):
 
-Authorship  
-Collaborative Research
-Publication and dissemination of research
+* Authorship  
+* Collaborative Research
+* Publication and dissemination of research
