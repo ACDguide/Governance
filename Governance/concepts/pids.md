@@ -29,7 +29,7 @@ This short [video](https://vimeo.com/97150912) shows how a ORCID works and why i
 
 ## Other identifiers
 ### RAiD: Research Activity Identifier
-In Australia the ARDC manages [RAiD, a Research Activity Identifier](https://www.raid.org.au/). A RAiD record will list all the persistent identifiers associated to a particular project. Any research project and activity can be listed with RAiD. While it is not a global identifier RAiD is a useful tool to have all your research project outputs like papers, data and code together with project inputs such as researcher(?) and grants. 
+In Australia the ARDC manages [RAiD, a Research Activity Identifier](https://www.raid.org.au/). A RAiD record will list all the persistent identifiers associated to a particular project. Any research project and activity can be listed with RAiD. While it is not a global identifier RAiD is a useful tool to have all your research project outputs like papers, data and code together with project sources such as funders, collaboratos and grants. 
 
 ### ROR - Research Organization Registry
 [ROR](https://ror.org/) is a community project aiming to create an open global registry for research organisations. It provides a unique identifier that can be used to link research products to a specific organisation. It is also a useful tool to find out about other organisations working in a field of interest. As an example this is what is returned by [querying for "climate"](https://ror.org/search?query=climate).
