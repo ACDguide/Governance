@@ -1,6 +1,6 @@
 # Q&A
 * <ins>Does a license last forever?</ins><br>
-Technically a license is valid while(?) you hold the copyright, which usually in Australia expires 70 years after creation. You can revoke a license and apply a different one anytime<br> 
+Technically a license is valid while you hold the copyright, which usually in Australia expires 70 years after the author death (50 years if acquired before 2005). You can revoke a license and apply a different one anytime.<br> 
 
 * <ins>If I move from one license to a different one, would the new one apply in retrospect?</ins><br>
 No, a license is an agreement you enter in with someone else at the moment in which they obtain your data/code, so for them the old license will still apply. The new license will apply to anyone who download your data/code from when the license enters in use. If you update your data or code and a "old" user downloads the updates though the new license will apply for them from that moment on.<br>
