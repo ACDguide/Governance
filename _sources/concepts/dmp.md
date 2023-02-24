@@ -17,38 +17,40 @@ and it is also useful:
 ## Creating a Data Management Plan
 
 It is best to create a DMP as early as you can in your project. Some institutions will provide tools and/or guidance on how to create a DMP.
-CLEX for example provides [CLEX_Roadmap](https://clex.dmponline.cloud.edu.au) a DMP webtool which you can use to create, store and share DMPs, as well as for guidance on how to structure one. 
+CLEX for example provides [CLEX_Roadmap](https://clex.dmponline.cloud.edu.au); a DMP webtool which you can use to create, store and share DMPs, as well as for guidance on how to structure one. 
 
 Here a distinction between three data management levels is made: personal, group and public. 
 
 **Personal**
- This applies to any project exploring new ideas and/or procedures. A single researcher mostly conducts the work and hence there are no specific sharing requirements.
+ 
+This applies to any project exploring new ideas and/or procedures. A single researcher mostly conducts the work and hence there are no specific sharing requirements.
 
 At this level a formal data management plan is not necessary, however one can still be useful to start collecting information in case the project becomes bigger and to help plan how the research will be conducted.
 
 At this stage a plan can help design the experiment:
 
-* which data will be used, if it is locally available and if can be used ([see licenses](license.md)
+* which data will be used, if it is locally available and if can be used ([see licenses](license.md))
 * basic workflow description
 * bulk estimate of data volume and compute resources
 * software and support (including training) necessary to run experiment and/or post-process data
 
-It is also never too early to start to work on your project [provenance](provenance.md):
+It is also never too early to start to work on project [provenance](provenance.md):
 
 * applying where possible relevant [metadata conventions](conventions.md) to any data produced, it is easier when done from the first analysis steps rather than having to update the metadata subsequently.
 * adopting version control for your code  !!!COMMENT add reference elsewhere in book or see issue 38
 * building references to data/code sources
 
 **Group**
+ 
  This applies to any project where data will be shared. Hence this applies to any group activity but also to single researcher projects whose output could be of interest to other researchers (this is often true of model experiments).
 
-When you share data with others it is important for the data to be accompanied by its provenance. This is so others can verify the validity of the data and also use the data in the correct way.
+When data is shared with others, it is important that it is accompanied by its provenance. This is so others can verify the validity of the data and also use the data in the correct way.
 
 A DMP should also include:
 
 * list of researchers responsible for the data and all the interested parties
 * all information previously entered in the DMP should be reviewed to make sure it is still applicable
-* directory structure and filenames should be consistent and follows conventions wherever possible, CF standard or other relevant standards should be adopted if not already in use.
+* directory structure and filenames should be consistent and follow conventions wherever possible; CF standard or other relevant standards should be adopted if not already in use.
 * data reduction plan: does all model data need to be saved after analysis?
 * data retention plan: when can data be deleted?
 * [backup strategy](backup.md)
@@ -56,7 +58,7 @@ A DMP should also include:
 If research is part of a collaboration project:
 
 * a [data agreement](collaboration-agreement.md) on how data will be shared/published should be in place from the start
-* any data policy and/or standard adopted by the project should be followed
+* any data policy and/or standard adopted by the project should be followed.
 
 **Public**
 
@@ -71,10 +73,10 @@ If research is part of a collaboration project:
 * long-term storage strategy
 * any other specific requirements that the chosen repository might have, must be addressed.
 
-As a DMP is documenting and describing your data output as a paper documents and describes your research output, some tips about writing research papers can be applied to DMP, too. We collected a few we found online below.
+As a DMP is documenting and describing your data output as a paper documents and describes your research output, some tips about writing research papers can be applied to the DMP too. We collected a few found online below.
 
 :::{admonition} **Tips**
-...Pitfalls include using complicated jargon, including unnecessary details, and writing for your highly specialized colleagues instead of a wider audience. ...<br>
+...Pitfalls include using complicated jargon, including unnecessary details, and writing for your highly specialised colleagues instead of a wider audience. ...<br>
 Only abbreviations firmly established in the field are eligible, … avoiding those which are not broadly used ...<br>
 … when looking for keywords, avoid words with a broad meaning and words already included in the title.<br>
 … you need to include detailed information so a knowledgeable reader can reproduce the experiment. However, do not repeat the details of established methods; use References and Supporting Materials to indicate the previously published procedures.<br>

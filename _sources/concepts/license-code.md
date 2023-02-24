@@ -7,9 +7,9 @@ The [Open Source initiative](https://opensource.org/licenses) and the [Software 
 
 They both summarise licenses by their "rules".
 
-As for the data, the ARDC has also a [guide to software licensing](https://ardc.edu.au/resource/research-software-rights-management-guide/). It is also worth noticing that the ARDC is running several initiative to facilitate software sharing and publishing.
+As for the data, the ARDC has also a [guide to software licensing](https://ardc.edu.au/resource/research-software-rights-management-guide/). It is also worth noticing that the ARDC is running several initiatives to facilitate software sharing and publishing.
 
-Permissive software license, also known as BSD-like or BSD-style licenses, are free-software licenses which carry only minimal restrictions on how the software can be used. 
+Permissive software licenses, also known as BSD-like or BSD-style licenses, are free-software licenses which carry only minimal restrictions on how the software can be used. 
 Two of the most used permissive licenses are the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0) and the [MIT license](https://choosealicense.com/licenses/mit/).
 
 ## Apache 2.0
@@ -61,7 +61,7 @@ Example of code with license header:
 > \# See the License for the specific language governing permissions and  <br>
 > \# limitations under the License.
 
-It is important that whichever license you choose the owner, author and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.
+It is important that whichever license you choose, the owner, author and title of the work are clear, including the source in the case of a derived work. This is the information that anyone who wants to use your work should be using to generate a correct attribution. Even better, you should be providing the preferred citation text yourself.
 
 ```{warning}
 Creative Commons are not suitable for licensing software, as stated on the Creative Commons website:

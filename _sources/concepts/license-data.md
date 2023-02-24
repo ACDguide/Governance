@@ -18,15 +18,15 @@ Check the [CC kiwi video](https://creativecommons.org/about/videos/creative-comm
 
 ```{admonition} Not Commercial option 
 :class: warning
-In the last few years there is a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.
+In the last few years there has been a push to avoid using the Not Commercial clause as this can have unexpected ramifications. For example, if you use some data or an image for a presentation at a conference that people have to pay to attend, this could be considered Commercial use.
 ```
 
 ## How to apply a license
 Once decided which license to apply, it is usually easy to apply it to a dataset.
 
-When publishing a dataset add a `license.txt` file which contains the chosen license legal text.
+When publishing a dataset add a `license.txt` file which contains the legal text for the chosen license.
 
-At the top of the file specify the dataset title ( referred to as "licensed material") and the owner of the work you are licensing (referred to as "licensor"). Please note that in the example below CLEX is acting as licensor on behalf of the author and/or their institution.
+At the top of the file specify the dataset title (referred to as "licensed material") and the owner of the work you are licensing (referred to as "licensor"). Please note that in the example below, CLEX is acting as licensor on behalf of the author and/or their institution.
 
 
 **Example license header**
@@ -38,7 +38,7 @@ At the top of the file specify the dataset title ( referred to as "licensed mate
 
 The `license.txt` file then will be available both in the dataset local directory and on the online data portal together with the files. Also, as netCDF is self-describing the appropriate license link to the Creative Commons website can be added to the files global attributes and/or other metadata records available.
 
-It is important that whichever license is chosen, the owner, author, and title of the work are clear, including the source in case of a derived work. This is the information that anyone who wants to use the data should be using to generate a correct attribution. Ideally, the author should provided the preferred citation.
+It is important that whichever license is chosen, the owner, author, and title of the work are clear, including the source in case of derived work. This is the information that anyone who wants to use the data should be using to generate a correct attribution. Ideally, the author should provide the preferred citation.
 
 ```{note} CC-BY 4.0
 There are a lot of different flavours possible. Usually, most licenses cover "attribution" which is the most common reason to apply a license: to get your work recognised! If unsure about which license to use, we advise using the [International CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode).

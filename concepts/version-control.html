@@ -28,8 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -748,7 +748,7 @@
 <h1>Version Control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h1>
 <p><strong>Version Control systems</strong> (e.g. git, SVN) are used to track changes to files over time, so that if a mistake is introduced, it is possible to go back to an earlier copy to work out what changed.</p>
 <p>Version control is particularly useful with code development, but it can also be used with documents (for example this book!) or pretty much any other file.</p>
-<p>You would typically use not just local version control, that is, making a history of our code as you develop it, but pair the use of <code class="docutils literal notranslate"><span class="pre">git</span></code> with a <strong>remote repository</strong> on a server such as GitHub (global cloud), GitLab (e.g. NCI’s git hosting instance) or BitBucket (e.g. CSIRO’s hosting instance). This means you have at least two copies of your repository so if you do something catastrophic in your local copy, you can always pull a fresh copy from the remote server. It also allows you to pull a copy of the repository to wherever you are working, for example, your work computer, home computer, or a remote machine such as NCI’s HPC or cloud.</p>
+<p>You would typically use not just local version control, that is, making a history of our code as you develop it, but pair the use of <code class="docutils literal notranslate"><span class="pre">git</span></code> with a <strong>remote repository</strong> on a server such as GitHub (global cloud), GitLab (e.g. NCI’s git hosting instance) or BitBucket (e.g. CSIRO’s hosting instance). This means there are at least two copies of your repository so if something catastrophic happens in your local copy, you can always pull a fresh copy from the remote server. It also allows you to pull a copy of the repository to wherever you are working, for example, your work computer, home computer, or a remote machine such as NCI’s HPC or cloud.</p>
 <p>There are a number of useful concept introductions to version control which are linked to here rather than attempting to paraphrase:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Git-SCM’s introduction to version control</a> - excellent overview of concepts and a useful resource generally</p></li>
@@ -758,15 +758,15 @@
 <div class="section" id="when-to-use-version-control">
 <h2>When to use version control<a class="headerlink" href="#when-to-use-version-control" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>When you are developing code</strong>, even if it’s just for yourself, undoing mistakes and checking differences is much easier with version control. Additionally having a remote backup protects against disaster.</p></li>
-<li><p><strong>When you are sharing code</strong>, it is easy for a collaborator to pull a copy of your code to their own machine, then if you make changes they can easily pick up your changes, and recriprocally, you may permit your collaborators to also make changes to your code base directly or via “pull request”.</p></li>
-<li><p><strong>When you are collaborating on a large central body of code</strong>, it is best practise to “fork” a copy of the respository, make modifications in your own branch, and then submit a “pull request” for your modifications to be merged into the authoritative version of the code.</p></li>
+<li><p><strong>When developing code</strong>, even if it’s just for yourself, undoing mistakes and checking differences is much easier with version control. Additionally having a remote backup protects against disaster.</p></li>
+<li><p><strong>When sharing code</strong>, it is easy for a collaborator to pull a copy of your code to their own machine, then if you make changes they can easily pick up your changes, and reciprocally, you may permit your collaborators to also make changes to your code base directly or via “pull request”.</p></li>
+<li><p><strong>When collaborating on a large central body of code</strong>, it is best practise to “fork” a copy of the respository, make modifications in your own branch, and then submit a “pull request” for your modifications to be merged into the authoritative version of the code.</p></li>
 </ul>
 </div>
 <div class="section" id="when-not-to-use-version-control">
 <h2>When not to use version control<a class="headerlink" href="#when-not-to-use-version-control" title="Permalink to this headline">¶</a></h2>
-<p>Some files are not best suited to being housed in a repository, either because it is inappropriate, or because they may blow out the size of the repository.</p>
-<p>Files you would usually not include in a version control system include compiled binaries (they probably are not portable to other machines), large data files (host them elsewhere if needed for tests), and local settings files.</p>
+<p>Some files are not suited to being housed in a repository, either because it is inappropriate, or because they may blow out the size of the repository.</p>
+<p>Files that wouldn’t usually be included in a version control system are compiled binaries (they are probably not portable to other machines), large data files (host them elsewhere if needed for tests), and local settings files.</p>
 <p>It is okay to have files in your git-managed directory that are not included in the version controlled repository - you can <em>exclude</em> files from version control using a <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> file in git, which is simply a text list of files in the git directory which should not be checked by git for changes or suggested for staging.</p>
 </div>
 <div class="section" id="additional-resources">
