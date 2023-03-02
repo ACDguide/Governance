@@ -2,20 +2,21 @@
 
 A good readme file attached to your published data is a useful tool for a potential user. If they have found the data online by downloading the readme file they can keep the data description and publications details together with the data. If they are using the data directly on the server where the data is stored, then they can get the information on the dataset without having to go online.
 
-More importantly the data description shown on online repository is limited in size and a readme file is useful to add more technical details, direcotry structure and other information that you might have to leave out of the main abstract.
+More importantly the data description shown on an online repository is limited in size and a readme file is useful to add more technical details, directory structure and other information that you might have to leave out of the main abstract.
 
-Readme template and example
-When you are publishing on NCI we provide a Readme file template in the working directory we create for each dataset. here I am using a real readme file from a record we recently published to illustrate the template structure. This particular readme file is quite long as there are a lot of technical details, so it provides a good example to show the kind of information you can include. However, if your dataset is less complex is likely your readme file will be a lot shorter than this.
+**Readme template and example**
+
+When you are publishing on NCI we provide a Readme file template in the working directory we create for each dataset. here I am using a real readme file from a record we recently published to illustrate the template structure. This particular readme file is quite long as there are a lot of technical details, so it provides a good example to show the kind of information you can include. However, if your dataset is less complex, it is likely your readme file will be a lot shorter than this.
 
 <Dataset title and version>
 
-High-Resolution Modelling of Extreme Storms over the East Coast of Australia v1.0
+**High-Resolution Modelling of Extreme Storms over the East Coast of Australia v1.0**
  <Abstract usually the same as published record>
 
 This dataset includes data of 11 extreme East Coast Lows simulated using a multi-physics (5), multi-resolution (3) approach for 4 different boundary conditions, leading to a total of 660 simulations. All simulations were performed using the Weather Research and Forecasting (WRF v3.6) regional model using a triple nesting approach with different domain sizes.
-The outer domain corresponds to the CORDEX (Coordinated Regional Climate Downscaling Experiment) Australasia domain and is discretized using a 24-km horizontal grid spacing.
-ECMWF ERA Interim (ERAI) reanalysis are use to initialize and drive the model for present climate simulations. For future climate simulations, the Pseudo Global Warming (PGW) approach is used. In this case, initial and boundary conditions are built by adding the climate change signal obtained from a global climate multi-model ensemble from the CMIP5.
-We selected a total of eleven events featuring an extreme east coast low over the eastern coast of Australia. Events were selected based on their impacts around the Sydney area and the selection includes some of the most iconic events in recent times such as the "Pasha Bulker" (June 2007) and the June 2016 storms. All events were simulated for a total of 8 days, starting about 4 days before the storm peaked near the Sydney's area. A full list of events dates is given below. 
+The outer domain corresponds to the CORDEX (Coordinated Regional Climate Downscaling Experiment) Australasia domain and is discretized using a 24 km horizontal grid spacing.
+ECMWF ERA Interim (ERAI) reanalysis are used to initialize and drive the model for present climate simulations. For future climate simulations, the Pseudo Global Warming (PGW) approach is used. In this case, initial and boundary conditions are built by adding the climate change signal obtained from a global climate multi-model ensemble from the CMIP5.
+We selected a total of eleven events featuring an extreme east coast low over the eastern coast of Australia. Events were selected based on their impacts around the Sydney area and the selection includes some of the most iconic events in recent times such as the "Pasha Bulker" (June 2007) and the June 2016 storms. All events were simulated for a total of 8 days, starting about 4 days before the storm peaked near the Sydney area. A full list of events dates is given below. 
 <list of relevant elements of the data as simulations,  data sources etc.>
 
 Events:
@@ -36,6 +37,7 @@ Boundary conditions:
     HIST-BRAN - (ERAI) reanalysis is used as lateral boundary conditions and BRAN for surface (SST), for present climate simulations
         FUT - initial and boundary conditions are built by adding the climate change signal from the CMIP5 RCP8.5 scenario climate multi-model ensemble to ERAI.
         FUT-THERMO - initial and boundary conditions are built by adding the climate change signal from the CMIP5 climate multi-model ensemble to ERAI, but only to thermodynamical variables (temperature and humidity) 
+
 Physics:
 There is one control run (CTL) and four perturbed physics members that include modifications in the cumulus (CU), the surface and planetary boundary layer (PBL), the radiation (RAD) and the microphysics (MPS) schemes. Members are denoted according to the physical scheme that is being changed compared to the CTL run. 
 <extra information if necessary as more details on technical aspects, sources etc.> 
@@ -116,5 +118,6 @@ Citation:
 Other information you can include which was not present in this particular example are
 
 References list, if you are citing other sources in the description
+
 Associated papers for publications that are based on the dataset
 
