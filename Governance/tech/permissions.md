@@ -387,7 +387,7 @@ this will preserve the ACLs. If run with the additional archive flag `-raA`, the
 
 ```{note}
 The -A flag requires source and destination to have compatible ACL systems, when this is not the case a potential solution in rsync is to use the `--chmod` option.
-From the rsync main page (in the --perms section):
+From the rsync man page (in the --perms section of the manual):
 
 >To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the --perms option is off and use `--chmod=ugo=rwX` (which ensures that all non-masked bits get enabled).
 
