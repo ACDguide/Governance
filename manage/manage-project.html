@@ -309,6 +309,11 @@
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../concepts/authorship.html">
+     Authorship
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../concepts/backup.html">
      Backup strategy
     </a>
@@ -481,6 +486,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/cf-checker.html">
      CF compliance checkers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/contributors.html">
+     Contributor roles
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -839,12 +849,18 @@ All the files should be owned by the project group with <code class="docutils li
 <div class="section" id="backup">
 <h2>Backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">gdata</span></code> is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">backup plan</span></a>. If the files are an authoritative copy it might be worth backing up the data on a separate system.
-The only option to back up data at NCI is to archive the data on the tape system also known as <code class="docutils literal notranslate"><span class="pre">[massdata](massdata)</span></code>.</p>
+The only option to back up data at NCI is to archive the data on the tape system also known as <code class="docutils literal notranslate"><span class="pre">[massdata](../tech/massdata)</span></code>.</p>
 <p>If the datasets are a replica and they can be easily retrieved, or are frequently changing, then backing up the data might be redundant.</p>
 </div>
 <div class="section" id="accounting">
 <h2>Accounting<a class="headerlink" href="#accounting" title="Permalink to this headline">¶</a></h2>
 <p>Covering the accounting tools available to handle storage allocations at NCI is behind the scope of this guidance, but you can refer to <a class="reference external" href="https://climate-cms.org/posts/2022-04-26-storage-where-what-why-how.html">this blog from the CLEX CMS</a> to get an overview.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>On older <code class="docutils literal notranslate"><span class="pre">gdata</span></code> filesystems at NCI, data can be assigned to a project different from the group folder where it is located. This can be identified by the <code class="docutils literal notranslate"><span class="pre">nci-files-report</span></code> command as it shows both project and group folder usage.
+As a result, data can be transferred to count against the quota of a different project than where it lives, and cause the target project to reach its storage quota. This can cause unforeseen issues for data projects who typically have a lot of users and can result in automatic dataset update to fail for lack of storage.
+From <code class="docutils literal notranslate"><span class="pre">gdata5</span></code> on, it is not possible to assign data to a project different from the group folder.</p>
+</div>
 </div>
 </div>
 
