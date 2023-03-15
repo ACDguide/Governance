@@ -15,6 +15,11 @@ NetCDF files contain three main components:
 
 * Dimensions describe the overall array structure of the data stored in the file, though not every variable must use all dimensions that exist in the file. Dimensions can be ‘real’ dimensions (such as time, latitude, longitude), or ‘pseudo’ dimensions (such as land-use tiles, or spectral bands). NetCDF dimensions, however, contain no metadata or actual values, which are described using variables with the same name. The dimensions are the base architecture of the file.
 
+```{note}
+Technically, many dimensions can be created in a NetCDF file, including multiple time (e.g. time0, time 1, etc) or lat/lon (e.g. lat_a, lat_c) dimensions if you choose.
+However, it is recommended to minimise the use of multiple highly similar dimensions; particularly 'time', as there is often a hard-coded expectation in analysis/visualisation packages that expect one and only one time axis.  
+```
+
 * Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled using any string or value, however there are some common standards (e.g. CF conventions) that we highly recommend using.
 
 * Global attributes are key:value pairs that descibe the file at the top-level. While these are typically chosen according to the use case of the data and can vary significantly between modelling realms or scientific need, standards also exist for these. Common global attributes include dataset title, provenance information (i.e. where the data came from), license, and contact information, as well as naming any metadata conventions implemented in the file.
