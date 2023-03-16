@@ -2,10 +2,10 @@
 
 The Australian and New Zealand Standard Research Classification codes for Field of Research or briefly ANZSRC FoR codes have been reviewed and there is a new release coming.
 If you have ever published a dataset or software, you were probably asked to browse through the available list online and choose any which were relevant.
-FoR codes are used by repositories to classify the dataset or code they list. Associated search tools will used them as keywords. While you can usually add other kind of keywords to your record, FoR codes, by providing an official classification, are more likely to be used by someone searching for data associated to a specific field. Therefore, they will make your dataset or software more visible to others.
-To avoid confusion between the two systems the codes where completely redefined. Most of the codes useful to our community will still be found under the Earth Science division, but the division itself is now identify by the code “37” while in the previous standard from 2008 its code was “04”.
+FoR codes are used by repositories to classify the dataset or code they list. Associated search tools will use them as keywords. While you can usually add other kinds of keywords to your record, FoR codes, by providing an official classification, are more likely to be used by someone searching for data associated to a specific field. Therefore, they will make your dataset or software more visible to others.
+To avoid confusion between the two systems the codes were completely redefined. Most of the codes useful to our community will still be found under the Earth Science division, but the division itself is now identified by the code “37” while in the previous standard from 2008 its code was “04”.
 
-In the previous version, most Climate science related codes were grouped under Atmospheric Science. The new classification includes also a new Climate Change Science group.
+In the previous version, most Climate science related codes were grouped under Atmospheric Science. The new classification includes a new Climate Change Science group.
 
 **3702   Climate Change Science**
 | Code	| Subject |

@@ -1,13 +1,13 @@
 # CF compliance checkers
 
-There are a few options when it comes to check if files are CF compliant. There are online checkers, a netCDF is uplaoded and a report to download is generated for the file, examples are:
+There are a few options when it comes to checking if files are CF compliant. There are online checkers, a netCDF is uploaded and a report to download is generated for the file, examples are:
 
 * https://compliance.ioos.us/index.html
 
 * http://cfconventions.org/compliance-checker.html
 
 This works fine for one small file but when checking a lot of files is better to install and use a checker.<br>
-The IOOS checker is recommended for this, if working at NCI is already installed in the CLEX managed conda environments.
+The IOOS checker is recommended for this. If working at NCI, this is already installed in the CLEX managed conda environments.
 The IOOS checker is python based, it checks for CF conventions and the ACDD conventions. NCI uses this checker as part of their publishing process, as it covers both CF and ACDD conventions, which are required to publish on their data portal. 
 
 ## Running IOOS at NCI

@@ -6,7 +6,7 @@
 ```
 
 ```{dropdown} **AURIN - Australian Urban Research Infrastructure Network**
-[AURIN](https://aurin.org.au/) is an NCRIS project that provides e-research infrastructure and expertise to support urban, regional and social science research in academia, governement and industry.
+[AURIN](https://aurin.org.au/) is an NCRIS project that provides e-research infrastructure and expertise to support urban, regional and social science research in academia, government and industry.
 ```
 
 (creative-commons)=
@@ -26,7 +26,7 @@ CF are conventions used to set metadata attributes in netCDF files. See [relevan
 ```
 
 ```{dropdown} **DAP - Data Access Protocol**
-DAP is a data transmission protocol designed specifically for science data. The protocol provides data types to accommodate gridded data, relational data, and time series, regardless of the original format. It is recognised by many scoentifc softwares, so you can pass a dap url instead of a filename to open a file or a subset.
+DAP is a data transmission protocol designed specifically for science data. The protocol provides data types to accommodate gridded data, relational data, and time series, regardless of the original format. It is recognised by many scientific softwares, so you can pass a dap url instead of a filename to open a file or a subset.
 ```
 
 ```{dropdown} **DMP - Data Management Plan**
@@ -66,12 +66,12 @@ see definition in [key concepts](fair)
 
 (opendap)=
 ```{dropdown} **OPeNDAP - Open-source Project for a Network Data Access Protocol**
-[OPeNDAP](https://www.opendap.org/) is the client/server software associated to DAP. OPeNDAP is a widely used, subsetting data access method extending the HTTP protocol. CLEX CMS haa published a blog that demonstrates [how to build and use and opendap url](https://climate-cms.org/2019/01/18/using-opendap.html), other more in depth information on OPenDAP is available from their [website](https://www.opendap.org/), including a list of software that understand this protocol.
+[OPeNDAP](https://www.opendap.org/) is the client/server software associated to DAP. OPeNDAP is a widely used, subsetting data access method extending the HTTP protocol. CLEX CMS has published a blog that demonstrates [how to build and use an opendap url](https://climate-cms.org/2019/01/18/using-opendap.html). Other more in depth information on OPenDAP is available from their [website](https://www.opendap.org/), including a list of software that understand this protocol.
 ```
 
 (rdaustralia)=
 ```{dropdown} **RDA - Research Data Australia**
-[RDA](https://researchdata.edu.au) is the data discovery service of the [Australian Research Data Commons (ARDC)](ardc). Most universities and research centers across Australia are now listing their data collections on RDA. RDA does not hold the data, so it is often used instead to list records existing on other repositories. Universities and data centers often automatically create an RDA record for any new published dataset. It is a useful tool for data, and more recently, for software discovery. RDA also holds record for research programs, institution and the researchers themselves. Datasets listed on RDA are automatically added to the [google dataset search tool](http://climate-cms.wikis.unsw.edu.au/index.php?title=Google_dataset_search_tool&action=edit&redlink=1).
+[RDA](https://researchdata.edu.au) is the data discovery service of the [Australian Research Data Commons (ARDC)](ardc). Most universities and research centres across Australia are now listing their data collections on RDA. RDA does not hold the data, so it is often used instead to list records existing on other repositories. Universities and data centres often automatically create an RDA record for any newly published dataset. It is a useful tool for data, and more recently, for software discovery. RDA also holds records for research programs, institutions and the researchers themselves. Datasets listed on RDA are automatically added to the [google dataset search tool](http://climate-cms.wikis.unsw.edu.au/index.php?title=Google_dataset_search_tool&action=edit&redlink=1).
 ```
 
 (rdalliance)=
@@ -80,7 +80,7 @@ see definition in [key concepts](fair)
 ```
 
 ```{dropdown} **TDS -THREDDS Data Server**
-TDS is a data, metadata catalogue server based on [THREDDS](thredds).
+TDS is a data andd metadata catalogue server based on [THREDDS](thredds).
 ```
 
 ```{dropdown} **TERN -**
@@ -88,7 +88,7 @@ TDS is a data, metadata catalogue server based on [THREDDS](thredds).
 
 (thredds)=
 ```{dropdown} **THREDDS - Thematic Real-Time Environmental Distributed Data Services**
-THREDDS provides metadata and data access for scientific datasets, using a variety of remote data access protocols, including DAP. NCI uses a [THREDDS server](https://dapds00.nci.org.au/thredds/catalog.html) to make datasets available remotely. Our CLEX and ARCCSS collection are also available on this. A list of other useful THREDDS data servers is available from our data access page.
+THREDDS provides metadata and data access for scientific datasets, using a variety of remote data access protocols, including DAP. NCI uses a [THREDDS server](https://dapds00.nci.org.au/thredds/catalog.html) to make datasets available remotely. The CLEX and ARCCSS collections are also available on this. A list of other useful THREDDS data servers is available from our data access page.
 ```
 
 ```{dropdown} **WCS - Web Coverage Service**

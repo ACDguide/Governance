@@ -30,11 +30,12 @@ This is an integer value from ranging from 0 to 9. A value of 0 means no compres
 **Shuffle**
 
 If the `shuffle` option isn't turned on each variable is stored on value, i.e. contiguously in memory. When `shuffle` is turned on, the first bit of all variables is stored contiguously in space, followed by the second bit, and so on.
-If the numbers we are storing are similar in values there is a high chance that all the first bits are either all `0` or all `1`, so shuffling produces very long sequences of the same number to store in memory which is very efficient. the same would be true for most of the other bits after the first.
+If the numbers we are storing are similar in values there is a high chance that all the first bits are either all `0` or all `1`, so shuffling produces very long sequences of the same number to store in memory which is very efficient. The same would be true for most of the other bits after the first.
 The only case in which shuffling is not a good idea is if neighbouring values differ considerably. Usually turning `shuffle` on results in a smaller compressed file with little performance overhead.
 
-**chunking**
-`chunking` also plays a part in the compression process, to use netCDF compression the data must be chunked. Without `chunking` a n-dimensional array representing a variable is stored contiguously in memory, following the dimension order. Using `chunking` an array is broken in units called `chunks`. Each chunk is stored contiguously in memory, as if it was a separate array. 
+**Chunking**
+
+`chunking` also plays a part in the compression process, to use netCDF compression, the data must be chunked. Without `chunking`, a n-dimensional array representing a variable is stored contiguously in memory, following the dimension order. Using `chunking`, an array is broken in units called `chunks`. Each chunk is stored contiguously in memory, as if it was a separate array. 
 There are several chunking strategies that can be applied, mostly depending on how the data is most frequently accessed. Many tools just adopt the netCDF library default chunking strategy. For many netCDF versions the default strategy has been to create chunks that are simply the same size as the grid dimensions of the variable and using size 1 for `time` when present. The [ACDG guide to BigData](https://acdguide.github.io/BigData/data/data-netcdf.html#what-is-data-chunking) covers the implications of different `chunking` strategies on data analysis. 
 
 ````{warning}
@@ -44,8 +45,8 @@ The error message will vary depending on the tool used, for example with nccopy 
 ```{code}
 cdo -f nc4 -z zip_5 input-file output-file
 ```
-might work as cdo will impose chunking before compressing.
-Another way around this is to use xarray to rewrite the file with the desire encoding, getting a better control of chunking and compression at the same time.
+might work, as cdo will impose chunking before compressing.
+Another way around this is to use xarray to rewrite the file with the desired encoding, getting better control of chunking and compression at the same time.
 ````
 
 ```{note}
@@ -67,17 +68,18 @@ nccopy -k nc4 -d 5 -s input.nc output.nc
 **NCO**
 
 The [NetCDF Operator](http://nco.sourceforge.net/nco.html#Compression) program suite can compress netCDF files and offers several [chunking strategies](http://nco.sourceforge.net/nco.html#Chunking). 
-This lossless compression is referred to as `deflate` and is usually applied with `shuffle`. The latest versions allow to choose in which order these two operations happen.
+This lossless compression is referred to as `deflate` and is usually applied with `shuffle`. The latest versions allow the user to choose in which order these two operations happen.
 
 ```{code}
 ncks -D 5 input.nc output.nc
 ```
 
-NCO also offers three lossy compression algorithms, that can be used in con junction with `deflate`:
+NCO also offers three lossy compression algorithms, that can be used in conjunction with `deflate`:
 * Linear packing - a higher precision type is "packed" into a lower precision type, usually NC_SHORT
 And two Precision Preserving Compression (PPC) algorithms where a per-variable precision level is set as:
 * Number of Significant Digits (NSD) after the decimal point
 * Decimal Significant Digits (DSD) before and after the decimal point
+
 For more details refer to the NCO documentation listed above.
 
 **CDO**
