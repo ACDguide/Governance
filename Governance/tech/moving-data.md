@@ -32,9 +32,8 @@ A: You will need to set up direct SSH access as per "4. Direct SSH access", and 
 To copy your files from OOD to ARE you need to use the scp tool.  You can either do this directly using a gadi login node (ssh command from your computer or ARE Gadi terminal app) OR as a 2 step process from your computer.
 
 Gadi login node
-Login to Gadi login node either using a native SSH client on your computer OR using the ARE 
+Login to Gadi login node either using a native SSH client on your computer OR using the ARE Gadi Terminal app
 
-Gadi Terminal app
 Use the scp command to copy your required files
 e.g. copy select file: 
 scp -r abc123@vdi-sftp.nci.org.au:DIR/FILENAME.txt
@@ -63,6 +62,6 @@ Also this is only a tech reference so the context can/should be given in the man
 ## CSIRO
 Thomas parallel rsync
 
-SPeicific tools
+Specific tools
 
 ACCESS-archiver
