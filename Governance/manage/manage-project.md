@@ -48,9 +48,15 @@ On CSIRO internal resources, access mgmt is governed by windows ACLs - email hel
 
 ## Backup
 `gdata` is not backed up, if the dataset files would be difficult to retrieve, or if they are the authoritative copy, it is important to have a [backup plan](../concepts/backup.md). If the files are an authoritative copy it might be worth backing up the data on a separate system. 
-The only option to back up data at NCI is to archive the data on the tape system also known as `[massdata](massdata)`.
+The only option to back up data at NCI is to archive the data on the tape system also known as `[massdata](../tech/massdata)`.
 
 If the datasets are a replica and they can be easily retrieved, or are frequently changing, then backing up the data might be redundant.
 
 ## Accounting
 Covering the accounting tools available to handle storage allocations at NCI is behind the scope of this guidance, but you can refer to [this blog from the CLEX CMS](https://climate-cms.org/posts/2022-04-26-storage-where-what-why-how.html) to get an overview.
+
+```{warning}
+On older `gdata` filesystems at NCI, data can be assigned to a project different from the group folder where it is located. This can be identified by the `nci-files-report` command as it shows both project and group folder usage.
+As a result, data can be transferred to count against the quota of a different project than where it lives, and cause the target project to reach its storage quota. This can cause unforeseen issues for data projects who typically have a lot of users and can result in automatic dataset update to fail for lack of storage.
+From `gdata5` on, it is not possible to assign data to a project different from the group folder.
+```

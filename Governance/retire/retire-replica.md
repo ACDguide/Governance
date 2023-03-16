@@ -26,7 +26,7 @@ Even if there is a reliable automatic measure of data access, it is always a goo
 * **Automated download of updated datasets:** when a dataset is maintained from a 3rd party host automatically, then new versions can be automatically detected and downloaded and older versions or data with identified serious errata removed. This process is in place for NCI's CMIP replica data using the `synda` tool.
 
 ### Community feedback
-* **E-mail communication:** this is possible where the community is well defined, such as if users need to sign up to a group/project or if there are a well defined community of potential users. For example, if the data is on NCI, Mancini ([http://my.nci.org.au](my.nci.org.au)) can be used to contact projects' users. This might be sufficient when a likely candidate for removal has already been identified.
+* **E-mail communication:** this is possible where the community is well defined, such as if users need to sign up to a group/project or if there are a well defined community of potential users. For example, if the data is on NCI, Mancini ([my.nci.org.au](https://my.nci.org.au)) can be used to contact projects' users. This might be sufficient when a likely candidate for removal has already been identified.
 * **Survey:** this can be useful when several datasets need to be evaluated at one time, or work out which subset of a big dataset could be retired.
 * **Project dependence:** if a dataset was replicated as part of a particular research project, then it can be considered for removal on completion of that project unless input data is required for reproducibility for some specified period.
 
