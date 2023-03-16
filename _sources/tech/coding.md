@@ -3,7 +3,7 @@
 There are code standards and conventions available depending on the language you are using (see references below) and sometimes also conventions adopted for specific collaborative projects. These can be complex and out of scope for smaller projects and/or a simple code. This page lists a few simple tips to make a code readable and safer from bugs.<br>
  In the video linked below, kindly provided by DataTAS, the presenter gives some useful tips which can be applied to any language:
 
-"Reproducible research how to write code that is built to last" 
+"Reproducible research: How to write code that is built to last" 
 
 It is worth watching the video (the actual presentation is about half of the video ~35 minutes) to understand fully how valuable these tips are and also to get a perspective from someone who went from a science background to a commercial software engineering position.
 
@@ -14,6 +14,7 @@ Below is a list of best practices discussed in the video.
 * Use consistent naming across the code
 * Avoid hard-coding values
 * Initialising variables
+
 **Code structure**
 * Indents
 * Comments
@@ -27,7 +28,7 @@ Below is a list of best practices discussed in the video.
 
 ## Writing reusable code
 
-Basic
+**Basic**
 
 The basics of code reusability involve easily readable code and DRY (don't repeat yourself) principles, so using functions/subroutines/procedures to avoid copying blocks of code and modifying each block. The tips in the introduction can all help with code reusability as well as those listed below.
 
@@ -47,7 +48,7 @@ In a similar vein (and also python specific), how and when to use a main functio
 
 https://realpython.com/python-main-function/
 
-Intermediate
+**Intermediate**
 
 Once code style, readability and DRY principles hace been mastered the next step is improving what you're already doing and using the more advanced language features.
 
@@ -59,7 +60,7 @@ Unfortunately the above link is to a book (Modern Fortran) only part of which is
 
  
 
-Advanced
+**Advanced**
 
 To see the advice above put into practice, you can watch this video. It is a bit long (18min). It is under the Advanced resources because the code it is using is written in Rails. Not many of you will have experience in Rails but the purpose of the video is to talk about the principles and not the specificity of the code. It also involves some more advanced concepts such as classes and modules.
 

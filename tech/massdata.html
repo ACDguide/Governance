@@ -797,20 +797,20 @@
 <p>Massdata (Mass Data Storage System, MDSS for short) is the tape storage available at NCI. This kind of storage is intended for long term storage of large files. It is possible to retrieve data from MDSS, so this is a good place to store data that will not be required for some time, for backup, or for archiving. Each project has a directory on the MDSS, the amount of storage allocated depends on the project allocation.</p>
 <div class="section" id="mdss-proper-usage">
 <h2>MDSS proper usage<a class="headerlink" href="#mdss-proper-usage" title="Permalink to this headline">¶</a></h2>
-<p>MDSS is designed for medium to long-term storage of large files, this means it is optimised for storing big amounts of data. This means it is most suitable for:</p>
+<p>MDSS is designed for medium to long-term storage of large files, this means it is optimised for storing big amounts of data. It is most suitable for:</p>
 <ul class="simple">
-<li><p>Files to keep for a long term, like data underlining published datasets, publications, PhD thesis etc.</p></li>
+<li><p>Files to keep long term, like data underlining published datasets, publications, PhD thesis etc.</p></li>
 <li><p>Files that are likely to be reused or analysed again in the future but not in the next few months. For example, restart files or other model output that are not immediately needed should be moved from disk to massdata as soon as possible.</p></li>
 <li><p>MDSS is suitable for backup of big data projects, like model output which could not be backed up elsewhere.</p></li>
 </ul>
 <div class="section" id="preparing-data-for-mdss">
 <h3>Preparing data for mdss<a class="headerlink" href="#preparing-data-for-mdss" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Files should be organised before uploading, anything that is not needed should be delete. It is difficult to get a list of what is stored on massdata, let alone to list what is in a tarred file once it is uploaded.</p></li>
-<li><p>Big files: there are tools like <code class="docutils literal notranslate"><span class="pre">tar</span></code> to bundle files together into archive files. Archive files should be reasonably big but also organised in logical units. There is no point of tarring together two different simulations if they are likely to be accessed separately later, as transferring a big amount of data is slow. Upload will fail if any of the files are less than 20MB or the average size is less than 250 MB.
-3, Files should be group readable, with group execute permissions for directories. This helps with long term maintenance, allowing administrators to track the type and size of archived data. Permissions can be changed by the data owner with the <code class="docutils literal notranslate"><span class="pre">chmod</span></code> unix utility.</p></li>
+<li><p>Files should be organised before uploading, and anything that is not needed should be deleted. It is difficult to get a list of what is stored on massdata, let alone to list what is in a tarred file once it is uploaded.</p></li>
+<li><p>Big files: there are tools like <code class="docutils literal notranslate"><span class="pre">tar</span></code> to bundle files together into archive files. Archive files should be reasonably big but also organised in logical units. There is no point in tarring together two different simulations if they are likely to be accessed separately later, as transferring a big amount of data is slow. Upload will fail if any of the files are less than 20MB or the average size is less than 250 MB.</p></li>
+<li><p>Files should be group readable, with group execute permissions for directories. This helps with long term maintenance, allowing administrators to track the type and size of archived data. Permissions can be changed by the data owner with the <code class="docutils literal notranslate"><span class="pre">chmod</span></code> unix utility.</p></li>
 </ol>
-<p>While preparing the data to be moved it is a good idea to also document what data is archived and how it is organised. Even a simple readme file added to the main directory can help others and the data owners themselves in the future. If archiving data underlining a publication or published dataset then it is important to have a summary of what is stored in massdata. This should be part of the <a class="reference internal" href="../concepts/dmp.html"><span class="doc std std-doc">dataset management plan</span></a> and/or <a class="reference internal" href="../concepts/availability-statement.html"><span class="doc std std-doc">data availability statement</span></a>.</p>
+<p>While preparing the data to be moved, it is a good idea to also document what data is archived and how it is organised. Even a simple readme file added to the main directory can help others and the data owners themselves in the future. If archiving data underlining a publication or published dataset, it is important to have a summary of what is stored in massdata. This should be part of the <a class="reference internal" href="../concepts/dmp.html"><span class="doc std std-doc">dataset management plan</span></a> and/or <a class="reference internal" href="../concepts/availability-statement.html"><span class="doc std std-doc">data availability statement</span></a>.</p>
 <p>Useful tools:</p>
 <p>* TAR- to create archives cheatsheet</p>
 <details class="sphinx-bs dropdown card mb-3">
@@ -843,7 +843,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  $man mdss
 </pre></div>
 </div>
-<p>If a project is not specified, it will use your default project. A sub-command follow with the path of the files and directories to upload, list etc.</p>
+<p>If a project is not specified, it will use your default project with a sub-command followed by the path of the files and directories to upload, list etc.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mdss</span> <span class="o">-</span><span class="n">P</span> <span class="o">&lt;</span><span class="n">project</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span> <span class="o">+</span> <span class="o">&lt;</span><span class="n">sub</span><span class="o">-</span><span class="n">command</span><span class="o">&gt;</span> <span class="o">+</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -863,7 +863,7 @@
 </div>
 <div class="section" id="monitoring-mdss-usage">
 <h3>Monitoring MDSS usage<a class="headerlink" href="#monitoring-mdss-usage" title="Permalink to this headline">¶</a></h3>
-<p>Unfortunately, there is no command to check the usage by user-id as for /g/data and /scratch. The only way to get this information currently is to ask help<at><a class="reference external" href="http://nci.org.au">nci.org.au</a>. The NCI administrators can access this information for any CI of the group.</p>
+<p>Unfortunately, there is no command to check the usage by user-id as for /g/data and /scratch. The only way to get this information currently is to ask <a class="reference external" href="mailto:help&#37;&#52;&#48;nci&#46;org&#46;au">help<span>&#64;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>. The NCI administrators can access this information for any CI of the group.</p>
 </div>
 <div class="section" id="transferring-data-to-and-from-mdss">
 <h3>Transferring data to and from MDSS<a class="headerlink" href="#transferring-data-to-and-from-mdss" title="Permalink to this headline">¶</a></h3>

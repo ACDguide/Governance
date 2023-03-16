@@ -803,10 +803,10 @@ which can be time consuming, not to mention the data in question will take up mu
 <p>This is an integer value from ranging from 0 to 9. A value of 0 means no compression, and 9 is the highest level of compression possible. The higher this value the smaller a file will be once compressed. However, there is a trade-off, the higher the deflate level, the longer it will take to compress, particularly so with very high deflate levels. At deflate level 9 it can take six times longer to compress the data, with only a few percent improvement in compression. The recommended deflate level is 5. This combines good compression with a small increase in compression time.</p>
 <p><strong>Shuffle</strong></p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> option isn’t turned on each variable is stored on value, i.e. contiguously in memory. When <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> is turned on, the first bit of all variables is stored contiguously in space, followed by the second bit, and so on.
-If the numbers we are storing are similar in values there is a high chance that all the first bits are either all <code class="docutils literal notranslate"><span class="pre">0</span></code> or all <code class="docutils literal notranslate"><span class="pre">1</span></code>, so shuffling produces very long sequences of the same number to store in memory which is very efficient. the same would be true for most of the other bits after the first.
+If the numbers we are storing are similar in values there is a high chance that all the first bits are either all <code class="docutils literal notranslate"><span class="pre">0</span></code> or all <code class="docutils literal notranslate"><span class="pre">1</span></code>, so shuffling produces very long sequences of the same number to store in memory which is very efficient. The same would be true for most of the other bits after the first.
 The only case in which shuffling is not a good idea is if neighbouring values differ considerably. Usually turning <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> on results in a smaller compressed file with little performance overhead.</p>
-<p><strong>chunking</strong>
-<code class="docutils literal notranslate"><span class="pre">chunking</span></code> also plays a part in the compression process, to use netCDF compression the data must be chunked. Without <code class="docutils literal notranslate"><span class="pre">chunking</span></code> a n-dimensional array representing a variable is stored contiguously in memory, following the dimension order. Using <code class="docutils literal notranslate"><span class="pre">chunking</span></code> an array is broken in units called <code class="docutils literal notranslate"><span class="pre">chunks</span></code>. Each chunk is stored contiguously in memory, as if it was a separate array.
+<p><strong>Chunking</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">chunking</span></code> also plays a part in the compression process, to use netCDF compression, the data must be chunked. Without <code class="docutils literal notranslate"><span class="pre">chunking</span></code>, a n-dimensional array representing a variable is stored contiguously in memory, following the dimension order. Using <code class="docutils literal notranslate"><span class="pre">chunking</span></code>, an array is broken in units called <code class="docutils literal notranslate"><span class="pre">chunks</span></code>. Each chunk is stored contiguously in memory, as if it was a separate array.
 There are several chunking strategies that can be applied, mostly depending on how the data is most frequently accessed. Many tools just adopt the netCDF library default chunking strategy. For many netCDF versions the default strategy has been to create chunks that are simply the same size as the grid dimensions of the variable and using size 1 for <code class="docutils literal notranslate"><span class="pre">time</span></code> when present. The <a class="reference external" href="https://acdguide.github.io/BigData/data/data-netcdf.html#what-is-data-chunking">ACDG guide to BigData</a> covers the implications of different <code class="docutils literal notranslate"><span class="pre">chunking</span></code> strategies on data analysis.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -816,8 +816,8 @@ The error message will vary depending on the tool used, for example with nccopy 
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="o">-</span><span class="n">f</span> <span class="n">nc4</span> <span class="o">-</span><span class="n">z</span> <span class="n">zip_5</span> <span class="nb">input</span><span class="o">-</span><span class="n">file</span> <span class="n">output</span><span class="o">-</span><span class="n">file</span>
 </pre></div>
 </div>
-<p>might work as cdo will impose chunking before compressing.
-Another way around this is to use xarray to rewrite the file with the desire encoding, getting a better control of chunking and compression at the same time.</p>
+<p>might work, as cdo will impose chunking before compressing.
+Another way around this is to use xarray to rewrite the file with the desired encoding, getting better control of chunking and compression at the same time.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -836,18 +836,18 @@ has a clear representation of how <code class="docutils literal notranslate"><sp
 </div>
 <p><strong>NCO</strong></p>
 <p>The <a class="reference external" href="http://nco.sourceforge.net/nco.html#Compression">NetCDF Operator</a> program suite can compress netCDF files and offers several <a class="reference external" href="http://nco.sourceforge.net/nco.html#Chunking">chunking strategies</a>.
-This lossless compression is referred to as <code class="docutils literal notranslate"><span class="pre">deflate</span></code> and is usually applied with <code class="docutils literal notranslate"><span class="pre">shuffle</span></code>. The latest versions allow to choose in which order these two operations happen.</p>
+This lossless compression is referred to as <code class="docutils literal notranslate"><span class="pre">deflate</span></code> and is usually applied with <code class="docutils literal notranslate"><span class="pre">shuffle</span></code>. The latest versions allow the user to choose in which order these two operations happen.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncks</span> <span class="o">-</span><span class="n">D</span> <span class="mi">5</span> <span class="nb">input</span><span class="o">.</span><span class="n">nc</span> <span class="n">output</span><span class="o">.</span><span class="n">nc</span>
 </pre></div>
 </div>
-<p>NCO also offers three lossy compression algorithms, that can be used in con junction with <code class="docutils literal notranslate"><span class="pre">deflate</span></code>:</p>
+<p>NCO also offers three lossy compression algorithms, that can be used in conjunction with <code class="docutils literal notranslate"><span class="pre">deflate</span></code>:</p>
 <ul class="simple">
 <li><p>Linear packing - a higher precision type is “packed” into a lower precision type, usually NC_SHORT
 And two Precision Preserving Compression (PPC) algorithms where a per-variable precision level is set as:</p></li>
 <li><p>Number of Significant Digits (NSD) after the decimal point</p></li>
-<li><p>Decimal Significant Digits (DSD) before and after the decimal point
-For more details refer to the NCO documentation listed above.</p></li>
+<li><p>Decimal Significant Digits (DSD) before and after the decimal point</p></li>
 </ul>
+<p>For more details refer to the NCO documentation listed above.</p>
 <p><strong>CDO</strong></p>
 <p><a class="reference external" href="https://code.mpimet.mpg.de/projects/cdo/embedded/index.html#x1-70001.2.1">Climate Data Operators</a> can also compress netCDF, <code class="docutils literal notranslate"><span class="pre">shuffle</span></code> is automatically enabled and it offers limited chunking options: auto (default), grid or lines.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="o">-</span><span class="n">f</span> <span class="n">nc4</span> <span class="o">-</span><span class="n">z</span> <span class="n">zip_5</span> <span class="p">{</span><span class="o">-</span><span class="n">k</span> <span class="n">grid</span><span class="p">}</span> <span class="n">copy</span> <span class="n">inpput</span><span class="o">.</span><span class="n">nc</span> <span class="n">output</span><span class="o">.</span><span class="n">nc</span>

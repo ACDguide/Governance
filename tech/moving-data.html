@@ -791,8 +791,11 @@ To copy files to Gadi you should use the Gadi data movers <a class="reference ex
 <span class="math notranslate nohighlight">\( scp /path/to/local/file abc123&#64;gadi-dm.nci.org.au:/path/to/destination/on/gadi
 To copy files from Gadi:
 \)</span> scp <a class="reference external" href="mailto:abc123&#37;&#52;&#48;gadi-dm&#46;nci&#46;org&#46;au">abc123<span>&#64;</span>gadi-dm<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>:/path/to/file/on/gadi /path/to/local/destination</p>
-<p>You can also transfer data through <a class="reference external" href="http://gadi-dm.nci.org.au">gadi-dm.nci.org.au</a> using•commands such as sftp, rsync,…•applications such as FileZilla, WinSCP,….•No interactive sessions on any of the data-mover nodes, try interactive copyq jobs</p>
-<p>This page covers ssh-keys but also how to set a special purpouse one for rsync: <a class="reference external" href="https://opus.nci.org.au/display/Help/Using+SSH+keys">https://opus.nci.org.au/display/Help/Using+SSH+keys</a></p>
+<p>You can also transfer data through <a class="reference external" href="http://gadi-dm.nci.org.au">gadi-dm.nci.org.au</a> using
+•commands such as sftp, rsync,…
+•applications such as FileZilla, WinSCP,….
+•No interactive sessions on any of the data-mover nodes, try interactive copyq jobs</p>
+<p>This page covers ssh-keys but also how to set a special purpose one for rsync: <a class="reference external" href="https://opus.nci.org.au/display/Help/Using+SSH+keys">https://opus.nci.org.au/display/Help/Using+SSH+keys</a></p>
 <div class="section" id="moving-data-from-different-disk-storage">
 <h3>Moving data from different disk storage<a class="headerlink" href="#moving-data-from-different-disk-storage" title="Permalink to this headline">¶</a></h3>
 <p>Moving data among different storage is usually straightforward, just using
@@ -801,18 +804,18 @@ However,  there are differences in the way these commands will act and some cons
 </div>
 <div class="section" id="ood-are">
 <h3>OOD ARE<a class="headerlink" href="#ood-are" title="Permalink to this headline">¶</a></h3>
-<p>Q: How do I rsync data to OOD?
-A: You will need to set up direct SSH access as per “4. Direct SSH access”, and then persuade rsync to use it. Depending exactly which versions of rsync and ssh you have installed, you may be able to use the ‘-e’ option to rsync to specify the extra options to ssh, something like rsync -e ‘ssh -J <a class="reference external" href="mailto:abc123&#37;&#52;&#48;ood-vnc&#46;nci&#46;org&#46;au">abc123<span>&#64;</span>ood-vnc<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>’ -av abc123&#64;ood-vnXX:/home/123/abc123/stuff-to-copy . (where ood-vnXX is the hostname from the session card within the OOD interface, and should not have <a class="reference external" href="http://nci.org.au">nci.org.au</a> appended to it). If your versions of ssh and rsync do not allow this, then you should be able to edit your SSH configuration file as per 4. Direct SSH access.
-oTo copy your files from OOD to ARE you need to use the scp tool.  You can either do this directly using a gadi login node (ssh command from your computer or ARE Gadi terminal app) OR as a 2 step process from your computer.
-Gadi login node
-Login to Gadi login node either using a native SSH client on your computer OR using the ARE Gadi Terminal app
-Use the scp command to copy your required files
+<p>Q: How do I rsync data to OOD?</p>
+<p>A: You will need to set up direct SSH access as per “4. Direct SSH access”, and then persuade rsync to use it. Depending exactly which versions of rsync and ssh you have installed, you may be able to use the ‘-e’ option to rsync to specify the extra options to ssh, something like rsync -e ‘ssh -J <a class="reference external" href="mailto:abc123&#37;&#52;&#48;ood-vnc&#46;nci&#46;org&#46;au">abc123<span>&#64;</span>ood-vnc<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>’ -av abc123&#64;ood-vnXX:/home/123/abc123/stuff-to-copy . (where ood-vnXX is the hostname from the session card within the OOD interface, and should not have <a class="reference external" href="http://nci.org.au">nci.org.au</a> appended to it). If your versions of ssh and rsync do not allow this, then you should be able to edit your SSH configuration file as per 4. Direct SSH access.</p>
+<p>To copy your files from OOD to ARE you need to use the scp tool.  You can either do this directly using a gadi login node (ssh command from your computer or ARE Gadi terminal app) OR as a 2 step process from your computer.</p>
+<p>Gadi login node
+Login to Gadi login node either using a native SSH client on your computer OR using the ARE Gadi Terminal app</p>
+<p>Use the scp command to copy your required files
 e.g. copy select file:
 scp -r <a class="reference external" href="mailto:abc123&#37;&#52;&#48;vdi-sftp&#46;nci&#46;org&#46;au">abc123<span>&#64;</span>vdi-sftp<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>:DIR/FILENAME.txt
 e.g. copy all files (if you have sufficient space in your Gadi home directory):
 scp -r <a class="reference external" href="mailto:abc123&#37;&#52;&#48;vdi-sftp&#46;nci&#46;org&#46;au">abc123<span>&#64;</span>vdi-sftp<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>:. ~/ood-home-copy
-Where abc123 is replaced with your NCI username and DIR/FILENAME.txt is replace by the name of the file or directory you want to copy.
-Via your computer
+Where abc123 is replaced with your NCI username and DIR/FILENAME.txt is replace by the name of the file or directory you want to copy.</p>
+<p>Via your computer
 If you would prefer a graphical transfer method then you can install a graphical SCP client on your computer and use it to first get your files from <a class="reference external" href="http://vdi-sftp.nci.org.au">vdi-sftp.nci.org.au</a> and then transfer them to <a class="reference external" href="http://gadi.nci.org.au">gadi.nci.org.au</a>.</p>
 <p><a class="reference external" href="https://opus.nci.org.au/display/DAE/Hadoop+HDFS">https://opus.nci.org.au/display/DAE/Hadoop+HDFS</a> ???</p>
 </div>
@@ -831,7 +834,7 @@ from/to cloud</p>
 <div class="section" id="csiro">
 <h2>CSIRO<a class="headerlink" href="#csiro" title="Permalink to this headline">¶</a></h2>
 <p>Thomas parallel rsync</p>
-<p>SPeicific tools</p>
+<p>Specific tools</p>
 <p>ACCESS-archiver</p>
 </div>
 </div>

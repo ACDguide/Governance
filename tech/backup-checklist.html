@@ -706,8 +706,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-often-is-updated">
-   How often is updated?
+  <a class="reference internal nav-link" href="#how-often-is-it-updated">
+   How often is it updated?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -751,8 +751,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-often-is-updated">
-   How often is updated?
+  <a class="reference internal nav-link" href="#how-often-is-it-updated">
+   How often is it updated?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -781,17 +781,17 @@
 <ul class="simple">
 <li><p>Intermediate output, run logs</p>
 <ul>
-<li><p>Not useful once an experiment is finished</p></li>
+<li><p>not useful once an experiment is finished</p></li>
 </ul>
 </li>
 <li><p>Processing scripts</p>
 <ul>
-<li><p>Useful to reproduce an experiment but could be redone</p></li>
+<li><p>useful to reproduce an experiment but could be redone</p></li>
 </ul>
 </li>
 <li><p>Model input</p>
 <ul>
-<li><p>Essential to reproduce an experiment</p></li>
+<li><p>essential to reproduce an experiment</p></li>
 </ul>
 </li>
 <li><p>Ease of reproducing the data</p>
@@ -804,7 +804,7 @@
 </li>
 <li><p>Published results</p>
 <ul>
-<li><p>they should be backed up, check what is repository strategy</p></li>
+<li><p>should be backed up, check what is repository strategy</p></li>
 <li><p>data underlining publications or a PhD thesis has to be available in case of legal dispute for  5 years from publication</p></li>
 </ul>
 </li>
@@ -816,7 +816,7 @@
 <li><p>Number of people accessing the data</p>
 <ul>
 <li><p>just you, your group, people from around the world</p></li>
-<li><p>this is particularly important if you are maintaining a web service via cloud, you should make sure you can recover your instance quickly and resume the service with the minimum interruption</p></li>
+<li><p>ensure you can recover your instance quickly and resume the service with minimum interruption - this is particularly important if you are maintaining a web service via cloud</p></li>
 </ul>
 </li>
 </ul>
@@ -826,8 +826,8 @@
 <ul class="simple">
 <li><p>Text files - Source code, scripts, configuration files, small data files</p>
 <ul>
-<li><p>Sizes &lt; 100 MB</p></li>
-<li><p>Not suitable for archives unless bundled into a tar file</p></li>
+<li><p>sizes &lt; 100 MB</p></li>
+<li><p>not suitable for archives unless bundled into a tar file</p></li>
 <li><p>source code and other text files can be kept under version control</p></li>
 </ul>
 </li>
@@ -839,22 +839,22 @@
 </li>
 </ul>
 </div>
-<div class="section" id="how-often-is-updated">
-<h2>How often is updated?<a class="headerlink" href="#how-often-is-updated" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-often-is-it-updated">
+<h2>How often is it updated?<a class="headerlink" href="#how-often-is-it-updated" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Unchanging once produced - e.g. raw model output</p>
 <ul>
-<li><p>Tape archives</p></li>
+<li><p>tape archives</p></li>
 </ul>
 </li>
-<li><p>It is updated and reviewed occasionally but not too frequently: post-processed output</p>
+<li><p>Updated and reviewed occasionally but not too frequently: post-processed output</p>
 <ul>
 <li><p>external drives, cloud and IT services, faster to retrieve than tape</p></li>
 </ul>
 </li>
 <li><p>Continually changing - source code under development</p>
 <ul>
-<li><p>Use automated revision control system - subversion, git</p></li>
+<li><p>use automated revision control system - subversion, git</p></li>
 </ul>
 </li>
 </ul>
@@ -864,43 +864,43 @@
 <ul class="simple">
 <li><p>You delete a file accidentally or the local file system fails</p>
 <ul>
-<li><p>Back up on a different file system</p></li>
+<li><p>back up on a different file system</p></li>
 </ul>
 </li>
 <li><p>Your storage provider goes bankrupt</p>
 <ul>
-<li><p>Multiple backup providers</p></li>
+<li><p>multiple backup providers</p></li>
 </ul>
 </li>
 <li><p>A fire destroys a building</p>
 <ul>
-<li><p>Offsite/multiple backups</p></li>
+<li><p>offsite/multiple backups</p></li>
 </ul>
 </li>
 <li><p>A flood/earthquake damages a city</p>
 <ul>
-<li><p>Offsite/multiple backups with a wide separation</p></li>
+<li><p>offsite/multiple backups with a wide separation</p></li>
 </ul>
 </li>
 </ul>
-<p>Check regularly logs and that you can actually recover the files!!!</p>
+<p>Check logs regularly and that you can actually recover the files!!!</p>
 </div>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">/home</span></code> on NCI or other institution server</p>
 <ul>
-<li><p>Limited space</p></li>
-<li><p>Backed up - Institutions will have their own strategies</p></li>
+<li><p>limited space</p></li>
+<li><p>backed up - institutions will have their own strategies</p></li>
 </ul>
 </li>
 </ul>
 <div class="admonition-to-recover-file-on-nci-home admonition">
-<p class="admonition-title">to recover file on NCI /home</p>
-<p>If you accidentally deleted files from your /home at NCI they can be recovered from daily snapshots check the <a class="reference external" href="https://opus.nci.org.au/pages/viewpage.action?pageId=90308816">NCI documentation</a> to see how to.</p>
+<p class="admonition-title">To recover file on NCI /home</p>
+<p>If you accidentally deleted files from your /home at NCI they can be recovered from daily snapshots - check the <a class="reference external" href="https://opus.nci.org.au/pages/viewpage.action?pageId=90308816">NCI documentation</a> to see how to.</p>
 </div>
 <ul class="simple">
-<li><p>University usually offer backup option on shared drives for data on your laptop</p>
+<li><p>Universities usually offer backup option on shared drives for data on your laptop</p>
 <ul>
 <li><p>reasonably large, but not suitable for huge amount of data</p></li>
 <li><p>quick to retrieve</p></li>
@@ -909,28 +909,28 @@
 </li>
 <li><p>Tape archives/ Data repositories</p>
 <ul>
-<li><p>Designed for archiving large and/or important data sets</p></li>
-<li><p>Will have their own backup strategies - e.g. NCI tape is duplicated to two separate buildings at ANU</p></li>
+<li><p>designed for archiving large and/or important data sets</p></li>
+<li><p>will have their own backup strategies - e.g. NCI tape is duplicated to two separate buildings at ANU</p></li>
 </ul>
 </li>
 <li><p>USB external hard drive</p>
 <ul>
-<li><p>Simple way to have a separate backup, cheap</p></li>
-<li><p>Can manage history manually or with something like time machine</p></li>
-<li><p>Not suitable for long-term storage - disks have limited lifetime</p></li>
+<li><p>simple way to have a separate backup, cheap</p></li>
+<li><p>can manage history manually or with something like time machine</p></li>
+<li><p>not suitable for long-term storage - disks have limited lifetime</p></li>
 </ul>
 </li>
 <li><p>Cloud storage, e.g. Dropbox, google drive, Github</p>
 <ul>
-<li><p>Can access from anywhere</p></li>
-<li><p>Offsite backup</p></li>
-<li><p>Can set up folders to automatically be backed up</p></li>
-<li><p>Is the service still going to be there in 5 years?</p></li>
-<li><p>Git and GitHub, and other version control services, are only suitable for text files, not binary, so they are usually ok for code or readme files not for the actual data</p></li>
+<li><p>can access from anywhere</p></li>
+<li><p>offsite backup</p></li>
+<li><p>can set up folders to automatically be backed up</p></li>
+<li><p>is the service still going to be there in 5 years?</p></li>
+<li><p>Git and GitHub, and other version control services, are only suitable for text files, not binary, so they are usually ok for code or readme files, not for the actual data</p></li>
 <li><p>NB some institutions might limit what services you can use based on security issues</p></li>
 </ul>
 </li>
-<li><p>snapshot of instances for VMs on <a class="reference external" href="https://support.ehelp.edu.au/support/solutions/articles/6000085112-backing-up-data">Nectar</a> and NCI clouds</p></li>
+<li><p>Snapshot of instances for VMs on <a class="reference external" href="https://support.ehelp.edu.au/support/solutions/articles/6000085112-backing-up-data">Nectar</a> and NCI clouds</p></li>
 </ul>
 </div>
 </div>

@@ -4,19 +4,19 @@ Massdata (Mass Data Storage System, MDSS for short) is the tape storage availabl
 
 ## MDSS proper usage
 
-MDSS is designed for medium to long-term storage of large files, this means it is optimised for storing big amounts of data. This means it is most suitable for:
+MDSS is designed for medium to long-term storage of large files, this means it is optimised for storing big amounts of data. It is most suitable for:
 
-* Files to keep for a long term, like data underlining published datasets, publications, PhD thesis etc.
+* Files to keep long term, like data underlining published datasets, publications, PhD thesis etc.
 * Files that are likely to be reused or analysed again in the future but not in the next few months. For example, restart files or other model output that are not immediately needed should be moved from disk to massdata as soon as possible.
 * MDSS is suitable for backup of big data projects, like model output which could not be backed up elsewhere.
 
 ### Preparing data for mdss
 
-1. Files should be organised before uploading, anything that is not needed should be delete. It is difficult to get a list of what is stored on massdata, let alone to list what is in a tarred file once it is uploaded. 
-2. Big files: there are tools like `tar` to bundle files together into archive files. Archive files should be reasonably big but also organised in logical units. There is no point of tarring together two different simulations if they are likely to be accessed separately later, as transferring a big amount of data is slow. Upload will fail if any of the files are less than 20MB or the average size is less than 250 MB.
-3, Files should be group readable, with group execute permissions for directories. This helps with long term maintenance, allowing administrators to track the type and size of archived data. Permissions can be changed by the data owner with the `chmod` unix utility.
+1. Files should be organised before uploading, and anything that is not needed should be deleted. It is difficult to get a list of what is stored on massdata, let alone to list what is in a tarred file once it is uploaded. 
+2. Big files: there are tools like `tar` to bundle files together into archive files. Archive files should be reasonably big but also organised in logical units. There is no point in tarring together two different simulations if they are likely to be accessed separately later, as transferring a big amount of data is slow. Upload will fail if any of the files are less than 20MB or the average size is less than 250 MB.
+3. Files should be group readable, with group execute permissions for directories. This helps with long term maintenance, allowing administrators to track the type and size of archived data. Permissions can be changed by the data owner with the `chmod` unix utility.
 
-While preparing the data to be moved it is a good idea to also document what data is archived and how it is organised. Even a simple readme file added to the main directory can help others and the data owners themselves in the future. If archiving data underlining a publication or published dataset then it is important to have a summary of what is stored in massdata. This should be part of the [dataset management plan](../concepts/dmp.md) and/or [data availability statement](../concepts/availability-statement.md).
+While preparing the data to be moved, it is a good idea to also document what data is archived and how it is organised. Even a simple readme file added to the main directory can help others and the data owners themselves in the future. If archiving data underlining a publication or published dataset, it is important to have a summary of what is stored in massdata. This should be part of the [dataset management plan](../concepts/dmp.md) and/or [data availability statement](../concepts/availability-statement.md).
 
 Useful tools:
 
@@ -41,7 +41,7 @@ or
 ```{code}
   $man mdss
 ```
-If a project is not specified, it will use your default project. A sub-command follow with the path of the files and directories to upload, list etc.
+If a project is not specified, it will use your default project with a sub-command followed by the path of the files and directories to upload, list etc.
 
 ```{code}
 mdss -P <project-id> + <sub-command> + <path>
@@ -66,7 +66,7 @@ Please note mdss sub-commands work only interactively or on the `copyq` queue. T
 
 ### Monitoring MDSS usage
 
-Unfortunately, there is no command to check the usage by user-id as for /g/data and /scratch. The only way to get this information currently is to ask help<at>nci.org.au. The NCI administrators can access this information for any CI of the group.
+Unfortunately, there is no command to check the usage by user-id as for /g/data and /scratch. The only way to get this information currently is to ask help@nci.org.au. The NCI administrators can access this information for any CI of the group.
 
 ### Transferring data to and from MDSS
 

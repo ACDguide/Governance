@@ -807,8 +807,8 @@
 <p>There are three kinds of permissions:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">read</span></code> - the permission to read a file. When set for a directory, only names of files in the directory can be listed, other details like file type, size, ownership, permissions etc. are not visible.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> the permission to modify or remove a file. When set for a directory, it grants the ability to modify entries in the directory, including creating, deleting, and renaming files. Note that, without execute permission on a directory, the write permission does not take any effect.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">execute</span></code> the permission to execute a file. When set for a directory, it is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but does not list files inside the directory, unless read is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> - the permission to modify or remove a file. When set for a directory, it grants the ability to modify entries in the directory, including creating, deleting, and renaming files. Note that, without execute permission on a directory, the write permission does not take any effect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">execute</span></code> - the permission to execute a file. When set for a directory, it is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but does not list files inside the directory, unless read is set.</p></li>
 </ul>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -834,33 +834,33 @@
 </div>
 </details><div class="section" id="hidden-permissions">
 <h3>Hidden permissions<a class="headerlink" href="#hidden-permissions" title="Permalink to this headline">¶</a></h3>
-<p>Most of this section is taken from the <a class="reference external" href="https://opus.nci.org.au/display/Help/File+Access+Permissions">NCI user guide</a></p>
+<p>Most of this section is taken from the <a class="reference external" href="https://opus.nci.org.au/display/Help/File+Access+Permissions">NCI user guide</a>.</p>
 <p>In addition to the 9 bits required to store the user, group, and other permissions of a file, there are three kinds of “additional permissions” that are rarely used but are extremely important to understand. The additional permissions are known as the <code class="docutils literal notranslate"><span class="pre">setuid</span> <span class="pre">bit</span></code>, <code class="docutils literal notranslate"><span class="pre">setgid</span> <span class="pre">bit</span></code>, and <code class="docutils literal notranslate"><span class="pre">sticky</span> <span class="pre">bit</span></code>. Each special bit has a different function depending on where it is used.</p>
-<p><strong>setuid</strong>
-The setuid bit on an executable file means that the file will run as the userid of the file’s owner as opposed to the userid of the user executing the file.
+<p><strong>setuid</strong></p>
+<p>The setuid bit on an executable file means that the file will run as the userid of the file’s owner as opposed to the userid of the user executing the file.
 It is considered as a security hazard and will have no effect when setting the execute bit to <code class="docutils literal notranslate"><span class="pre">s</span></code> in the user owner triad on Gadi.</p>
-<p><strong>setgid</strong>
-The setgid bit is similar to the setuid bit but set the permissions for its group owner. It enables a command to be run as the project that owns the file rather than the user’s default project. On Gadi, again, for security concerns, it is ignored when set on standard files, but it can be used on directories to force new files and directories created inside them to inherit their group ownership.</p>
+<p><strong>setgid</strong></p>
+<p>The setgid bit is similar to the setuid bit but set the permissions for its group owner. It enables a command to be run as the project that owns the file rather than the user’s default project. On Gadi, again, for security concerns, it is ignored when set on standard files, but it can be used on directories to force new files and directories created inside them to inherit their group ownership.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">g</span><span class="o">+</span><span class="n">s</span> <span class="o">/</span> <span class="n">g</span><span class="o">-</span><span class="n">s</span> 
 </pre></div>
 </div>
-<p><strong>sticky bit</strong>
-When a directory has the sticky bit set, its files can be deleted or renamed only by the file owner, directory owner and the root user. The command below shows how the sticky bit can be set.</p>
+<p><strong>sticky bit</strong></p>
+<p>When a directory has the sticky bit set, its files can be deleted or renamed only by the file owner, directory owner and the root user. The command below shows how the sticky bit can be set.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">t</span> <span class="o">/</span> <span class="o">-</span><span class="n">t</span>
 </pre></div>
 </div>
 <p>This is useful to keep writing permissions for anyone in the group but avoid someone accidentally deleting a file they don’t own.</p>
-<p><strong>umask</strong>
-The default permission for newly created files is set in the umask value. On Gadi, <code class="docutils literal notranslate"><span class="pre">umask</span> <span class="pre">022</span></code> is the default configuration in the system <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file. User can overwrite it in their own file ~/.bashrc.</p>
+<p><strong>umask</strong></p>
+<p>The default permission for newly created files is set in the umask value. On Gadi, <code class="docutils literal notranslate"><span class="pre">umask</span> <span class="pre">022</span></code> is the default configuration in the system <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code> file. Users can overwrite it in their own file ~/.bashrc.</p>
 <p>The command <code class="docutils literal notranslate"><span class="pre">umask</span></code> sets the inverse mask of the default file access permissions. The OS restricts the permissions of newly created files to no more than the defined permissions by the umask value.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>What happens when a file is created on Gadi</strong>
-Every time a new file or directory is created the first set of permissions is automatically created based on the user who created them and they their account settings.</p>
+<p><strong>What happens when a file is created on Gadi</strong></p>
+<p>Every time a new file or directory is created, the first set of permissions is automatically created based on the user who created them and their account settings.</p>
 <ul class="simple">
 <li><p>all project’s folders have <code class="docutils literal notranslate"><span class="pre">rwxrws---</span></code> permissions, hence a user has to be part of the group to read/write in them. The <code class="docutils literal notranslate"><span class="pre">s</span></code> in the group execute position shows that the setgid is active, so any new file will inherit the directory group rather than the user group</p></li>
-<li><p>the owner of the file is the user who first create the file</p></li>
-<li><p>if the file is created in $HOME than the file group will be the user $PROJECT, this is usually set in $HOME/.rashrc</p></li>
+<li><p>the owner of the file is the user who first creates the file</p></li>
+<li><p>if the file is created in $HOME then the file group will be the user’s $PROJECT, this is usually set in $HOME/.rashrc</p></li>
 <li><p>the permissions of the file are determined by the umask file</p></li>
 <li><p>if a file is created by running a program with active setuid and setgid, then they will determine the permissions</p></li>
 <li><p>if the file is in a directory with the <code class="docutils literal notranslate"><span class="pre">sticky</span> <span class="pre">bit</span></code> activated, then only the file owner, directory owner or root will be able to remove the file, regardless of other permissions.</p></li>
@@ -880,9 +880,9 @@ Unix commands are:</p>
 <p class="admonition-title">Warning</p>
 <p><code class="docutils literal notranslate"><span class="pre">chown</span></code> can only be used by an NCI system administrator. A request can be made to the NCI helpdesk and both the current and new owner should be cc-ed, occasionally NCI might also request the Lead CI of the project to authorise the transaction.</p>
 </div>
-<p>In most cases just using the POSIX permission system is sufficient to handle who can view or write a specific file. The limitations of this system are obvious when there is the need to set different level of permissions for different groups of users.
-In that case the distinction between <code class="docutils literal notranslate"><span class="pre">other</span></code> and <code class="docutils literal notranslate"><span class="pre">group</span></code> might not be sufficient.</p>
-<p>An example of this is when managing a data collection at NCI, by NCI policy only users in the group can view a project’s files. It is not allowed to have a <code class="docutils literal notranslate"><span class="pre">other</span></code> reading permission at the main project directory level.
+<p>In most cases just using the POSIX permission system is sufficient to handle who can view or write a specific file. The limitations of this system are obvious when there is the need to set different levels of permissions for different groups of users.
+In that case, the distinction between <code class="docutils literal notranslate"><span class="pre">other</span></code> and <code class="docutils literal notranslate"><span class="pre">group</span></code> might not be sufficient.</p>
+<p>An example of this is when managing a data collection at NCI. NCI policy dictates only users in the group can view a project’s files. It is not allowed to have an <code class="docutils literal notranslate"><span class="pre">other</span></code> reading permission at the main project directory level.
 This means that it is not possible to have only a subset of the group users (i.e., the data managers) having writing permission.
 This is where Access Control Lists (ACLs) enter into play, as with ACLs is possible to set permissions for a different group and/or user.
 In the data management context this usually happens by setting a writers group which can be joined by all the managers and then using ACLs to give this group writing permission.</p>
@@ -903,9 +903,9 @@ In the data management context this usually happens by setting a writers group w
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">/</span><span class="nb">dir</span><span class="o">&gt;</span>  
 </pre></div>
 </div>
-<p class="card-text">Shows <em>file/dir</em> ACLs. If ACLs are set a line like “mask::r-x” should be present
-<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">dir</span></code>  should also show a + at the end of permissions if ACLs are set
-Ex.  drwxr-s—+</p>
+<p class="card-text">Shows <em>file/dir</em> ACLs. If ACLs are set, a line like “mask::r-x” should be present.
+<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">dir</span></code>  should also show a ‘+’ at the end of permissions if ACLs are set
+Eg.  drwxr-s—+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
 </div>
@@ -924,7 +924,7 @@ Ex.  drwxr-s—+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">--</span><span class="n">omit</span><span class="o">-</span><span class="n">header</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">will show only the actual permissions and not the header showing owner, group and flags</p>
+<p class="card-text">Will show only the actual permissions and not the header showing owner, group and flags</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -942,7 +942,7 @@ Ex.  drwxr-s—+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span> <span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>  <span class="n">onefile</span>  
 </pre></div>
 </div>
-<p class="card-text">Give <em>user1</em> r-x access to <em>onefile</em>
+<p class="card-text">Give <em>user1</em> r-x access to <em>onefile</em>,
 -m stands for <code class="docutils literal notranslate"><span class="pre">modify</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span>  <span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">rwx</span> <span class="n">file</span><span class="p">,</span>  <span class="n">g</span><span class="p">:</span><span class="n">group1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>  
 </pre></div>
@@ -1005,7 +1005,7 @@ any new files in <em>somedir</em> will inherit this permission</p>
 </div>
 <div class="section" id="troubleshooting">
 <h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
-<p>ACLs are very useful but tend to get broken easily</p>
+<p>ACLs are very useful but tend to get broken easily.</p>
 <p>Let’s see first how to interpret the <code class="docutils literal notranslate"><span class="pre">getfacl</span></code> output</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="n">Download</span><span class="o">/</span>
 <span class="c1"># file: Download/</span>
@@ -1027,17 +1027,17 @@ any new files in <em>somedir</em> will inherit this permission</p>
 <p>The first three lines refer to the normal POSIX permissions, in this case we can see that pxp581 is the owner, ua8 the group and that this directory has setgid (flag: s) set. So, any new file in it will belong to ua8 too.</p>
 <p>The next 5 lines show the POSIX permissions (user, group and other), a permission for user ua8_nfs to <code class="docutils literal notranslate"><span class="pre">rwx</span></code> set by ACLs and the mask also <code class="docutils literal notranslate"><span class="pre">rwx</span></code>.
 What the <code class="docutils literal notranslate"><span class="pre">mask</span></code> does is to set the upper boundary of what permissions can be.
-It has effect only on the permissions of the group and/or any extended user and group added by ACLs. The mask has no effect on other or the main user permissions.
-However, as the directory has setgid set the directory other permissions act as a mask for the file other permissions. So, if a file with write permissions was copied in here, the new file will still have only <code class="docutils literal notranslate"><span class="pre">r-x</span></code> permissions, as the file can’t get more permissions on ‘other’ then what the directory other r-x permissions.</p>
+It affects only the permissions of the group and/or any extended user and group added by ACLs. The mask has no affect on other or the main user permissions.
+However, as the directory has setgid, set the directory other permissions act as a mask for the file other permissions. So, if a file with write permissions was copied in here, the new file will still have only <code class="docutils literal notranslate"><span class="pre">r-x</span></code> permissions, as the file can’t get more permissions on ‘other’ than the directory other r-x permissions.</p>
 <div class="admonition-order-of-operations admonition">
 <p class="admonition-title"><strong>Order of operations</strong></p>
 <p>When a process requests access to a file system object, two steps are performed.</p>
 <ol class="simple">
-<li><p>the ACL entry that most closely matches the requesting process is selected. The ACL entries are looked at in the following order: owner, named users, (owning or named) groups, others. Only the highest ranking entry determines access: i.e. if the user is the owner this will have precedence on the group permissions.</p></li>
-<li><p>the system checks if the matching entry contains sufficient permissions to execute action.</p></li>
+<li><p>The ACL entry that most closely matches the requesting process is selected. The ACL entries are looked at in the following order: owner, named users, (owning or named) groups, others. Only the highest ranking entry determines access: i.e. if the user is the owner this will have precedence on the group permissions.</p></li>
+<li><p>The system checks if the matching entry contains sufficient permissions to execute action.</p></li>
 </ol>
 </div>
-<p>The effective permissions are set to the permissions defined in the <code class="docutils literal notranslate"><span class="pre">mode</span></code>, minus the permissions set in the current <code class="docutils literal notranslate"><span class="pre">umask</span></code>. However, the <code class="docutils literal notranslate"><span class="pre">umask</span></code> has no effect if a default ACL exists.</p>
+<p>The effective permissions are set to the permissions defined in the <code class="docutils literal notranslate"><span class="pre">mode</span></code>, minus the permissions set in the current <code class="docutils literal notranslate"><span class="pre">umask</span></code>. However, the <code class="docutils literal notranslate"><span class="pre">umask</span></code> has no affect if a default ACL exists.</p>
 <p>The mask entry is automatically created when needed but not provided. Its permissions are set to the union of the permissions of all entries that are in the group class, so initially the mask entry does not mask any permissions.</p>
 <p>Here is an example of ‘broken’ ACLs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># file: test.txt </span>
@@ -1053,7 +1053,7 @@ However, as the directory has setgid set the directory other permissions act as 
 </div>
 <p>As some process has set the <code class="docutils literal notranslate"><span class="pre">mask</span></code> to <code class="docutils literal notranslate"><span class="pre">rw-</span></code>, the group will have effectively <code class="docutils literal notranslate"><span class="pre">r--</span></code> instead of <code class="docutils literal notranslate"><span class="pre">r-x</span></code> permissions. And similarly, the groups w40 and hh5_w ACL entry contains permissions that are disabled by the mask entry, so <code class="docutils literal notranslate"><span class="pre">getfacl</span></code> adds a comment that shows the effective set of permissions granted by that entry.<br>
 If we grant again writing permissions to the group using <code class="docutils literal notranslate"><span class="pre">chmod</span></code> the mask will change, and the ACLs will be again effective. The ACLs can be disabled but not altered by <code class="docutils literal notranslate"><span class="pre">chmod</span></code>.</p>
-<p>Any command that sets the <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">parameter</span></code> can have unexpected effects on ACLs Aside from <code class="docutils literal notranslate"><span class="pre">setacls</span></code> and <code class="docutils literal notranslate"><span class="pre">chmod</span></code>, these are usually commands used to create, move, and copy files.</p>
+<p>Any command that sets the <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">parameter</span></code> can have unexpected effects on ACLs. Aside from <code class="docutils literal notranslate"><span class="pre">setacls</span></code> and <code class="docutils literal notranslate"><span class="pre">chmod</span></code>, these are usually commands used to create, move, and copy files.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 <strong>mkdir</strong><div class="summary-down docutils">
@@ -1063,7 +1063,7 @@ If we grant again writing permissions to the group using <code class="docutils l
 </summary><div class="summary-content card-body docutils">
 <p class="card-text">Unless otherwise specified, the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command uses a value of 0777 as the mode parameter to the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> system call, which it uses for creating the new directory.
 This corresponds to <code class="docutils literal notranslate"><span class="pre">a+rwx,ug-s,-t</span></code>.</p>
-<p class="card-text">If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable effect because the value 0777 used for the mode parameter represents a full set of permissions.</p>
+<p class="card-text">If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable affect because the value 0777 used for the mode parameter represents a full set of permissions.</p>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -1151,10 +1151,10 @@ Without the archive flag, the copy will lose all the ACLs and its permissions wi
 <span class="n">other</span><span class="p">::</span><span class="o">---</span>
 </pre></div>
 </div>
-<p class="card-text">Finally, in the case the file to move has ACLs set, running <code class="docutils literal notranslate"><span class="pre">mv</span></code> will preserve the permissions regardless that the destination has or not ACLs set.</p>
+<p class="card-text">Finally, in the case the file to move has ACLs set, running <code class="docutils literal notranslate"><span class="pre">mv</span></code> will preserve the permissions regardless of the destination ACLs set (or not set).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p class="card-text">Moving a file across the same filesystem means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!</p>
+<p class="card-text">Moving a file across the same file system means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!</p>
 </div>
 </div>
 </details><details class="sphinx-bs dropdown card mb-3">
@@ -1164,9 +1164,9 @@ Without the archive flag, the copy will lose all the ACLs and its permissions wi
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><code class="docutils literal notranslate"><span class="pre">rsync</span></code> will behave similarly to <code class="docutils literal notranslate"><span class="pre">cp</span></code> when run without any flag. So, if the ACLs are set on the destination the files will inherit them.
+<p class="card-text"><code class="docutils literal notranslate"><span class="pre">rsync</span></code> will behave similarly to <code class="docutils literal notranslate"><span class="pre">cp</span></code> when run without any flag. So, if the ACLs are set on the destination, the files will inherit them.
 Like <code class="docutils literal notranslate"><span class="pre">cp</span></code> rsync has an archive flag <code class="docutils literal notranslate"><span class="pre">-a</span></code> which should preserve both permissions and group.
-Differently from <code class="docutils literal notranslate"><span class="pre">cp</span></code>, if ACLs are set, even using the archive flag the permissions and group <strong>will not be preserved</strong>. The <code class="docutils literal notranslate"><span class="pre">archive</span></code> flag, as well as the <code class="docutils literal notranslate"><span class="pre">perms</span></code> and <code class="docutils literal notranslate"><span class="pre">group</span></code> flags, are ignored if there are ACLs.</p>
+Differently from <code class="docutils literal notranslate"><span class="pre">cp</span></code>, if ACLs are set, even when using the archive flag, the permissions and group <strong>will not be preserved</strong>. The <code class="docutils literal notranslate"><span class="pre">archive</span></code> flag, as well as the <code class="docutils literal notranslate"><span class="pre">perms</span></code> and <code class="docutils literal notranslate"><span class="pre">group</span></code> flags, are ignored if there are ACLs.</p>
 <p class="card-text">If rsync-ing a directory with ACLs set, as Test in previous examples, to a directory with no ACLs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rsync</span> <span class="o">-</span><span class="n">r</span> <span class="n">Test</span> <span class="n">Test</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">acls</span><span class="o">/.</span> 
 </pre></div>
@@ -1180,11 +1180,11 @@ To preserve them rsync has a specific flag <code class="docutils literal notrans
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p class="card-text">The -A flag requires source and destination to have compatible ACL systems, when this is not the case a potential solution in rsync is to use the <code class="docutils literal notranslate"><span class="pre">--chmod</span></code> option.
-From the rsync man page (in the –perms section):</p>
+From the rsync man page (in the –perms section of the manual):</p>
 <blockquote>
-<div><p class="card-text">To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the –perms option is off and use –chmod=ugo=rwX (which ensures that all non-masked bits get enabled).</p>
+<div><p class="card-text">To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the –perms option is off and use <code class="docutils literal notranslate"><span class="pre">--chmod=ugo=rwX</span></code> (which ensures that all non-masked bits get enabled).</p>
 </div></blockquote>
-<p class="card-text">NB the order of flags is important: -a, -A and so on can, in fact, be used but MUST come before the –chmod flag.
+<p class="card-text">NB the order of flags is important: -a, -A and so on can in fact, be used but MUST come before the –chmod flag.
 This tip is from ref (4).</p>
 </div>
 </div>
@@ -1199,7 +1199,7 @@ This tip is from ref (4).</p>
 </div>
 </details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Please note that if the ACLs were ignored because <code class="docutils literal notranslate"><span class="pre">mv</span></code> or <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-a</span></code> were used. Simply copying again the file with <code class="docutils literal notranslate"><span class="pre">cp</span></code> only won’t preserve the ACLs, the file needs to be deleted first and then copied again.</p>
+<p>Please note that if the ACLs were ignored because <code class="docutils literal notranslate"><span class="pre">mv</span></code> or <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-a</span></code> were used, simply copying the file again with <code class="docutils literal notranslate"><span class="pre">cp</span></code> only won’t preserve the ACLs, the file needs to be deleted first and then copied again.</p>
 </div>
 <div class="admonition-references admonition">
 <p class="admonition-title">References</p>

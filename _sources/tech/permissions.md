@@ -13,8 +13,8 @@ Each file or directory is owned by only one user and one group, only the owner o
 
 There are three kinds of permissions:
  - `read` - the permission to read a file. When set for a directory, only names of files in the directory can be listed, other details like file type, size, ownership, permissions etc. are not visible.
- - `write` the permission to modify or remove a file. When set for a directory, it grants the ability to modify entries in the directory, including creating, deleting, and renaming files. Note that, without execute permission on a directory, the write permission does not take any effect.
- - `execute` the permission to execute a file. When set for a directory, it is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but does not list files inside the directory, unless read is set.
+ - `write` - the permission to modify or remove a file. When set for a directory, it grants the ability to modify entries in the directory, including creating, deleting, and renaming files. Note that, without execute permission on a directory, the write permission does not take any effect.
+ - `execute` - the permission to execute a file. When set for a directory, it is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but does not list files inside the directory, unless read is set.
 
 ````{dropdown} **Permission example**
 This is an example of what the permissions look like when we list files using the long `l` option.
@@ -37,15 +37,17 @@ NB When listing a directory content with `ls -l`, an additional “+” characte
  
 ### Hidden permissions
 
-Most of this section is taken from the [NCI user guide](https://opus.nci.org.au/display/Help/File+Access+Permissions)
+Most of this section is taken from the [NCI user guide](https://opus.nci.org.au/display/Help/File+Access+Permissions).
 
 In addition to the 9 bits required to store the user, group, and other permissions of a file, there are three kinds of "additional permissions" that are rarely used but are extremely important to understand. The additional permissions are known as the `setuid bit`, `setgid bit`, and `sticky bit`. Each special bit has a different function depending on where it is used.
 
 **setuid**
+
 The setuid bit on an executable file means that the file will run as the userid of the file's owner as opposed to the userid of the user executing the file. 
 It is considered as a security hazard and will have no effect when setting the execute bit to `s` in the user owner triad on Gadi.
 
 **setgid**
+
 The setgid bit is similar to the setuid bit but set the permissions for its group owner. It enables a command to be run as the project that owns the file rather than the user's default project. On Gadi, again, for security concerns, it is ignored when set on standard files, but it can be used on directories to force new files and directories created inside them to inherit their group ownership.
 
 ```{code}
@@ -53,6 +55,7 @@ chmod g+s / g-s
 ```
 
 **sticky bit**
+
 When a directory has the sticky bit set, its files can be deleted or renamed only by the file owner, directory owner and the root user. The command below shows how the sticky bit can be set.
 
 ```{code}
@@ -62,15 +65,17 @@ chmod +t / -t
 This is useful to keep writing permissions for anyone in the group but avoid someone accidentally deleting a file they don't own.
 
 **umask**
-The default permission for newly created files is set in the umask value. On Gadi, `umask 022` is the default configuration in the system `.bashrc` file. User can overwrite it in their own file ~/.bashrc. 
+
+The default permission for newly created files is set in the umask value. On Gadi, `umask 022` is the default configuration in the system `.bashrc` file. Users can overwrite it in their own file ~/.bashrc. 
 
 The command `umask` sets the inverse mask of the default file access permissions. The OS restricts the permissions of newly created files to no more than the defined permissions by the umask value. 
 
 ```{note}  **What happens when a file is created on Gadi**
-Every time a new file or directory is created the first set of permissions is automatically created based on the user who created them and they their account settings.
+
+Every time a new file or directory is created, the first set of permissions is automatically created based on the user who created them and their account settings.
 - all project's folders have `rwxrws---` permissions, hence a user has to be part of the group to read/write in them. The `s` in the group execute position shows that the setgid is active, so any new file will inherit the directory group rather than the user group
-- the owner of the file is the user who first create the file
-- if the file is created in \$HOME than the file group will be the user \$PROJECT, this is usually set in \$HOME/.rashrc
+- the owner of the file is the user who first creates the file
+- if the file is created in \$HOME then the file group will be the user's \$PROJECT, this is usually set in \$HOME/.rashrc
 - the permissions of the file are determined by the umask file
 - if a file is created by running a program with active setuid and setgid, then they will determine the permissions
 - if the file is in a directory with the `sticky bit` activated, then only the file owner, directory owner or root will be able to remove the file, regardless of other permissions.
@@ -88,10 +93,10 @@ Unix commands are:
 `chown` can only be used by an NCI system administrator. A request can be made to the NCI helpdesk and both the current and new owner should be cc-ed, occasionally NCI might also request the Lead CI of the project to authorise the transaction. 
 ```
 
-In most cases just using the POSIX permission system is sufficient to handle who can view or write a specific file. The limitations of this system are obvious when there is the need to set different level of permissions for different groups of users. 
-In that case the distinction between `other` and `group` might not be sufficient.
+In most cases just using the POSIX permission system is sufficient to handle who can view or write a specific file. The limitations of this system are obvious when there is the need to set different levels of permissions for different groups of users. 
+In that case, the distinction between `other` and `group` might not be sufficient.
 
-An example of this is when managing a data collection at NCI, by NCI policy only users in the group can view a project's files. It is not allowed to have a `other` reading permission at the main project directory level.
+An example of this is when managing a data collection at NCI. NCI policy dictates only users in the group can view a project's files. It is not allowed to have an `other` reading permission at the main project directory level.
 This means that it is not possible to have only a subset of the group users (i.e., the data managers) having writing permission.
 This is where Access Control Lists (ACLs) enter into play, as with ACLs is possible to set permissions for a different group and/or user.
 In the data management context this usually happens by setting a writers group which can be joined by all the managers and then using ACLs to give this group writing permission.
@@ -106,9 +111,9 @@ In the data management context this usually happens by setting a writers group w
 ```{code}
 getfacl <file/dir>  
 ```
-Shows *file/dir* ACLs. If ACLs are set a line like “mask::r-x” should be present
-`ls -l dir`  should also show a + at the end of permissions if ACLs are set
-Ex.  drwxr-s---+ 
+Shows *file/dir* ACLs. If ACLs are set, a line like “mask::r-x” should be present.
+`ls -l dir`  should also show a '+' at the end of permissions if ACLs are set
+Eg.  drwxr-s---+ 
 
 ```{code}
 getfacl -h
@@ -132,7 +137,7 @@ Display the default ACLs for *somedir* only
 ```{code}
 getfacl --omit-header somedir
 ```
-will show only the actual permissions and not the header showing owner, group and flags
+Will show only the actual permissions and not the header showing owner, group and flags
 
 ````
 
@@ -146,7 +151,7 @@ setfacl -h
 ```{code}
 setfacl -m u:user1:r-x  onefile  
 ```
-Give *user1* r-x access to *onefile*
+Give *user1* r-x access to *onefile*,
 -m stands for `modify`
 
 ```{code}
@@ -209,7 +214,7 @@ Only the file/directory owner can change ACLs, as for any other permissions. If 
 
 ### Troubleshooting
 
-ACLs are very useful but tend to get broken easily 
+ACLs are very useful but tend to get broken easily. 
 
 Let's see first how to interpret the `getfacl` output
 ```{code}
@@ -233,16 +238,16 @@ The first three lines refer to the normal POSIX permissions, in this case we can
 
 The next 5 lines show the POSIX permissions (user, group and other), a permission for user ua8_nfs to `rwx` set by ACLs and the mask also `rwx`.
 What the `mask` does is to set the upper boundary of what permissions can be.
-It has effect only on the permissions of the group and/or any extended user and group added by ACLs. The mask has no effect on other or the main user permissions.
-However, as the directory has setgid set the directory other permissions act as a mask for the file other permissions. So, if a file with write permissions was copied in here, the new file will still have only `r-x` permissions, as the file can't get more permissions on 'other' then what the directory other r-x permissions.
+It affects only the permissions of the group and/or any extended user and group added by ACLs. The mask has no affect on other or the main user permissions.
+However, as the directory has setgid, set the directory other permissions act as a mask for the file other permissions. So, if a file with write permissions was copied in here, the new file will still have only `r-x` permissions, as the file can't get more permissions on 'other' than the directory other r-x permissions.
 
 ```{admonition} **Order of operations**
 When a process requests access to a file system object, two steps are performed.
-1. the ACL entry that most closely matches the requesting process is selected. The ACL entries are looked at in the following order: owner, named users, (owning or named) groups, others. Only the highest ranking entry determines access: i.e. if the user is the owner this will have precedence on the group permissions. 
-2. the system checks if the matching entry contains sufficient permissions to execute action.
+1. The ACL entry that most closely matches the requesting process is selected. The ACL entries are looked at in the following order: owner, named users, (owning or named) groups, others. Only the highest ranking entry determines access: i.e. if the user is the owner this will have precedence on the group permissions. 
+2. The system checks if the matching entry contains sufficient permissions to execute action.
 ```
 
-The effective permissions are set to the permissions defined in the `mode`, minus the permissions set in the current `umask`. However, the `umask` has no effect if a default ACL exists. 
+The effective permissions are set to the permissions defined in the `mode`, minus the permissions set in the current `umask`. However, the `umask` has no affect if a default ACL exists. 
 
 The mask entry is automatically created when needed but not provided. Its permissions are set to the union of the permissions of all entries that are in the group class, so initially the mask entry does not mask any permissions.
 
@@ -261,13 +266,13 @@ other::r--
 As some process has set the `mask` to `rw-`, the group will have effectively `r--` instead of `r-x` permissions. And similarly, the groups w40 and hh5_w ACL entry contains permissions that are disabled by the mask entry, so `getfacl` adds a comment that shows the effective set of permissions granted by that entry.<br>
 If we grant again writing permissions to the group using `chmod` the mask will change, and the ACLs will be again effective. The ACLs can be disabled but not altered by `chmod`.
 
-Any command that sets the `mode parameter` can have unexpected effects on ACLs Aside from `setacls` and `chmod`, these are usually commands used to create, move, and copy files. 
+Any command that sets the `mode parameter` can have unexpected effects on ACLs. Aside from `setacls` and `chmod`, these are usually commands used to create, move, and copy files. 
 
 ```{dropdown} **mkdir**
 Unless otherwise specified, the `mkdir` command uses a value of 0777 as the mode parameter to the `mkdir` system call, which it uses for creating the new directory.
 This corresponds to `a+rwx,ug-s,-t`. 
 
-If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable effect because the value 0777 used for the mode parameter represents a full set of permissions.
+If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable affect because the value 0777 used for the mode parameter represents a full set of permissions.
 ```
 
 ````{dropdown} **cp**
@@ -356,17 +361,17 @@ user::rw-
 group::---
 other::---
 ```
-Finally, in the case the file to move has ACLs set, running `mv` will preserve the permissions regardless that the destination has or not ACLs set.
+Finally, in the case the file to move has ACLs set, running `mv` will preserve the permissions regardless of the destination ACLs set (or not set).
 
 ```{warning}
-Moving a file across the same filesystem means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!
+Moving a file across the same file system means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!
 ```
 `````
 
 ````{dropdown} **rsync**
-`rsync` will behave similarly to `cp` when run without any flag. So, if the ACLs are set on the destination the files will inherit them.
+`rsync` will behave similarly to `cp` when run without any flag. So, if the ACLs are set on the destination, the files will inherit them.
 Like `cp` rsync has an archive flag `-a` which should preserve both permissions and group.
-Differently from `cp`, if ACLs are set, even using the archive flag the permissions and group **will not be preserved**. The `archive` flag, as well as the `perms` and `group` flags, are ignored if there are ACLs.
+Differently from `cp`, if ACLs are set, even when using the archive flag, the permissions and group **will not be preserved**. The `archive` flag, as well as the `perms` and `group` flags, are ignored if there are ACLs.
 
 If rsync-ing a directory with ACLs set, as Test in previous examples, to a directory with no ACLs:
 ```{code}
@@ -382,11 +387,11 @@ this will preserve the ACLs. If run with the additional archive flag `-raA`, the
 
 ```{note}
 The -A flag requires source and destination to have compatible ACL systems, when this is not the case a potential solution in rsync is to use the `--chmod` option.
-From the rsync man page (in the --perms section):
+From the rsync man page (in the --perms section of the manual):
 
->To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the --perms option is off and use --chmod=ugo=rwX (which ensures that all non-masked bits get enabled).
+>To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the --perms option is off and use `--chmod=ugo=rwX` (which ensures that all non-masked bits get enabled).
 
-NB the order of flags is important: -a, -A and so on can, in fact, be used but MUST come before the --chmod flag. 
+NB the order of flags is important: -a, -A and so on can in fact, be used but MUST come before the --chmod flag. 
 This tip is from ref (4).
 ````
 
@@ -395,7 +400,7 @@ The touch command passes a mode value of 0666 to the kernel for creating the fil
 ```
 
 ```{warning}
-Please note that if the ACLs were ignored because `mv` or `cp -a` were used. Simply copying again the file with `cp` only won't preserve the ACLs, the file needs to be deleted first and then copied again.
+Please note that if the ACLs were ignored because `mv` or `cp -a` were used, simply copying the file again with `cp` only won't preserve the ACLs, the file needs to be deleted first and then copied again.
 ```
 
 ```{admonition} References
