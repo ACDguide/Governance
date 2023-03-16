@@ -17,7 +17,7 @@ In the example above the author tried to include:
 * spatial domain - Kuala Lumpur
 * subject - urban climate
 * that there is more than 1 experiment - experiments
-NB that having used the full model name rather than an acronym clarified to any user not familiar with WRF that this are weather forecast related experiments
+NB that having used the full model name rather than an acronym clarified to any user not familiar with WRF that these are weather forecast related experiments
 
 ## Code example
 "CleF - Climate Finder a python based command line tool to query ESGF datasets hosted at NCI"
