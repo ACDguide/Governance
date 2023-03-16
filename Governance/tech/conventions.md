@@ -216,7 +216,7 @@ It is important to be aware of this, as particularly for coordinates, units and 
 ````
 
 ## Global attributes
-Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, such as DOI, contract(?), license and references.<br>
+Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, such as DOI, main contact, license and references.<br>
 While global attributes are the most useful when sharing data, for example to increase discoverability, using some key ones from the start of the file creation is important to keep track of the file history. Often this level of information is neglected when saving data to a file, which can make it hard if not impossible to reconstruct the analysis workflow.<br>
 Also, as global attributes are preserved during most analysis operations, output files end up containing information from the source file which is usually not relevant to the new data.<br>
 `institution`, `source`, `references`, and `comment` can also be assigned to individual variables, in such cases, the variable version has precedence.
