@@ -75,7 +75,7 @@ The command `umask` sets the inverse mask of the default file access permissions
 Every time a new file or directory is created, the first set of permissions is automatically created based on the user who created them and their account settings.
 - all project's folders have `rwxrws---` permissions, hence a user has to be part of the group to read/write in them. The `s` in the group execute position shows that the setgid is active, so any new file will inherit the directory group rather than the user group
 - the owner of the file is the user who first creates the file
-- if the file is created in \$HOME then the file group will be the user\$PROJECT, this is usually set in \$HOME/.rashrc
+- if the file is created in \$HOME then the file group will be the user's \$PROJECT, this is usually set in \$HOME/.rashrc
 - the permissions of the file are determined by the umask file
 - if a file is created by running a program with active setuid and setgid, then they will determine the permissions
 - if the file is in a directory with the `sticky bit` activated, then only the file owner, directory owner or root will be able to remove the file, regardless of other permissions.
