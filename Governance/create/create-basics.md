@@ -60,12 +60,12 @@ Our general recommendations are:
 * keep only data intended for sharing in common areas.
 * working data should be restricted to your personal space, or a defined collaborative working space.
 * ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.
-* raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. onto NCI's [MDSS](../tech/massdata.md)) to enable regeneration of processed datasets from the raw data, without having to rerun models.
+* raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. NCI's [MDSS](../tech/massdata.md)) to enable regeneration of processed datasets from the raw data, without having to rerun models.
 * a backup strategy should be set-up and implented early (ideally as part of a data management plan; see next section).
 
 For more detailed guidance on backing up data, see our [guide to creating a backup strategy](../concepts/backup.md) and [backup checklist](../tech/backup-checklist.md).
 
-Moving data between disks (e.g. from NCI's `/scratch` to `/g/data/`) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using [rsync](https://rsync.samba.org/) wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). ** perhaps a tech page on data moving tools would be helpful? **
+Moving data between disks (e.g. from NCI's `/scratch` to `/g/data/`) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using [rsync](https://rsync.samba.org/) wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). For more guidance on moving large data, see the [Moving Data page](../tech/moving-data.md).
 
 ## Data management plans & documentation
 
