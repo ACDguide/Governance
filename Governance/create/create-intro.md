@@ -35,11 +35,13 @@ This is the more practical description of how to create climate datasets (genera
     * Creating derived datasets from existing/published data
 
 &nbsp;
-* [Requirements for publication](create-publishing.md)  
+* [Requirements for publication & productisation](create-publishing.md)  
 This chapter outlines the standards for publication data that either accompanies a journal article or is submitted to an intercomparison project (e.g. CMIP), and some recommendations for tools to aid this process.
     
     * Publishing in a journal
     * Submitting to an intercomparison project
+    * Dataset productisation for market-ready commercialisation
 
 &nbsp;
 * [Checklists for data management in the project lifecycle](create-checklists.md)
+This page contains a useful checklist to aid in data management planning; separated according to the various stages of a project lifecycle.
