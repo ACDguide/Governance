@@ -20,7 +20,7 @@ Technically, many dimensions can be created in a NetCDF file, including multiple
 However, it is recommended to minimise the use of multiple highly similar dimensions; particularly 'time', as there is often a hard-coded expectation in analysis/visualisation packages that expect one and only one time axis.  
 ```
 
-* Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled using any string or value, however there are some common standards (e.g. CF conventions) that we highly recommend using.
+* Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled using any string or value, however there are some common standards (e.g. [CF conventions](../concepts/cf-conventions.md)) that we highly recommend using.
 
 * Global attributes are key:value pairs that descibe the file at the top-level. While these are typically chosen according to the use case of the data and can vary significantly between modelling realms or scientific need, standards also exist for these. Common global attributes include dataset title, provenance information (i.e. where the data came from), license, and contact information, as well as naming any metadata conventions implemented in the file.
 
@@ -28,16 +28,19 @@ It is likely that the raw scientific data that you are building your datasets ar
 
 ### Attributes
 
-NetCDF attributes are in one of two categories: Machine-readable metadata attributes and human-readable metadata attributes (long names, most global attrs).
+NetCDF metadata attributes are generally in one of two categories: machine-readable and human-readable (though these overlap significantly).
 
 * Machine-readable attributes (e.g., `units`, `standard_name`, `missing_value` and `calendar`) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common [conventions](../concepts/conventions.md) and [controlled vocabularies](../concepts/controlled-vocab.md). These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages. 
 
-* Human-readable attributes (e.g. `title`, `institution`, `license` and `long_name`) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how is was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of [keywords](../tech/keywords.md) similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.
+* Human-readable attributes (e.g. `title`, `institution`, `license` and `long_name`) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how it was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of [keywords](../tech/keywords.md) similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.
 
 For a list of recommended attributes to include and define in most climate datasets and how to apply them, see the [conventions page in this book](../tech/conventions.md). We recommend implementing these metadata fields into your post-processing workflow so that these are automatically applied by your data creation code/script. 
 
-For a more technical description of the netCDF format and metadata, see https://acdguide.github.io/BigData/format_metadata.html.
+For a more technical description of the netCDF format and metadata, see https://acdguide.github.io/BigData/data/data-netcdf.html.
 
+### Example metadata using ncdump
+
+Ncdump from a simple-ish file. Not CMIP6, coz I want to save that for later; prefer something less complex.
 
 ## File & directory organisation
 
@@ -55,7 +58,7 @@ Climate data can often be difficult (or impossible) to regenerate, due to large 
 
 Our general recommendations are:
 * keep only data intended for sharing in common areas.
-* working data should be restricted to your personal space.
+* working data should be restricted to your personal space, or a defined collaborative working space.
 * ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.
 * raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. onto NCI's [MDSS](../tech/massdata.md)) to enable regeneration of processed datasets from the raw data, without having to rerun models.
 * a backup strategy should be set-up and implented early (ideally as part of a data management plan; see next section).
