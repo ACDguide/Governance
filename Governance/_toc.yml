@@ -40,6 +40,9 @@ parts:
     - file: retire/retire-replica
     - file: retire/retire-unpublished
     - file: retire/retire-references
+  - caption: Creating climate data products 
+    chapters:
+    - file: products/products-intro
   - caption: About us
     chapters:
     - file: about-us/working-group-governance
@@ -106,7 +109,6 @@ parts:
     chapters:
     - file: appendix/appendix-intro.md
       sections:
-      - file: appendix/concepts.md
-      - file: appendix/acronyms.md
+      - file: appendix/glossary.md
       - file: appendix/forcodes.md
       - file: appendix/zenodo.md
