@@ -2,9 +2,10 @@
 
 ## UNDER DEVELOPMENT
 
-So far, the guidelines have focused on creating, managing, and publishing climate research data with a climate science researcher as end-user. However, climate data is often used in other research fields, government initiatives and by private stakeholders for a variety of applications.
-The process to adapt and package climate data so that be of use to a wider audience, with different backgrounds and/or for different purposes is more complex than simply sharing data with other climate researchers. We know of research projects that had put together climate data products and we expect agency such as CSIRO and the Bureau of meteorology to do this on a regular basis, however there's no best practice documented available.
-This guideline aims to outline the extra steps to consider when creating a climate data product which is fit to be distributed. It is important to provide enough documentation and quality control so that a non-expert audience can use the data correctly and trust can be built and maintained in the product itself. It is also important to offer a product which is of the right format and accessible to the targeted users.
+So far, the guidelines have focused on creating, managing, and publishing climate research data with a climate science researcher as end-user. However, climate data is often used in other research fields, government initiatives and by private stakeholders for a variety of applications.  
+The process to adapt and package climate data so that be of use to a wider audience with different backgrounds and/or for different purposes is more complex than simply sharing data with other climate researchers. We know of research projects that had put together climate data products and we expect agencies such as CSIRO and the Bureau of Meteorology to do this, however there are no identified best practices available.  
+
+This guideline aims to outline the extra steps to consider when creating a climate data product that meets the standards and expectations of a commercial product. It is important to provide enough documentation and quality control so that a non-expert audience can use the data correctly and trust can be built and maintained in the product itself. It is also important to offer a product which is of the right format and accessible to the targeted users.
 
 This is a new guideline and we welcome input and contributions from anyone who is interested and/or has experience in providing climate data products.
  
