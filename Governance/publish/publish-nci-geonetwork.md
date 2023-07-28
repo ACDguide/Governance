@@ -1,8 +1,8 @@
 # Publishing climate data with NCI
 
-NCI provides web services to publish data and metadata:
-* a [dataset catalogue](https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/home) based on [GeoNetwork](geonetwork) to describe the dataset (i.e. a metadata repository) and associated DOI.  This will be the landing page for the DOI and will include a link to access the dataset. 
-* a [THREDDS Data Server](https://dapds00.nci.org.au/thredds/catalog.html) (TDS). This is a public data repository that provides access to the data. [THREDDS](thredds) offer a variety of protocols, and files can be downloaded from here or accessed via the [OPeNDAP protocol](opendap).
+{term}`NCI` provides web services to publish data and metadata:
+* a [dataset catalogue](https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/home) based on {term}`GeoNetwork` to describe the dataset (i.e. a metadata repository) and associated DOI.  This will be the landing page for the DOI and will include a link to access the dataset. 
+* a [THREDDS Data Server](https://dapds00.nci.org.au/thredds/catalog.html) (TDS). This is a public data repository that provides access to the data. {term}`THREDDS` offers a variety of protocols, and files can be downloaded from here or accessed via the {term}`OPeNDAP` protocol.
 
 ## What data can be published with NCI
 Publishing with NCI is a good option when publishing a big dataset and/or data in netCDF format, with obvious candidates being outputs of model simulation runs on Gadi. 
@@ -12,12 +12,12 @@ THREDDS was developed for netCDF files, and publishing on a THREDDS server means
 Currently NCI is in the process of updating their data procedures, their [official documentation](https://opus.nci.org.au/display/NDP/Data+Management) does not yet include a detailed description of the process, so the following information is based on our experiences.
 
 ### Data project
-NCI manages storage and computational resources via projects. To publish data with them a project setup exclusively for this scope is needed. Depending on the researcher's affiliation and or the dataset scope, they might be able to contribute to an existing "publishing" data project. This is a good option if the dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the CLEX collection which uses project ks32.
+NCI manages storage and computational resources via projects. To publish data with them a project setup exclusively for this scope is needed. Depending on the researcher's affiliation and or the dataset scope, they might be able to contribute to an existing "publishing" data project. This is a good option if the dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the {term}`CLEX` collection which uses project ks32.
 
 If the dataset is big enough to have its own project, then the researcher should contact the NCI data team, via the helpdesk, and discuss the options with them. If NCI agrees to proceed with the publication, the researcher will have to provide details of the dataset and usually funding for the disk storage.
 
 ### Creating a GeoNetwork record
-The first step is to create a DMP to collect information on the dataset. Once NCI has agreed to publish the dataset, they will create a page on their confluence site for the specified project, containing a table to be populated with the dataset information.
+The first step is to create a {term}`DMP` to collect information on the dataset. Once NCI has agreed to publish the dataset, they will create a page on their confluence site for the specified project, containing a table to be populated with the dataset information.
 These pages are only visible to interested parties, therefore we provide an [example](https://docs.google.com/spreadsheets/d/1Rt-bKNfjNRi-kB_pFrhLE9-XwqvmkpLfu5i4_sdzfQ4/edit#gid=0) from the publication of a satellite dataset, using a google spreadsheet instead.
 Once the DMP is ready NCI will use the content to create a geonetwork record and mint a DOI for the new dataset. The GeoNetwork record will provide the landing page for the DOI and will be visible only once the files are available on THREDDS.
 
