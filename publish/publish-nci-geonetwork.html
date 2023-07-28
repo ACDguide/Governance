@@ -272,6 +272,18 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
+  Creating climate data products
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../products/products-intro.html">
+   Guidelines to create a climate data product
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
   About us
  </span>
 </p>
@@ -387,7 +399,7 @@
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../concepts/policy-bom.html">
-       BoM Data Policy
+       Bureau of Meteorology Data Policy
       </a>
      </li>
      <li class="toctree-l3">
@@ -585,13 +597,8 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/concepts.html">
-     Key concepts
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/acronyms.html">
-     Acronyms
+    <a class="reference internal" href="../appendix/glossary.html">
+     Glossary
     </a>
    </li>
    <li class="toctree-l2">
@@ -834,10 +841,10 @@
                 
   <div class="section" id="publishing-climate-data-with-nci">
 <h1>Publishing climate data with NCI<a class="headerlink" href="#publishing-climate-data-with-nci" title="Permalink to this headline">¶</a></h1>
-<p>NCI provides web services to publish data and metadata:</p>
+<p><a class="reference internal" href="../appendix/glossary.html#term-NCI"><span class="xref std std-term">NCI</span></a> provides web services to publish data and metadata:</p>
 <ul class="simple">
-<li><p>a <a class="reference external" href="https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/home">dataset catalogue</a> based on <a class="reference internal" href="../appendix/acronyms.html#geonetwork"><span class="std std-ref">GeoNetwork</span></a> to describe the dataset (i.e. a metadata repository) and associated DOI.  This will be the landing page for the DOI and will include a link to access the dataset.</p></li>
-<li><p>a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS Data Server</a> (TDS). This is a public data repository that provides access to the data. <a class="reference internal" href="../appendix/acronyms.html#thredds"><span class="std std-ref">THREDDS</span></a> offer a variety of protocols, and files can be downloaded from here or accessed via the <a class="reference internal" href="../appendix/acronyms.html#opendap"><span class="std std-ref">OPeNDAP protocol</span></a>.</p></li>
+<li><p>a <a class="reference external" href="https://geonetwork.nci.org.au/geonetwork/srv/eng/catalog.search#/home">dataset catalogue</a> based on <a class="reference internal" href="../appendix/glossary.html#term-GeoNetwork"><span class="xref std std-term">GeoNetwork</span></a> to describe the dataset (i.e. a metadata repository) and associated DOI.  This will be the landing page for the DOI and will include a link to access the dataset.</p></li>
+<li><p>a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS Data Server</a> (TDS). This is a public data repository that provides access to the data. <a class="reference internal" href="../appendix/glossary.html#term-THREDDS"><span class="xref std std-term">THREDDS</span></a> offers a variety of protocols, and files can be downloaded from here or accessed via the <a class="reference internal" href="../appendix/glossary.html#term-OPeNDAP"><span class="xref std std-term">OPeNDAP</span></a> protocol.</p></li>
 </ul>
 <div class="section" id="what-data-can-be-published-with-nci">
 <h2>What data can be published with NCI<a class="headerlink" href="#what-data-can-be-published-with-nci" title="Permalink to this headline">¶</a></h2>
@@ -849,12 +856,12 @@ THREDDS was developed for netCDF files, and publishing on a THREDDS server means
 <p>Currently NCI is in the process of updating their data procedures, their <a class="reference external" href="https://opus.nci.org.au/display/NDP/Data+Management">official documentation</a> does not yet include a detailed description of the process, so the following information is based on our experiences.</p>
 <div class="section" id="data-project">
 <h3>Data project<a class="headerlink" href="#data-project" title="Permalink to this headline">¶</a></h3>
-<p>NCI manages storage and computational resources via projects. To publish data with them a project setup exclusively for this scope is needed. Depending on the researcher’s affiliation and or the dataset scope, they might be able to contribute to an existing “publishing” data project. This is a good option if the dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the CLEX collection which uses project ks32.</p>
+<p>NCI manages storage and computational resources via projects. To publish data with them a project setup exclusively for this scope is needed. Depending on the researcher’s affiliation and or the dataset scope, they might be able to contribute to an existing “publishing” data project. This is a good option if the dataset is relatively small, as NCI is unlikely to setup a project for a small dataset. An example is the <a class="reference internal" href="../appendix/glossary.html#term-CLEX"><span class="xref std std-term">CLEX</span></a> collection which uses project ks32.</p>
 <p>If the dataset is big enough to have its own project, then the researcher should contact the NCI data team, via the helpdesk, and discuss the options with them. If NCI agrees to proceed with the publication, the researcher will have to provide details of the dataset and usually funding for the disk storage.</p>
 </div>
 <div class="section" id="creating-a-geonetwork-record">
 <h3>Creating a GeoNetwork record<a class="headerlink" href="#creating-a-geonetwork-record" title="Permalink to this headline">¶</a></h3>
-<p>The first step is to create a DMP to collect information on the dataset. Once NCI has agreed to publish the dataset, they will create a page on their confluence site for the specified project, containing a table to be populated with the dataset information.
+<p>The first step is to create a <a class="reference internal" href="../appendix/glossary.html#term-DMP"><span class="xref std std-term">DMP</span></a> to collect information on the dataset. Once NCI has agreed to publish the dataset, they will create a page on their confluence site for the specified project, containing a table to be populated with the dataset information.
 These pages are only visible to interested parties, therefore we provide an <a class="reference external" href="https://docs.google.com/spreadsheets/d/1Rt-bKNfjNRi-kB_pFrhLE9-XwqvmkpLfu5i4_sdzfQ4/edit#gid=0">example</a> from the publication of a satellite dataset, using a google spreadsheet instead.
 Once the DMP is ready NCI will use the content to create a geonetwork record and mint a DOI for the new dataset. The GeoNetwork record will provide the landing page for the DOI and will be visible only once the files are available on THREDDS.</p>
 </div>
