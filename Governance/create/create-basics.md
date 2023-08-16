@@ -69,26 +69,14 @@ Moving data between disks (e.g. from NCI's `/scratch` to `/g/data/`) and systems
 
 ## Data management plans & documentation
 
+A **Data Management Plan*** (DMP) is a general term for a document that describes the intended methods of the creation, storage, management and distribution of a given collection of data, and defines or cites the rules, policies or principles that govern the dataset. DMPs can vary greatly depending on context, the type of data, or intended audience. A DMP is also a living document, one that evolves through the various stages of the project in which the data is created.  
+Generally, however, a DMP should provide guidance to data managers, in order to help inform decision making. E.g., where should a new dataset be stored, who should have access to it, when should it be deleted. In the case where decisions are not clearly indicated from the DMP, it should indicate who is responsible for making the decision.  
+Ideally, a DMP is prepared as an integral part of project planning, with a data custodian also responsible for it's continued development. An initial DMP can be as simple as notes in a text file, and include basic information such as backup locations, input files, tools used, and the intended use of the final dataset. Additionally, file metadata such as licences (see https://acdguide.github.io/Governance/concepts/license.html) and contact information are regularly included in DMPs. 
 
+For more information on Data Management Plans, see https://acdguide.github.io/Governance/concepts/dmp.html
 
-TOFIX!!!!
+While similar to DMP in many ways, **data documentation** is a distinct purpose in that it provides guidance to users of the data (rather than managers of the data), including those who intend to reproduce it. Data documentation will include many of the same information as a DMP, such as the method of data generation (input files, software used), distribution details, and project context. Data documentation are typically kept alongside the dataset as in a README file at the top level directory, which provide high-level information about the dataset (e.g., when it was created, who to contact, and how to use it). However, data documentation is a general term for 'user guidance of a dataset', and can also be prepared in the form of journal articles that provide much more detail. In cases where the data itself is not self-describing (e.g. CSV files), data documentation will need to provide low-level metadata such as dimensions and units.
 
-Claire:  
-pick your project: ensure files are created belonging to the correct project, or if they need to be moved after creation, ensure that the correct group and permissions are inherited in the destination (See also ACLs page)
-
-Create a README at the top level with information about the dataset, when it was created, who to contact, how to use etc as relevant
-
-Make a data management plan, and consider how your data is to be shared and/or published.
-
-Paola:  
-DMP including basic info as backup, input files, tools used, license of what is used and potential output. This ideally should be part of project planning but might still be worth mentioning it here
-
-Keep track of changes, workflow etc from the start, even if just in a simple notes text file. Make sure it is regularly updated and details are added accordingly with phase of project, in particular when starting to share data.
-
-Chloe:  
-DMPs: https://acdguide.github.io/Governance/concepts/dmp.html
-
-Licensing https://acdguide.github.io/Governance/concepts/license.html
 
 
 ## Code management & version control
