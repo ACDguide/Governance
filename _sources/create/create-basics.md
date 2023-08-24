@@ -15,7 +15,12 @@ NetCDF files contain three main components:
 
 * Dimensions describe the overall array structure of the data stored in the file, though not every variable must use all dimensions that exist in the file. Dimensions can be ‘real’ dimensions (such as time, latitude, longitude), or ‘pseudo’ dimensions (such as land-use tiles, or spectral bands). NetCDF dimensions, however, contain no metadata or actual values, which are described using variables with the same name. The dimensions are the base architecture of the file.
 
-* Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled using any string or value, however there are some common standards (e.g. CF conventions) that we highly recommend using.
+```{note}
+Technically, many dimensions can be created in a NetCDF file, including multiple time (e.g. time0, time 1, etc) or lat/lon (e.g. lat_a, lat_c) dimensions if you choose.
+However, it is recommended to minimise the use of multiple highly similar dimensions; particularly 'time', as there is often a hard-coded expectation in analysis/visualisation packages that expect one and only one time axis.  
+```
+
+* Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled using any string or value, however there are some common standards (e.g. [CF conventions](../concepts/cf-conventions.md)) that we highly recommend using.
 
 * Global attributes are key:value pairs that descibe the file at the top-level. While these are typically chosen according to the use case of the data and can vary significantly between modelling realms or scientific need, standards also exist for these. Common global attributes include dataset title, provenance information (i.e. where the data came from), license, and contact information, as well as naming any metadata conventions implemented in the file.
 
@@ -23,16 +28,19 @@ It is likely that the raw scientific data that you are building your datasets ar
 
 ### Attributes
 
-NetCDF attributes are in one of two categories: Machine-readable metadata attributes and human-readable metadata attributes (long names, most global attrs).
+NetCDF metadata attributes are generally in one of two categories: machine-readable and human-readable (though these overlap significantly).
 
 * Machine-readable attributes (e.g., `units`, `standard_name`, `missing_value` and `calendar`) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common [conventions](../concepts/conventions.md) and [controlled vocabularies](../concepts/controlled-vocab.md). These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages. 
 
-* Human-readable attributes (e.g. `title`, `institution`, `license` and `long_name`) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how is was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of [keywords](../tech/keywords.md) similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.
+* Human-readable attributes (e.g. `title`, `institution`, `license` and `long_name`) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how it was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of [keywords](../tech/keywords.md) similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.
 
 For a list of recommended attributes to include and define in most climate datasets and how to apply them, see the [conventions page in this book](../tech/conventions.md). We recommend implementing these metadata fields into your post-processing workflow so that these are automatically applied by your data creation code/script. 
 
-For a more technical description of the netCDF format and metadata, see https://acdguide.github.io/BigData/format_metadata.html.
+For a more technical description of the netCDF format and metadata, see https://acdguide.github.io/BigData/data/data-netcdf.html.
 
+### Example metadata using ncdump
+
+Ncdump from a simple-ish file. Not CMIP6, coz I want to save that for later; prefer something less complex.
 
 ## File & directory organisation
 
@@ -50,37 +58,25 @@ Climate data can often be difficult (or impossible) to regenerate, due to large 
 
 Our general recommendations are:
 * keep only data intended for sharing in common areas.
-* working data should be restricted to your personal space.
+* working data should be restricted to your personal space, or a defined collaborative working space.
 * ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.
-* raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. onto NCI's [MDSS](../tech/massdata.md)) to enable regeneration of processed datasets from the raw data, without having to rerun models.
+* raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. NCI's [MDSS](../tech/massdata.md)) to enable regeneration of processed datasets from the raw data, without having to rerun models.
 * a backup strategy should be set-up and implented early (ideally as part of a data management plan; see next section).
 
 For more detailed guidance on backing up data, see our [guide to creating a backup strategy](../concepts/backup.md) and [backup checklist](../tech/backup-checklist.md).
 
-Moving data between disks (e.g. from NCI's `/scratch` to `/g/data/`) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using [rsync](https://rsync.samba.org/) wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). ** perhaps a tech page on data moving tools would be helpful? **
+Moving data between disks (e.g. from NCI's `/scratch` to `/g/data/`) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using [rsync](https://rsync.samba.org/) wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). For more guidance on moving large data, see the [Moving Data page](../tech/moving-data.md).
 
 ## Data management plans & documentation
 
+A **Data Management Plan** (DMP) is a general term for a document that describes the intended methods of the creation, storage, management and distribution of a given collection of data, and defines or cites the rules, policies or principles that govern the dataset. DMPs can vary greatly depending on context, the type of data, or intended audience. A DMP is also a living document, one that evolves through the various stages of the project in which the data is created.  
+Generally, however, a DMP should provide guidance to data managers, in order to help inform decision making. E.g., where should a new dataset be stored, who should have access to it, when should it be deleted. In the case where decisions are not clearly indicated from the DMP, it should indicate who is responsible for making the decision.  
+Ideally, a DMP is prepared as an integral part of project planning, with a data custodian also responsible for it's continued development. An initial DMP can be as simple as notes in a text file, and include basic information such as backup locations, input files, tools used, and the intended use of the final dataset. Additionally, file metadata such as licences (see https://acdguide.github.io/Governance/concepts/license.html) and contact information are regularly included in DMPs. 
 
+For more information on Data Management Plans, see https://acdguide.github.io/Governance/concepts/dmp.html
 
-TOFIX!!!!
+While similar to DMP in many ways, **data documentation** is a distinct purpose in that it provides guidance to users of the data (rather than managers of the data), including those who intend to reproduce it. Data documentation will include many of the same information as a DMP, such as the method of data generation (input files, software used), distribution details, and project context. Data documentation are typically kept alongside the dataset as in a README file at the top level directory, which provide high-level information about the dataset (e.g., when it was created, who to contact, and how to use it). However, data documentation is a general term for 'user guidance of a dataset', and can also be prepared in the form of journal articles that provide much more detail. In cases where the data itself is not self-describing (e.g. CSV files), data documentation will need to provide low-level metadata such as dimensions and units.
 
-Claire:  
-pick your project: ensure files are created belonging to the correct project, or if they need to be moved after creation, ensure that the correct group and permissions are inherited in the destination (See also ACLs page)
-
-Create a README at the top level with information about the dataset, when it was created, who to contact, how to use etc as relevant
-
-Make a data management plan, and consider how your data is to be shared and/or published.
-
-Paola:  
-DMP including basic info as backup, input files, tools used, license of what is used and potential output. This ideally should be part of project planning but might still be worth mentioning it here
-
-Keep track of changes, workflow etc from the start, even if just in a simple notes text file. Make sure it is regularly updated and details are added accordingly with phase of project, in particular when starting to share data.
-
-Chloe:  
-DMPs: https://acdguide.github.io/Governance/concepts/dmp.html
-
-Licensing https://acdguide.github.io/Governance/concepts/license.html
 
 
 ## Code management & version control

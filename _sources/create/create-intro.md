@@ -6,11 +6,12 @@
 
 These guidelines cover the various aspects of creating robust and well-described climate data for reuse, analysis, sharing, and publication.
 
-We have identified four primary use cases that guide the recommendations and requirements you should follow when creating your climate datasets:  
+We have identified five primary use cases that guide the recommendations and requirements you should follow when creating your climate datasets:  
 1. for your own reuse and analysis (basic dataset needs)  
 2. sharing with colleagues for collaboration (minimum sharing recommendations, no citation necessary)
 3. for publication alongside a research paper (journal requirements apply)
 4. for publication into a large multi-institutional intercomparison project like CMIP (strict standards apply)
+5. for productisation, including market-readiness and commercialisation (standards to be defined)
 
 Additionally, we have identified two main situations you may find yourself in: i) preparing your datasets from scratch (i.e. you have 'raw' data that is currently undescribed, and in a format that is not analysis-ready); or ii) deriving metrics or indices from a reference dataset (e.g. performing an analysis on CMIP data for a research publication). We will mostly be discussing the first situation where you are creating climate data from scratch, with specific recommendatations for the second situation later in the section.
 
@@ -34,11 +35,13 @@ This is the more practical description of how to create climate datasets (genera
     * Creating derived datasets from existing/published data
 
 &nbsp;
-* [Requirements for publication](create-publishing.md)  
+* [Requirements for publication & productisation](create-publishing.md)  
 This chapter outlines the standards for publication data that either accompanies a journal article or is submitted to an intercomparison project (e.g. CMIP), and some recommendations for tools to aid this process.
     
     * Publishing in a journal
     * Submitting to an intercomparison project
+    * Dataset productisation for market-ready commercialisation
 
 &nbsp;
 * [Checklists for data management in the project lifecycle](create-checklists.md)
+This page contains a useful checklist to aid in data management planning; separated according to the various stages of a project lifecycle.
