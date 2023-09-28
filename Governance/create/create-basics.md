@@ -143,11 +143,11 @@ While similar to a DMP in many ways, **data documentation** is a distinct purpos
 
 ## Code management & version control
 
-Claire:  
-If your data is an analysis product, keep the code nearby the data or document where it can be accessed (snapshot the version of the code used to create this dataset)
+Best practice for managing software of any kind starts with **version controlled repositories**. Git-based platforms (e.g., GitHub and GitLab instances such as the [NCI GitLab](https://git.nci.org.au/)) and APIs are the current standard, although SVN and other tools are also in use throughout climate science. Learning these tools are vital to software development, and the versioning native in these systems help ensure provenance, reproduction, and creating FAIR datasets for sharing and publication. 
+Releases (Git-based publications) of specific versions can be useful to complement published datasets or papers, however it is important to note that independent publication of code (e.g. via Zenodo) is required for a DOI and is recommended to ensure long-term access and reproducibility.
 
-Paola:  
-Keep code under version control
+Of course, code cannot exclusively exist in a repository. It is suggested (particularly if your data is an analysis product) to keep the code nearby the data (e.g. in the same parent directory) or document where it can be accessed in a readily available README file (also note the version of the code used to create the associated dataset!). 
 
-Chloe:  
-Versioning: https://acdguide.github.io/Governance/tech/versioning.html
+Data should also be versioned, especially for more underpinning datasets such as model output & data products, however best practice in this domain is still evolving. CMIP data includes versioning at the variable level that uses date of file creation, however this is just one method. 
+
+For more information on versioning, see https://acdguide.github.io/Governance/tech/versioning.html
