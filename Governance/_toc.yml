@@ -91,9 +91,7 @@ parts:
       - file: tech/backup-checklist
       - file: tech/cf-checker
       - file: tech/contributors
-      - file: tech/drs
-        sections:
-        - file: tech/filenames
+      - file: tech/drs-names
       - file: tech/keywords
       - file: tech/coding
       - file: tech/data_formats
