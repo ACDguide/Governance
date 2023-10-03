@@ -1,7 +1,5 @@
 # Guidelines to create a climate dataset
 
-## Scope of the guidelines
-
 These guidelines cover the various aspects of creating robust and well-described climate data for reuse, analysis, sharing, and publication.
 
 We have identified five primary use cases that guide the recommendations and requirements to follow when creating climate datasets:  
