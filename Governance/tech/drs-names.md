@@ -1,6 +1,6 @@
-# Choosing a directory structure: DRS and filenames
+# Choosing a directory structure and filenames
 
-The names you choose for files and directories and generally the way you organise your data, i.e. your directory structure, can help navigating the data, provide extra information, avoid confusion and avoid the user ending up accessing the wrong data. In many cases the best file organisation will depend on the specific research project and the actual server where the data is stored. The global climate modelling intercomparison project (CMIP) has adopted a **Data Reference Syntax (DRS)**, based on the **controlled vocabularies (CVs)** used in model metadata, to define their file names and directory structures. 
+The names you choose for files and directories and generally the way you organise your data, i.e. your directory structure, can help navigating the data, provide extra information, avoid confusion and avoid the user ending up accessing the wrong data. In many cases the best file organisation will depend on the specific research project and the actual server where the data is stored. The global Climate Modelling Intercomparison Project (CMIP) has adopted a **Data Reference Syntax (DRS)**, based on the **controlled vocabularies (CVs)** used in model metadata, to define their file names and directory structures. 
 Here we list a few guidelines and tips to help you decide.  
 
 ## General considerations
@@ -9,7 +9,7 @@ Here we list a few guidelines and tips to help you decide.
 * Be consistent, this applies both to the organisation and the naming, consistency is essential for the data to be machine-readable, i.e. data which is easy to access by coding. In fact, use community standards and/or controlled vocabularies wherever possible.
 * Consider adding a `readme` file in the main directory, including an explanation of the DRS and the naming conventions, abbreviation and/or codes you used. If you used standards and controlled vocabularies all you have to do is to include a link to them.    
 
-## DRS
+## Directory structure
 
 ![Example of directory structure](../images/example_drs.png)
 
@@ -30,7 +30,7 @@ for the final output. Also consider how others might use them: are they going to
 * The CMIP6 DRS is defined in the [CMIP6 Controlled Vocabularies document](https://docs.google.com/document/d/1h0r8RZr_f3-8egBMMh7aqLwy3snpD6_MrDz1q8n5XUk/edit), starting on p.13.
 * The [CORDEX DRS](http://is-enes-data.github.io/CORDEX_adjust_drs.pdf) builds on the CMIP DRS to apply to regional climate models.
 
-## Naming
+## File naming
 You can use filenames to include information as:
 
 * project, simulation and/or experiment acronyms, you might have to use a combination of them
