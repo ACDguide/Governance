@@ -42,7 +42,7 @@ CF conventions cover both variable-level and global attributes, while the ACDD c
 We give a detailed overview of how to write CF compliant files in the [Technical tips](../tech/conventions.md) appendix. This includes known issues that can be caused by not following the standards, as CF conventions are used by developers of tools that access and analyse netCDF data to make assumptions on the data structure. We recommend implementing these metadata fields in the post-processing workflow so that these are automatically generated when possible. For a more technical description of the netCDF format and metadata, see the [ACDG guidelines on BigData](https://acdguide.github.io/BigData/data/data-netcdf.html).
 ````
 
-:::{dropdown} Example of netCDF file which adheres to CF and ACDD conventions
+:::{dropdown} Example of netCDF file in human-readable format (a .cdl text-based file created with the 'ncdump' utility) which adheres to CF and ACDD conventions
 netcdf heatflux {<br>
     dimensions:<br>
         lon = 1440 ;<br>

@@ -1,6 +1,18 @@
 # New, modified, and derived datasets
 
 ## Creating new datasets from raw data
+
+Creating netCDF files from scratch, using raw data (e.g., from a csv file or pandas array) can be tricky, however tools exist to aid this process.
+
+Some tools that can be used to create netCDF files include:
+- The Python netCDF4 API (https://unidata.github.io/netcdf4-python/), which allows for very granular control to build netCDF objects and write to disk.
+- The command-line netCDF utilities 'ncdump' and 'ncgen' (https://docs.unidata.ucar.edu/nug/current/netcdf_utilities_guide.html), which uses the .cdl format (a ncdump output style file; example on previous page) to create netCDF files from human-readable templates.
+- CDO
+- xarray
+
+
+----------
+
 Paola (new comments following meeting Sep23):
 
 We discussed here mentioning tools to generate/modify a netcdf file (ncdump/ncgen, nco to modify attributes, how xarray/matlab "create" netcdf file))
