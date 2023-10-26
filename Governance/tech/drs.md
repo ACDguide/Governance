@@ -1,4 +1,4 @@
-# Choosing a directory structure (DRS) and filenames
+# Choosing a directory structure: DRS and filenames
 
 The names you choose for files and directories and generally the way you organise your data, i.e. your directory structure, can help navigating the data, provide extra information, avoid confusion and avoid the user ending up accessing the wrong data. In many cases the best file organisation will depend on the specific research project and the actual server where the data is stored. The global climate modelling intercomparison project (CMIP) has adopted a **Data Reference Syntax (DRS)**, based on the **controlled vocabularies (CVs)** used in model metadata, to define their file names and directory structures. 
 Here we list a few guidelines and tips to help you decide.  

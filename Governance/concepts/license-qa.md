@@ -11,7 +11,7 @@ The license is enforceable in court, but clearly that's an extreme step. Usually
 * <ins>How can my license be valid if a project or myself act as licensor when the copyright belongs to my institution?</ins><br>
  If you are the creator of the data/code then you can apply a license on behalf of your institution. They won't mind as long as the license you are using is in line with their recommendations. Most Australian universities and the ARC, which funds most projects, require open access for any research product (unless there is a valid reason not to).<br>
 
-*<ins>How can I license data partly derived from a "commercial" product?</ins><br>
+* <ins>How can I license data partly derived from a "commercial" product?</ins><br>
 You should first check if there is an agreement allowing you to use the data and if this agreement covers publishing derived data. If this is not in place a way around it could be to leave out the commercial data used in the project and substituted with a derived quantity. 
 In this [example](https://zenodo.org/record/4448518#.Y322MuxBz0o) the authors removed the wind speed mesaurements they used to identify a “severe wind event” and introduce a variable indicating if such event occured or not to ensure at least partial reproducibility.<br>
 

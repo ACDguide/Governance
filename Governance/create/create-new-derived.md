@@ -1,6 +1,12 @@
 # New, modified, and derived datasets
 
 ## Creating new datasets from raw data
+Paola (new comments following meeting Sep23):
+
+We discussed here mentioning tools to generate/modify a netcdf file (ncdump/ncgen, nco to modify attributes, how xarray/matlab "create" netcdf file))
+rather than trying to re-create every possible workflow.
+As well as things a user should check to make sure they're following the reccomendations listed in create-basics. For example ar ethe attributes still relevant both at global and variable level?
+
 
 Paola:  
 however rare, we could cover starting from a template, as for a cdl file (i.e. a ncdump output style file)
