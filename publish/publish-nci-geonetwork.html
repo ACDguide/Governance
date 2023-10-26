@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics &amp; sharing recommendations
+   Dataset creation basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -500,22 +500,10 @@
      Contributor roles
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../tech/drs.html">
-     Choosing a directory structure (DRS) and filenames
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/drs-names.html">
+     Choosing a directory structure and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tech/filenames.html">
-       Naming
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/keywords.html">
@@ -585,8 +573,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -862,7 +850,7 @@ Once the DMP is ready NCI will use the content to create a geonetwork record and
 </div>
 <div class="section" id="preparing-the-files">
 <h3>Preparing the files<a class="headerlink" href="#preparing-the-files" title="Permalink to this headline">¶</a></h3>
-<p>The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme file (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">DRS page</span></a> for examples.
+<p>The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme file (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the <span class="xref myst">DRS page</span> for examples.
 The files should follow both <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF</span></a> and <a class="reference internal" href="../concepts/acdd-conventions.html"><span class="doc std std-doc">ACDD</span></a> conventions. Once the files are ready, NCI will run a QC check, CF/ACDD compliance check, and that the files are accessible by widely used software like ncview, nco etc.
 If the files passed the tests, then they will add the dataset to THREDDS and activate the DOI. If not, they will send a detailed report of the QC results so the files can be fixed where possible.</p>
 <div class="admonition-cf-checker admonition">

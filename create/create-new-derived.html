@@ -54,7 +54,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Preparing files for publication" href="create-publishing.html" />
-    <link rel="prev" title="Dataset creation basics &amp; sharing recommendations" href="create-basics.html" />
+    <link rel="prev" title="Dataset creation basics" href="create-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="create-basics.html">
-   Dataset creation basics &amp; sharing recommendations
+   Dataset creation basics
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -500,22 +500,10 @@
      Contributor roles
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../tech/drs.html">
-     Choosing a directory structure (DRS) and filenames
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/drs-names.html">
+     Choosing a directory structure and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tech/filenames.html">
-       Naming
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/keywords.html">
@@ -585,8 +573,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -760,6 +748,10 @@
 <h1>New, modified, and derived datasets<a class="headerlink" href="#new-modified-and-derived-datasets" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="creating-new-datasets-from-raw-data">
 <h2>Creating new datasets from raw data<a class="headerlink" href="#creating-new-datasets-from-raw-data" title="Permalink to this headline">¶</a></h2>
+<p>Paola (new comments following meeting Sep23):</p>
+<p>We discussed here mentioning tools to generate/modify a netcdf file (ncdump/ncgen, nco to modify attributes, how xarray/matlab “create” netcdf file))
+rather than trying to re-create every possible workflow.
+As well as things a user should check to make sure they’re following the reccomendations listed in create-basics. For example ar ethe attributes still relevant both at global and variable level?</p>
 <p>Paola:<br />
 however rare, we could cover starting from a template, as for a cdl file (i.e. a ncdump output style file)</p>
 <p>data saved from analysis - start saving data with reasonable default format (free, common etc.) and chunking, compression etc if netcdf</p>
@@ -814,7 +806,7 @@ Provenance: <a class="reference external" href="https://acdguide.github.io/Gover
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Dataset creation basics &amp; sharing recommendations</p>
+            <p class="prev-next-title">Dataset creation basics</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="create-publishing.html" title="next page">

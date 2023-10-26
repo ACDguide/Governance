@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Choosing a directory structure (DRS) and filenames &#8212; Climate Data Guidelines</title>
+    <title>Choosing a directory structure and filenames &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Naming" href="filenames.html" />
+    <link rel="next" title="Choosing keywords" href="keywords.html" />
     <link rel="prev" title="Contributor roles" href="contributors.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics &amp; sharing recommendations
+   Dataset creation basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -500,22 +500,10 @@
      Contributor roles
     </a>
    </li>
-   <li class="toctree-l2 current active has-children">
+   <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Choosing a directory structure (DRS) and filenames
+     Choosing a directory structure and filenames
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="filenames.html">
-       Naming
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="keywords.html">
@@ -585,8 +573,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -649,7 +637,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tech/drs.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/tech/drs-names.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -669,10 +657,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/drs.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/drs-names.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/drs.md"><button
+        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/drs-names.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -697,15 +685,39 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-considerations">
-   General considerations
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Choosing a directory structure and filenames
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-considerations">
+     General considerations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directory-structure">
+     Directory structure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-naming">
+     File naming
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#drs">
-   DRS
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-for-machine-readable-files">
+   Tips for machine-readable files
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#online-resources">
+     Online Resources
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -717,7 +729,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Choosing a directory structure (DRS) and filenames</h1>
+                <h1>Choosing a directory structure and filenames</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -727,15 +739,39 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#general-considerations">
-   General considerations
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Choosing a directory structure and filenames
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-considerations">
+     General considerations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#directory-structure">
+     Directory structure
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-naming">
+     File naming
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#drs">
-   DRS
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-for-machine-readable-files">
+   Tips for machine-readable files
   </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#online-resources">
+     Online Resources
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -746,9 +782,9 @@
             
               <div>
                 
-  <div class="section" id="choosing-a-directory-structure-drs-and-filenames">
-<h1>Choosing a directory structure (DRS) and filenames<a class="headerlink" href="#choosing-a-directory-structure-drs-and-filenames" title="Permalink to this headline">¶</a></h1>
-<p>The names you choose for files and directories and generally the way you organise your data, i.e. your directory structure, can help navigating the data, provide extra information, avoid confusion and avoid the user ending up accessing the wrong data. In many cases the best file organisation will depend on the specific research project and the actual server where the data is stored. The global climate modelling intercomparison project (CMIP) has adopted a <strong>Data Reference Syntax (DRS)</strong>, based on the <strong>controlled vocabularies (CVs)</strong> used in model metadata, to define their file names and directory structures.
+  <div class="section" id="choosing-a-directory-structure-and-filenames">
+<h1>Choosing a directory structure and filenames<a class="headerlink" href="#choosing-a-directory-structure-and-filenames" title="Permalink to this headline">¶</a></h1>
+<p>The names you choose for files and directories and generally the way you organise your data, i.e. your directory structure, can help navigating the data, provide extra information, avoid confusion and avoid the user ending up accessing the wrong data. In many cases the best file organisation will depend on the specific research project and the actual server where the data is stored. The global Climate Modelling Intercomparison Project (CMIP) has adopted a <strong>Data Reference Syntax (DRS)</strong>, based on the <strong>controlled vocabularies (CVs)</strong> used in model metadata, to define their file names and directory structures.
 Here we list a few guidelines and tips to help you decide.</p>
 <div class="section" id="general-considerations">
 <h2>General considerations<a class="headerlink" href="#general-considerations" title="Permalink to this headline">¶</a></h2>
@@ -759,8 +795,8 @@ Here we list a few guidelines and tips to help you decide.</p>
 <li><p>Consider adding a <code class="docutils literal notranslate"><span class="pre">readme</span></code> file in the main directory, including an explanation of the DRS and the naming conventions, abbreviation and/or codes you used. If you used standards and controlled vocabularies all you have to do is to include a link to them.</p></li>
 </ul>
 </div>
-<div class="section" id="drs">
-<h2>DRS<a class="headerlink" href="#drs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="directory-structure">
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h2>
 <p><img alt="Example of directory structure" src="../_images/example_drs.png" /></p>
 <p>The figure above shows an example of an organised working directory for a model output.</p>
 <p><strong>Things to consider:</strong></p>
@@ -779,7 +815,40 @@ for the final output. Also consider how others might use them: are they going to
 <li><p>The <a class="reference external" href="http://is-enes-data.github.io/CORDEX_adjust_drs.pdf">CORDEX DRS</a> builds on the CMIP DRS to apply to regional climate models.</p></li>
 </ul>
 </div>
-<div class="toctree-wrapper compound">
+<div class="section" id="file-naming">
+<h2>File naming<a class="headerlink" href="#file-naming" title="Permalink to this headline">¶</a></h2>
+<p>You can use filenames to include information as:</p>
+<ul class="simple">
+<li><p>project, simulation and/or experiment acronyms, you might have to use a combination of them</p></li>
+<li><p>spatial coverage: the region or coordinates range covered by the data, could also be a specific domain for climate model data, e.g., ocean, land etc.</p></li>
+<li><p>grid: could be either a grid label or spatial resolution</p></li>
+<li><p>temporal coverage: a specific year/date or a temporal range</p></li>
+<li><p>temporal frequency: monthly, daily etc.</p></li>
+<li><p>type of data: again this depends on context, if the same directory contains data from different instrumentations it is important to specify the instrument in the name. For coupled model output this could be the model component, if you are using one file per variable, the variable name</p></li>
+<li><p>version: this is really important if you are sharing the data even if only 1 version exists at the time</p></li>
+<li><p>correct file extension</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="tips-for-machine-readable-files">
+<h1>Tips for machine-readable files<a class="headerlink" href="#tips-for-machine-readable-files" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>avoid special characters: ~ ! &#64; # $ % ^ &amp; * ( ) ` ; &lt; &gt; ? , [ ] { } ‘ “</p></li>
+<li><p>do not use spaces to separate words; use underscores “_” or dashes “-” or CamelCase</p></li>
+<li><p>use YYYYMMDD for dates, it will sort your files in chronological order, absolutely avoid “Jan, Feb, ..” for months as they are much harder to code for.</p></li>
+<li><p>for number sequences, use leading zeros: so 001, 002,.. 020,.. 103  rather than 1, 2,.. 20, .. 103</p></li>
+<li><p>try to avoid overly long names - for a single file directory keep it under 255 characters, for paths 30000.</p></li>
+<li><p>avoid having a large number of files in a single directory, but also an excessive number of directories with one file each</p></li>
+<li><p>always include file extension, some software can recognise files from their header, but this is not always the case</p></li>
+</ul>
+<div class="section" id="online-resources">
+<h2>Online Resources<a class="headerlink" href="#online-resources" title="Permalink to this headline">¶</a></h2>
+<p>We partially based this page on the resources listed below, and recommend checking them for more insight and advice.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.earthdatascience.org/courses/intro-to-earth-data-science/open-reproducible-science/get-started-open-reproducible-science/best-practices-for-organizing-open-reproducible-science/">Best practice to organise your data</a> - part of an Open reproducible science course from the University of Colorado</p></li>
+<li><p><a class="reference external" href="https://youtu.be/3MEJ38BO6Mo">Software Carpentry video covering DRS best practices</a></p></li>
+<li><p><a class="reference external" href="https://stanford.box.com/shared/static/yl5a04udc7hff6a61rc0egmed8xol5yd.pdf">Best file naming practice handout (pdf) from Standford University</a></p></li>
+</ul>
 </div>
 </div>
 
@@ -815,10 +884,10 @@ for the final output. Also consider how others might use them: are they going to
             <p class="prev-next-title">Contributor roles</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="filenames.html" title="next page">
+    <a class='right-next' id="next-link" href="keywords.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Naming</p>
+        <p class="prev-next-title">Choosing keywords</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

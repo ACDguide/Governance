@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dataset creation basics &amp; sharing recommendations &#8212; Climate Data Guidelines</title>
+    <title>Dataset creation basics &#8212; Climate Data Guidelines</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Dataset creation basics &amp; sharing recommendations
+   Dataset creation basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -500,22 +500,10 @@
      Contributor roles
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../tech/drs.html">
-     Choosing a directory structure (DRS) and filenames
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/drs-names.html">
+     Choosing a directory structure and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tech/filenames.html">
-       Naming
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/keywords.html">
@@ -585,8 +573,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -698,23 +686,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-formats-metadata-coordinates">
-   File formats, metadata &amp; coordinates
+  <a class="reference internal nav-link" href="#netcdf-format">
+   NetCDF format
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#components-of-a-netcdf-file">
-     Components of a NetCDF file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attributes">
      Attributes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-metadata-using-ncdump">
-     Example metadata using ncdump
     </a>
    </li>
   </ul>
@@ -725,11 +703,6 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#backups-archiving">
-   Backups &amp; archiving
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-management-plans-documentation">
    Data management plans &amp; documentation
   </a>
@@ -737,6 +710,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#code-management-version-control">
    Code management &amp; version control
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backups-archiving">
+   Backups &amp; archiving
   </a>
  </li>
 </ul>
@@ -749,7 +727,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dataset creation basics & sharing recommendations</h1>
+                <h1>Dataset creation basics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -760,23 +738,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-formats-metadata-coordinates">
-   File formats, metadata &amp; coordinates
+  <a class="reference internal nav-link" href="#netcdf-format">
+   NetCDF format
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#components-of-a-netcdf-file">
-     Components of a NetCDF file
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#attributes">
      Attributes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-metadata-using-ncdump">
-     Example metadata using ncdump
     </a>
    </li>
   </ul>
@@ -784,11 +752,6 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-directory-organisation">
    File &amp; directory organisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#backups-archiving">
-   Backups &amp; archiving
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -801,6 +764,11 @@
    Code management &amp; version control
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#backups-archiving">
+   Backups &amp; archiving
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -810,73 +778,130 @@
             
               <div>
                 
-  <div class="section" id="dataset-creation-basics-sharing-recommendations">
-<h1>Dataset creation basics &amp; sharing recommendations<a class="headerlink" href="#dataset-creation-basics-sharing-recommendations" title="Permalink to this headline">¶</a></h1>
-<p>See <a class="reference external" href="https://github.com/ACDguide/Governance/issues/7">https://github.com/ACDguide/Governance/issues/7</a> for discussion and suggestions</p>
-<div class="section" id="file-formats-metadata-coordinates">
-<h2>File formats, metadata &amp; coordinates<a class="headerlink" href="#file-formats-metadata-coordinates" title="Permalink to this headline">¶</a></h2>
-<p>Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills, the variety of metadata fields required to adequately describe the data and its dimensions, the domain-specific scientific knowledge required to make informed decisions about its creation and use, and the technical knoweldge required to produce robust datasets that can be reused by others. (Note that we will use terms and concepts described in the appendix <a class="reference internal" href="../concepts/concept-intro.html"><span class="doc std std-doc">Concepts</span></a>.)</p>
-<p>By far the most commonly used format in the climate science community is <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a>, an open (i.e. not proprietary), self-describing (i.e. metadata is an in-built feature) array-oriented (i.e. highly structured data such as climate model data) format that is typically used on POSIX systems (Unix-based computing system with a directory structure and command-line input; standard for high-performance computing systems such as <a class="reference external" href="https://nci.org.au/">NCI</a>). See the <a class="reference internal" href="../tech/data_formats.html"><span class="doc std std-doc">technical note on data formats</span></a>.</p>
-<div class="section" id="components-of-a-netcdf-file">
-<h3>Components of a NetCDF file<a class="headerlink" href="#components-of-a-netcdf-file" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="dataset-creation-basics">
+<h1>Dataset creation basics<a class="headerlink" href="#dataset-creation-basics" title="Permalink to this headline">¶</a></h1>
+<p>Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills. A variety of metadata fields are required to adequately describe the data and its dimensions. Domain-specific scientific knowledge is required to make informed decisions about its creation and use, and technical knowledge is required to produce robust datasets that can be reused by others.
+Many of the terms and concepts used are described in more detail in the <a class="reference internal" href="../concepts/concept-intro.html"><span class="doc std std-doc">Concepts</span></a> and <a class="reference internal" href="../tech/tech-intro.html"><span class="doc std std-doc">Technical tips</span></a> appendices.</p>
+<div class="section" id="netcdf-format">
+<h2>NetCDF format<a class="headerlink" href="#netcdf-format" title="Permalink to this headline">¶</a></h2>
+<p>By far the most commonly used format in the climate science community is <a class="reference internal" href="../tech/data_formats.html"><span class="doc std std-doc">netCDF</span></a>: (maybe we should cross reference big data guide here)</p>
+<ul class="simple">
+<li><p>open,</p></li>
+<li><p>self-describing: metadata is an in-built feature,</p></li>
+<li><p>array-oriented,
+format.</p></li>
+</ul>
 <p>NetCDF files contain three main components:</p>
 <ul class="simple">
-<li><p>Dimensions describe the overall array structure of the data stored in the file, though not every variable must use all dimensions that exist in the file. Dimensions can be ‘real’ dimensions (such as time, latitude, longitude), or ‘pseudo’ dimensions (such as land-use tiles, or spectral bands). NetCDF dimensions, however, contain no metadata or actual values, which are described using variables with the same name. The dimensions are the base architecture of the file.</p></li>
+<li><p>Dimensions describe the overall array structure of the data stored in the file, though variables can have different dimensions. Dimensions can be ‘real’ dimensions (such as time, latitude, longitude), or ‘pseudo’ dimensions (such as land-use tiles, or spectral bands). NetCDF dimensions, however, contain no metadata or actual values, which are instead described using variables with the same name. The dimensions are the base architecture of the file.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Technically, many dimensions can be created in a NetCDF file, including multiple time (e.g. time0, time 1, etc) or lat/lon (e.g. lat_a, lat_c) dimensions if you choose.
-However, it is recommended to minimise the use of multiple highly similar dimensions; particularly ‘time’, as there is often a hard-coded expectation in analysis/visualisation packages that expect one and only one time axis.</p>
+<p>Technically, many dimensions can be created in a netCDF file, including multiple time or lat/lon dimensions.
+However, it is recommended to minimise the use of multiple highly similar dimensions; particularly ‘time’, as often analysis/visualisation packages cannot handle multiple time axis and having more than one might produce errors or unexpected results.</p>
 </div>
 <ul class="simple">
-<li><p>Variables (usually represented with floating point values) contain the actual geospatial data that you are interested in storing and sharing. NetCDF variables can be either your specific scientific information (e.g. surface temperatures on a lat/lon grid), or the value description of the array dimensions (e.g. timestamps for a time dimension). Each variable is defined along one or more dimension, and has associated attributes in the form of key:value pairs. These attributes can be titled using any string or value, however there are some common standards (e.g. <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF conventions</span></a>) that we highly recommend using.</p></li>
-<li><p>Global attributes are key:value pairs that descibe the file at the top-level. While these are typically chosen according to the use case of the data and can vary significantly between modelling realms or scientific need, standards also exist for these. Common global attributes include dataset title, provenance information (i.e. where the data came from), license, and contact information, as well as naming any metadata conventions implemented in the file.</p></li>
+<li><p>Variables contain the actual value arrays and metadata used to describe them. NetCDF variables can be used for actual geospatial data (e.g., surface temperatures on a lat/lon grid), or to store the dimensions arrays and definitions (e.g., timestamps for a time dimension). Each variable is defined along one or more dimension and has associated attributes in the form of {key, value} pairs. Attributes and variable names must be strings, while there are only few restrictions on names, there are common standards (e.g., <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">CF conventions</span></a>) that we highly recommend using.</p></li>
+<li><p>Global attributes are {key: value} pairs that describe the overall file. These are typically chosen according to the kind of data, the way it was generated and its potential uses. However, standards such as the <a class="reference internal" href="../concepts/acdd-conventions.html"><span class="doc std std-doc">ACDD conventions</span></a> also exist to cover common global attributes. These include dataset title, <a class="reference internal" href="../concepts/provenance.html"><span class="doc std std-doc">provenance information</span></a>, license, and contact information, as well as naming any metadata conventions implemented in the file.</p></li>
 </ul>
-<p>It is likely that the raw scientific data that you are building your datasets around are already highly structured (even in netCDF format already), so your main effort here will be ensuring that the metadata correctly and adequately describes your data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Raw scientific data is usually highly structured and likely in netCDF format already, so often the main effort required is to ensure that the attributes describe the data correctly and adequately.</p>
 </div>
 <div class="section" id="attributes">
 <h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
 <p>NetCDF metadata attributes are generally in one of two categories: machine-readable and human-readable (though these overlap significantly).</p>
 <ul class="simple">
-<li><p>Machine-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> and <code class="docutils literal notranslate"><span class="pre">calendar</span></code>) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common <a class="reference internal" href="../concepts/conventions.html"><span class="doc std std-doc">conventions</span></a> and <a class="reference internal" href="../concepts/controlled-vocab.html"><span class="doc std std-doc">controlled vocabularies</span></a>. These conventions typically contain suggestions for the attribute key and value using commonly understood terms, and are highly recommended to enable analysis and visualisation with standard software packages.</p></li>
-<li><p>Human-readable attributes (e.g. <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">license</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code>) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how it was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of <a class="reference internal" href="../tech/keywords.html"><span class="doc std std-doc">keywords</span></a> similar to those in a journal publication. Conventions usually contain suggested keys to use, with the values defined according to your use case.</p></li>
+<li><p>Machine-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> and <code class="docutils literal notranslate"><span class="pre">calendar</span></code>) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common <a class="reference internal" href="../concepts/conventions.html"><span class="doc std std-doc">conventions</span></a> and <a class="reference internal" href="../concepts/controlled-vocab.html"><span class="doc std std-doc">controlled vocabularies</span></a>. These conventions typically contain suggestions for the attribute key and value using commonly understood terms and are highly recommended to enable analysis and visualisation with standard software packages.</p></li>
+<li><p>Human-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">license</span></code> and <code class="docutils literal notranslate"><span class="pre">long_name</span></code>) are fields that contain free strings and are interpreted by the user. Often global-level, these tend to describe the larger context in which the dataset sits, and enable the user to understand where the data came from, how it was generated, and enables both reuse and reproduction. These attributes could document the climate model used to generate the data, the project in which the data generation was conducted, the contact information of the dataset creator or manager, or a list of <a class="reference internal" href="../tech/keywords.html"><span class="doc std std-doc">keywords</span></a> similar to those in a journal publication.</p></li>
 </ul>
-<p>For a list of recommended attributes to include and define in most climate datasets and how to apply them, see the <a class="reference internal" href="../tech/conventions.html"><span class="doc std std-doc">conventions page in this book</span></a>. We recommend implementing these metadata fields into your post-processing workflow so that these are automatically applied by your data creation code/script.</p>
-<p>For a more technical description of the netCDF format and metadata, see <a class="reference external" href="https://acdguide.github.io/BigData/data/data-netcdf.html">https://acdguide.github.io/BigData/data/data-netcdf.html</a>.</p>
+<p>CF conventions cover both variable-level and global attributes, while the ACDD conventions are an extension covering mostly ‘human-readable’ information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We give a detailed overview of how to write CF compliant files in the <a class="reference internal" href="../tech/conventions.html"><span class="doc std std-doc">Technical tips</span></a> appendix. This includes known issues that can be caused by not following the standards, as CF conventions are used by developers of tools that access and analyse netCDF data to make assumptions on the data structure. We recommend implementing these metadata fields in the post-processing workflow so that these are automatically generated when possible. For a more technical description of the netCDF format and metadata, see the <a class="reference external" href="https://acdguide.github.io/BigData/data/data-netcdf.html">ACDG guidelines on BigData</a>.</p>
 </div>
-<div class="section" id="example-metadata-using-ncdump">
-<h3>Example metadata using ncdump<a class="headerlink" href="#example-metadata-using-ncdump" title="Permalink to this headline">¶</a></h3>
-<p>Ncdump from a simple-ish file. Not CMIP6, coz I want to save that for later; prefer something less complex.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Example of netCDF file which adheres to CF and ACDD conventions<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">netcdf heatflux {<br>
+    dimensions:<br>
+        lon = 1440 ;<br>
+        lat = 720 ;<br>
+        time = 12 ;<br>
+    variables:<br>
+        double lon(lon) ;<br>
+            lon:units = “degrees_east” ;<br>
+            lon:long_name = “longitude” ;<br>
+            lon:standard_name = “longitude” ;<br>
+        double lat(lat) ;<br>
+            lat:units = “degrees_north” ;<br>
+            lat:long_name = “latitude” ;<br>
+            lat:standard_name = “latitude” ;<br>
+        double time(time) ;<br>
+            time:units = “days since 1990-1-1 0:0:0” ;<br>
+            time:long_name = “time” ;<br>
+            time:calendar = “gregorian” ;<br>
+            time:standard_name = “time” ;<br>
+        float hfls(time, lat, lon) ;<br>
+            hfls:units = “W m-2” ;<br>
+            hfls:_FillValue = NaNf ;<br>
+            hfls:long_name = “latent heat flux” ;<br>
+            hfls:standard_name = “surface_upward_latent_heat_flux” ;<br>
+            hfls:ALMA_short_name = “Qle” ;<br>
+        float hfls_sd(time, lat, lon) ;<br>
+            hfls_sd:units = “W m-2” ;<br>
+            hfls_sd:_FillValue = NaNf ;<br>
+            hfls_sd:long_name = “error (standard deviation) of latent heat flux” ;<br>
+            hfls_sd:standard_name = “surface_upward_latent_heat_flux” ;<br>
+            hfls_sd:cell_methods = “area: standard_deviation” ;<br></p>
+<p class="card-text">// global attributes:<br>
+    :Conventions = “CF-1.7, ACDD-1.3” ;<br>
+    :title = “Global surface latent heat flux from reanalysis and observations” ;<br>
+    :product_version = “1.0” ;<br>
+    :summary = “Surface latent heatflux dataset with error estimates derived from reanalysis and observations” ;<br>
+    :source = “Reanalysis: …; Observations: …”;<br>
+    :creator_name = “author” ;<br>
+    :contact = “<a class="reference external" href="mailto:author&#37;&#52;&#48;uni&#46;edu">author<span>&#64;</span>uni<span>&#46;</span>edu</a>” ;<br>
+    :contributor_name = “data manager” ;<br>
+    :contributor_role = “curator” ;<br>
+    :contributor_email = “<a class="reference external" href="mailto:curator&#37;&#52;&#48;uni&#46;edu">curator<span>&#64;</span>uni<span>&#46;</span>edu</a>” ;<br>
+    :institution = “University of …” ;<br>
+    :organisation = “Centre for …” ;<br>
+    :id = “<a class="reference external" href="https://doi.org/10.12345/dfg56th7">https://doi.org/10.12345/dfg56th7</a>” ;<br>
+    :date_created = “2023-04-15” ;<br>
+    :license = “<a class="reference external" href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>” ;<br>
+    :keywords = “040105 Climatology (excl. Climate Change Processes) and 040608 Surfacewater Hydrology” ;<br>
+    :references = “Author, 2023. Global surface latent heat flux from reanalysis and observations v1.0. Publisher, (Dataset), doi:10.12345/dfg56th7” ;<br>
+    :time_coverage_start = “1990-01-01” ;<br>
+:time_coverage_end = “2022-12-31” ;<br>
+    :geospatial_lat_min = “-90” ;<br>
+    :geospatial_lat_max = “90” ;<br>
+    :geospatial_lon_min = “-180” ;<br>
+    :geospatial_lon_max = “180” ;<br>
+    :history = “nccat hfls*.nc <a class="reference external" href="http://heatflux.nc">heatflux.nc</a>” ;<br></p>
 </div>
+</details></div>
 </div>
 <div class="section" id="file-directory-organisation">
 <h2>File &amp; directory organisation<a class="headerlink" href="#file-directory-organisation" title="Permalink to this headline">¶</a></h2>
-<p>Climate datasets are complex and can be chopped up and stored in many different ways. For example, datasets can broken up into separate files that contain full timeseries of a single variable, or each file could contain one month of data for all relevant variables. Data files should be structured into a navigable directory structure that sorts the files into some high-level dimensions that make it easier to access and understand what different data the set contains, with a directory tree that is meaningful and interpretable, and keeps the number of individual files in a given directory to below ~1000. Depending on how many files are produced, implementing a directory structure early before the number of files become hard to track, is recommended. Some suggestions for directory tree components/dimensions are: variable, frequency, modelling realm, experiment name, or governing project.</p>
-<p>There is a type of complex directory structure known as a ‘<a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">Directory Reference Syntax</span></a>’ (DRS), which is typically standardised through intercomparison projects such as CMIP and CORDEX. The directory tree components are usually very broad and cover many contextual aspects, especially when multiple models or modelling institutions are using the same directory structure and controlled vocabulary.</p>
-<p>Filenaming is an important consideration here, as confusion can easily arise if you have not named your files with enough verbosity to disentangle similar, but critically different files. A common recommendation is to name the files in a similar way to the directory structure (e.g. if you have both monthly and daily data, put these into two separate sub-directories and include the frequency in the filenames). Other provenance details, such as experiment name and model, should be considered in the filename itself to reduce the risk of confusing different outputs. For example, a file called ‘ocean_2014.nc’ can be misunderstood very easily, but a file called ‘ACCESS-ESM_historical-pacemaker_ocean_monthly_2014.nc’ is much clearer and will reduce the risk of having to rerun models, or misplacing irreplaceable observational data.<br />
-See <a class="reference internal" href="../tech/filenames.html"><span class="doc std std-doc">this page</span></a> for some tips to creating a robust filenaming convention for your datasets.</p>
-</div>
-<div class="section" id="backups-archiving">
-<h2>Backups &amp; archiving<a class="headerlink" href="#backups-archiving" title="Permalink to this headline">¶</a></h2>
-<p>Climate data can often be difficult (or impossible) to regenerate, due to large compute costs and non-repeatable conditions. A good backup strategy is vital to ensuring that the risk of data loss is minimised, and storage/compute resources are used efficiently. It is also important to note that NCI’s <code class="docutils literal notranslate"><span class="pre">/g/data</span></code> storage system is NOT backed up.</p>
-<p>Our general recommendations are:</p>
-<ul class="simple">
-<li><p>keep only data intended for sharing in common areas.</p></li>
-<li><p>working data should be restricted to your personal space, or a defined collaborative working space.</p></li>
-<li><p>ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.</p></li>
-<li><p>raw data (e.g. unprocessed or semi-processed model output) should be backed up onto a tape system (e.g. NCI’s <a class="reference internal" href="../tech/massdata.html"><span class="doc std std-doc">MDSS</span></a>) to enable regeneration of processed datasets from the raw data, without having to rerun models.</p></li>
-<li><p>a backup strategy should be set-up and implented early (ideally as part of a data management plan; see next section).</p></li>
-</ul>
-<p>For more detailed guidance on backing up data, see our <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">guide to creating a backup strategy</span></a> and <a class="reference internal" href="../tech/backup-checklist.html"><span class="doc std std-doc">backup checklist</span></a>.</p>
-<p>Moving data between disks (e.g. from NCI’s <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> to <code class="docutils literal notranslate"><span class="pre">/g/data/</span></code>) and systems (e.g. from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using <a class="reference external" href="https://rsync.samba.org/">rsync</a> wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). For more guidance on moving large data, see the <a class="reference internal" href="../tech/moving-data.html"><span class="doc std std-doc">Moving Data page</span></a>.</p>
+<p>Climate datasets can be complex and often too big to be stored in a single file.
+Raw output refers to the files generated by a model, analysis workflow, or instrument. Raw output is optimised to the tool that produced it. For example, models often output all variables at a single timestep in one file. This is optimal for the model but not necessarily for analysis and long-term storage.
+Data files should be structured into a navigable directory structure that describes what different data the set contains. Ideally a directory tree should be meaningful and interpretable, with less than ~1000 individual files in each directory. Depending on how many files are produced, implementing a directory structure early before the number of files become hard to track, is recommended.
+Data Reference Syntax (DRS) is a naming system to be used within files, directories, and metadata to identify data sets. DRS were first established by intercomparison projects such as CMIP and CORDEX based on Controlled Vocabularies (CV). While aspects of these DRS don’t apply to smaller datasets, they offer a useful framework to organise climate data and choosing names that are meaningful and recognisable.</p>
+<p>File naming is also important, as confusion can easily arise if names are not sufficiently descriptive. A common recommendation is to name the files in a similar way to the directory structure. For example, if you have both monthly and daily data, put these into two separate sub-directories and include the frequency in the filenames. Other provenance details, such as experiment name and model, should be considered in the filename itself to reduce the risk of confusing different outputs. For example, a file called ‘ocean_2014.nc’ can be misunderstood very easily, but a file called ‘ACCESS-ESM_historical-pacemaker_ocean_monthly_2014.nc’ is much clearer and will reduce the risk of having to rerun models or misplacing irreplaceable observational data.<br />
+See <a class="reference internal" href="../tech/drs-names.html"><span class="doc std std-doc">this page</span></a> for some tips to creating a robust directory structure and filenaming convention for your datasets.</p>
 </div>
 <div class="section" id="data-management-plans-documentation">
 <h2>Data management plans &amp; documentation<a class="headerlink" href="#data-management-plans-documentation" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>Data Management Plan</strong> (DMP) is a general term for a document that describes the intended methods of the creation, storage, management and distribution of a given collection of data, and defines or cites the rules, policies or principles that govern the dataset. DMPs can vary greatly depending on context, the type of data, or intended audience. A DMP is also a living document, one that evolves through the various stages of the project in which the data is created.<br />
-Generally, however, a DMP should provide guidance to data managers, in order to help inform decision making. E.g., where should a new dataset be stored, who should have access to it, when should it be deleted. In the case where decisions are not clearly indicated from the DMP, it should indicate who is responsible for making the decision.<br />
-Ideally, a DMP is prepared as an integral part of project planning, with a data custodian also responsible for it’s continued development. An initial DMP can be as simple as notes in a text file, and include basic information such as backup locations, input files, tools used, and the intended use of the final dataset. Additionally, file metadata such as licences (see <a class="reference external" href="https://acdguide.github.io/Governance/concepts/license.html">https://acdguide.github.io/Governance/concepts/license.html</a>) and contact information are regularly included in DMPs.</p>
+Generally, however, a DMP should provide guidance to data managers to inform decision making. E.g., where should a new dataset be stored, who should have access to it, when should it be deleted. In the case where decisions are not clearly indicated from the DMP, it should indicate who is responsible for making the decision.<br />
+Ideally, a DMP is prepared as an integral part of project planning, with a data custodian also responsible for its continued development. An initial DMP can be as simple as notes in a text file, and include basic information such as backup locations, input files, tools used, and the intended use of the final dataset. Additionally, file metadata such as licences (see <a class="reference external" href="https://acdguide.github.io/Governance/concepts/license.html">https://acdguide.github.io/Governance/concepts/license.html</a>) and contact information are regularly included in DMPs.</p>
 <p>For more information on Data Management Plans, see <a class="reference external" href="https://acdguide.github.io/Governance/concepts/dmp.html">https://acdguide.github.io/Governance/concepts/dmp.html</a></p>
-<p>While similar to DMP in many ways, <strong>data documentation</strong> is a distinct purpose in that it provides guidance to users of the data (rather than managers of the data), including those who intend to reproduce it. Data documentation will include many of the same information as a DMP, such as the method of data generation (input files, software used), distribution details, and project context. Data documentation are typically kept alongside the dataset as in a README file at the top level directory, which provide high-level information about the dataset (e.g., when it was created, who to contact, and how to use it). However, data documentation is a general term for ‘user guidance of a dataset’, and can also be prepared in the form of journal articles that provide much more detail. In cases where the data itself is not self-describing (e.g. CSV files), data documentation will need to provide low-level metadata such as dimensions and units.</p>
+<p>While similar to a DMP in many ways, <strong>data documentation</strong> is a distinct purpose in that it provides guidance to users of the data (rather than managers of the data), including those who intend to reproduce it. Data documentation will include many of the same information as a DMP, such as the method of data generation (input files, software used), distribution details, and project context. Data documentation is typically kept alongside the dataset as in a README file at the top level directory, which provide high-level information about the dataset (e.g., when it was created, who to contact, and how to use it). However, data documentation is a general term for ‘user guidance of a dataset’ and can also be prepared in the form of journal articles that provide much more detail. In cases where the data itself is not self-describing (e.g., CSV files), data documentation will need to provide low-level metadata such as dimensions and units.</p>
 </div>
 <div class="section" id="code-management-version-control">
 <h2>Code management &amp; version control<a class="headerlink" href="#code-management-version-control" title="Permalink to this headline">¶</a></h2>
@@ -885,6 +910,20 @@ Releases (Git-based publications) of specific versions can be useful to compleme
 <p>Of course, code cannot exclusively exist in a repository. It is suggested (particularly if your data is an analysis product) to keep the code nearby the data (e.g. in the same parent directory) or document where it can be accessed in a readily available README file (also note the version of the code used to create the associated dataset!).</p>
 <p>Data should also be versioned, especially for more underpinning datasets such as model output &amp; data products, however best practice in this domain is still evolving. CMIP data includes versioning at the variable level that uses date of file creation, however this is just one method.</p>
 <p>For more information on versioning, see <a class="reference external" href="https://acdguide.github.io/Governance/tech/versioning.html">https://acdguide.github.io/Governance/tech/versioning.html</a></p>
+</div>
+<div class="section" id="backups-archiving">
+<h2>Backups &amp; archiving<a class="headerlink" href="#backups-archiving" title="Permalink to this headline">¶</a></h2>
+<p>Climate data can often be difficult (or impossible) to regenerate, due to large compute costs and non-repeatable conditions. A good backup strategy is vital to ensuring that the risk of data loss is minimised, and storage/compute resources are used efficiently. It is also important to note that NCI’s <code class="docutils literal notranslate"><span class="pre">/g/data</span></code> storage system is <strong>not</strong> backed up.</p>
+<p>Our general recommendations are:</p>
+<ul class="simple">
+<li><p>keep only data intended for sharing in common areas.</p></li>
+<li><p>working data should be restricted to your personal space, or a defined collaborative working space.</p></li>
+<li><p>ancillary data (model input/config files, and other data that is not being actively used) tarred and archived into longer-term storage.</p></li>
+<li><p>raw data (e.g., unprocessed or semi-processed model output) should be backed up onto a tape system (e.g., NCI’s <a class="reference internal" href="../tech/massdata.html"><span class="doc std std-doc">MDSS</span></a>) to enable regeneration of processed datasets from the raw data, without having to rerun models.</p></li>
+<li><p>a backup strategy should be set-up and implemented early (ideally as part of a data management plan; see next section).</p></li>
+</ul>
+<p>For more detailed guidance on backing up data, see our <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">guide to creating a backup strategy</span></a> and <a class="reference internal" href="../tech/backup-checklist.html"><span class="doc std std-doc">backup checklist</span></a>.</p>
+<p>Moving data between disks (e.g., from NCI’s <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> to <code class="docutils literal notranslate"><span class="pre">/g/data/</span></code>) and systems (e.g., from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using <a class="reference external" href="https://rsync.samba.org/">rsync</a> wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). For more guidance on moving large data, see the <a class="reference internal" href="../tech/moving-data.html"><span class="doc std std-doc">Moving Data page</span></a>.</p>
 </div>
 </div>
 

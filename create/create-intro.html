@@ -53,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dataset creation basics &amp; sharing recommendations" href="create-basics.html" />
+    <link rel="next" title="Dataset creation basics" href="create-basics.html" />
     <link rel="prev" title="Introduction" href="../introduction.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="create-basics.html">
-   Dataset creation basics &amp; sharing recommendations
+   Dataset creation basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -500,22 +500,10 @@
      Contributor roles
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../tech/drs.html">
-     Choosing a directory structure (DRS) and filenames
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/drs-names.html">
+     Choosing a directory structure and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tech/filenames.html">
-       Naming
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/keywords.html">
@@ -585,8 +573,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -698,16 +686,6 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#under-development">
-   UNDER DEVELOPMENT
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scope-of-the-guidelines">
-   Scope of the guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#index">
    Index
   </a>
@@ -733,16 +711,6 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#under-development">
-   UNDER DEVELOPMENT
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scope-of-the-guidelines">
-   Scope of the guidelines
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#index">
    Index
   </a>
@@ -758,27 +726,21 @@
                 
   <div class="section" id="guidelines-to-create-a-climate-dataset">
 <h1>Guidelines to create a climate dataset<a class="headerlink" href="#guidelines-to-create-a-climate-dataset" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="under-development">
-<h2>UNDER DEVELOPMENT<a class="headerlink" href="#under-development" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="scope-of-the-guidelines">
-<h2>Scope of the guidelines<a class="headerlink" href="#scope-of-the-guidelines" title="Permalink to this headline">¶</a></h2>
 <p>These guidelines cover the various aspects of creating robust and well-described climate data for reuse, analysis, sharing, and publication.</p>
-<p>We have identified five primary use cases that guide the recommendations and requirements you should follow when creating your climate datasets:</p>
+<p>We have identified five primary use cases that guide the recommendations and requirements to follow when creating climate datasets:</p>
 <ol class="simple">
-<li><p>for your own reuse and analysis (basic dataset needs)</p></li>
-<li><p>sharing with colleagues for collaboration (minimum sharing recommendations, no citation necessary)</p></li>
-<li><p>for publication alongside a research paper (journal requirements apply)</p></li>
-<li><p>for publication into a large multi-institutional intercomparison project like CMIP (strict standards apply)</p></li>
-<li><p>for productisation, including market-readiness and commercialisation (standards to be defined)</p></li>
+<li><p>Own reuse and analysis: basic dataset needs.</p></li>
+<li><p>Sharing with colleagues for collaboration: minimum sharing recommendations, no citation necessary.</p></li>
+<li><p>Publication alongside a research paper: journal requirements apply.</p></li>
+<li><p>Publication into a specific project: project standards apply.</p></li>
+<li><p>Productisation, including market-readiness and commercialisation: standards depend on audience and intended use.</p></li>
 </ol>
-<p>Additionally, we have identified two main situations you may find yourself in: i) preparing your datasets from scratch (i.e. you have ‘raw’ data that is currently undescribed, and in a format that is not analysis-ready); or ii) deriving metrics or indices from a reference dataset (e.g. performing an analysis on CMIP data for a research publication). We will mostly be discussing the first situation where you are creating climate data from scratch, with specific recommendatations for the second situation later in the section.</p>
-</div>
+<p>We will mostly be discussing starting datasets from scratch from ‘raw’ data that is currently undescribed, and in a format that is not analysis-ready. Datasets can also be derived from existing data, as result of analysis or deriving metrics and indices from a reference dataset. We provide specific recommendations for the second situation later in the section.</p>
 <div class="section" id="index">
 <h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="create-basics.html"><span class="doc std std-doc">Dataset creation basics &amp; sharing recommendations</span></a><br />
-This is an overview of the landscape of climate datasets, including the various components of netCDF files and their storage in POSIX systems, and some best practice recommendations for the back up of data and management of the creation process.</p>
+<li><p><a class="reference internal" href="create-basics.html"><span class="doc std std-doc">Dataset creation basics</span></a><br />
+An overview of the landscape of climate datasets, including the various components of netCDF files and their storage in POSIX systems, and best practice recommendations for the backup of data and management of the creation process.</p>
 <ul>
 <li><p>File formats, metadata &amp; coordinates</p></li>
 <li><p>File &amp; directory organisation</p></li>
@@ -802,7 +764,7 @@ This is the more practical description of how to create climate datasets (genera
 <p> </p>
 <ul class="simple">
 <li><p><a class="reference internal" href="create-publishing.html"><span class="doc std std-doc">Requirements for publication &amp; productisation</span></a><br />
-This chapter outlines the standards for publication data that either accompanies a journal article or is submitted to an intercomparison project (e.g. CMIP), and some recommendations for tools to aid this process.</p>
+This chapter outlines the standards for publication data that either accompanies a journal article or is submitted to an intercomparison project (e.g., CMIP), and some recommendations for tools to aid this process.</p>
 <ul>
 <li><p>Publishing in a journal</p></li>
 <li><p>Submitting to an intercomparison project</p></li>
@@ -853,7 +815,7 @@ This page contains a useful checklist to aid in data management planning; separa
     <a class='right-next' id="next-link" href="create-basics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Dataset creation basics &amp; sharing recommendations</p>
+        <p class="prev-next-title">Dataset creation basics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

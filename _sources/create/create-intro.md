@@ -1,24 +1,20 @@
 # Guidelines to create a climate dataset
 
-## UNDER DEVELOPMENT
-
-## Scope of the guidelines
-
 These guidelines cover the various aspects of creating robust and well-described climate data for reuse, analysis, sharing, and publication.
 
-We have identified five primary use cases that guide the recommendations and requirements you should follow when creating your climate datasets:  
-1. for your own reuse and analysis (basic dataset needs)  
-2. sharing with colleagues for collaboration (minimum sharing recommendations, no citation necessary)
-3. for publication alongside a research paper (journal requirements apply)
-4. for publication into a large multi-institutional intercomparison project like CMIP (strict standards apply)
-5. for productisation, including market-readiness and commercialisation (standards to be defined)
+We have identified five primary use cases that guide the recommendations and requirements to follow when creating climate datasets:  
+1. Own reuse and analysis: basic dataset needs.
+2. Sharing with colleagues for collaboration: minimum sharing recommendations, no citation necessary.
+3. Publication alongside a research paper: journal requirements apply.
+4. Publication into a specific project: project standards apply.
+5. Productisation, including market-readiness and commercialisation: standards depend on audience and intended use.
 
-Additionally, we have identified two main situations you may find yourself in: i) preparing your datasets from scratch (i.e. you have 'raw' data that is currently undescribed, and in a format that is not analysis-ready); or ii) deriving metrics or indices from a reference dataset (e.g. performing an analysis on CMIP data for a research publication). We will mostly be discussing the first situation where you are creating climate data from scratch, with specific recommendatations for the second situation later in the section.
+We will mostly be discussing starting datasets from scratch from 'raw' data that is currently undescribed, and in a format that is not analysis-ready. Datasets can also be derived from existing data, as result of analysis or deriving metrics and indices from a reference dataset. We provide specific recommendations for the second situation later in the section.
 
 
 ## Index
-* [Dataset creation basics & sharing recommendations](create-basics.md)  
-This is an overview of the landscape of climate datasets, including the various components of netCDF files and their storage in POSIX systems, and some best practice recommendations for the back up of data and management of the creation process.  
+* [Dataset creation basics](create-basics.md)  
+An overview of the landscape of climate datasets, including the various components of netCDF files and their storage in POSIX systems, and best practice recommendations for the backup of data and management of the creation process.  
 
     * File formats, metadata & coordinates
     * File & directory organisation
@@ -36,7 +32,7 @@ This is the more practical description of how to create climate datasets (genera
 
 &nbsp;
 * [Requirements for publication & productisation](create-publishing.md)  
-This chapter outlines the standards for publication data that either accompanies a journal article or is submitted to an intercomparison project (e.g. CMIP), and some recommendations for tools to aid this process.
+This chapter outlines the standards for publication data that either accompanies a journal article or is submitted to an intercomparison project (e.g., CMIP), and some recommendations for tools to aid this process.
     
     * Publishing in a journal
     * Submitting to an intercomparison project

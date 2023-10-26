@@ -111,7 +111,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics &amp; sharing recommendations
+   Dataset creation basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -500,22 +500,10 @@
      Contributor roles
     </a>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../tech/drs.html">
-     Choosing a directory structure (DRS) and filenames
+   <li class="toctree-l2">
+    <a class="reference internal" href="../tech/drs-names.html">
+     Choosing a directory structure and filenames
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../tech/filenames.html">
-       Naming
-      </a>
-     </li>
-    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../tech/keywords.html">
@@ -585,8 +573,8 @@
   <a class="reference internal" href="../appendix/appendix-intro.html">
    Supplemental material
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -804,7 +792,7 @@ Python is a good choice for a scripting language as it has lots of modules that 
 </div>
 <div class="section" id="file-and-directory-organisation">
 <h2>File and directory organisation<a class="headerlink" href="#file-and-directory-organisation" title="Permalink to this headline">¶</a></h2>
-<p>While all the generic advice on <a class="reference internal" href="../tech/drs.html"><span class="doc std std-doc">how to organise and name files</span></a> is still applicable, when replicating a dataset it is important to also consider the original data organisation.</p>
+<p>While all the generic advice on <span class="xref myst">how to organise and name files</span> is still applicable, when replicating a dataset it is important to also consider the original data organisation.</p>
 <div class="section" id="naming-files">
 <h3>Naming files<a class="headerlink" href="#naming-files" title="Permalink to this headline">¶</a></h3>
 <p>In most cases there is no need, and in fact it is not a good idea, to rename the files. The only exception is for datasets that are downloaded “by request”. An example of these is the ERA5 reanalysis distributed by the Copernicus Climate Data Store. This data exists on the remote server as a <code class="docutils literal notranslate"><span class="pre">cube</span></code> that can be sliced by submitting a request via their API. The resulting file will have a randomly generated name, or a name specified by the user in the request.
