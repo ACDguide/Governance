@@ -14,6 +14,7 @@ parts:
   - caption: Publishing climate data
     chapters:
     - file: publish/publish-intro
+    - file: publish/publish-procedure
     - file: publish/publish-options
       sections:
       - file: publish/publish-nci-geonetwork

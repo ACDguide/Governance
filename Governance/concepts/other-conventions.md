@@ -29,3 +29,7 @@ IMOS] has very specific extensions of the CF conventions for different kind of o
 * [AMBER Trajectory Conventions](http://ambermd.org/netcdf/nctraj.xhtml) for molecular dynamics simulations.
 * [CF Discrete Sampling Geometries Conventions](http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html\#discrete-sampling-geometries) - CF for observational and point data 
 * [COMODO](https://web.archive.org/web/20160417032300/http://pycomodo.forge.imag.fr/norm.html) ??? still used?
+
+```{note} Potential clashes
+Some of these conventions are a spinoff of the CF Conventions and so there's an expectation when applied that the files will also be CF compliant. However, as conventions are ever-evolving documents and the groups working on specific conventions are different, it is possible for them to introduce requirements that clash with the CF conventions. An example of this is the different uses for cf_role in UGRID and CF, UGRID requires values for this attributes which are not included in the values allowed by CF. As CF evolves it's possible that some of these alternatives will become just a use case of CF. In the mentioned example the clash should be resolved with CF V11 which should include an integration of UGRID into CF, see the relevant [CF github issue](https://github.com/cf-convention/cf-conventions/issues/501).
+```
