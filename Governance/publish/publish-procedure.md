@@ -44,7 +44,7 @@ It's not usual or a good thing to publish all the data produced in a research pr
  
 3. It's essential to consider an end user point of view. What would a user look for when considering using a dataset? What kind of information is essential for the data to be usable? Which additional information would make its use easier?
 
-4. The data required for publication might be a small part of the overall output. It often happens with model output that a researcher only uses a small subset of variables, but others could be useful to other projects. If it's possible these can be added to the publication and when time or resources to publish are scarce, providing information on their existence and on how to access them, it's often enough. This should include details on license, possible use restrictions and details on how to create accounts with other institutions if necessary.
+4. The data required for publication might be a small part of the overall output. It often happens with model output that a researcher only uses a small subset of variables, but others could be useful to other projects. If it is viable these can be added to the publication, but when resources to publish are scarce, providing information on their existence and on how to access them, may be enough. This should include details on license, possible use restrictions and details on how to create accounts with other institutions if necessary.
 
 **Where**
 
