@@ -40,7 +40,7 @@ Files should be well formatted to enhance their accessibility and usability.
 It's not usual or a good thing to publish all the data produced in a research project. It's important to identify what data is useful or required, considered other limitations like storage availability. Here are some considerations that can help with the choice.
 1. Provide the information needed to interpret, reuse and reproduce the results. This is what journal publishers usually require, most of them provides [guidelines and examples](journals) of which data should be shared.
  
-2. If the output is big publish only a subset. If methods are well described, the software used is easily available, then publishing only the subset of data that underlines a publication is sufficient. For example, the post-processed output is sufficient for a model simulation. However, the model version and configuration used, the input data and model source code should be documented.
+2. If the output is big publish only a subset. If methods are well described, the software used is easily available, then publishing only the subset of data that underlines a publication is sufficient. For example, the post-processed output is sufficient for a model simulation. However, the model version and configuration used, the input data and model source code should be clearly documented.
  
 3. It's essential to consider an end user point of view. What would a user look for when considering using a dataset? What kind of information is essential for the data to be usable? Which additional information would make its use easier?
 
