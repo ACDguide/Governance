@@ -31,7 +31,7 @@ Always have the code under version control!
 
 ## File and directory organisation
 
-While all the generic advice on [how to organise and name files](../tech/drs.md) is still applicable, when replicating a dataset it is important to also consider the original data organisation. 
+While all the generic advice on [how to organise and name files](../tech/drs-names.md) is still applicable, when replicating a dataset it is important to also consider the original data organisation. 
 
 ### Naming files
 
