@@ -62,7 +62,7 @@ Often researchers think they don't need a version for a dataset as they are not 
 
 **Authors and collaborators**
 
-Another important choice is the authors and collaborators. As for a paper only people who contributed to the data (the data not the research project itself) should be listed as authors and where appropriate people who helped for example with the publishing process itself, formatting the data etc as collaborators. See the [authorship page](../concepts/authorship) in concepts.
+Like journal manuscripts, datasets (and software) have an authorship list and collaborators. As for a paper, only people who contributed to the dataset (the data not the research project itself) should be listed as authors and where appropriate people who helped for example with the publishing process itself, formatting the data etc as collaborators. See the [authorship page](../concepts/authorship) in concepts.
 ````
 
 ````{tab-item} Metadata
