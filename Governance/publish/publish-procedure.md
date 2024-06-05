@@ -19,7 +19,7 @@ The first step is to make some important choices, which will depend on the chara
 
 Step 2: Metadata
 ^^^
-Metadata includes any information on the data itself. In a published record the metadata is usually available as a record abstract and inside the files (if using a self-describing format as netCDF) or by auxiliary metadata files.
+Metadata includes any information on the data itself. In a published record the metadata is usually available as a record abstract and inside the files (if using a self-describing format such as netCDF) or by auxiliary metadata files.
 Ideally all this combined information should allow someone to reproduce the data from scratch (see [Provenance](../concepts/provenance)).
 ```
 
@@ -48,11 +48,11 @@ It's not usual or a good thing to publish all the data produced in a research pr
 
 **Where**
 
-There are different options to publish climate data, the most suitable for a research project will depend largely on the institution the researcher works for. This is explained in depth in the [next page](publish-options). It is worth to remember that while there should always be **only one DOI** per dataset, it is possible to create a metadata-only record pointing to the official DOI in other data portals to give more visibility to the data.
+There are different options to publish climate data, the most suitable for a research project will depend largely on the institution the researcher works for. This is explained in depth in the [next page](publish-options). It is worth remembering that while there should always be **only one DOI** per dataset, it is possible to create a metadata-only record pointing to the official DOI in other data portals to give more visibility to the data.
  
 **Licence**
 
-This is often left last and in most cases this is not an issue, however, it is important to know from the start of the research what are the licensing terms of the data used as input and, if the rules around licensing potentially imposed by the employer, the project itself and funding bodies. Big collaborative projects, like CMIP6, usually have their set of rules around licensing.
+This is often left last and in most cases this is not an issue, however, it is important to know **from the start** of the research what are the *licensing terms of the data used as input* and, if the rules around licensing potentially imposed by the employer, the project itself and funding bodies. Big collaborative projects, like CMIP6, usually have their set of rules around licensing.
 [Licenses](../concepts/license) are covered extensively in the concepts part of this book.
 It is also worth to consider adding **term of use** and a **disclaimer** to avoid the data being misused accidentally.
 
@@ -74,7 +74,7 @@ This ...
 
 **Self-describing files**
 Most of the file formats commonly used in climate are self-describing. An example are the attributes in a netCDF file. It is important to use these as much as possible to give a precise and correct definition of the data itself following available conventions. Using the self-describing properties of a file has two important advantages: it keeps important information with the data itself, and these files attributes are used by discipline software to simplify data analysis.
-Publishers that deal regularly with climate data usually require at least for the [CF](../concepts/cf-conventions) and/or [ACDD](../concepts/acdd-conventions) conventions to be followed, however it is always worth to apply them when possible even if they are not required for publication.
+Publishers that deal regularly with climate data usually require at least for the [CF](../concepts/cf-conventions) and/or [ACDD](../concepts/acdd-conventions) conventions to be followed, however it is always worth applying them when possible even if they are not required for publication.
 
 ```{note}
 Please note we cover CF conventions application and potential issues when they are used incorrectly in the [technical pages](../tech/conventions).
@@ -82,7 +82,7 @@ Please note we cover CF conventions application and potential issues when they a
 
 **Auxiliary files**
 
-These could be any kind of text, tabular files or other formats like markup (xml, html, json etc.) that add information on the data. These could also be actual data files, for example the ancillary files used to run a model simulation. 
+These could be any kind of text, tabular files or other formats like markup (xml, html, json, md etc.) that add information on the data. These could also be actual data files, for example the ancillary files used to run a model simulation. 
 ````
 
 ````{tab-item} Formatting files
