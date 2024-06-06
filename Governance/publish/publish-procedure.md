@@ -42,7 +42,7 @@ It's not usual or a good thing to publish all the data produced in a research pr
  
 2. If the output is big publish only a subset. If methods are well described, the software used is easily available, then publishing only the subset of data that underlines a publication is sufficient. For example, the post-processed output is sufficient for a model simulation. However, the model version and configuration used, the input data and model source code should be documented.
  
-3. It's essential to consider an end user point of view. What would a user look for when considering using a dataset? What kind of information is essential for the data to be usable? Which additional information would make its use easier?
+3. Consider the strengths and limitations of the data, the way it was produced can limit what it should be used for. Model output is a good example of this, the way physical processes are parametrised, the resolution, the input data and other model components determine what the output data should or shouldn't be used for.
 
 4. The data required for publication might be a small part of the overall output. It often happens with model output that a researcher only uses a small subset of variables, but others could be useful to other projects. If it's possible these can be added to the publication and when time or resources to publish are scarce, providing information on their existence and on how to access them, it's often enough. This should include details on license, possible use restrictions and details on how to create accounts with other institutions if necessary.
 
@@ -62,15 +62,18 @@ Often researchers think they don't need a version for a dataset as they are not 
 
 **Authors and collaborators**
 
-Another important choice is the authors and collaborators. As for a paper only people who contributed to the data (the data not the research project itself) should be listed as authors and where appropriate people who helped for example with the publishing process itself, formatting the data etc as collaborators. See the [authorship page](../concepts/authorship) in concepts.
+Another important choice is the authors and collaborators. As for a paper only people who contributed to the data (the data not the research project itself) should be listed as authors and, where appropriate, people who helped with the publishing process itself, for example formatting the data, as [collaborators](../tech/contributors). See also the [authorship page](../concepts/authorship) in concepts.
 ````
 
 ````{tab-item} Metadata
 
-**Abstract**
+**Dataset webpage**
 
-This ...
+The dataset page on the data portal provides the first data information for a prospective user. While there are differences among how this information is displayed, most of the elements are common to all portals.
 
+A page will show a **title** and an **abstract**, it is important for both to be written considering an end user point of view. What would a user look for when considering using a dataset? What kind of information is essential for the data to be usable? Which additional information would make its use easier?
+It's important to consider how the search engine of the portal works and how it displays results. Choosing relevant [keywords](../tech/keywords) and using terms from [controlled vocabularies](../concepts/controlled-vocab) helps. Words in the title are also prioritised by search engines and shown as part of the results list, so the [title should be as descriptive](../tech/title) as possible.
+The abstract should use plain language and not assumed expertise of the field on a user side. For the same reason it is important to give the context in which the data was produced and highlight its appropriate uses. If there is a high risk for the data to be misused, then a disclaimer explaining the data limitations should be added too. While it’s important to share technical details to use the data correctly, it's worth considering adding this information in a separate file if it is extensive. We provide an [annoted example of a readme file](../tech/tech-readme) which show what kind of information should be considered. Data portals often have options to add related links, this is an easy way to provide as much relevant information as possible.
 
 **Self-describing files**
 Most of the file formats commonly used in climate are self-describing. An example are the attributes in a netCDF file. It is important to use these as much as possible to give a precise and correct definition of the data itself following available conventions. Using the self-describing properties of a file has two important advantages: it keeps important information with the data itself, and these files attributes are used by discipline software to simplify data analysis.
@@ -80,6 +83,7 @@ Publishers that deal regularly with climate data usually require at least for th
 Please note we cover CF conventions application and potential issues when they are used incorrectly in the [technical pages](../tech/conventions).
 ```
 
+
 **Auxiliary files**
 
 These could be any kind of text, tabular files or other formats like markup (xml, html, json etc.) that add information on the data. These could also be actual data files, for example the ancillary files used to run a model simulation. 
@@ -88,9 +92,11 @@ These could be any kind of text, tabular files or other formats like markup (xml
 ````{tab-item} Formatting files
 
 **Files organisation**
+
 The way files are organised in folders, their names and sizes should consider both how the files will be distributed and how they will be used. For example, the protocol used to download the files might have a maximum size allowed, likewise having to list a lot of small files it's inefficient when loading an html page. Names also should be descriptive enough that a file can be recognised easily after has been downloaded as being part of a specific dataset. We covered [files organisation and naming](../tech/drs-names) in the technical pages of this book, however, it is important to check the publisher instructions in this regard, or, if none are available online, contacting them about it as early as possible in the publishing process.  
 
 **Conventions**
+
 It is important to use [conventions](../concepts/conventions) and [controlled vocabularies](../concepts/controlled-vocab) whenever possible, both official ones, like CF conventions for file attributes, and others which are not a requirement but have become common practice in the climate community (e.g. CMIP variable names). As some of these conventions also apply to folder and file names, it is important to be consistent and use the same terms in the files, names and descriptions. 
 
 ````
