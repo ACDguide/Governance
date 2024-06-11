@@ -1,5 +1,5 @@
 # Publishing options
-Once the data is created and ready for publication, **where** can it be published? 
+Before starting preparing the data files for publication, it is important to individuate **where** it can be published.
 
 One of the main factors is what services are available, which is largely determined by the researcher's institution and/or organisation.
 Another important consideration is the kind of data, depending on format, size etc. 
@@ -7,21 +7,21 @@ In some cases, depending on the dataset, using a public repository is suitable a
 On the other end of the scale, some data could be produced on purpose or simply be suitable to contribute to a large-scale project that has its own publishing procedure established.
 The most common use cases for our community are covered here.
 
-::::{tab-set}
-:::{tab-item} BoM 
+````{tab-set}
+```{tab-item} BoM 
 Insert here pathways for BoM researchers...
 
 
 
-:::
+```
 
-:::{tab-item} CSIRO 
-Data, software and links to external data holdings (such as NCI) can be added to the [CSIRO Data Access Portal](https://data.csiro.au/) (DAP) by **CSIRO staff** only. More information on creating metadata records and uploading files to the CSIRO DAP can be found on the [DAP Help Guide](https://confluence.csiro.au/display/dap/Deposit+and+Manage+Data) (staff only access).
+```{tab-item} CSIRO 
+Data, software and links to external data holdings (such as NCI) can be added to the [CSIRO Data Access Portal](https://research.csiro.au/dap/) (DAP) by **CSIRO staff** only. More information on creating metadata records and uploading files to the CSIRO DAP can be found on the [DAP Help Guide](https://confluence.csiro.au/display/dap/Publish%2C+Archive%2C+and+Manage+Research+Data+and+Software) (staff only access).
 
  CSIRO-affiliated data can be published in the DAP and the lead creator does not have to be CSIRO staff member.
-:::
+```
 
-:::{tab-item} CLEX
+```{tab-item} CLEX
 We are looking here at CLEX as an example but as basically CLEX is only a collaboration project among universities, a lot of what applies here it is also usually applicable for anyone who works/studies in another university. Researchers working for a university have potentially more freedom in terms of where they can publish data. Unless they are working for a project which is covered by a data agreement and has specific licensing and/or data distribution requirements, the approach is to follow the FAIR principle and they are usually expected to share data openly.
 Part of making data FAIR is to make it discoverable, so sharing data in a discipline specific collection is to be preferred when possible. This could be a collection of climate data, or of a related discipline, i.e., paleoclimate data, oceanographic data, etc. 
   
@@ -37,9 +37,9 @@ An institutional repository might not be able to publish big datasets effectivel
 **CLEX Data Collection on Zenodo**
 For CLEX researchers, students and associates, the CMS team offers advice and can review a record, as well as add it to the [CLEX Data Collection community](https://zenodo.org/communities/arc-coe-clex-data/?page=1&size=20) to improve discoverability.
 For more information on Zenodo see the generic options tab.
-:::
+```
 
-:::{tab-item} Generalist repositories
+```{tab-item} Generalist repositories
 
 Repositories like [Zenodo](https://zenodo.org), [Figshare](https://www.google.com/search?client=safari&rls=en&q=figshare&ie=UTF-8&oe=UTF-8), [Mendeley](https://www.data.mendeley.com) are public, generic data repositories. It is usually easy to create an account, add a data record and mint a DOI for it. These repositories also publish different kind of materials. This can be useful if publishing code together with data, for example code and data to produce a specific figure required to publish a paper. 
 Another advantage is that these services are widely used and so you are more likely to reach an international audience.
@@ -48,9 +48,9 @@ However, as they are generalist repositories, there are no standards required or
 
 Finally, as for institutional repositories, the data size is limited to 50-100 GB and files can only be downloaded. 
 We are covering [Zenodo](publish-zenodo.md) more in detail as it is available to anyone and the most used in our community. Figshare is not free but it might be available via an institutional account. Mendeley is free but lees used for climate data.
-:::
+```
 
-:::{tab-item} Discipline repositories
+```{tab-item} Discipline repositories
 
 In some cases, the data might be fit to be published to a specific data portal or as part of a larger initiative.
 Of these we are covering only the ESGF case more closely, as it provides an example of a comprehensive publishing process. For the others refer to their websites for more information or there might be some relevant examples at the end of this guidelines.
@@ -70,6 +70,6 @@ Keep in mind that some of these options can be an extra distribution option for 
  - [Copernicus Climate Data Store - CDS](https://cds.climate.copernicus.eu)
  - [Copernicus Climate Change Services - C3S](https://www.copernicus.eu/en/copernicus-services/climate-change)
 <br>Both Copernicus services work with a tender system, so they do not accept requests to publish datasets unless they fit into products they have an open tender for.
-:::
+```
 
-::::
+````

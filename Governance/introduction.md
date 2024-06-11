@@ -20,3 +20,7 @@ As with all scientific outputs, errors and inconsistencies can be found in clima
 
 ### **[Retiring climate data](retire/retire-intro.md)**
 Data doesn't last forever, usually becoming outdated or obsolete within 5-10 years; this of course is simply the nature of scientific research. In this section, recommendations are presented on how to go about retiring a dataset, both published and replicated, without breaking citations, removing identifiers, or causing disruption to users, while retaining the value of your research data. 
+
+### **[Creating climate data products](products/products-intro.md)**
+Climate data is often used in other research fields, government initiatives and by private stakeholders for a variety of applications.
+The process of adapting and packaging climate data so that it will be of use to a wider audience, with different backgrounds and/or for different purposes is more complex than simply sharing data with other climate researchers. At the moment we provide only an overview of what this section aims to cover. We welcome input and collaboration from people who have relevant experience or would like to propose use cases to cover. 

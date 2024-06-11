@@ -14,7 +14,7 @@ Publishing a dataset is easy and quick as long as the data is reasonably organis
 * A dataset can have several authors, they all should agree to the dataset publication and to list the record on Zenodo. All authors should have made a significant contribution to the data.
 * Make sure the files:
     * are following any relevant standards, if they are netcdf files they should follow both [CF](../concepts/cf-conventions) and [ACDD](../concepts/acdd-conventions.md) conventions.
-    * have [descriptive names](../tech/filenames.md) and are organised in [directories](../tech/drs.md) in a way that facilitate their access and use;
+    * have [descriptive names and are organised in directories](../tech/drs-names.md) in a way that facilitate their access and use;
     * have a [version](versioning-data) and a [license](../concepts/license-data.md) assigned.
 * Use [keywords and controlled vocabularies](../concepts/controlled-vocab.md) in the metadata to increase discoverability.
 * If the data has already been published elsewhere, a record on Zenodo can still be added to improve visibility. In such cases, use the existing DOI, **do not create a new DOI for the same data**. Instead of uploading the actual data files, a Readme file can be uploaded and links to the original records added for data download.

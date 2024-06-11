@@ -22,7 +22,7 @@ These pages are only visible to interested parties, therefore we provide an [exa
 Once the DMP is ready NCI will use the content to create a geonetwork record and mint a DOI for the new dataset. The GeoNetwork record will provide the landing page for the DOI and will be visible only once the files are available on THREDDS.
 
 ### Preparing the files
-The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme file (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the [DRS page](../tech/drs.md) for examples.
+The actual files have to be organised in a <dataset-folder>, this will contain the license and a readme file (usually pointing to the geonetwork record) and a sub-folder for each version containing the data files. How the data is organised will depend on the actual dataset, see the [DRS page](../tech/drs-names.md) for examples.
 The files should follow both [CF](../concepts/cf-conventions.md) and [ACDD](../concepts/acdd-conventions.md) conventions. Once the files are ready, NCI will run a QC check, CF/ACDD compliance check, and that the files are accessible by widely used software like ncview, nco etc.
 If the files passed the tests, then they will add the dataset to THREDDS and activate the DOI. If not, they will send a detailed report of the QC results so the files can be fixed where possible.
 

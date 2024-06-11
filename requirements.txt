@@ -1,4 +1,4 @@
-jupyter-book == 0.11.*
+jupyter-book
 matplotlib
 numpy
 ghp-import
