@@ -1,775 +1,527 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Writing valid and compliant netCDF files &#8212; Climate Data Guidelines</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tech/conventions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Supplemental material" href="../appendix/appendix-intro.html" />
     <link rel="prev" title="Versioning" href="versioning.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data
- </span>
-</p>
+    
+    
+    <img src="../_static/ACDG-logo_v2.png" class="logo__image only-light" alt="Climate Data Guidelines - Home"/>
+    <script>document.write(`<img src="../_static/ACDG-logo_v2.png" class="logo__image only-dark" alt="Climate Data Guidelines - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-intro.html">
-   Guidelines to create a climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-new-derived.html">
-   New, modified, and derived datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-publishing.html">
-   Preparing files for publication
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-checklists.html">
-   Checklists for data management in the project lifecycle
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-intro.html">Guidelines to create a climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-basics.html">Dataset creation basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-new-derived.html">New, modified, and derived datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-publishing.html">Preparing files for publication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-checklists.html">Checklists for data management in the project lifecycle</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Publishing climate data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publish climate data
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options.html">
-   Publishing options
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
-     Publishing climate data with NCI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-esgf.html">
-     ESGF publishing procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-csiro-dap.html">
-     CSIRO Data Access Portal (DAP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-zenodo.html">
-     Publishing with Zenodo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/journals.html">
-   Journal publishers data policies
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-intro.html">Guidelines to publish climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-procedure.html">Publishing procedure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publish/publish-options.html">Publishing options</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-nci-geonetwork.html">Publishing climate data with NCI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-esgf.html">ESGF publishing procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-csiro-dap.html">CSIRO Data Access Portal (DAP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-zenodo.html">Publishing with Zenodo</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Managing datasets
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-examples.html">Best Practice Published Data Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/journals.html">Journal publishers data policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Managing datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-intro.html">
-   Guidelines to manage climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-project.html">
-   Project management
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../manage/manage-file.html">
-   File handling
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-rep.html">
-     Updates to replicated data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-pub.html">
-     Updates to published data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-docs.html">
-   Documentation and provenance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-ausref.html">
-   Australian Community Reference Climate Data Collection @ NCI
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-intro.html">Guidelines to manage climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-project.html">Project management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../manage/manage-file.html">File handling</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-rep.html">Updates to replicated data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-pub.html">Updates to published data</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Retiring datasets
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-docs.html">Documentation and provenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-ausref.html">Australian Community Reference Climate Data Collection @ NCI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Retiring datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-intro.html">
-   Guidelines to manage the retirement of a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-principles.html">
-   General principles of data retirement
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-published.html">
-   Use case: published data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-replica.html">
-   Use case: replicated data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-unpublished.html">
-   Use case: unpublished data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-references.html">
-   Further information
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-intro.html">Guidelines to manage the retirement of a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-principles.html">General principles of data retirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-published.html">Use case: published data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-replica.html">Use case: replicated data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-unpublished.html">Use case: unpublished data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-references.html">Further information</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data products
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data products</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../products/products-intro.html">
-   Guidelines to create a climate data product
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../products/products-intro.html">Guidelines to create a climate data product</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  About us
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About us</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/working-group-governance.html">
-   Working group governance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/goals.html">
-   Working group goals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/how-to-contribute.html">
-   Guidelines for contributors
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/working-group-governance.html">Working group governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/goals.html">Working group goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/how-to-contribute.html">Guidelines for contributors</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Concepts
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../concepts/concept-intro.html">
-   Key concepts in data management
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/authorship.html">
-     Authorship
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/backup.html">
-     Backup strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/controlled-vocab.html">
-     Controlled vocabularies
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/conventions.html">
-     Conventions and standards
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/cf-conventions.html">
-       CF Conventions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/acdd-conventions.html">
-       Attribute Convention for Data Discovery
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/other-conventions.html">
-       Other conventions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/availability-statement.html">
-     Data availability statement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/collaboration-agreement.html">
-     Data collaboration agreement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/dmp.html">
-     Data Management Plan
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/policies.html">
-     Data policies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-conduct.html">
-       Responsible Conduct of Research
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-arc.html">
-       Australian Research Council data policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-bom.html">
-       Bureau of Meteorology Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-clex.html">
-       CLEX Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-csiro.html">
-       CSIRO Data Policy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/fairer-principles.html">
-     FAIR(ER) Principles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/journal.html">
-     Journal requirements
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/license.html">
-     Open Access License
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-data.html">
-       Dataset license
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-code.html">
-       Software licenses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-qa.html">
-       Q&amp;A
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/pids.html">
-     Persistent identifiers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/provenance.html">
-     Provenance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/version-control.html">
-     Version Control
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../concepts/concept-intro.html">Key concepts in data management</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/authorship.html">Authorship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/backup.html">Backup strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/controlled-vocab.html">Controlled vocabularies</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/conventions.html">Conventions and standards</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/cf-conventions.html">CF Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/acdd-conventions.html">Attribute Convention for Data Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/other-conventions.html">Other conventions</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Technical guide
- </span>
-</p>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/availability-statement.html">Data availability statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/collaboration-agreement.html">Data collaboration agreement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/dmp.html">Data Management Plan</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/policies.html">Data policies</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-conduct.html">Responsible Conduct of Research</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-arc.html">Australian Research Council data policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-bom.html">Bureau of Meteorology Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-clex.html">CLEX Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-csiro.html">CSIRO Data Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/fairer-principles.html">FAIR(ER) Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/journal.html">Journal requirements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/license.html">Open Access License</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-data.html">Dataset license</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-code.html">Software licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-qa.html">Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/pids.html">Persistent identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/provenance.html">Provenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/version-control.html">Version Control</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical guide</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="tech-intro.html">
-   Technical tips
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="backup-checklist.html">
-     Backup checklist
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cf-checker.html">
-     CF compliance checkers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="contributors.html">
-     Contributor roles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="drs-names.html">
-     Choosing a directory structure and filenames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="keywords.html">
-     Choosing keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="coding.html">
-     Coding best practices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="data_formats.html">
-     Data formats
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="tech-readme.html">
-     Dataset readme file template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="title.html">
-     Descriptive title
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="permissions.html">
-     File permissions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="massdata.html">
-     Mass Data Storage System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="moving-data.html">
-     Moving data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="compression.html">
-     NetCDF compression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="versioning.html">
-     Versioning
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Writing valid and compliant netCDF files
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tech-intro.html">Technical tips</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="backup-checklist.html">Backup checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf-checker.html">CF compliance checkers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributors.html">Contributor roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drs-names.html">Choosing a directory structure and filenames</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="keywords.html">Choosing keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coding.html">Coding best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tech-readme.html">Annotated README example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="title.html">Descriptive title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">File permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="massdata.html">Mass Data Storage System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moving-data.html">Moving data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">NetCDF compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Writing valid and compliant netCDF files</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/appendix-intro.html">
-   Supplemental material
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/glossary.html">
-     Glossary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/forcodes.html">
-     ANZSRC Field of Research (FoR) codes 2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/zenodo.html">
-     Step by step Zenodo guide
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix-intro.html">Supplemental material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/forcodes.html">ANZSRC Field of Research (FoR) codes 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/zenodo.html">Step by step Zenodo guide</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tech/conventions.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Source interaction buttons -->
+<div class="article-header-buttons">
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/conventions.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/conventions.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-conventions">
-   Naming conventions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coordinate-system">
-   Coordinate system
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-coordinate">
-     Time coordinate
-    </a>
-   </li>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/conventions.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/conventions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-attributes">
-   Variable attributes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#global-attributes">
-   Global attributes
-  </a>
- </li>
-</ul>
+</div>
 
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tech/conventions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Writing valid and compliant netCDF files</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-system">Coordinate system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-coordinate">Time coordinate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-attributes">Variable attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-attributes">Global attributes</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Writing valid and compliant netCDF files</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#naming-conventions">
-   Naming conventions
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#coordinate-system">
-   Coordinate system
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-coordinate">
-     Time coordinate
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variable-attributes">
-   Variable attributes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#global-attributes">
-   Global attributes
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="writing-valid-and-compliant-netcdf-files">
-<h1>Writing valid and compliant netCDF files<a class="headerlink" href="#writing-valid-and-compliant-netcdf-files" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="writing-valid-and-compliant-netcdf-files">
+<h1>Writing valid and compliant netCDF files<a class="headerlink" href="#writing-valid-and-compliant-netcdf-files" title="Permalink to this heading">#</a></h1>
 <p>This page covers the basic netCDF structure and the application of the CF and ACDD conventions to netCDF files. Not all the rules are listed here, this is just a summary of the most common ones. For a complete overview of both conventions refer to their official documentation (see references).
 This summary is meant to help setting variables and attributes correctly at file creation, for existing files a CF checker tool can be used. We cover some available tools in the <a class="reference internal" href="cf-checker.html"><span class="doc std std-doc">next page</span></a>.</p>
 <div class="admonition warning">
@@ -780,8 +532,8 @@ This summary is meant to help setting variables and attributes correctly at file
 <li><p>A file might satisfy all the rules but have incorrect information, i.e., all variables have units defined, but some of them are incorrect</p></li>
 </ul>
 </div>
-<div class="section" id="naming-conventions">
-<h2>Naming conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<section id="naming-conventions">
+<h2>Naming conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this heading">#</a></h2>
 <p>There are no recognised vocabularies for files and variable names, however the ESGF created their own <a class="reference external" href="https://github.com/PCMDI/cmip6-cmor-tables/tree/master/Tables">variable definition tables</a> for the CMIP output and this is often used by other projects.
 The CF conventions only have some basic requirements and recommendations on how to form the names.</p>
 <p><strong>Requirements</strong></p>
@@ -799,37 +551,37 @@ The CF conventions only have some basic requirements and recommendations on how 
 <p class="admonition-title">Warning</p>
 <p>Attribute names commencing with underscore (‘_’) are reserved for use by the netCDF library.</p>
 </div>
-</div>
-<div class="section" id="coordinate-system">
-<h2>Coordinate system<a class="headerlink" href="#coordinate-system" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="coordinate-system">
+<h2>Coordinate system<a class="headerlink" href="#coordinate-system" title="Permalink to this heading">#</a></h2>
 <p>A coordinate system is described in netCDF files through the combinations of its dimensions, coordinates and projections.
 A <code class="docutils literal notranslate"><span class="pre">coordinate</span> <span class="pre">variable</span></code> is a one-dimensional variable representing a dimension and sharing its name. An <code class="docutils literal notranslate"><span class="pre">auxiliary</span> <span class="pre">coordinate</span> <span class="pre">variable</span></code> is an additional or alternative coordinate for an axis. Finally a <code class="docutils literal notranslate"><span class="pre">scalar</span> <span class="pre">coordinate</span> <span class="pre">variable</span></code> is a coordinate with no dimension (i.e., of size one).</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>dimension</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">A dimension has both a name and a length, which is an arbitrary positive integer. The special value of <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> indicates an unlimited record dimension. A variable with an unlimited dimension can grow to any length along that dimension.<br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>dimension</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A dimension has both a name and a length, which is an arbitrary positive integer. The special value of <code class="docutils literal notranslate"><span class="pre">UNLIMITED</span></code> indicates an unlimited record dimension. A variable with an unlimited dimension can grow to any length along that dimension.<br>
 A netCDF classic dataset can have at most one unlimited dimension, if present this must be the most significant (slowest changing) one and so also the first dimension in a CDL or other array declarations.<br>
 A netCDF-4 file may have multiple unlimited dimensions, and there are no restrictions on their order.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>coordinate variable</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">A coordinate variable is a one-dimensional variable with the same name as a dimension, which names the coordinate values of the dimension.</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>coordinate variable</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">A coordinate variable is a one-dimensional variable with the same name as a dimension, which names the coordinate values of the dimension.</p>
 <ul class="simple">
-<li><p class="card-text">It must not have any missing data (for example, no _FillValue or missing_value attributes) and must be strictly monotonic (values increasing or decreasing).</p></li>
-<li><p class="card-text">A two-dimensional variable of type char is a string-valued coordinate variable if it has the same name as its first dimension, e.g.: char time( time, time_len); all of its strings must be unique.</p></li>
-<li><p class="card-text">Make coordinate variables for every dimension possible (except for string length dimensions).</p></li>
-<li><p class="card-text">Give each coordinate variable at least unit and long_name attributes to document its meaning.</p></li>
-<li><p class="card-text">Use an existing netCDF Convention for your coordinate variables, especially to identify spatio-temporal coordinates.</p></li>
-<li><p class="card-text">Use shared dimensions to indicate that two variables use the same coordinates along that dimension. If two variables’ dimensions are not related, create separate dimensions for them, even if they happen to have the same length.</p></li>
+<li><p class="sd-card-text">It must not have any missing data (for example, no _FillValue or missing_value attributes) and must be strictly monotonic (values increasing or decreasing).</p></li>
+<li><p class="sd-card-text">A two-dimensional variable of type char is a string-valued coordinate variable if it has the same name as its first dimension, e.g.: char time( time, time_len); all of its strings must be unique.</p></li>
+<li><p class="sd-card-text">Make coordinate variables for every dimension possible (except for string length dimensions).</p></li>
+<li><p class="sd-card-text">Give each coordinate variable at least unit and long_name attributes to document its meaning.</p></li>
+<li><p class="sd-card-text">Use an existing netCDF Convention for your coordinate variables, especially to identify spatio-temporal coordinates.</p></li>
+<li><p class="sd-card-text">Use shared dimensions to indicate that two variables use the same coordinates along that dimension. If two variables’ dimensions are not related, create separate dimensions for them, even if they happen to have the same length.</p></li>
 </ul>
 </div>
 </details><p>The most common dimensions and coordinates are <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">latitude</span></code>, <code class="docutils literal notranslate"><span class="pre">longitude</span></code> and the vertical coordinate (<code class="docutils literal notranslate"><span class="pre">depth</span></code> or <code class="docutils literal notranslate"><span class="pre">height</span></code>). These have a special attribute <code class="docutils literal notranslate"><span class="pre">axis</span></code>:</p>
@@ -846,8 +598,8 @@ A netCDF-4 file may have multiple unlimited dimensions, and there are no restric
 <li><p>If any or all of the dimensions of a variable have the interpretations (as given by their units or axis attribute) of time (T), height or depth (Z), latitude (Y), or longitude (X) then those dimensions should appear in the relative order T, then Z, then Y, then X in the CDL definition corresponding to the file.</p></li>
 <li><p>Any dimensions of a variable other than space and time dimensions should be added “to the left” of the space and time dimensions as represented in CDL.</p></li>
 </ul>
-<div class="section" id="time-coordinate">
-<h3>Time coordinate<a class="headerlink" href="#time-coordinate" title="Permalink to this headline">¶</a></h3>
+<section id="time-coordinate">
+<h3>Time coordinate<a class="headerlink" href="#time-coordinate" title="Permalink to this heading">#</a></h3>
 <p>The time coordinate is well defined by the <code class="docutils literal notranslate"><span class="pre">units</span></code> and the <code class="docutils literal notranslate"><span class="pre">calendar</span></code> attributes. The standard time definition doesn’t work for climatological statistics, as a calendar year, month and day of the year are not well defined units of time and they usually change depending on the calendar. For more information on how to describe climatological statistics refer to the <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#climatological-statistics">CF documentation</a>.</p>
 <p><strong>Requirements</strong></p>
 <ul class="simple">
@@ -864,71 +616,71 @@ A netCDF-4 file may have multiple unlimited dimensions, and there are no restric
 <p class="admonition-title">Warning</p>
 <p>CF standards follows UDUNITS definition of a year to be exactly 365.242198781 days, and a month to be exactly year/12. These are different from a calendar year and a calendar month.</p>
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>calendar</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - recommended</strong><br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>calendar</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - recommended</strong><br>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#calendar">calendar</a> attribute defines the calendar used by the time coordinate. In order to calculate a time coordinate value from a date/time, or the reverse, one must know the <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute of the time coordinate variable (containing the time unit of the coordinate values and the reference date/time) and the calendar.<br>
 The choice of calendar defines the set of dates (year-month-day combinations) which are permitted, and therefore it specifies the number of days between the times of 0:0:0 (midnight) on any two dates. Date/times which are not permitted in a given calendar are prohibited in both the encoded time coordinate values, and in the reference date/time string.<br></p>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">The attributes calendar, month_lengths, leap_year, and leap_month may only be attached to time coordinate variables.</p></li>
-<li><p class="card-text">The standardized values (case insensitive) of the calendar attribute are <code class="docutils literal notranslate"><span class="pre">standard</span></code>, <code class="docutils literal notranslate"><span class="pre">gregorian</span></code> (deprecated), <code class="docutils literal notranslate"><span class="pre">proleptic_gregorian</span></code>, <code class="docutils literal notranslate"><span class="pre">noleap</span></code>, <code class="docutils literal notranslate"><span class="pre">365_day</span></code>, <code class="docutils literal notranslate"><span class="pre">all_leap</span></code>, <code class="docutils literal notranslate"><span class="pre">366_day</span></code>, <code class="docutils literal notranslate"><span class="pre">360_day</span></code>, <code class="docutils literal notranslate"><span class="pre">julian</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p></li>
-<li><p class="card-text">If the calendar attribute is given a non-standard value, then the attribute <code class="docutils literal notranslate"><span class="pre">month_lengths</span></code> is required, along with <code class="docutils literal notranslate"><span class="pre">leap_year</span></code> and <code class="docutils literal notranslate"><span class="pre">leap_month</span></code> as appropriate.</p></li>
-<li><p class="card-text">The type of the <code class="docutils literal notranslate"><span class="pre">month_lengths</span></code> attribute must be an integer array of size 12.</p></li>
-<li><p class="card-text">The values of the <code class="docutils literal notranslate"><span class="pre">leap_month</span></code> attribute must be an integer in the range 1-12.</p></li>
+<li><p class="sd-card-text">The attributes calendar, month_lengths, leap_year, and leap_month may only be attached to time coordinate variables.</p></li>
+<li><p class="sd-card-text">The standardized values (case insensitive) of the calendar attribute are <code class="docutils literal notranslate"><span class="pre">standard</span></code>, <code class="docutils literal notranslate"><span class="pre">gregorian</span></code> (deprecated), <code class="docutils literal notranslate"><span class="pre">proleptic_gregorian</span></code>, <code class="docutils literal notranslate"><span class="pre">noleap</span></code>, <code class="docutils literal notranslate"><span class="pre">365_day</span></code>, <code class="docutils literal notranslate"><span class="pre">all_leap</span></code>, <code class="docutils literal notranslate"><span class="pre">366_day</span></code>, <code class="docutils literal notranslate"><span class="pre">360_day</span></code>, <code class="docutils literal notranslate"><span class="pre">julian</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p></li>
+<li><p class="sd-card-text">If the calendar attribute is given a non-standard value, then the attribute <code class="docutils literal notranslate"><span class="pre">month_lengths</span></code> is required, along with <code class="docutils literal notranslate"><span class="pre">leap_year</span></code> and <code class="docutils literal notranslate"><span class="pre">leap_month</span></code> as appropriate.</p></li>
+<li><p class="sd-card-text">The type of the <code class="docutils literal notranslate"><span class="pre">month_lengths</span></code> attribute must be an integer array of size 12.</p></li>
+<li><p class="sd-card-text">The values of the <code class="docutils literal notranslate"><span class="pre">leap_month</span></code> attribute must be an integer in the range 1-12.</p></li>
 </ul>
-<p class="card-text"><strong>Recommendations</strong></p>
+<p class="sd-card-text"><strong>Recommendations</strong></p>
 <ul class="simple">
-<li><p class="card-text">The value <code class="docutils literal notranslate"><span class="pre">standard</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">gregorian</span></code> in the calendar attribute.</p></li>
-<li><p class="card-text">The attribute <code class="docutils literal notranslate"><span class="pre">leap_month</span></code> should not appear unless the attribute <code class="docutils literal notranslate"><span class="pre">leap_year</span></code> is present.</p></li>
-<li><p class="card-text">The time coordinate should not cross the date 1582-10-15 when the default mixed Gregorian/Julian calendar is in use.</p></li>
+<li><p class="sd-card-text">The value <code class="docutils literal notranslate"><span class="pre">standard</span></code> should be used instead of <code class="docutils literal notranslate"><span class="pre">gregorian</span></code> in the calendar attribute.</p></li>
+<li><p class="sd-card-text">The attribute <code class="docutils literal notranslate"><span class="pre">leap_month</span></code> should not appear unless the attribute <code class="docutils literal notranslate"><span class="pre">leap_year</span></code> is present.</p></li>
+<li><p class="sd-card-text">The time coordinate should not cross the date 1582-10-15 when the default mixed Gregorian/Julian calendar is in use.</p></li>
 </ul>
 </div>
-</details></div>
-</div>
-<div class="section" id="variable-attributes">
-<h2>Variable attributes<a class="headerlink" href="#variable-attributes" title="Permalink to this headline">¶</a></h2>
+</details></section>
+</section>
+<section id="variable-attributes">
+<h2>Variable attributes<a class="headerlink" href="#variable-attributes" title="Permalink to this heading">#</a></h2>
 <p>The CF Conventions provides a complete <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#attribute-appendix">list of variable attributes</a> it covers.<br>
 Here we are covering only the ones we believe are more critical. It is also worth pointing out that only a few attributes are <code class="docutils literal notranslate"><span class="pre">required</span></code> to maintain backwards compatibility with COARDS. However, most of the <code class="docutils literal notranslate"><span class="pre">highly</span> <span class="pre">recommended</span></code> ones are expected for the files to be considered CF compliant, whenever they are applicable.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>units</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - required</strong><br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>units</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - required</strong><br>
 The attribute <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#units"><code class="docutils literal notranslate"><span class="pre">units</span></code></a> is essential for all variables representing dimensional quantities.
 This is especially true for dimensions such as latitude, longitude, and time coordinates which the netCDF library identifies solely by the value of their <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute. This identification uses the <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#UDUNITS">UDUNITS package</a>.<br>
 Vertical coordinates with units of pressure may also be identified by the <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute. Other vertical coordinates must use the attribute positive which determines whether the direction of increasing coordinate value is <code class="docutils literal notranslate"><span class="pre">up</span></code> or <code class="docutils literal notranslate"><span class="pre">down</span></code>. <br>
 CF provides the optional attribute <code class="docutils literal notranslate"><span class="pre">axis</span></code> for a direct identification of coordinates that correspond to latitude, longitude, vertical, or time axes.<br></p>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">The value of the <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute is a string from the UDUNITS library</p></li>
-<li><p class="card-text">If the variable is adimensional: percentage, 0-1, etc then the official value for <code class="docutils literal notranslate"><span class="pre">units</span></code> is always <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+<li><p class="sd-card-text">The value of the <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute is a string from the UDUNITS library</p></li>
+<li><p class="sd-card-text">If the variable is adimensional: percentage, 0-1, etc then the official value for <code class="docutils literal notranslate"><span class="pre">units</span></code> is always <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
 </ul>
-<p class="card-text"><strong>Recommendations</strong></p>
+<p class="sd-card-text"><strong>Recommendations</strong></p>
 <ul class="simple">
-<li><p class="card-text">The units <code class="docutils literal notranslate"><span class="pre">level</span></code>, <code class="docutils literal notranslate"><span class="pre">layer</span></code>, and <code class="docutils literal notranslate"><span class="pre">sigma_level</span></code> are allowed for backwards compatibility with COARDS but they are deprecated and shouldn’t be used for new files, as dimensionless vertical coordinates do not require a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute.</p></li>
+<li><p class="sd-card-text">The units <code class="docutils literal notranslate"><span class="pre">level</span></code>, <code class="docutils literal notranslate"><span class="pre">layer</span></code>, and <code class="docutils literal notranslate"><span class="pre">sigma_level</span></code> are allowed for backwards compatibility with COARDS but they are deprecated and shouldn’t be used for new files, as dimensionless vertical coordinates do not require a <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute.</p></li>
 </ul>
 <div class="admonition-tip admonition">
 <p class="admonition-title">Tip</p>
-<p class="card-text">NCICS provides an online <a class="reference external" href="https://ncics.org/portfolio/other-resources/udunits2/">UDUNITS2 database</a> including a full list of all units and prefixes by name and symbol.</p>
+<p class="sd-card-text">NCICS provides an online <a class="reference external" href="https://ncics.org/portfolio/other-resources/udunits2/">UDUNITS2 database</a> including a full list of all units and prefixes by name and symbol.</p>
 </div>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>long_name</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>long_name</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - highly recommended</strong><br>
 <strong>ACDD - highly recommended</strong><br>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#long-name">long_name</a> attribute provides a description of the variable. Either long_name or standard_name is expected to be present ideally, they both are.<br>
 Standard_names are designed to describe the physical quantity, as air_temperature, this is usually not sufficient on its own to fully describe a variable.<br>
@@ -936,101 +688,101 @@ Long_name provides a chance to give a more complete description of the variable,
 For example, adimensional variables have <code class="docutils literal notranslate"><span class="pre">1</span></code> as units. Long_name can be used to specify what kind of adimensional units: percentage, 0-1, ppm etc.<br>
 Long_name is also often used to label plots.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>standard_name</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly  recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>standard_name</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - highly  recommended</strong><br>
 <strong>ACDD - highly recommended</strong><br>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#standard-name"><code class="docutils literal notranslate"><span class="pre">standard_name</span></code></a> attribute is used to identify the variable content. A list of the approved standard_names is available <a class="reference external" href="http://cfconventions.org/Data/cf-standard-names/current/build/cf-standard-name-table.html">here</a>.<br>
 It was introduced to provide an objective definition of a variable. The <code class="docutils literal notranslate"><span class="pre">long_name</span></code> attribute was, and still is, useful to provide a description of the variable, but as it is defined ad hoc by the dataset creator it is not possible to use it programmatically to individuate a specific variable, across different files. For example, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code> can be used by online data catalogues to query all datasets that provide a particular variable.<br></p>
-<p class="card-text"><strong>Requirements</strong><br></p>
+<p class="sd-card-text"><strong>Requirements</strong><br></p>
 <ul class="simple">
-<li><p class="card-text"><code class="docutils literal notranslate"><span class="pre">standard_name</span></code> contains no whitespace, underscores are used instead, and is case sensitive.<br></p></li>
-<li><p class="card-text">The variable needs to have units which are physically equivalent, if not the same, as the ones listed to be able to use a <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>.</p></li>
-<li><p class="card-text">If a variable has a standard_name of region or area_type, it must have value(s) from the permitted lists: <a class="reference external" href="https://cfconventions.org/Data/standardized-region-list/standardized-region-list.html">region list</a> and <a class="reference external" href="http://cfconventions.org/Data/area-type-table/current/build/area-type-table.html">area_type list</a>.</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">standard_name</span></code> contains no whitespace, underscores are used instead, and is case sensitive.<br></p></li>
+<li><p class="sd-card-text">The variable needs to have units which are physically equivalent, if not the same, as the ones listed to be able to use a <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>.</p></li>
+<li><p class="sd-card-text">If a variable has a standard_name of region or area_type, it must have value(s) from the permitted lists: <a class="reference external" href="https://cfconventions.org/Data/standardized-region-list/standardized-region-list.html">region list</a> and <a class="reference external" href="http://cfconventions.org/Data/area-type-table/current/build/area-type-table.html">area_type list</a>.</p></li>
 </ul>
-<p class="card-text"><strong>Recommendations</strong><br></p>
+<p class="sd-card-text"><strong>Recommendations</strong><br></p>
 <ul class="simple">
-<li><p class="card-text">The variable definition can be further clarified using <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#standard-name-modifiers">modifiers</a>, modifications due to common statistical operations are expressed via the cell_methods attribute.<br></p></li>
+<li><p class="sd-card-text">The variable definition can be further clarified using <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#standard-name-modifiers">modifiers</a>, modifications due to common statistical operations are expressed via the cell_methods attribute.<br></p></li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p class="card-text">NEVER MAKE UP YOUR OWN STANDARD NAME!!! If it’s not defined for your variable you must not use this metadata attribute.
+<p class="sd-card-text">NEVER MAKE UP YOUR OWN STANDARD NAME!!! If it’s not defined for your variable you must not use this metadata attribute.
 Empty strings are not valid.</p>
 </div>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>cell_methods</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>cell_methods</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - recommended</strong><br>
 <a class="reference external" href="http://cfconventions.org/cf-conventions/cf-conventions.html#appendix-cell-methods"><code class="docutils literal notranslate"><span class="pre">cell_methods</span></code></a> describes a characteristic (usually statistical) of the cell values. <code class="docutils literal notranslate"><span class="pre">cell_methods</span></code> is useful where a variable could be intepreted both as an extensive (which depends on the size of the cell) or intensive (which does not) quantity.
 For example, a precipitation rate could be instantaneous (intensive) or a mean value over the time interval specified by the cell (extensive).<br></p>
-<p class="card-text"><strong>Requirements</strong><br></p>
+<p class="sd-card-text"><strong>Requirements</strong><br></p>
 <ul class="simple">
-<li><p class="card-text">It is a string attribute comprising a list of <code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">method</span></code> pairs, where <code class="docutils literal notranslate"><span class="pre">name</span></code> indicates the dimension or coordinate to which the method is applied. For example, <code class="docutils literal notranslate"><span class="pre">cell_methods=&quot;time:</span> <span class="pre">mean&quot;</span></code> means that each cell value represents the  time averaged value.</p></li>
-<li><p class="card-text">To list different methods for different axis: <code class="docutils literal notranslate"><span class="pre">cell_methods=&quot;time:</span> <span class="pre">mean</span> <span class="pre">longitude:</span> <span class="pre">max&quot;</span></code>.</p></li>
-<li><p class="card-text">The values of method should be selected from <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#appendix-cell-methods">this list</a>.</p></li>
+<li><p class="sd-card-text">It is a string attribute comprising a list of <code class="docutils literal notranslate"><span class="pre">name:</span> <span class="pre">method</span></code> pairs, where <code class="docutils literal notranslate"><span class="pre">name</span></code> indicates the dimension or coordinate to which the method is applied. For example, <code class="docutils literal notranslate"><span class="pre">cell_methods=&quot;time:</span> <span class="pre">mean&quot;</span></code> means that each cell value represents the  time averaged value.</p></li>
+<li><p class="sd-card-text">To list different methods for different axis: <code class="docutils literal notranslate"><span class="pre">cell_methods=&quot;time:</span> <span class="pre">mean</span> <span class="pre">longitude:</span> <span class="pre">max&quot;</span></code>.</p></li>
+<li><p class="sd-card-text">The values of method should be selected from <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#appendix-cell-methods">this list</a>.</p></li>
 </ul>
-<p class="card-text"><strong>Recommendations</strong><br></p>
+<p class="sd-card-text"><strong>Recommendations</strong><br></p>
 <ul class="simple">
-<li><p class="card-text">The word ‘area’ can also be used as <code class="docutils literal notranslate"><span class="pre">name</span></code> (see <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#cell-methods-no-coordinates">here</a>).</p></li>
-<li><p class="card-text">To clarify that a cell value is “instantaneous” use <code class="docutils literal notranslate"><span class="pre">point</span></code> as method.</p></li>
-<li><p class="card-text">Every data variable should include for each of its dimensions and each of its scalar coordinate variables the cell_methods information of interest (unless this information would not be meaningful).</p></li>
-<li><p class="card-text">It is especially recommended that cell_methods be explicitly specified for each spatio-temporal dimension and each spatio-temporal scalar coordinate variable.</p></li>
+<li><p class="sd-card-text">The word ‘area’ can also be used as <code class="docutils literal notranslate"><span class="pre">name</span></code> (see <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#cell-methods-no-coordinates">here</a>).</p></li>
+<li><p class="sd-card-text">To clarify that a cell value is “instantaneous” use <code class="docutils literal notranslate"><span class="pre">point</span></code> as method.</p></li>
+<li><p class="sd-card-text">Every data variable should include for each of its dimensions and each of its scalar coordinate variables the cell_methods information of interest (unless this information would not be meaningful).</p></li>
+<li><p class="sd-card-text">It is especially recommended that cell_methods be explicitly specified for each spatio-temporal dimension and each spatio-temporal scalar coordinate variable.</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>missing and valid data</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>missing and valid data</strong> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - recommended</strong><br>
 <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.9/cf-conventions.html#missing-data"><code class="docutils literal notranslate"><span class="pre">_FillValue</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code>, <code class="docutils literal notranslate"><span class="pre">valid_min</span></code>, <code class="docutils literal notranslate"><span class="pre">valid_max</span></code>, and <code class="docutils literal notranslate"><span class="pre">valid_range</span></code></a> attributes are used to indicate missing data. Missing data is allowed in data variables and auxiliary coordinate variables. Generic applications should treat the data as missing where any auxiliary coordinate variables have missing values; it’s very important to define this value so that NaNs are properly interpreted by as many tools as possible.<br>
 Missing data is not allowed in coordinate variables.<br></p>
-<p class="card-text"><strong>_FillValue</strong><br>
+<p class="sd-card-text"><strong>_FillValue</strong><br>
 The <a class="reference external" href="https://docs.unidata.ucar.edu/netcdf-c/current/attribute_conventions.html#autotoc_md89"><code class="docutils literal notranslate"><span class="pre">_FillValue</span></code></a> attribute specifies the fill value used to pre-fill disk space allocated to the variable, it is then returned when reading values which were never written.
 If <code class="docutils literal notranslate"><span class="pre">_FillValue</span></code> is defined then it should be scalar and of the same type as the variable. If the variable is packed using scale_factor and add_offset attributes, the _FillValue attribute should have the data type of the packed data.<br>
 If not defined the default fill value for the type of the variable is used. However, use of the default fill value for data type byte is not recommended.<br>
 Note that changing the value of this attibute, won’t change previously ‘filled’ data automatically.<br>
 If <code class="docutils literal notranslate"><span class="pre">valid_range</span></code> is specified <code class="docutils literal notranslate"><span class="pre">_FillValue</span></code> should be outside of this range.</p>
-<p class="card-text"><strong>missing-value</strong><br>
+<p class="sd-card-text"><strong>missing-value</strong><br>
 The <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> is not treated in any special way by the netCDF library, but it may be used by specific applications. The missing_value attribute can be a scalar or vector containing values indicating missing data. These values should all be outside the valid range.<br>
 When scale_factor and add_offset are used, the value(s) of the missing_value attribute should be specified in relation to the packed data, so that missing values can be detected before the scale_factor and add_offset are applied.<br>
 If both missing_value and _FillValue are used, they should have the same value.</p>
-<p class="card-text"><strong>actual_range</strong><br>
+<p class="sd-card-text"><strong>actual_range</strong><br>
 The <code class="docutils literal notranslate"><span class="pre">actual_range</span></code> defines a two-element vector for numeric variables, composed of the exact minimum and the maximum data values and both must be within the valid_range if specified.<br>
 If the variable is packed, the elements of the actual_range should be defined based on the unpacked data, including the type.<br>
 If the data is all missing or invalid, the actual_range attribute cannot be used.</p>
-<p class="card-text"><strong>valid_range, valid_min, valid_max</strong><br>
+<p class="sd-card-text"><strong>valid_range, valid_min, valid_max</strong><br>
 The <code class="docutils literal notranslate"><span class="pre">valid_range</span></code> attribute is mutually exclusive with <code class="docutils literal notranslate"><span class="pre">valid_min</span></code> and <code class="docutils literal notranslate"><span class="pre">valid_max</span></code> attributes. If none of these are defined, software applications will use <code class="docutils literal notranslate"><span class="pre">_FillValue</span></code> and the variable type to try to determine a valid range.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>ancillary data</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">CF -</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>ancillary data</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">CF -</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>coverage_content_type</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>coverage_content_type</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - highly recommended</strong><br>
 This is the only attribute at variable level added by the ACDD conventions. It indicates the source of the data and it is defined using the ISO 19115-1 codes. Valid values are: <code class="docutils literal notranslate"><span class="pre">image</span></code>, <code class="docutils literal notranslate"><span class="pre">thematicClassification</span></code>, <code class="docutils literal notranslate"><span class="pre">physicalMeasurement</span></code>, <code class="docutils literal notranslate"><span class="pre">auxiliaryInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">qualityInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">referenceInformation</span></code>, <code class="docutils literal notranslate"><span class="pre">modelResult</span></code>, or <code class="docutils literal notranslate"><span class="pre">coordinate</span></code>.</p>
 </div>
 </details><div class="admonition warning">
@@ -1038,128 +790,128 @@ This is the only attribute at variable level added by the ACDD conventions. It i
 <p>In xarray variable attributes are kept across operations depending on the value of the <code class="docutils literal notranslate"><span class="pre">keep_attrs</span></code> argument. Its default behaviour is to keep them in unambiguous circumstances. If set to True it will always keep the attributes, if set to False it will discard them.<br>
 It is important to be aware of this, as particularly for coordinates, units and cell_methods are easily changed by calculations and often inherited attributes become meaningless or worse, can cause issues if not updated. The same can also happen with other software.</p>
 </div>
-</div>
-<div class="section" id="global-attributes">
-<h2>Global attributes<a class="headerlink" href="#global-attributes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="global-attributes">
+<h2>Global attributes<a class="headerlink" href="#global-attributes" title="Permalink to this heading">#</a></h2>
 <p>Global attributes are the ones that apply to the entire file. Global attributes are useful to record provenance: keep track of operations applied to the file, data sources and software used to generate the data, any party involved. They are also used at publication stage when conventions like ACDD build on the CF ones to add publication related information, such as DOI, main contact, license and references.<br>
 While global attributes are the most useful when sharing data, for example to increase discoverability, using some key ones from the start of the file creation is important to keep track of the file history. Often this level of information is neglected when saving data to a file, which can make it hard if not impossible to reconstruct the analysis workflow.<br>
 Also, as global attributes are preserved during most analysis operations, output files end up containing information from the source file which is usually not relevant to the new data.<br>
 <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">source</span></code>, <code class="docutils literal notranslate"><span class="pre">references</span></code>, and <code class="docutils literal notranslate"><span class="pre">comment</span></code> can also be assigned to individual variables, in such cases, the variable version has precedence.</p>
 <p><strong>Requirements</strong></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">title</span></code>, <code class="docutils literal notranslate"><span class="pre">history</span></code>, <code class="docutils literal notranslate"><span class="pre">institution</span></code>, <code class="docutils literal notranslate"><span class="pre">source</span></code>, <code class="docutils literal notranslate"><span class="pre">references</span></code>, and <code class="docutils literal notranslate"><span class="pre">comment</span></code> attributes are all type string.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Conventions</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - required</strong><br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Conventions</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - required</strong><br>
 <strong>ACDD - highly recommended</strong><br>
 This attribute simply indicates the conventions applied to the file, and as such is one of the few required attributes, as it provides the key to correctly interpret all the other attributes. For CF conventions, the expected value is <code class="docutils literal notranslate"><span class="pre">CF-&lt;version&gt;</span></code> for example <code class="docutils literal notranslate"><span class="pre">CF-1.8</span></code>. If more than one convention is applied to the file then they should be provided as a list separated by blank spaces or commas. For example <code class="docutils literal notranslate"><span class="pre">CF-1.8,</span> <span class="pre">ACDD-1.3</span></code>.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>title</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>title</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - highly recommended</strong><br>
 <strong>ACDD - highly recommended</strong><br>
 A short phrase or sentence describing the dataset. When applied to single files the title might simply describe the file content, if the file is published as part of a dataset, it is better to use this attribute for the dataset official title and use <code class="docutils literal notranslate"><span class="pre">summary</span></code> to add more detail on the specific file content.
 If the file is going to be published, the title has to be short enough to be displayed easily in the dataset catalogue listing. At the same time it is important for this to be descriptive of the data. For suggestions on how to create a title see <a class="reference internal" href="title.html"><span class="doc std std-doc">Descriptive title</span></a> in this section.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>history</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>history</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - highly recommended</strong><br>
 <strong>ACDD - recommended</strong><br>
 The <a class="reference external" href="https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html#description-of-file-contents">history</a> attribute provides a chronological trace of the modifications applied to the original data. Many netCDF aware software append a line containing: date, time of day, user name, program name and command arguments.’
 Alternatively, a user can append information manually when processing a file.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p class="card-text">While it is useful to have a program automatically update the file history, some of the appended information can be system dependent, such as file paths, and could have been inherited from a source file which are no longer relevant, or it could be unreadable. An example of the last is when concatenating files with CDO, if you are using a <code class="docutils literal notranslate"><span class="pre">*</span></code> to match many files, the history message will explode the regex and list the path of each file, which make the history attribute hard to read.</p>
+<p class="sd-card-text">While it is useful to have a program automatically update the file history, some of the appended information can be system dependent, such as file paths, and could have been inherited from a source file which are no longer relevant, or it could be unreadable. An example of the last is when concatenating files with CDO, if you are using a <code class="docutils literal notranslate"><span class="pre">*</span></code> to match many files, the history message will explode the regex and list the path of each file, which make the history attribute hard to read.</p>
 </div>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>institution</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>institution</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - recommended</strong><br>
 <strong>ACDD - recommended</strong><br>
 The name of the institution principally responsible for originating this data.
 This can also be used at variable level, in which case it takes precendence over the global one for that specific variable.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>source</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>source</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - recommended</strong><br>
 <strong>ACDD - recommended</strong><br>
 This attribute indicates the method of production of the original data. It should be as detailed as possible so, for example, if the data is model generated, the version and (if applicable) details of configuration used should be present. It’s often easier if the source of the data is complex, to use a link to documentation.<br>
 While this attribute’s definition focuses on the method, often source is also used to list the input data. If the file is derived directly from another dataset, it is good practice to preserve some of the original dataset global attributes but prefacing them with <code class="docutils literal notranslate"><span class="pre">source_</span></code>, for example <code class="docutils literal notranslate"><span class="pre">source_license</span></code>. Alternatively, as a specific attribute for input data does not exist in conventions, <code class="docutils literal notranslate"><span class="pre">source_data</span></code>, <code class="docutils literal notranslate"><span class="pre">input</span></code>, and <code class="docutils literal notranslate"><span class="pre">input_data</span></code>, are often used. CMIP conventions uses <code class="docutils literal notranslate"><span class="pre">parent_</span></code> to indicate properties of parent experiments used to initialise model simulations.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>references</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>references</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - recommended</strong><br>
 <strong>ACDD - suggested</strong><br>
 Published or web-based references that describe the data or methods used to produce it.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>comment</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>CF - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>comment</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>CF - highly recommended</strong><br>
 <strong>ACDD - recommended</strong><br>
 Miscellaneous information about the data or methods used to produce it. This can also be used at variable level.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>summary</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>summary</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - highly recommended</strong><br>
 A short abstract to introduce the dataset. It provides a chance to add more details about the file content, particularly when the files of a dataset might have different content. For example, if different variables are stored as separate files, the <code class="docutils literal notranslate"><span class="pre">title</span></code> attribute might indicate the dataset title, and would be the same for all files, then <code class="docutils literal notranslate"><span class="pre">summary</span></code> can be used to list the content of each file.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>keywords</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - highly recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>keywords</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - highly recommended</strong><br>
 The <a class="reference external" href="https://wiki.esipfed.org/Attribute_Convention_for_Data_Discovery_1-3#keywords">keywords</a> attribute is a comma-separated list of key words and/or phrases. Keywords should preferably be terms from a controlled vocabulary, in that case a reference for this can be added using the “keywords_vocabulary” attribute. Look at the <a class="reference internal" href="keywords.html"><span class="doc std std-doc">Choosing keywords</span></a> page in this section for suggestions on how to choose effective keywords.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>id</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>id</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - recommended</strong><br>
 This attribute only applies to published data. It is the dataset identifier, provided by and unique within its naming authority.<br>
 The <code class="docutils literal notranslate"><span class="pre">id</span></code> can be the full persistent identifier, for example:<br>
 <code class="docutils literal notranslate"><span class="pre">https://doi.org/10.24381/cds.e2161bac</span></code><br>
@@ -1167,60 +919,60 @@ Or, when used in combination with the <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">example</span></code><br>
 The id should not include white space characters.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>license</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>license</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - recommended</strong><br>
 This can be free text describing the license and/or terms and conditions applied to the dataset, or a URL pointing to the same. If using the URL(?) it might help to specify the main points as <code class="docutils literal notranslate"><span class="pre">free</span> <span class="pre">access</span></code> or <code class="docutils literal notranslate"><span class="pre">no</span> <span class="pre">commercial</span> <span class="pre">use</span></code> unless they can be easily surmised from the url itself (as with the CC licenses).</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>creator_(name/ email/ url)</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>creator_(name/ email/ url)</strong> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - recommended</strong><br>
 Respectively, the name, email and a web address (if available) of the person (or other creator type specified by the creator_type attribute) principally responsible for creating this data.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>publisher_(name/ email/ url)</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>publisher_(name/ email/ url)</strong> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - recommended</strong><br>
 The name of the person (or other entity specified by the publisher_type attribute) responsible for publishing the data file or product to users, with its current metadata and format.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>geospatial_&lt;&gt; / time_coverage_&lt;&gt;</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong><br></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>geospatial_&lt;&gt; / time_coverage_&lt;&gt;</strong> <div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - recommended</strong><br></p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>created_date</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>ACDD - recommended</strong><br>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>created_date</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>ACDD - recommended</strong><br>
 The date on which this version of the data was created.
 The ISO 8601:2004 extended date format is recommended: <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DDThh:mm:ss&lt;zone&gt;</span></code>.</p>
 </div>
 </details><p><strong>References</strong><br>
 A useful summarised version of <a class="reference external" href="https://cfconventions.org/Data/cf-documents/requirements-recommendations/conformance-1.9.html">requirements and recommendations</a> for CF conventions.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1234,7 +986,7 @@ A useful summarised version of <a class="reference external" href="https://cfcon
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./tech"
         },
         predefinedOutput: true
@@ -1242,44 +994,108 @@ A useful summarised version of <a class="reference external" href="https://cfcon
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="versioning.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Versioning</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="versioning.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Versioning</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../appendix/appendix-intro.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../appendix/appendix-intro.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Supplemental material</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By ACD Working Group<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-system">Coordinate system</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#time-coordinate">Time coordinate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-attributes">Variable attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-attributes">Global attributes</a></li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By ACD Working Group
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

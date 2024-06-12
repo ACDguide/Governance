@@ -6,7 +6,8 @@ We are collecting here information on technical aspects of data management, incl
 
 * [](backup-checklist.md)
 * [](cf-checker.md)
-* [](drs.md)
+* [](contributors.md)
+* [](drs-names.md)
 * [](keywords.md)
 * [](coding.md)
 * [](data_formats.md)

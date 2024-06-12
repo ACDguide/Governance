@@ -1,1060 +1,866 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Journal publishers data policies &#8212; Climate Data Guidelines</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'publish/journals';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Guidelines to manage climate dataset" href="../manage/manage-intro.html" />
     <link rel="prev" title="Best Practice Published Data Records" href="publish-examples.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data
- </span>
-</p>
+    
+    
+    <img src="../_static/ACDG-logo_v2.png" class="logo__image only-light" alt="Climate Data Guidelines - Home"/>
+    <script>document.write(`<img src="../_static/ACDG-logo_v2.png" class="logo__image only-dark" alt="Climate Data Guidelines - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-intro.html">
-   Guidelines to create a climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-new-derived.html">
-   New, modified, and derived datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-publishing.html">
-   Preparing files for publication
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-checklists.html">
-   Checklists for data management in the project lifecycle
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-intro.html">Guidelines to create a climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-basics.html">Dataset creation basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-new-derived.html">New, modified, and derived datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-publishing.html">Preparing files for publication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-checklists.html">Checklists for data management in the project lifecycle</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Publishing climate data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing climate data</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-intro.html">
-   Guidelines to publish climate data
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="publish-options.html">
-   Publishing options
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-nci-geonetwork.html">
-     Publishing climate data with NCI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-esgf.html">
-     ESGF publishing procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-csiro-dap.html">
-     CSIRO Data Access Portal (DAP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="publish-zenodo.html">
-     Publishing with Zenodo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Journal publishers data policies
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="publish-intro.html">Guidelines to publish climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish-procedure.html">Publishing procedure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="publish-options.html">Publishing options</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="publish-nci-geonetwork.html">Publishing climate data with NCI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publish-esgf.html">ESGF publishing procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publish-csiro-dap.html">CSIRO Data Access Portal (DAP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publish-zenodo.html">Publishing with Zenodo</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Managing datasets
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-intro.html">
-   Guidelines to manage climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-project.html">
-   Project management
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../manage/manage-file.html">
-   File handling
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-rep.html">
-     Updates to replicated data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-pub.html">
-     Updates to published data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-docs.html">
-   Documentation and provenance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-ausref.html">
-   Australian Community Reference Climate Data Collection @ NCI
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publish-examples.html">Best Practice Published Data Records</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Journal publishers data policies</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Retiring datasets
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Managing datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-intro.html">
-   Guidelines to manage the retirement of a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-principles.html">
-   General principles of data retirement
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-published.html">
-   Use case: published data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-replica.html">
-   Use case: replicated data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-unpublished.html">
-   Use case: unpublished data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-references.html">
-   Further information
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-intro.html">Guidelines to manage climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-project.html">Project management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../manage/manage-file.html">File handling</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-rep.html">Updates to replicated data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-pub.html">Updates to published data</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data products
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../products/products-intro.html">
-   Guidelines to create a climate data product
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-docs.html">Documentation and provenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-ausref.html">Australian Community Reference Climate Data Collection @ NCI</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  About us
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Retiring datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/working-group-governance.html">
-   Working group governance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/goals.html">
-   Working group goals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/how-to-contribute.html">
-   Guidelines for contributors
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-intro.html">Guidelines to manage the retirement of a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-principles.html">General principles of data retirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-published.html">Use case: published data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-replica.html">Use case: replicated data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-unpublished.html">Use case: unpublished data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-references.html">Further information</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Concepts
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data products</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../concepts/concept-intro.html">
-   Key concepts in data management
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/authorship.html">
-     Authorship
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/backup.html">
-     Backup strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/controlled-vocab.html">
-     Controlled vocabularies
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/conventions.html">
-     Conventions and standards
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/cf-conventions.html">
-       CF Conventions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/acdd-conventions.html">
-       Attribute Convention for Data Discovery
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/other-conventions.html">
-       Other conventions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/availability-statement.html">
-     Data availability statement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/collaboration-agreement.html">
-     Data collaboration agreement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/dmp.html">
-     Data Management Plan
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/policies.html">
-     Data policies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-conduct.html">
-       Responsible Conduct of Research
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-arc.html">
-       Australian Research Council data policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-bom.html">
-       Bureau of Meteorology Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-clex.html">
-       CLEX Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-csiro.html">
-       CSIRO Data Policy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/fairer-principles.html">
-     FAIR(ER) Principles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/journal.html">
-     Journal requirements
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/license.html">
-     Open Access License
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-data.html">
-       Dataset license
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-code.html">
-       Software licenses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-qa.html">
-       Q&amp;A
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/pids.html">
-     Persistent identifiers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/provenance.html">
-     Provenance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/version-control.html">
-     Version Control
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../products/products-intro.html">Guidelines to create a climate data product</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Technical guide
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About us</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tech/tech-intro.html">
-   Technical tips
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/backup-checklist.html">
-     Backup checklist
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/cf-checker.html">
-     CF compliance checkers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/contributors.html">
-     Contributor roles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/drs-names.html">
-     Choosing a directory structure and filenames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/keywords.html">
-     Choosing keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/coding.html">
-     Coding best practices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/data_formats.html">
-     Data formats
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/tech-readme.html">
-     Dataset readme file template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/title.html">
-     Descriptive title
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/permissions.html">
-     File permissions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/massdata.html">
-     Mass Data Storage System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/moving-data.html">
-     Moving data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/compression.html">
-     NetCDF compression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/versioning.html">
-     Versioning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/conventions.html">
-     Writing valid and compliant netCDF files
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/working-group-governance.html">Working group governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/goals.html">Working group goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/how-to-contribute.html">Guidelines for contributors</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/appendix-intro.html">
-   Supplemental material
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/glossary.html">
-     Glossary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/forcodes.html">
-     ANZSRC Field of Research (FoR) codes 2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/zenodo.html">
-     Step by step Zenodo guide
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../concepts/concept-intro.html">Key concepts in data management</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/authorship.html">Authorship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/backup.html">Backup strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/controlled-vocab.html">Controlled vocabularies</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/conventions.html">Conventions and standards</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/cf-conventions.html">CF Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/acdd-conventions.html">Attribute Convention for Data Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/other-conventions.html">Other conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/availability-statement.html">Data availability statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/collaboration-agreement.html">Data collaboration agreement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/dmp.html">Data Management Plan</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/policies.html">Data policies</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-conduct.html">Responsible Conduct of Research</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-arc.html">Australian Research Council data policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-bom.html">Bureau of Meteorology Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-clex.html">CLEX Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-csiro.html">CSIRO Data Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/fairer-principles.html">FAIR(ER) Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/journal.html">Journal requirements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/license.html">Open Access License</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-data.html">Dataset license</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-code.html">Software licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-qa.html">Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/pids.html">Persistent identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/provenance.html">Provenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/version-control.html">Version Control</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tech/tech-intro.html">Technical tips</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tech/backup-checklist.html">Backup checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/cf-checker.html">CF compliance checkers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/contributors.html">Contributor roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/drs-names.html">Choosing a directory structure and filenames</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../tech/keywords.html">Choosing keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/coding.html">Coding best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/tech-readme.html">Annotated README example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/title.html">Descriptive title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/permissions.html">File permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/massdata.html">Mass Data Storage System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/moving-data.html">Moving data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/compression.html">NetCDF compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/versioning.html">Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/conventions.html">Writing valid and compliant netCDF files</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix-intro.html">Supplemental material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/forcodes.html">ANZSRC Field of Research (FoR) codes 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/zenodo.html">Step by step Zenodo guide</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/publish/journals.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/journals.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/journals.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fpublish/journals.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/publish/journals.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/publish/journals.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Journal publishers data policies</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Journal publishers data policies</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+
+              
                 
-  <div class="section" id="journal-publishers-data-policies">
-<h1>Journal publishers data policies<a class="headerlink" href="#journal-publishers-data-policies" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="journal-publishers-data-policies">
+<h1>Journal publishers data policies<a class="headerlink" href="#journal-publishers-data-policies" title="Permalink to this heading">#</a></h1>
 <p>Here is a summary of relevant journal publishers data policies. Please note that while we do our best to interpret the policies and review these summaries, we cannot guarantee that they are always correct and up to date.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-American_Geophysical_Union - AGU<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+American_Geophysical_Union - AGU<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Geophysical Research Letters</p></li>
-<li><p class="card-text">Journal of Geophysical Research: Atmospheres</p></li>
-<li><p class="card-text">Journal of Geophysical Research: Oceans</p></li>
-<li><p class="card-text">Water Resources Research</p></li>
+<li><p class="sd-card-text">Geophysical Research Letters</p></li>
+<li><p class="sd-card-text">Journal of Geophysical Research: Atmospheres</p></li>
+<li><p class="sd-card-text">Journal of Geophysical Research: Oceans</p></li>
+<li><p class="sd-card-text">Water Resources Research</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong></p>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Policies/Data-policy">AGU Data Policy</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Policies/Data-policy">AGU Data Policy</a></p></li>
 </ul>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors">Data guidelines from author resources</a></p></li>
-<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Data-and-Software-for-Authors">Data guidelines from author resources</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
 </ul>
-<p class="card-text">Some of the AGU journals also have their specific data guidance:</p>
+<p class="sd-card-text">Some of the AGU journals also have their specific data guidance:</p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.agu.org/-/media/Files/Publications/JGR-Atmospheres-Data-Sharing-Guidance.pdf">JGR Atmospheres Data Sharing Guidance</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.agu.org/-/media/Files/Publications/WRR-Data-Sharing-Guidance.pdf">Water Resources Research Data Sharing Guidance</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.agu.org/-/media/Files/Publications/JGR-Atmospheres-Data-Sharing-Guidance.pdf">JGR Atmospheres Data Sharing Guidance</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.agu.org/-/media/Files/Publications/WRR-Data-Sharing-Guidance.pdf">Water Resources Research Data Sharing Guidance</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">No supplement is required, can be produced if data is new and not described in paper</p></li>
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Software is required</p></li>
-</ul>
-</div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-American_Meteorological_Society - AMC<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
-<ul class="simple">
-<li><p class="card-text">Bulletin of the American Meteorological Society</p></li>
-<li><p class="card-text">Journal of Climate</p></li>
-<li><p class="card-text">Journal of Hydrometeorology</p></li>
-<li><p class="card-text">Journal of Physical Oceanography</p></li>
-</ul>
-<p class="card-text"><strong>Open data policy</strong></p>
-<ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.ametsoc.org/ams/index.cfm/publications/ethical-guidelines-and-ams-policies/data-policy-and-guidelines/">Data policy and guidelines</a></p></li>
-</ul>
-<p class="card-text"><strong>Guidelines</strong></p>
-<ul class="simple">
-<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
-</ul>
-<p class="card-text"><strong>Requirements</strong></p>
-<ul class="simple">
-<li><p class="card-text">Data Availability Statement is required</p></li>
-<li><p class="card-text">DOI is  required, if possible, for both data and software</p></li>
-<li><p class="card-text">Software is required wherever is central to the research</p></li>
+<li><p class="sd-card-text">No supplement is required, can be produced if data is new and not described in paper</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Software is required</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-CSIRO_Publishing - CSIRO<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+American_Meteorological_Society - AMC<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Journal of Southern Hemisphere Earth Systems Science</p></li>
+<li><p class="sd-card-text">Bulletin of the American Meteorological Society</p></li>
+<li><p class="sd-card-text">Journal of Climate</p></li>
+<li><p class="sd-card-text">Journal of Hydrometeorology</p></li>
+<li><p class="sd-card-text">Journal of Physical Oceanography</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong></p>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.publish.csiro.au/es/PublishingPolicies#6">CSIRO Data Policy</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.ametsoc.org/ams/index.cfm/publications/ethical-guidelines-and-ams-policies/data-policy-and-guidelines/">Data policy and guidelines</a></p></li>
 </ul>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">No supplement is required, but data can be provided as supplementary material</p></li>
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Software is required</p></li>
-<li><p class="card-text">Data Availability Statement is required</p></li>
-</ul>
-</div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Elsevier<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
-<ul class="simple">
-<li><p class="card-text">Journal of Hydrology</p></li>
-<li><p class="card-text">Ocean Modelling</p></li>
-<li><p class="card-text">Open data policy</p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.elsevier.com/about/our-business/policies/research-data">Research data policy</a></p></li>
-</ul>
-<p class="card-text"><strong>Guidelines</strong></p>
-<ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.elsevier.com/authors/tools-and-resources/research-data/data-guidelines">Research data guidelines</a></p></li>
-</ul>
-<p class="card-text"><strong>Requirements</strong></p>
-<ul class="simple">
-<li><p class="card-text">No supplement is required, preferred approach is to share your data on the repository with DOI or publish in data journal</p></li>
-<li><p class="card-text">DOI is explicitly required</p></li>
-<li><p class="card-text">Software is not explicitly required</p></li>
+<li><p class="sd-card-text">Data Availability Statement is required</p></li>
+<li><p class="sd-card-text">DOI is  required, if possible, for both data and software</p></li>
+<li><p class="sd-card-text">Software is required wherever is central to the research</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-European_Geophysical_Union - EGU Copernicus publisher<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+CSIRO_Publishing - CSIRO<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Biogeosciences</p></li>
-<li><p class="card-text">Climate of the Past</p></li>
-<li><p class="card-text">Geoscientific Model Development</p></li>
+<li><p class="sd-card-text">Journal of Southern Hemisphere Earth Systems Science</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://www.publish.csiro.au/es/PublishingPolicies#6">CSIRO Data Policy</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">No supplement is required, but data can be provided as supplementary material</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Software is required</p></li>
+<li><p class="sd-card-text">Data Availability Statement is required</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Elsevier<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Journal of Hydrology</p></li>
+<li><p class="sd-card-text">Ocean Modelling</p></li>
+<li><p class="sd-card-text">Open data policy</p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.elsevier.com/about/our-business/policies/research-data">Research data policy</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><a class="reference external" href="https://www.elsevier.com/authors/tools-and-resources/research-data/data-guidelines">Research data guidelines</a></p></li>
+</ul>
+<p class="sd-card-text"><strong>Requirements</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">No supplement is required, preferred approach is to share your data on the repository with DOI or publish in data journal</p></li>
+<li><p class="sd-card-text">DOI is explicitly required</p></li>
+<li><p class="sd-card-text">Software is not explicitly required</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+European_Geophysical_Union - EGU Copernicus publisher<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text">Biogeosciences</p></li>
+<li><p class="sd-card-text">Climate of the Past</p></li>
+<li><p class="sd-card-text">Geoscientific Model Development</p></li>
+</ul>
+<p class="sd-card-text"><strong>Open data policy</strong>
 For this publisher the policy depends on the journal</p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.biogeosciences.net/about/data_policy.html">Biogeosciences</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.climate-of-the-past.net/about/data_policy.html">Climate of the Past</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.geoscientific-model-development.net/about/code_and_data_policy.html">Geoscientific Model Development</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.biogeosciences.net/about/data_policy.html">Biogeosciences</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.climate-of-the-past.net/about/data_policy.html">Climate of the Past</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.geoscientific-model-development.net/about/code_and_data_policy.html">Geoscientific Model Development</a></p></li>
 </ul>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://www.copdess.org/enabling-fair-data-project/author-guidelines/">COPDESS author guidelines</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">No supplement is required if code/data is available from archive with DOI identifier</p></li>
-<li><p class="card-text">DOI is explicitly required</p></li>
-<li><p class="card-text">Software is required</p></li>
-<li><p class="card-text">Data Availability Statement required</p></li>
-<li><p class="card-text">If you have data you want to publish, they recommend submitting it to their partner journal Earth System Science Data (ESSD)</p></li>
+<li><p class="sd-card-text">No supplement is required if code/data is available from archive with DOI identifier</p></li>
+<li><p class="sd-card-text">DOI is explicitly required</p></li>
+<li><p class="sd-card-text">Software is required</p></li>
+<li><p class="sd-card-text">Data Availability Statement required</p></li>
+<li><p class="sd-card-text">If you have data you want to publish, they recommend submitting it to their partner journal Earth System Science Data (ESSD)</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-IOPscience<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+IOPscience<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Environmental Research Letters</p></li>
+<li><p class="sd-card-text">Environmental Research Letters</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong>
+<p class="sd-card-text"><strong>Open data policy</strong>
 IOP journals have a data  policy that will be listed in the ‘about the journal’ section of their website. These will follow one of the following data policies:</p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="http://publishingsupport.iopscience.iop.org/iop-publishing-standard-data-policy/">Standard data policy</a></p></li>
-<li><p class="card-text"><a class="reference external" href="http://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/">Data availability policy</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://publishingsupport.iopscience.iop.org/iop-publishing-standard-data-policy/">Standard data policy</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="http://publishingsupport.iopscience.iop.org/iop-publishing-data-availability-policy/">Data availability policy</a></p></li>
 </ul>
-<p class="card-text">For Environmental Research Letters the Data availability policy applies</p>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text">For Environmental Research Letters the Data availability policy applies</p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://publishingsupport.iopscience.iop.org/?category=authors&amp;step=0">Authors guidelines</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://publishingsupport.iopscience.iop.org/questions/supplementary-material-and-data-in-journal-articles/">Supplementary material and data guidelines</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://publishingsupport.iopscience.iop.org/?category=authors&amp;step=0">Authors guidelines</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://publishingsupport.iopscience.iop.org/questions/supplementary-material-and-data-in-journal-articles/">Supplementary material and data guidelines</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">Supplementary data files are strongly recommended if their size is small (&lt; 10 MB) otherwise use of a data repository is recommended.</p></li>
-<li><p class="card-text">DOI is not explicitly required but encouraged</p></li>
-<li><p class="card-text">Software is not explicitly required but encouraged</p></li>
+<li><p class="sd-card-text">Supplementary data files are strongly recommended if their size is small (&lt; 10 MB) otherwise use of a data repository is recommended.</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required but encouraged</p></li>
+<li><p class="sd-card-text">Software is not explicitly required but encouraged</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-MDPI<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+MDPI<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Atmosphere</p></li>
-<li><p class="card-text">Applied Sciences</p></li>
+<li><p class="sd-card-text">Atmosphere</p></li>
+<li><p class="sd-card-text">Applied Sciences</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong>
+<p class="sd-card-text"><strong>Open data policy</strong>
 MDPI does not have its own data policy, data requirements are covered as supplemental material.
 These requirements are based on the <a class="reference external" href="https://www.cos.io/initiatives/top-guidelines">Transparency and Openness Promotion guidelines</a></p>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.mdpi.com/journal/atmosphere/instructions#suppmaterials">Instructions on supplemental materials</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.mdpi.com/journal/atmosphere/instructions#suppmaterials">Instructions on supplemental materials</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">No supplement is required, but data can be provided as supplementary material if size is small (&lt; 60 MB)</p></li>
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Software is required</p></li>
-<li><p class="card-text">Data Availability Statement is required</p></li>
+<li><p class="sd-card-text">No supplement is required, but data can be provided as supplementary material if size is small (&lt; 60 MB)</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Software is required</p></li>
+<li><p class="sd-card-text">Data Availability Statement is required</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Nature<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Nature<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Nature</p></li>
-<li><p class="card-text">Nature Climate Change</p></li>
-<li><p class="card-text">Scientific Reports</p></li>
+<li><p class="sd-card-text">Nature</p></li>
+<li><p class="sd-card-text">Nature Climate Change</p></li>
+<li><p class="sd-card-text">Scientific Reports</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong></p>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.springernature.com/gp/authors/research-data-policy">Springer Nature Research Data Policy</a>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.springernature.com/gp/authors/research-data-policy">Springer Nature Research Data Policy</a>
 This covers 4 different kind of data policies:</p></li>
 </ul>
-<ol class="simple">
-<li><p class="card-text">Data sharing and data citation is encouraged</p></li>
-<li><p class="card-text">Data sharing and evidence of data sharing encouraged</p></li>
-<li><p class="card-text">Data sharing encouraged and statements of data availability required</p></li>
-<li><p class="card-text">Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see <a class="reference external" href="http://www.nature.com/sdata/policies/data-policies">Data policies</a>)</p></li>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Data sharing and data citation is encouraged</p></li>
+<li><p class="sd-card-text">Data sharing and evidence of data sharing encouraged</p></li>
+<li><p class="sd-card-text">Data sharing encouraged and statements of data availability required</p></li>
+<li><p class="sd-card-text">Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see <a class="reference external" href="http://www.nature.com/sdata/policies/data-policies">Data policies</a>)</p></li>
 </ol>
 <ul class="simple">
-<li><p class="card-text">Specific journal policies are listed for each journal under editorial policies, they are in line with the main Springer Nature data policy, linked above.
+<li><p class="sd-card-text">Specific journal policies are listed for each journal under editorial policies, they are in line with the main Springer Nature data policy, linked above.
 The following is an example for Nature journal:
 <a class="reference external" href="https://www.nature.com/nature-portfolio/editorial-policies/reporting-standards#data">Nature reporting data</a></p></li>
 </ul>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf">Data policy guidance for authors</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf">Data policy guidance for authors</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
 </ul>
-<p class="card-text">Specifically for software, some journals will peer review code:</p>
+<p class="sd-card-text">Specifically for software, some journals will peer review code:</p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.nature.com/documents/GuidelinesCodePublication.pdf">Guidelines for authors submitting Code</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.nature.com/documents/GuidelinesCodePublication.pdf">Guidelines for authors submitting Code</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">No supplement is required but Nature Research journals encourage authors to consider the publication of a Data Descriptor in Scientific Data to increase transparency and enhance the re-use value of data sets used in their papers.</p></li>
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Software is explicitly required</p></li>
-<li><p class="card-text">Data Availability Statement is required</p></li>
+<li><p class="sd-card-text">No supplement is required but Nature Research journals encourage authors to consider the publication of a Data Descriptor in Scientific Data to increase transparency and enhance the re-use value of data sets used in their papers.</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Software is explicitly required</p></li>
+<li><p class="sd-card-text">Data Availability Statement is required</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Royal_Meteorological_Society - RMetS<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Royal_Meteorological_Society - RMetS<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">International Journal of Climatology</p></li>
-<li><p class="card-text">Quarterly Journal of the Royal Meteorological Society</p></li>
+<li><p class="sd-card-text">International Journal of Climatology</p></li>
+<li><p class="sd-card-text">Quarterly Journal of the Royal Meteorological Society</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong></p>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://rmets.onlinelibrary.wiley.com/pb-assets/hub-assets/rmets/Policy_on_availability_of_data-1508421522713.pdf">Rmets Data Policy</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://rmets.onlinelibrary.wiley.com/pb-assets/hub-assets/rmets/Policy_on_availability_of_data-1508421522713.pdf">Rmets Data Policy</a></p></li>
 </ul>
-<p class="card-text"><strong>Guidelines</strong>
+<p class="sd-card-text"><strong>Guidelines</strong>
 NA</p>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">No supplement is required</p></li>
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Model code or software is seen as metadata rather than data</p></li>
-<li><p class="card-text">Data should be deposited in repositories that are permanent or have plans for succession</p></li>
+<li><p class="sd-card-text">No supplement is required</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Model code or software is seen as metadata rather than data</p></li>
+<li><p class="sd-card-text">Data should be deposited in repositories that are permanent or have plans for succession</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Springer<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Springer<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Climate Dynamics</p></li>
-<li><p class="card-text">Climatic Change</p></li>
+<li><p class="sd-card-text">Climate Dynamics</p></li>
+<li><p class="sd-card-text">Climatic Change</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong></p>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.springernature.com/gp/authors/research-data-policy">Springer Nature Research Data Policy</a>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.springernature.com/gp/authors/research-data-policy">Springer Nature Research Data Policy</a>
 This covers 4 different kind of data policies:</p></li>
 </ul>
-<ol class="simple">
-<li><p class="card-text">Data sharing and data citation is encouraged</p></li>
-<li><p class="card-text">Data sharing and evidence of data sharing encouraged</p></li>
-<li><p class="card-text">Data sharing encouraged and statements of data availability required</p></li>
-<li><p class="card-text">Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see <a class="reference external" href="http://www.nature.com/sdata/policies/data-policies">Data policies</a>)</p></li>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Data sharing and data citation is encouraged</p></li>
+<li><p class="sd-card-text">Data sharing and evidence of data sharing encouraged</p></li>
+<li><p class="sd-card-text">Data sharing encouraged and statements of data availability required</p></li>
+<li><p class="sd-card-text">Data sharing, evidence of data sharing and peer review of data required with publishing in Scientific Data (see <a class="reference external" href="http://www.nature.com/sdata/policies/data-policies">Data policies</a>)</p></li>
 </ol>
 <ul class="simple">
-<li><p class="card-text">Specific journal policies are listed for each journal under “Submission guidelines”. They are usually in line with the type 3 data policy, as an example:</p></li>
+<li><p class="sd-card-text">Specific journal policies are listed for each journal under “Submission guidelines”. They are usually in line with the type 3 data policy, as an example:</p></li>
 </ul>
-<p class="card-text"><a class="reference external" href="https://www.springer.com/journal/382/submission-guidelines#Instructions%20for%20Authors_Research%20Data%20Policy%20and%20Data%20Availability%20Statements">Climate Dynamics Research Data Policy</a></p>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text"><a class="reference external" href="https://www.springer.com/journal/382/submission-guidelines#Instructions%20for%20Authors_Research%20Data%20Policy%20and%20Data%20Availability%20Statements">Climate Dynamics Research Data Policy</a></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.springer.com/authors/manuscript+guidelines?SGWID=0-40162-6-795522-0">Springer manuscript guidelines</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.springer.com/authors/manuscript+guidelines?SGWID=0-40162-6-795522-0">Springer manuscript guidelines</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Software is not explicitly required</p></li>
-<li><p class="card-text">Data Availability Statement is required</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Software is not explicitly required</p></li>
+<li><p class="sd-card-text">Data Availability Statement is required</p></li>
 </ul>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Wiley_Blackwell - Wiley<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Journals</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Wiley_Blackwell - Wiley<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Journals</strong></p>
 <ul class="simple">
-<li><p class="card-text">Global Change Biology</p></li>
+<li><p class="sd-card-text">Global Change Biology</p></li>
 </ul>
-<p class="card-text"><strong>Open data policy</strong></p>
+<p class="sd-card-text"><strong>Open data policy</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html">Open Access data sharing policy</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://authorservices.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html">Open Access data sharing policy</a></p></li>
 </ul>
-<p class="card-text">This details 4 different levels of data sharing:</p>
-<ol class="simple">
-<li><p class="card-text">Expects Data Sharing</p></li>
-<li><p class="card-text">Mandates Data Sharing</p></li>
-<li><p class="card-text">Mandates Data Sharing and Peer Reviews Data</p></li>
-<li><p class="card-text">Information on which level is adopted is provided for each journal in the “Author guidelines: Editorial policies and Ethical Consideration” section.</p></li>
+<p class="sd-card-text">This details 4 different levels of data sharing:</p>
+<ol class="arabic simple">
+<li><p class="sd-card-text">Expects Data Sharing</p></li>
+<li><p class="sd-card-text">Mandates Data Sharing</p></li>
+<li><p class="sd-card-text">Mandates Data Sharing and Peer Reviews Data</p></li>
+<li><p class="sd-card-text">Information on which level is adopted is provided for each journal in the “Author guidelines: Editorial policies and Ethical Consideration” section.</p></li>
 </ol>
-<p class="card-text">The following is an example for Global Change Biology journal, which Mandates data sharing:</p>
-<p class="card-text"><a class="reference external" href="https://onlinelibrary.wiley.com/page/journal/13652486/homepage/forauthors.html">Global Change Biology data sharing policy</a></p>
-<p class="card-text"><strong>Guidelines</strong></p>
+<p class="sd-card-text">The following is an example for Global Change Biology journal, which Mandates data sharing:</p>
+<p class="sd-card-text"><a class="reference external" href="https://onlinelibrary.wiley.com/page/journal/13652486/homepage/forauthors.html">Global Change Biology data sharing policy</a></p>
+<p class="sd-card-text"><strong>Guidelines</strong></p>
 <ul class="simple">
-<li><p class="card-text"><a class="reference external" href="https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf">Data policy guidance for authors</a></p></li>
-<li><p class="card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.nature.com/documents/nr-data-availability-statements-data-citations.pdf">Data policy guidance for authors</a></p></li>
+<li><p class="sd-card-text"><a class="reference external" href="https://www.nature.com/sdata/policies/repositories#envgeo">Recommended repositories</a></p></li>
 </ul>
-<p class="card-text"><strong>Requirements</strong></p>
+<p class="sd-card-text"><strong>Requirements</strong></p>
 <ul class="simple">
-<li><p class="card-text">DOI is not explicitly required</p></li>
-<li><p class="card-text">Software is explicitly required in some of the policies</p></li>
-<li><p class="card-text">Data Availability Statement is required in some of the policies</p></li>
+<li><p class="sd-card-text">DOI is not explicitly required</p></li>
+<li><p class="sd-card-text">Software is explicitly required in some of the policies</p></li>
+<li><p class="sd-card-text">Data Availability Statement is required in some of the policies</p></li>
 </ul>
 </div>
-</details></div>
+</details></section>
 
     <script type="text/x-thebe-config">
     {
@@ -1068,7 +874,7 @@ Wiley_Blackwell - Wiley<div class="summary-down docutils">
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./publish"
         },
         predefinedOutput: true
@@ -1076,44 +882,88 @@ Wiley_Blackwell - Wiley<div class="summary-down docutils">
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="publish-examples.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Best Practice Published Data Records</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="publish-examples.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Best Practice Published Data Records</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="../manage/manage-intro.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="../manage/manage-intro.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Guidelines to manage climate dataset</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By ACD Working Group<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By ACD Working Group
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,789 +1,532 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Dataset creation basics &#8212; Climate Data Guidelines</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'create/create-basics';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="New, modified, and derived datasets" href="create-new-derived.html" />
     <link rel="prev" title="Guidelines to create a climate dataset" href="create-intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data
- </span>
-</p>
+    
+    
+    <img src="../_static/ACDG-logo_v2.png" class="logo__image only-light" alt="Climate Data Guidelines - Home"/>
+    <script>document.write(`<img src="../_static/ACDG-logo_v2.png" class="logo__image only-dark" alt="Climate Data Guidelines - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="create-intro.html">
-   Guidelines to create a climate dataset
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Dataset creation basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-new-derived.html">
-   New, modified, and derived datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-publishing.html">
-   Preparing files for publication
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="create-checklists.html">
-   Checklists for data management in the project lifecycle
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="create-intro.html">Guidelines to create a climate dataset</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset creation basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-new-derived.html">New, modified, and derived datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-publishing.html">Preparing files for publication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-checklists.html">Checklists for data management in the project lifecycle</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Publishing climate data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publish climate data
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options.html">
-   Publishing options
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
-     Publishing climate data with NCI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-esgf.html">
-     ESGF publishing procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-csiro-dap.html">
-     CSIRO Data Access Portal (DAP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-zenodo.html">
-     Publishing with Zenodo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/journals.html">
-   Journal publishers data policies
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-intro.html">Guidelines to publish climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-procedure.html">Publishing procedure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publish/publish-options.html">Publishing options</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-nci-geonetwork.html">Publishing climate data with NCI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-esgf.html">ESGF publishing procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-csiro-dap.html">CSIRO Data Access Portal (DAP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-zenodo.html">Publishing with Zenodo</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Managing datasets
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-intro.html">
-   Guidelines to manage climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-project.html">
-   Project management
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../manage/manage-file.html">
-   File handling
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-rep.html">
-     Updates to replicated data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-pub.html">
-     Updates to published data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-docs.html">
-   Documentation and provenance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-ausref.html">
-   Australian Community Reference Climate Data Collection @ NCI
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-examples.html">Best Practice Published Data Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/journals.html">Journal publishers data policies</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Retiring datasets
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Managing datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-intro.html">
-   Guidelines to manage the retirement of a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-principles.html">
-   General principles of data retirement
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-published.html">
-   Use case: published data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-replica.html">
-   Use case: replicated data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-unpublished.html">
-   Use case: unpublished data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-references.html">
-   Further information
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-intro.html">Guidelines to manage climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-project.html">Project management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../manage/manage-file.html">File handling</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-rep.html">Updates to replicated data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-pub.html">Updates to published data</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data products
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../products/products-intro.html">
-   Guidelines to create a climate data product
-  </a>
- </li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-docs.html">Documentation and provenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-ausref.html">Australian Community Reference Climate Data Collection @ NCI</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  About us
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Retiring datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/working-group-governance.html">
-   Working group governance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/goals.html">
-   Working group goals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/how-to-contribute.html">
-   Guidelines for contributors
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-intro.html">Guidelines to manage the retirement of a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-principles.html">General principles of data retirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-published.html">Use case: published data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-replica.html">Use case: replicated data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-unpublished.html">Use case: unpublished data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-references.html">Further information</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Concepts
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data products</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../concepts/concept-intro.html">
-   Key concepts in data management
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/authorship.html">
-     Authorship
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/backup.html">
-     Backup strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/controlled-vocab.html">
-     Controlled vocabularies
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/conventions.html">
-     Conventions and standards
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/cf-conventions.html">
-       CF Conventions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/acdd-conventions.html">
-       Attribute Convention for Data Discovery
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/other-conventions.html">
-       Other conventions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/availability-statement.html">
-     Data availability statement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/collaboration-agreement.html">
-     Data collaboration agreement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/dmp.html">
-     Data Management Plan
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/policies.html">
-     Data policies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-conduct.html">
-       Responsible Conduct of Research
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-arc.html">
-       Australian Research Council data policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-bom.html">
-       Bureau of Meteorology Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-clex.html">
-       CLEX Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-csiro.html">
-       CSIRO Data Policy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/fairer-principles.html">
-     FAIR(ER) Principles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/journal.html">
-     Journal requirements
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/license.html">
-     Open Access License
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-data.html">
-       Dataset license
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-code.html">
-       Software licenses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-qa.html">
-       Q&amp;A
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/pids.html">
-     Persistent identifiers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/provenance.html">
-     Provenance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/version-control.html">
-     Version Control
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../products/products-intro.html">Guidelines to create a climate data product</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Technical guide
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About us</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tech/tech-intro.html">
-   Technical tips
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/backup-checklist.html">
-     Backup checklist
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/cf-checker.html">
-     CF compliance checkers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/contributors.html">
-     Contributor roles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/drs-names.html">
-     Choosing a directory structure and filenames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/keywords.html">
-     Choosing keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/coding.html">
-     Coding best practices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/data_formats.html">
-     Data formats
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/tech-readme.html">
-     Dataset readme file template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/title.html">
-     Descriptive title
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/permissions.html">
-     File permissions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/massdata.html">
-     Mass Data Storage System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/moving-data.html">
-     Moving data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/compression.html">
-     NetCDF compression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/versioning.html">
-     Versioning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/conventions.html">
-     Writing valid and compliant netCDF files
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/working-group-governance.html">Working group governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/goals.html">Working group goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/how-to-contribute.html">Guidelines for contributors</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/appendix-intro.html">
-   Supplemental material
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/glossary.html">
-     Glossary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/forcodes.html">
-     ANZSRC Field of Research (FoR) codes 2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/zenodo.html">
-     Step by step Zenodo guide
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../concepts/concept-intro.html">Key concepts in data management</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/authorship.html">Authorship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/backup.html">Backup strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/controlled-vocab.html">Controlled vocabularies</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/conventions.html">Conventions and standards</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/cf-conventions.html">CF Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/acdd-conventions.html">Attribute Convention for Data Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/other-conventions.html">Other conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/availability-statement.html">Data availability statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/collaboration-agreement.html">Data collaboration agreement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/dmp.html">Data Management Plan</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/policies.html">Data policies</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-conduct.html">Responsible Conduct of Research</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-arc.html">Australian Research Council data policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-bom.html">Bureau of Meteorology Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-clex.html">CLEX Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-csiro.html">CSIRO Data Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/fairer-principles.html">FAIR(ER) Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/journal.html">Journal requirements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/license.html">Open Access License</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-data.html">Dataset license</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-code.html">Software licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-qa.html">Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/pids.html">Persistent identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/provenance.html">Provenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/version-control.html">Version Control</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical guide</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tech/tech-intro.html">Technical tips</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tech/backup-checklist.html">Backup checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/cf-checker.html">CF compliance checkers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/contributors.html">Contributor roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/drs-names.html">Choosing a directory structure and filenames</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../tech/keywords.html">Choosing keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/coding.html">Coding best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/tech-readme.html">Annotated README example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/title.html">Descriptive title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/permissions.html">File permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/massdata.html">Mass Data Storage System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/moving-data.html">Moving data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/compression.html">NetCDF compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/versioning.html">Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/conventions.html">Writing valid and compliant netCDF files</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix-intro.html">Supplemental material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/forcodes.html">ANZSRC Field of Research (FoR) codes 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/zenodo.html">Step by step Zenodo guide</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/create/create-basics.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-</div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
 
-            <!-- Source interaction buttons -->
+<div class="article-header-buttons">
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fcreate/create-basics.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/create/create-basics.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
-</div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#netcdf-format">
-   NetCDF format
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attributes">
-     Attributes
-    </a>
-   </li>
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/create/create-basics.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fcreate/create-basics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-directory-organisation">
-   File &amp; directory organisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-management-plans-documentation">
-   Data management plans &amp; documentation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-management-version-control">
-   Code management &amp; version control
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#backups-archiving">
-   Backups &amp; archiving
-  </a>
- </li>
-</ul>
+</div>
 
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/create/create-basics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dataset creation basics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#netcdf-format">NetCDF format</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-directory-organisation">File &amp; directory organisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management-plans-documentation">Data management plans &amp; documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-management-version-control">Code management &amp; version control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backups-archiving">Backups &amp; archiving</a></li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dataset creation basics</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#netcdf-format">
-   NetCDF format
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attributes">
-     Attributes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#file-directory-organisation">
-   File &amp; directory organisation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-management-plans-documentation">
-   Data management plans &amp; documentation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-management-version-control">
-   Code management &amp; version control
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#backups-archiving">
-   Backups &amp; archiving
-  </a>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="dataset-creation-basics">
-<h1>Dataset creation basics<a class="headerlink" href="#dataset-creation-basics" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dataset-creation-basics">
+<h1>Dataset creation basics<a class="headerlink" href="#dataset-creation-basics" title="Permalink to this heading">#</a></h1>
 <p>Climate data is a highly specialised field of data science, due to the size and complexity which often require computing and scientific coding skills. A variety of metadata fields are required to adequately describe the data and its dimensions. Domain-specific scientific knowledge is required to make informed decisions about its creation and use, and technical knowledge is required to produce robust datasets that can be reused by others.
 Many of the terms and concepts used are described in more detail in the <a class="reference internal" href="../concepts/concept-intro.html"><span class="doc std std-doc">Concepts</span></a> and <a class="reference internal" href="../tech/tech-intro.html"><span class="doc std std-doc">Technical tips</span></a> appendices.</p>
-<div class="section" id="netcdf-format">
-<h2>NetCDF format<a class="headerlink" href="#netcdf-format" title="Permalink to this headline">¶</a></h2>
+<section id="netcdf-format">
+<h2>NetCDF format<a class="headerlink" href="#netcdf-format" title="Permalink to this heading">#</a></h2>
 <p>By far the most commonly used format in the climate science community is <a class="reference internal" href="../tech/data_formats.html"><span class="doc std std-doc">netCDF</span></a>: (maybe we should cross reference big data guide here)</p>
 <ul class="simple">
 <li><p>open,</p></li>
@@ -808,8 +551,8 @@ However, it is recommended to minimise the use of multiple highly similar dimens
 <p class="admonition-title">Note</p>
 <p>Raw scientific data is usually highly structured and likely in netCDF format already, so often the main effort required is to ensure that the attributes describe the data correctly and adequately.</p>
 </div>
-<div class="section" id="attributes">
-<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
 <p>NetCDF metadata attributes are generally in one of two categories: machine-readable and human-readable (though these overlap significantly).</p>
 <ul class="simple">
 <li><p>Machine-readable attributes (e.g., <code class="docutils literal notranslate"><span class="pre">units</span></code>, <code class="docutils literal notranslate"><span class="pre">standard_name</span></code>, <code class="docutils literal notranslate"><span class="pre">missing_value</span></code> and <code class="docutils literal notranslate"><span class="pre">calendar</span></code>) typically describe the data itself, are usually variable-level, and can be automatically interpreted by standard plotting and analysis tools if set according to common <a class="reference internal" href="../concepts/conventions.html"><span class="doc std std-doc">conventions</span></a> and <a class="reference internal" href="../concepts/controlled-vocab.html"><span class="doc std std-doc">controlled vocabularies</span></a>. These conventions typically contain suggestions for the attribute key and value using commonly understood terms and are highly recommended to enable analysis and visualisation with standard software packages.</p></li>
@@ -820,14 +563,14 @@ However, it is recommended to minimise the use of multiple highly similar dimens
 <p class="admonition-title">Note</p>
 <p>We give a detailed overview of how to write CF compliant files in the <a class="reference internal" href="../tech/conventions.html"><span class="doc std std-doc">Technical tips</span></a> appendix. This includes known issues that can be caused by not following the standards, as CF conventions are used by developers of tools that access and analyse netCDF data to make assumptions on the data structure. We recommend implementing these metadata fields in the post-processing workflow so that these are automatically generated when possible. For a more technical description of the netCDF format and metadata, see the <a class="reference external" href="https://acdguide.github.io/BigData/data/data-netcdf.html">ACDG guidelines on BigData</a>.</p>
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Example of netCDF file which adheres to CF and ACDD conventions<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">netcdf heatflux {<br>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Example of netCDF file which adheres to CF and ACDD conventions<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">netcdf heatflux {<br>
     dimensions:<br>
         lon = 1440 ;<br>
         lat = 720 ;<br>
@@ -858,7 +601,7 @@ Example of netCDF file which adheres to CF and ACDD conventions<div class="summa
             hfls_sd:long_name = “error (standard deviation) of latent heat flux” ;<br>
             hfls_sd:standard_name = “surface_upward_latent_heat_flux” ;<br>
             hfls_sd:cell_methods = “area: standard_deviation” ;<br></p>
-<p class="card-text">// global attributes:<br>
+<p class="sd-card-text">// global attributes:<br>
     :Conventions = “CF-1.7, ACDD-1.3” ;<br>
     :title = “Global surface latent heat flux from reanalysis and observations” ;<br>
     :product_version = “1.0” ;<br>
@@ -884,35 +627,35 @@ Example of netCDF file which adheres to CF and ACDD conventions<div class="summa
     :geospatial_lon_max = “180” ;<br>
     :history = “nccat hfls*.nc <a class="reference external" href="http://heatflux.nc">heatflux.nc</a>” ;<br></p>
 </div>
-</details></div>
-</div>
-<div class="section" id="file-directory-organisation">
-<h2>File &amp; directory organisation<a class="headerlink" href="#file-directory-organisation" title="Permalink to this headline">¶</a></h2>
+</details></section>
+</section>
+<section id="file-directory-organisation">
+<h2>File &amp; directory organisation<a class="headerlink" href="#file-directory-organisation" title="Permalink to this heading">#</a></h2>
 <p>Climate datasets can be complex and often too big to be stored in a single file.
 Raw output refers to the files generated by a model, analysis workflow, or instrument. Raw output is optimised to the tool that produced it. For example, models often output all variables at a single timestep in one file. This is optimal for the model but not necessarily for analysis and long-term storage.
 Data files should be structured into a navigable directory structure that describes what different data the set contains. Ideally a directory tree should be meaningful and interpretable, with less than ~1000 individual files in each directory. Depending on how many files are produced, implementing a directory structure early before the number of files become hard to track, is recommended.
 Data Reference Syntax (DRS) is a naming system to be used within files, directories, and metadata to identify data sets. DRS were first established by intercomparison projects such as CMIP and CORDEX based on Controlled Vocabularies (CV). While aspects of these DRS don’t apply to smaller datasets, they offer a useful framework to organise climate data and choosing names that are meaningful and recognisable.</p>
 <p>File naming is also important, as confusion can easily arise if names are not sufficiently descriptive. A common recommendation is to name the files in a similar way to the directory structure. For example, if you have both monthly and daily data, put these into two separate sub-directories and include the frequency in the filenames. Other provenance details, such as experiment name and model, should be considered in the filename itself to reduce the risk of confusing different outputs. For example, a file called ‘ocean_2014.nc’ can be misunderstood very easily, but a file called ‘ACCESS-ESM_historical-pacemaker_ocean_monthly_2014.nc’ is much clearer and will reduce the risk of having to rerun models or misplacing irreplaceable observational data.<br />
 See <a class="reference internal" href="../tech/drs-names.html"><span class="doc std std-doc">this page</span></a> for some tips to creating a robust directory structure and filenaming convention for your datasets.</p>
-</div>
-<div class="section" id="data-management-plans-documentation">
-<h2>Data management plans &amp; documentation<a class="headerlink" href="#data-management-plans-documentation" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="data-management-plans-documentation">
+<h2>Data management plans &amp; documentation<a class="headerlink" href="#data-management-plans-documentation" title="Permalink to this heading">#</a></h2>
 <p>A <strong>Data Management Plan</strong> (DMP) is a general term for a document that describes the intended methods of the creation, storage, management and distribution of a given collection of data, and defines or cites the rules, policies or principles that govern the dataset. DMPs can vary greatly depending on context, the type of data, or intended audience. A DMP is also a living document, one that evolves through the various stages of the project in which the data is created.<br />
 Generally, however, a DMP should provide guidance to data managers to inform decision making. E.g., where should a new dataset be stored, who should have access to it, when should it be deleted. In the case where decisions are not clearly indicated from the DMP, it should indicate who is responsible for making the decision.<br />
 Ideally, a DMP is prepared as an integral part of project planning, with a data custodian also responsible for its continued development. An initial DMP can be as simple as notes in a text file, and include basic information such as backup locations, input files, tools used, and the intended use of the final dataset. Additionally, file metadata such as licences (see <a class="reference external" href="https://acdguide.github.io/Governance/concepts/license.html">https://acdguide.github.io/Governance/concepts/license.html</a>) and contact information are regularly included in DMPs.</p>
 <p>For more information on Data Management Plans, see <a class="reference external" href="https://acdguide.github.io/Governance/concepts/dmp.html">https://acdguide.github.io/Governance/concepts/dmp.html</a></p>
 <p>While similar to a DMP in many ways, <strong>data documentation</strong> is a distinct purpose in that it provides guidance to users of the data (rather than managers of the data), including those who intend to reproduce it. Data documentation will include many of the same information as a DMP, such as the method of data generation (input files, software used), distribution details, and project context. Data documentation is typically kept alongside the dataset as in a README file at the top level directory, which provide high-level information about the dataset (e.g., when it was created, who to contact, and how to use it). However, data documentation is a general term for ‘user guidance of a dataset’ and can also be prepared in the form of journal articles that provide much more detail. In cases where the data itself is not self-describing (e.g., CSV files), data documentation will need to provide low-level metadata such as dimensions and units.</p>
-</div>
-<div class="section" id="code-management-version-control">
-<h2>Code management &amp; version control<a class="headerlink" href="#code-management-version-control" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="code-management-version-control">
+<h2>Code management &amp; version control<a class="headerlink" href="#code-management-version-control" title="Permalink to this heading">#</a></h2>
 <p>Best practice for managing software of any kind starts with <strong>version controlled repositories</strong>. Git-based platforms (e.g., GitHub and GitLab instances such as the <a class="reference external" href="https://git.nci.org.au/">NCI GitLab</a>) and APIs are the current standard, although SVN and other tools are also in use throughout climate science. Learning these tools are vital to software development, and the versioning native in these systems help ensure provenance, reproduction, and creating FAIR datasets for sharing and publication.
 Releases (Git-based publications) of specific versions can be useful to complement published datasets or papers, however it is important to note that independent publication of code (e.g. via Zenodo) is required for a DOI and is recommended to ensure long-term access and reproducibility.</p>
 <p>Of course, code cannot exclusively exist in a repository. It is suggested (particularly if your data is an analysis product) to keep the code nearby the data (e.g. in the same parent directory) or document where it can be accessed in a readily available README file (also note the version of the code used to create the associated dataset!).</p>
 <p>Data should also be versioned, especially for more underpinning datasets such as model output &amp; data products, however best practice in this domain is still evolving. CMIP data includes versioning at the variable level that uses date of file creation, however this is just one method.</p>
 <p>For more information on versioning, see <a class="reference external" href="https://acdguide.github.io/Governance/tech/versioning.html">https://acdguide.github.io/Governance/tech/versioning.html</a></p>
-</div>
-<div class="section" id="backups-archiving">
-<h2>Backups &amp; archiving<a class="headerlink" href="#backups-archiving" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="backups-archiving">
+<h2>Backups &amp; archiving<a class="headerlink" href="#backups-archiving" title="Permalink to this heading">#</a></h2>
 <p>Climate data can often be difficult (or impossible) to regenerate, due to large compute costs and non-repeatable conditions. A good backup strategy is vital to ensuring that the risk of data loss is minimised, and storage/compute resources are used efficiently. It is also important to note that NCI’s <code class="docutils literal notranslate"><span class="pre">/g/data</span></code> storage system is <strong>not</strong> backed up.</p>
 <p>Our general recommendations are:</p>
 <ul class="simple">
@@ -924,8 +667,8 @@ Releases (Git-based publications) of specific versions can be useful to compleme
 </ul>
 <p>For more detailed guidance on backing up data, see our <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">guide to creating a backup strategy</span></a> and <a class="reference internal" href="../tech/backup-checklist.html"><span class="doc std std-doc">backup checklist</span></a>.</p>
 <p>Moving data between disks (e.g., from NCI’s <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> to <code class="docutils literal notranslate"><span class="pre">/g/data/</span></code>) and systems (e.g., from NCI to public cloud) can be challenging, especially for datasets at the TB-scale. We recommend using <a class="reference external" href="https://rsync.samba.org/">rsync</a> wherever possible, because it contains a large amount of flexibility (useful for the variety of use cases when moving data), and is generally very stable (stability is a major issue when moving data between systems). For more guidance on moving large data, see the <a class="reference internal" href="../tech/moving-data.html"><span class="doc std std-doc">Moving Data page</span></a>.</p>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -939,7 +682,7 @@ Releases (Git-based publications) of specific versions can be useful to compleme
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./create"
         },
         predefinedOutput: true
@@ -947,44 +690,109 @@ Releases (Git-based publications) of specific versions can be useful to compleme
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="create-intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Guidelines to create a climate dataset</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="create-intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Guidelines to create a climate dataset</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="create-new-derived.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="create-new-derived.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">New, modified, and derived datasets</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By ACD Working Group<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#netcdf-format">NetCDF format</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#file-directory-organisation">File &amp; directory organisation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management-plans-documentation">Data management plans &amp; documentation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-management-version-control">Code management &amp; version control</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backups-archiving">Backups &amp; archiving</a></li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By ACD Working Group
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

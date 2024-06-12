@@ -1,818 +1,624 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Glossary &#8212; Climate Data Guidelines</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/glossary';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ANZSRC Field of Research (FoR) codes 2020" href="forcodes.html" />
     <link rel="prev" title="Supplemental material" href="appendix-intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data
- </span>
-</p>
+    
+    
+    <img src="../_static/ACDG-logo_v2.png" class="logo__image only-light" alt="Climate Data Guidelines - Home"/>
+    <script>document.write(`<img src="../_static/ACDG-logo_v2.png" class="logo__image only-dark" alt="Climate Data Guidelines - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-intro.html">
-   Guidelines to create a climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-new-derived.html">
-   New, modified, and derived datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-publishing.html">
-   Preparing files for publication
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-checklists.html">
-   Checklists for data management in the project lifecycle
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-intro.html">Guidelines to create a climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-basics.html">Dataset creation basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-new-derived.html">New, modified, and derived datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-publishing.html">Preparing files for publication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-checklists.html">Checklists for data management in the project lifecycle</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Publishing climate data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publish climate data
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options.html">
-   Publishing options
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
-     Publishing climate data with NCI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-esgf.html">
-     ESGF publishing procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-csiro-dap.html">
-     CSIRO Data Access Portal (DAP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-zenodo.html">
-     Publishing with Zenodo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/journals.html">
-   Journal publishers data policies
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-intro.html">Guidelines to publish climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-procedure.html">Publishing procedure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publish/publish-options.html">Publishing options</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-nci-geonetwork.html">Publishing climate data with NCI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-esgf.html">ESGF publishing procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-csiro-dap.html">CSIRO Data Access Portal (DAP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-zenodo.html">Publishing with Zenodo</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Managing datasets
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-examples.html">Best Practice Published Data Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/journals.html">Journal publishers data policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Managing datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-intro.html">
-   Guidelines to manage climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-project.html">
-   Project management
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../manage/manage-file.html">
-   File handling
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-rep.html">
-     Updates to replicated data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-pub.html">
-     Updates to published data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-docs.html">
-   Documentation and provenance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-ausref.html">
-   Australian Community Reference Climate Data Collection @ NCI
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-intro.html">Guidelines to manage climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-project.html">Project management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../manage/manage-file.html">File handling</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-rep.html">Updates to replicated data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-pub.html">Updates to published data</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Retiring datasets
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-docs.html">Documentation and provenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-ausref.html">Australian Community Reference Climate Data Collection @ NCI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Retiring datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-intro.html">
-   Guidelines to manage the retirement of a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-principles.html">
-   General principles of data retirement
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-published.html">
-   Use case: published data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-replica.html">
-   Use case: replicated data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-unpublished.html">
-   Use case: unpublished data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-references.html">
-   Further information
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-intro.html">Guidelines to manage the retirement of a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-principles.html">General principles of data retirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-published.html">Use case: published data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-replica.html">Use case: replicated data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-unpublished.html">Use case: unpublished data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-references.html">Further information</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data products
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data products</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../products/products-intro.html">
-   Guidelines to create a climate data product
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../products/products-intro.html">Guidelines to create a climate data product</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  About us
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About us</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/working-group-governance.html">
-   Working group governance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/goals.html">
-   Working group goals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/how-to-contribute.html">
-   Guidelines for contributors
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/working-group-governance.html">Working group governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/goals.html">Working group goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/how-to-contribute.html">Guidelines for contributors</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Concepts
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../concepts/concept-intro.html">
-   Key concepts in data management
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/authorship.html">
-     Authorship
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/backup.html">
-     Backup strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/controlled-vocab.html">
-     Controlled vocabularies
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/conventions.html">
-     Conventions and standards
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/cf-conventions.html">
-       CF Conventions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/acdd-conventions.html">
-       Attribute Convention for Data Discovery
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/other-conventions.html">
-       Other conventions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/availability-statement.html">
-     Data availability statement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/collaboration-agreement.html">
-     Data collaboration agreement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/dmp.html">
-     Data Management Plan
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/policies.html">
-     Data policies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-conduct.html">
-       Responsible Conduct of Research
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-arc.html">
-       Australian Research Council data policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-bom.html">
-       Bureau of Meteorology Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-clex.html">
-       CLEX Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-csiro.html">
-       CSIRO Data Policy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/fairer-principles.html">
-     FAIR(ER) Principles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/journal.html">
-     Journal requirements
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/license.html">
-     Open Access License
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-data.html">
-       Dataset license
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-code.html">
-       Software licenses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-qa.html">
-       Q&amp;A
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/pids.html">
-     Persistent identifiers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/provenance.html">
-     Provenance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/version-control.html">
-     Version Control
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../concepts/concept-intro.html">Key concepts in data management</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/authorship.html">Authorship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/backup.html">Backup strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/controlled-vocab.html">Controlled vocabularies</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/conventions.html">Conventions and standards</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/cf-conventions.html">CF Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/acdd-conventions.html">Attribute Convention for Data Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/other-conventions.html">Other conventions</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Technical guide
- </span>
-</p>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/availability-statement.html">Data availability statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/collaboration-agreement.html">Data collaboration agreement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/dmp.html">Data Management Plan</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/policies.html">Data policies</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-conduct.html">Responsible Conduct of Research</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-arc.html">Australian Research Council data policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-bom.html">Bureau of Meteorology Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-clex.html">CLEX Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-csiro.html">CSIRO Data Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/fairer-principles.html">FAIR(ER) Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/journal.html">Journal requirements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/license.html">Open Access License</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-data.html">Dataset license</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-code.html">Software licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-qa.html">Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/pids.html">Persistent identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/provenance.html">Provenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/version-control.html">Version Control</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical guide</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../tech/tech-intro.html">
-   Technical tips
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/backup-checklist.html">
-     Backup checklist
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/cf-checker.html">
-     CF compliance checkers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/contributors.html">
-     Contributor roles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/drs-names.html">
-     Choosing a directory structure and filenames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/keywords.html">
-     Choosing keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/coding.html">
-     Coding best practices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/data_formats.html">
-     Data formats
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/tech-readme.html">
-     Dataset readme file template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/title.html">
-     Descriptive title
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/permissions.html">
-     File permissions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/massdata.html">
-     Mass Data Storage System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/moving-data.html">
-     Moving data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/compression.html">
-     NetCDF compression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/versioning.html">
-     Versioning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../tech/conventions.html">
-     Writing valid and compliant netCDF files
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tech/tech-intro.html">Technical tips</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tech/backup-checklist.html">Backup checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/cf-checker.html">CF compliance checkers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/contributors.html">Contributor roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/drs-names.html">Choosing a directory structure and filenames</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../tech/keywords.html">Choosing keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/coding.html">Coding best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/tech-readme.html">Annotated README example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/title.html">Descriptive title</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/permissions.html">File permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/massdata.html">Mass Data Storage System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/moving-data.html">Moving data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/compression.html">NetCDF compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/versioning.html">Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tech/conventions.html">Writing valid and compliant netCDF files</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="appendix-intro.html">
-   Supplemental material
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Glossary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="forcodes.html">
-     ANZSRC Field of Research (FoR) codes 2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="zenodo.html">
-     Step by step Zenodo guide
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="appendix-intro.html">Supplemental material</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forcodes.html">ANZSRC Field of Research (FoR) codes 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zenodo.html">Step by step Zenodo guide</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/appendix/glossary.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/appendix/glossary.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fappendix/glossary.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Fappendix/glossary.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/appendix/glossary.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/appendix/glossary.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Glossary</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Glossary</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+
+              
                 
-  <div class="section" id="glossary">
-<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
-<dl class="glossary simple">
-<dt id="term-ACCESS"><strong>ACCESS</strong><a class="headerlink" href="#term-ACCESS" title="Permalink to this term">¶</a></dt><dd><p>Australian Community Climate and Earth System Simulator (ACCESS) modelling system.</p>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">#</a></h1>
+<dl class="simple glossary">
+<dt id="term-ACCESS"><strong>ACCESS</strong><a class="headerlink" href="#term-ACCESS" title="Permalink to this term">#</a></dt><dd><p>Australian Community Climate and Earth System Simulator (ACCESS) modelling system.</p>
 </dd>
-<dt id="term-ACCESS-NRI"><strong>ACCESS-NRI</strong><a class="headerlink" href="#term-ACCESS-NRI" title="Permalink to this term">¶</a></dt><dd><p>(<a class="reference external" href="https://www.access-nri.org.au">https://www.access-nri.org.au</a>) The <a class="reference external" href="https://www.access-nri.org.au">Australian Earth-System Simulator (ACCESS-NRI)</a> is a national research Infrastructure created to support development and research with the <a class="reference internal" href="#term-ACCESS"><span class="xref std std-term">ACCESS</span></a> modelling system.</p>
+<dt id="term-ACCESS-NRI"><strong>ACCESS-NRI</strong><a class="headerlink" href="#term-ACCESS-NRI" title="Permalink to this term">#</a></dt><dd><p>(<a class="reference external" href="https://www.access-nri.org.au">https://www.access-nri.org.au</a>) The <a class="reference external" href="https://www.access-nri.org.au">Australian Earth-System Simulator (ACCESS-NRI)</a> is a national research Infrastructure created to support development and research with the <a class="reference internal" href="#term-ACCESS"><span class="xref std std-term">ACCESS</span></a> modelling system.</p>
 </dd>
-<dt id="term-ACS"><strong>ACS</strong><a class="headerlink" href="#term-ACS" title="Permalink to this term">¶</a></dt><dd><p>Australia Climate Service</p>
+<dt id="term-ACS"><strong>ACS</strong><a class="headerlink" href="#term-ACS" title="Permalink to this term">#</a></dt><dd><p>Australia Climate Service</p>
 </dd>
-<dt id="term-AODN"><strong>AODN</strong><a class="headerlink" href="#term-AODN" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://portal.aodn.org.au">Australian Ocean Data Network Portal</a> provides access to all available Australian marine and climate science data and provides the primary access to <a class="reference internal" href="#term-IMOS"><span class="xref std std-term">IMOS</span></a> data including access to the IMOS metadata.</p>
+<dt id="term-AODN"><strong>AODN</strong><a class="headerlink" href="#term-AODN" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://portal.aodn.org.au">Australian Ocean Data Network Portal</a> provides access to all available Australian marine and climate science data and provides the primary access to <a class="reference internal" href="#term-IMOS"><span class="xref std std-term">IMOS</span></a> data including access to the IMOS metadata.</p>
 </dd>
-<dt id="term-ARCCSS"><strong>ARCCSS</strong><a class="headerlink" href="#term-ARCCSS" title="Permalink to this term">¶</a></dt><dd><p>The ARC Centre of Excellence for Climate System Science</p>
+<dt id="term-ARCCSS"><strong>ARCCSS</strong><a class="headerlink" href="#term-ARCCSS" title="Permalink to this term">#</a></dt><dd><p>The ARC Centre of Excellence for Climate System Science</p>
 </dd>
-<dt id="term-ARDC"><strong>ARDC</strong><a class="headerlink" href="#term-ARDC" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://ardc.edu.au/">Australian Research Data Commons (ARDC ex-ANDS)</a> is a <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project aimed to enable the Australian research community and industry access to nationally significant, data intensive digital research infrastructure, platforms, skills and collections of high quality data. ARDC now also manages the <a class="reference internal" href="#term-Nectar"><span class="xref std std-term">NeCTAR</span></a> infrastructure.</p>
+<dt id="term-ARDC"><strong>ARDC</strong><a class="headerlink" href="#term-ARDC" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://ardc.edu.au/">Australian Research Data Commons (ARDC ex-ANDS)</a> is a <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project aimed to enable the Australian research community and industry access to nationally significant, data intensive digital research infrastructure, platforms, skills and collections of high quality data. ARDC now also manages the <a class="reference internal" href="#term-Nectar"><span class="xref std std-term">NeCTAR</span></a> infrastructure.</p>
 </dd>
-<dt id="term-Attribution"><strong>Attribution</strong> <a class="headerlink" href="#term-Attribution" title="Permalink to this term">¶</a></dt><dd><p>Attribution is the act of recognising the author/s of a piece of work that you used in your research. It is a common requirement of licenses.</p>
+<dt id="term-Attribution"><strong>Attribution</strong> <a class="headerlink" href="#term-Attribution" title="Permalink to this term">#</a></dt><dd><p>Attribution is the act of recognising the author/s of a piece of work that you used in your research. It is a common requirement of licenses.</p>
 </dd>
-<dt id="term-AURIN"><strong>AURIN</strong><a class="headerlink" href="#term-AURIN" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://aurin.org.au/">Australian Research Data Commons (AURIN)</a> is an <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project that provides e-research infrastructure and expertise to support urban, regional and social science research in academia, government and industry.</p>
+<dt id="term-AURIN"><strong>AURIN</strong><a class="headerlink" href="#term-AURIN" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://aurin.org.au/">Australian Research Data Commons (AURIN)</a> is an <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project that provides e-research infrastructure and expertise to support urban, regional and social science research in academia, government and industry.</p>
 </dd>
-<dt id="term-CARE"><strong>CARE</strong><a class="headerlink" href="#term-CARE" title="Permalink to this term">¶</a></dt><dd><p>The CARE Principles for Indigenous Data Governance are people and purpose-oriented, reflecting the crucial role of data in advancing Indigenous innovation and self-determination. <a class="reference external" href="https://www.gida-global.org/care">See more</a></p>
+<dt id="term-CARE"><strong>CARE</strong><a class="headerlink" href="#term-CARE" title="Permalink to this term">#</a></dt><dd><p>The CARE Principles for Indigenous Data Governance are people and purpose-oriented, reflecting the crucial role of data in advancing Indigenous innovation and self-determination. <a class="reference external" href="https://www.gida-global.org/care">See more</a></p>
 </dd>
-<dt id="term-CARE-Collective-Benefit"><strong>CARE - Collective Benefit</strong><a class="headerlink" href="#term-CARE-Collective-Benefit" title="Permalink to this term">¶</a></dt><dd><p>Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.</p>
+<dt id="term-CARE-Collective-Benefit"><strong>CARE - Collective Benefit</strong><a class="headerlink" href="#term-CARE-Collective-Benefit" title="Permalink to this term">#</a></dt><dd><p>Data ecosystems shall be designed and function in ways that enable Indigenous Peoples to derive benefit from the data.</p>
 </dd>
-<dt id="term-CARE-Authority-to-Control"><strong>CARE - Authority to Control</strong><a class="headerlink" href="#term-CARE-Authority-to-Control" title="Permalink to this term">¶</a></dt><dd><p>Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered.</p>
+<dt id="term-CARE-Authority-to-Control"><strong>CARE - Authority to Control</strong><a class="headerlink" href="#term-CARE-Authority-to-Control" title="Permalink to this term">#</a></dt><dd><p>Indigenous Peoples’ rights and interests in Indigenous data must be recognised and their authority to control such data be empowered.</p>
 </dd>
-<dt id="term-CARE-Responsibility"><strong>CARE - Responsibility</strong><a class="headerlink" href="#term-CARE-Responsibility" title="Permalink to this term">¶</a></dt><dd><p>Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self- determination and collective benefit.</p>
+<dt id="term-CARE-Responsibility"><strong>CARE - Responsibility</strong><a class="headerlink" href="#term-CARE-Responsibility" title="Permalink to this term">#</a></dt><dd><p>Those working with Indigenous data have a responsibility to share how those data are used to support Indigenous Peoples’ self- determination and collective benefit.</p>
 </dd>
-<dt id="term-CARE-Ethics"><strong>CARE - Ethics</strong><a class="headerlink" href="#term-CARE-Ethics" title="Permalink to this term">¶</a></dt><dd><p>Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.</p>
+<dt id="term-CARE-Ethics"><strong>CARE - Ethics</strong><a class="headerlink" href="#term-CARE-Ethics" title="Permalink to this term">#</a></dt><dd><p>Indigenous Peoples’ rights and wellbeing should be the primary concern at all stages of the data life cycle and across the data ecosystem.</p>
 </dd>
-<dt id="term-CC"><strong>CC</strong><a class="headerlink" href="#term-CC" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://creativecommons.org/">Creative Commons (CC)</a> is a non-profit organisation that produces licenses to encourage sharing of knowledge, commonly used for data products. See also the <a class="reference internal" href="../concepts/license-data.html#data-license"><span class="std std-ref">open access license</span></a> book page.</p>
+<dt id="term-CC"><strong>CC</strong><a class="headerlink" href="#term-CC" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://creativecommons.org/">Creative Commons (CC)</a> is a non-profit organisation that produces licenses to encourage sharing of knowledge, commonly used for data products. See also the <a class="reference internal" href="../concepts/license-data.html#data-license"><span class="std std-ref">open access license</span></a> book page.</p>
 </dd>
-<dt id="term-CDM"><strong>CDM</strong><a class="headerlink" href="#term-CDM" title="Permalink to this term">¶</a></dt><dd><p>Common Data Model (CDM) is an abstract data model for scientific datasets. This term can be used in different contexts. <a class="reference external" href="https://docs.unidata.ucar.edu/netcdf-java/5.3/userguide/common_data_model_overview.html">Unidata’s Common Data Model</a> merges the netCDF, <a class="reference internal" href="#term-OPeNDAP"><span class="xref std std-term">OPeNDAP</span></a>, and HDF5 data models to create a common API for many types of scientific data. The NetCDF Java library is an implementation of the CDM which can read many file formats besides netCDF. Another example of CDM is the one developed by <a class="reference external" href="https://cds.climate.copernicus.eu/toolbox/doc/how-to/15_how_to_understand_the_common_data_model/15_how_to_understand_the_common_data_model.html">Copernicus</a> to provide a uniform description (conventions, structures, formats etc.) of all data and products in their Climate Data Store.</p>
+<dt id="term-CDM"><strong>CDM</strong><a class="headerlink" href="#term-CDM" title="Permalink to this term">#</a></dt><dd><p>Common Data Model (CDM) is an abstract data model for scientific datasets. This term can be used in different contexts. <a class="reference external" href="https://docs.unidata.ucar.edu/netcdf-java/5.3/userguide/common_data_model_overview.html">Unidata’s Common Data Model</a> merges the netCDF, <a class="reference internal" href="#term-OPeNDAP"><span class="xref std std-term">OPeNDAP</span></a>, and HDF5 data models to create a common API for many types of scientific data. The NetCDF Java library is an implementation of the CDM which can read many file formats besides netCDF. Another example of CDM is the one developed by <a class="reference external" href="https://cds.climate.copernicus.eu/toolbox/doc/how-to/15_how_to_understand_the_common_data_model/15_how_to_understand_the_common_data_model.html">Copernicus</a> to provide a uniform description (conventions, structures, formats etc.) of all data and products in their Climate Data Store.</p>
 </dd>
-<dt id="term-CDS"><strong>CDS</strong><a class="headerlink" href="#term-CDS" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://cds.climate.copernicus.eu/#%21/home">Copernicus Climate Data Store (CDS)</a> provides access to a wide range of quality-assured climate datasets including observations, historical climate data records, estimates of Essential Climate Variables (ECVs) derived from Earth observations, global and regional climate reanalyses of past observations, seasonal forecasts and climate projections. It is an initiative of the European Climate Change Service.</p>
+<dt id="term-CDS"><strong>CDS</strong><a class="headerlink" href="#term-CDS" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://cds.climate.copernicus.eu/#!/home">Copernicus Climate Data Store (CDS)</a> provides access to a wide range of quality-assured climate datasets including observations, historical climate data records, estimates of Essential Climate Variables (ECVs) derived from Earth observations, global and regional climate reanalyses of past observations, seasonal forecasts and climate projections. It is an initiative of the European Climate Change Service.</p>
 </dd>
-<dt id="term-CF-conventions"><strong>CF conventions</strong><a class="headerlink" href="#term-CF-conventions" title="Permalink to this term">¶</a></dt><dd><p>The CF Climate and Forecast conventions are used to set metadata attributes in netCDF files. <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">See more</span></a></p>
+<dt id="term-CF-conventions"><strong>CF conventions</strong><a class="headerlink" href="#term-CF-conventions" title="Permalink to this term">#</a></dt><dd><p>The CF Climate and Forecast conventions are used to set metadata attributes in netCDF files. <a class="reference internal" href="../concepts/cf-conventions.html"><span class="doc std std-doc">See more</span></a></p>
 </dd>
-<dt id="term-Citation"><strong>Citation</strong><a class="headerlink" href="#term-Citation" title="Permalink to this term">¶</a></dt><dd><p>Citation is the way you attribute a piece of work, it should contain all the information necessary to locate the original work.</p>
+<dt id="term-Citation"><strong>Citation</strong><a class="headerlink" href="#term-Citation" title="Permalink to this term">#</a></dt><dd><p>Citation is the way you attribute a piece of work, it should contain all the information necessary to locate the original work.</p>
 </dd>
-<dt id="term-CLEX"><strong>CLEX</strong><a class="headerlink" href="#term-CLEX" title="Permalink to this term">¶</a></dt><dd><p>The ARC Centre of Excellence for Climate Extremes</p>
+<dt id="term-CLEX"><strong>CLEX</strong><a class="headerlink" href="#term-CLEX" title="Permalink to this term">#</a></dt><dd><p>The ARC Centre of Excellence for Climate Extremes</p>
 </dd>
-<dt id="term-Copyright"><strong>Copyright</strong><a class="headerlink" href="#term-Copyright" title="Permalink to this term">¶</a></dt><dd><p>Copyright is a form of intellectual property meant to protect the right of the author of a creative work to control how the work is used. More comprehensive but readable information on copyright is available <a class="reference external" href="https://smartcopying.edu.au/guidelines/copyright-basics/what-is-copyright/">here</a>.</p>
+<dt id="term-Copyright"><strong>Copyright</strong><a class="headerlink" href="#term-Copyright" title="Permalink to this term">#</a></dt><dd><p>Copyright is a form of intellectual property meant to protect the right of the author of a creative work to control how the work is used. More comprehensive but readable information on copyright is available <a class="reference external" href="https://smartcopying.edu.au/guidelines/copyright-basics/what-is-copyright/">here</a>.</p>
 </dd>
-<dt id="term-COSIMA"><strong>COSIMA</strong><a class="headerlink" href="#term-COSIMA" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://cosima.org.au">COSIMA</a> is the Consortium for Ocean-Sea Ice Modelling in Australia, which brings together Australian researchers involved in global ocean and sea ice modelling.</p>
+<dt id="term-COSIMA"><strong>COSIMA</strong><a class="headerlink" href="#term-COSIMA" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://cosima.org.au">COSIMA</a> is the Consortium for Ocean-Sea Ice Modelling in Australia, which brings together Australian researchers involved in global ocean and sea ice modelling.</p>
 </dd>
-<dt id="term-DAP"><strong>DAP</strong><a class="headerlink" href="#term-DAP" title="Permalink to this term">¶</a></dt><dd><p>DAP refers to the <a class="reference external" href="https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices/data-access-protocol-2">Data Access Protocol</a> used by <a class="reference internal" href="#term-OPeNDAP"><span class="xref std std-term">OPeNDAP</span></a>, it is a data transmission protocol designed specifically for science data. The protocol provides data types to accommodate gridded data, relational data, and time series, regardless of the original format. It is recognised by many scientific softwares, so you can pass a dap url instead of a filename to open a file or a subset.</p>
+<dt id="term-DAP"><strong>DAP</strong><a class="headerlink" href="#term-DAP" title="Permalink to this term">#</a></dt><dd><p>DAP refers to the <a class="reference external" href="https://www.earthdata.nasa.gov/esdis/esco/standards-and-practices/data-access-protocol-2">Data Access Protocol</a> used by <a class="reference internal" href="#term-OPeNDAP"><span class="xref std std-term">OPeNDAP</span></a>, it is a data transmission protocol designed specifically for science data. The protocol provides data types to accommodate gridded data, relational data, and time series, regardless of the original format. It is recognised by many scientific softwares, so you can pass a dap url instead of a filename to open a file or a subset.</p>
 </dd>
-<dt id="term-Data-Archiving-or-Preservation"><strong>Data Archiving or Preservation</strong><a class="headerlink" href="#term-Data-Archiving-or-Preservation" title="Permalink to this term">¶</a></dt><dd><p>The process of putting your data in long term storage following the completion of a project or publication for a minimum of 5 years. This includes identifying who can access the data and how it can be accessed. Many institutions have repositories which can be used by staff and students.</p>
+<dt id="term-Data-Archiving-or-Preservation"><strong>Data Archiving or Preservation</strong><a class="headerlink" href="#term-Data-Archiving-or-Preservation" title="Permalink to this term">#</a></dt><dd><p>The process of putting your data in long term storage following the completion of a project or publication for a minimum of 5 years. This includes identifying who can access the data and how it can be accessed. Many institutions have repositories which can be used by staff and students.</p>
 </dd>
-<dt id="term-Data-Back-Up"><strong>Data Back Up</strong><a class="headerlink" href="#term-Data-Back-Up" title="Permalink to this term">¶</a></dt><dd><p>The process of saving your data to protect against data loss. This can be an automatic process, where the storage location automatically retains previous versions of your data, or a manual process, where you need to actively save the data in another location. <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">See more</span></a></p>
+<dt id="term-Data-Back-Up"><strong>Data Back Up</strong><a class="headerlink" href="#term-Data-Back-Up" title="Permalink to this term">#</a></dt><dd><p>The process of saving your data to protect against data loss. This can be an automatic process, where the storage location automatically retains previous versions of your data, or a manual process, where you need to actively save the data in another location. <a class="reference internal" href="../concepts/backup.html"><span class="doc std std-doc">See more</span></a></p>
 </dd>
-<dt id="term-Data-Sharing"><strong>Data Sharing</strong><a class="headerlink" href="#term-Data-Sharing" title="Permalink to this term">¶</a></dt><dd><p>Making your data available for use by other researchers for their own research projects. This requires quality metadata to determine data source and changes made to allow for reuse. The best way to share data is to publish it, then it will be more discoverable and will be assigned a persistent identifier (such as DOI) which helps others to cite the data.</p>
+<dt id="term-Data-Sharing"><strong>Data Sharing</strong><a class="headerlink" href="#term-Data-Sharing" title="Permalink to this term">#</a></dt><dd><p>Making your data available for use by other researchers for their own research projects. This requires quality metadata to determine data source and changes made to allow for reuse. The best way to share data is to publish it, then it will be more discoverable and will be assigned a persistent identifier (such as DOI) which helps others to cite the data.</p>
 </dd>
-<dt id="term-Data-Storage"><strong>Data Storage</strong><a class="headerlink" href="#term-Data-Storage" title="Permalink to this term">¶</a></dt><dd><p>The location and/or system you use to store your data during a research project. This could include disk on personal computers, disk or tape on a shared server,  external storage devices such as hard drives or SD cards, and networked drives managed by your institution, commercial or research cloud storage.</p>
+<dt id="term-Data-Storage"><strong>Data Storage</strong><a class="headerlink" href="#term-Data-Storage" title="Permalink to this term">#</a></dt><dd><p>The location and/or system you use to store your data during a research project. This could include disk on personal computers, disk or tape on a shared server,  external storage devices such as hard drives or SD cards, and networked drives managed by your institution, commercial or research cloud storage.</p>
 </dd>
-<dt id="term-DMP"><strong>DMP</strong><a class="headerlink" href="#term-DMP" title="Permalink to this term">¶</a></dt><dd><p>A Data Management Plan is a tool to help you manage the data for a specific research project. It can take different forms depending on the stage of your project, for example a DMP to submit with a grant application will be different from the DMP required to publish your data. A DMP evolves with your project and is useful to record your data provenance. <a class="reference internal" href="../concepts/dmp.html"><span class="doc std std-doc">See more</span></a></p>
+<dt id="term-DMP"><strong>DMP</strong><a class="headerlink" href="#term-DMP" title="Permalink to this term">#</a></dt><dd><p>A Data Management Plan is a tool to help you manage the data for a specific research project. It can take different forms depending on the stage of your project, for example a DMP to submit with a grant application will be different from the DMP required to publish your data. A DMP evolves with your project and is useful to record your data provenance. <a class="reference internal" href="../concepts/dmp.html"><span class="doc std std-doc">See more</span></a></p>
 </dd>
-<dt id="term-FAIR"><strong>FAIR</strong><a class="headerlink" href="#term-FAIR" title="Permalink to this term">¶</a></dt><dd><p>The guiding principles often used in data governance are the FAIR principles of data sharing – Findable, Accessible, Interoperable, and Reusable. An extension to these are the FAIRER principles which add Ethical and Revisable to the acronym. <a class="reference internal" href="../concepts/fairer-principles.html"><span class="doc std std-doc">See more</span></a></p>
+<dt id="term-FAIR"><strong>FAIR</strong><a class="headerlink" href="#term-FAIR" title="Permalink to this term">#</a></dt><dd><p>The guiding principles often used in data governance are the FAIR principles of data sharing – Findable, Accessible, Interoperable, and Reusable. An extension to these are the FAIRER principles which add Ethical and Revisable to the acronym. <a class="reference internal" href="../concepts/fairer-principles.html"><span class="doc std std-doc">See more</span></a></p>
 </dd>
-<dt id="term-FAIR-Findable"><strong>FAIR - Findable</strong><a class="headerlink" href="#term-FAIR-Findable" title="Permalink to this term">¶</a></dt><dd><p>Data should be easy to find and identify.</p>
+<dt id="term-FAIR-Findable"><strong>FAIR - Findable</strong><a class="headerlink" href="#term-FAIR-Findable" title="Permalink to this term">#</a></dt><dd><p>Data should be easy to find and identify.</p>
 </dd>
-<dt id="term-FAIR-Accessible"><strong>FAIR - Accessible</strong><a class="headerlink" href="#term-FAIR-Accessible" title="Permalink to this term">¶</a></dt><dd><p>Data should have open access whenever possible.</p>
+<dt id="term-FAIR-Accessible"><strong>FAIR - Accessible</strong><a class="headerlink" href="#term-FAIR-Accessible" title="Permalink to this term">#</a></dt><dd><p>Data should have open access whenever possible.</p>
 </dd>
-<dt id="term-FAIR-Interoperable"><strong>FAIR - Interoperable</strong><a class="headerlink" href="#term-FAIR-Interoperable" title="Permalink to this term">¶</a></dt><dd><p>Well formatted data that uses discipline conventions and vocabularies, for both the data itself and the metadata used to describe it.</p>
+<dt id="term-FAIR-Interoperable"><strong>FAIR - Interoperable</strong><a class="headerlink" href="#term-FAIR-Interoperable" title="Permalink to this term">#</a></dt><dd><p>Well formatted data that uses discipline conventions and vocabularies, for both the data itself and the metadata used to describe it.</p>
 </dd>
-<dt id="term-FAIR-Reusable"><strong>FAIR - Reusable</strong><a class="headerlink" href="#term-FAIR-Reusable" title="Permalink to this term">¶</a></dt><dd><p>Data should be accompanied by enough information on how it was collected or processed, as to guarantee its quality and hence make it usable by others.</p>
+<dt id="term-FAIR-Reusable"><strong>FAIR - Reusable</strong><a class="headerlink" href="#term-FAIR-Reusable" title="Permalink to this term">#</a></dt><dd><p>Data should be accompanied by enough information on how it was collected or processed, as to guarantee its quality and hence make it usable by others.</p>
 </dd>
-<dt id="term-FAIRER-Ethical"><strong>FAIRER - Ethical</strong><a class="headerlink" href="#term-FAIRER-Ethical" title="Permalink to this term">¶</a></dt><dd><p>Data should be ethical, its collection, distribution, and reuse should be done in a way that is respectful toward humans and the planet.</p>
+<dt id="term-FAIRER-Ethical"><strong>FAIRER - Ethical</strong><a class="headerlink" href="#term-FAIRER-Ethical" title="Permalink to this term">#</a></dt><dd><p>Data should be ethical, its collection, distribution, and reuse should be done in a way that is respectful toward humans and the planet.</p>
 </dd>
-<dt id="term-FAIRER-Revisable"><strong>FAIRER - Revisable</strong><a class="headerlink" href="#term-FAIRER-Revisable" title="Permalink to this term">¶</a></dt><dd><p>Data can require fixes or corrections, retraction and republication, or extensions. These potential fixes should be planned for.</p>
+<dt id="term-FAIRER-Revisable"><strong>FAIRER - Revisable</strong><a class="headerlink" href="#term-FAIRER-Revisable" title="Permalink to this term">#</a></dt><dd><p>Data can require fixes or corrections, retraction and republication, or extensions. These potential fixes should be planned for.</p>
 </dd>
-<dt id="term-File-Management"><strong>File Management</strong><a class="headerlink" href="#term-File-Management" title="Permalink to this term">¶</a></dt><dd><p>Methods for storing, organising, naming, discovering and retrieving files in a structured consistent manner.</p>
+<dt id="term-File-Management"><strong>File Management</strong><a class="headerlink" href="#term-File-Management" title="Permalink to this term">#</a></dt><dd><p>Methods for storing, organising, naming, discovering and retrieving files in a structured consistent manner.</p>
 </dd>
-<dt id="term-GeoNetwork"><strong>GeoNetwork</strong><a class="headerlink" href="#term-GeoNetwork" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://geonetwork-opensource.org/">GeoNetwork</a> is an open source web interface to serve geospatial data across multiple catalogs. <a class="reference internal" href="#term-NCI"><span class="xref std std-term">NCI</span></a> uses a <a class="reference external" href="http://geonetwork.nci.org.au/">GeoNetwork catalogue</a> to manage the metadata of data collections hosted on their servers.</p>
+<dt id="term-GeoNetwork"><strong>GeoNetwork</strong><a class="headerlink" href="#term-GeoNetwork" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://geonetwork-opensource.org/">GeoNetwork</a> is an open source web interface to serve geospatial data across multiple catalogs. <a class="reference internal" href="#term-NCI"><span class="xref std std-term">NCI</span></a> uses a <a class="reference external" href="http://geonetwork.nci.org.au/">GeoNetwork catalogue</a> to manage the metadata of data collections hosted on their servers.</p>
 </dd>
-<dt id="term-IMOS"><strong>IMOS</strong><a class="headerlink" href="#term-IMOS" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://imos.org.au">Australian Integrated Marine Observing System (IMOS)</a> is an <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project that operates a wide range of observing equipment throughout Australia’s coastal and open oceans, making all of its data accessible to the marine and climate science community, other stakeholders and collaborators, via the <a class="reference internal" href="#term-AODN"><span class="xref std std-term">AODN</span></a> portal.</p>
+<dt id="term-IMOS"><strong>IMOS</strong><a class="headerlink" href="#term-IMOS" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://imos.org.au">Australian Integrated Marine Observing System (IMOS)</a> is an <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project that operates a wide range of observing equipment throughout Australia’s coastal and open oceans, making all of its data accessible to the marine and climate science community, other stakeholders and collaborators, via the <a class="reference internal" href="#term-AODN"><span class="xref std std-term">AODN</span></a> portal.</p>
 </dd>
-<dt id="term-License"><strong>License</strong><a class="headerlink" href="#term-License" title="Permalink to this term">¶</a></dt><dd><p>A copyright license is a legal document stating what someone else is allowed or not allowed to do with a research product.</p>
+<dt id="term-License"><strong>License</strong><a class="headerlink" href="#term-License" title="Permalink to this term">#</a></dt><dd><p>A copyright license is a legal document stating what someone else is allowed or not allowed to do with a research product.</p>
 </dd>
-<dt id="term-Metadata"><strong>Metadata</strong><a class="headerlink" href="#term-Metadata" title="Permalink to this term">¶</a></dt><dd><p>The information on data. Examples are metadata files accompanying observations with details of instrumentations and location, or the attributes of a netCDF file. A metadata record or repositories will contain information on a dataset but not the data itself.</p>
+<dt id="term-Metadata"><strong>Metadata</strong><a class="headerlink" href="#term-Metadata" title="Permalink to this term">#</a></dt><dd><p>The information on data. Examples are metadata files accompanying observations with details of instrumentations and location, or the attributes of a netCDF file. A metadata record or repositories will contain information on a dataset but not the data itself.</p>
 </dd>
-<dt id="term-NCI"><strong>NCI</strong><a class="headerlink" href="#term-NCI" title="Permalink to this term">¶</a></dt><dd><p>The Australian <a class="reference external" href="https://nci.org.au">National Computational Infrastructure</a> is a <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project whose aim is to provide high-performance data, storage and computing for all domains of science. It is the main HPC provider for the climate science community.</p>
+<dt id="term-NCI"><strong>NCI</strong><a class="headerlink" href="#term-NCI" title="Permalink to this term">#</a></dt><dd><p>The Australian <a class="reference external" href="https://nci.org.au">National Computational Infrastructure</a> is a <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project whose aim is to provide high-performance data, storage and computing for all domains of science. It is the main HPC provider for the climate science community.</p>
 </dd>
-<dt id="term-NCRIS"><strong>NCRIS</strong><a class="headerlink" href="#term-NCRIS" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://www.dese.gov.au/ncris">National Collaborative Research Infrastructure Strategy (NCRIS)</a> provides strategic funding for national-scale research infrastructure in Australia and facilitates strong partnerships between the research sector, business, industry and government to actively support research.</p>
+<dt id="term-NCRIS"><strong>NCRIS</strong><a class="headerlink" href="#term-NCRIS" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://www.dese.gov.au/ncris">National Collaborative Research Infrastructure Strategy (NCRIS)</a> provides strategic funding for national-scale research infrastructure in Australia and facilitates strong partnerships between the research sector, business, industry and government to actively support research.</p>
 </dd>
-<dt id="term-NCSS"><strong>NCSS</strong><a class="headerlink" href="#term-NCSS" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/tds/reference/NetcdfSubsetServiceReference.html">NetCDF Subset Service (NCSS)</a> allows subsetting certain <a class="reference internal" href="#term-CDM"><span class="xref std std-term">CDM</span></a> datasets in coordinate space, using a REST API. Gridded data subsets can be returned in CF-compliant netCDF3 or netCDF4. Point data subsets can be returned in CSV, XML, or <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries">CF-DSG</a> netCDF files.</p>
+<dt id="term-NCSS"><strong>NCSS</strong><a class="headerlink" href="#term-NCSS" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="http://www.unidata.ucar.edu/software/thredds/current/tds/reference/NetcdfSubsetServiceReference.html">NetCDF Subset Service (NCSS)</a> allows subsetting certain <a class="reference internal" href="#term-CDM"><span class="xref std std-term">CDM</span></a> datasets in coordinate space, using a REST API. Gridded data subsets can be returned in CF-compliant netCDF3 or netCDF4. Point data subsets can be returned in CSV, XML, or <a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#discrete-sampling-geometries">CF-DSG</a> netCDF files.</p>
 </dd>
-<dt id="term-Nectar"><strong>Nectar</strong><a class="headerlink" href="#term-Nectar" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://ardc.edu.au/services/nectar-research-cloud/">ARDC Nectar Research Cloud (Nectar)</a> is Australia’s national research cloud, specifically designed for research computing.</p>
+<dt id="term-Nectar"><strong>Nectar</strong><a class="headerlink" href="#term-Nectar" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://ardc.edu.au/services/nectar-research-cloud/">ARDC Nectar Research Cloud (Nectar)</a> is Australia’s national research cloud, specifically designed for research computing.</p>
 </dd>
-<dt id="term-OGC"><strong>OGC</strong><a class="headerlink" href="#term-OGC" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://www.ogc.org/">Open Geospatial Consortium (OGC)</a> is an international consortium whose aim is to create free, publicly available geospatial standards to improve access to geospatial data. Examples are <a class="reference internal" href="#term-WCS"><span class="xref std std-term">WCS</span></a>, <a class="reference internal" href="#term-WMS"><span class="xref std std-term">WMS</span></a> and <a class="reference internal" href="#term-WFS"><span class="xref std std-term">WFS</span></a> services.</p>
+<dt id="term-OGC"><strong>OGC</strong><a class="headerlink" href="#term-OGC" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://www.ogc.org/">Open Geospatial Consortium (OGC)</a> is an international consortium whose aim is to create free, publicly available geospatial standards to improve access to geospatial data. Examples are <a class="reference internal" href="#term-WCS"><span class="xref std std-term">WCS</span></a>, <a class="reference internal" href="#term-WMS"><span class="xref std std-term">WMS</span></a> and <a class="reference internal" href="#term-WFS"><span class="xref std std-term">WFS</span></a> services.</p>
 </dd>
-<dt id="term-Open-Access"><strong>Open Access</strong><a class="headerlink" href="#term-Open-Access" title="Permalink to this term">¶</a></dt><dd><p>A set of principles and a range of practices through which research outputs are distributed online, free of cost or other access barriers.</p>
+<dt id="term-Open-Access"><strong>Open Access</strong><a class="headerlink" href="#term-Open-Access" title="Permalink to this term">#</a></dt><dd><p>A set of principles and a range of practices through which research outputs are distributed online, free of cost or other access barriers.</p>
 </dd>
-<dt id="term-OPeNDAP"><strong>OPeNDAP</strong><a class="headerlink" href="#term-OPeNDAP" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://www.opendap.org/">Open-source Project for a Network Data Access Protocol (OPeNDAP)</a> is the client/server software associated to <a class="reference internal" href="#term-DAP"><span class="xref std std-term">DAP</span></a>. OPeNDAP is a widely used, subsetting data access method extending the HTTP protocol. CLEX CMS has published a blog that demonstrates <a class="reference external" href="https://climate-cms.org/2019/01/18/using-opendap.html">how to build and use an opendap url</a>. Other more in depth information on OPenDAP is available from their <a class="reference external" href="https://www.opendap.org/">website</a>, including a list of software that understand this protocol.</p>
+<dt id="term-OPeNDAP"><strong>OPeNDAP</strong><a class="headerlink" href="#term-OPeNDAP" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://www.opendap.org/">Open-source Project for a Network Data Access Protocol (OPeNDAP)</a> is the client/server software associated to <a class="reference internal" href="#term-DAP"><span class="xref std std-term">DAP</span></a>. OPeNDAP is a widely used, subsetting data access method extending the HTTP protocol. CLEX CMS has published a blog that demonstrates <a class="reference external" href="https://climate-cms.org/2019/01/18/using-opendap.html">how to build and use an opendap url</a>. Other more in depth information on OPenDAP is available from their <a class="reference external" href="https://www.opendap.org/">website</a>, including a list of software that understand this protocol.</p>
 </dd>
-<dt id="term-Provenance"><strong>Provenance</strong><a class="headerlink" href="#term-Provenance" title="Permalink to this term">¶</a></dt><dd><p>Data provenance describes the journey data goes through. It documents the evolution of a dataset from the original source including all the processes and methodology by which it was produced. <a class="reference internal" href="../concepts/provenance.html"><span class="doc std std-doc">See more</span></a></p>
+<dt id="term-Provenance"><strong>Provenance</strong><a class="headerlink" href="#term-Provenance" title="Permalink to this term">#</a></dt><dd><p>Data provenance describes the journey data goes through. It documents the evolution of a dataset from the original source including all the processes and methodology by which it was produced. <a class="reference internal" href="../concepts/provenance.html"><span class="doc std std-doc">See more</span></a></p>
 </dd>
-<dt id="term-Research-Data-Alliance"><strong>Research Data Alliance</strong><a class="headerlink" href="#term-Research-Data-Alliance" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://www.rd-alliance.org/">Research Data Alliance (RDA)</a> is a global community-driven initiative with the goal of building the social and technical infrastructure to enable open sharing and re-use of data.</p>
+<dt id="term-Research-Data-Alliance"><strong>Research Data Alliance</strong><a class="headerlink" href="#term-Research-Data-Alliance" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://www.rd-alliance.org/">Research Data Alliance (RDA)</a> is a global community-driven initiative with the goal of building the social and technical infrastructure to enable open sharing and re-use of data.</p>
 </dd>
-<dt id="term-Research-Data-Australia"><strong>Research Data Australia</strong><a class="headerlink" href="#term-Research-Data-Australia" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://researchdata.edu.au">Research Data Australia RDA</a> is the data discovery service of <a class="reference internal" href="#term-ARDC"><span class="xref std std-term">ARDC</span></a>. Most universities and research centres across Australia are now listing their data collections on RDA. RDA does not hold the data, so it is often used instead to list records existing on other repositories. Universities and data centres often automatically create an RDA record for any newly published dataset. It is a useful tool for data, and more recently, for software discovery. RDA also holds records for research programs, institutions and the researchers themselves. Datasets listed on RDA are automatically added to the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/index.php?title=Google_dataset_search_tool&amp;action=edit&amp;redlink=1">google dataset search tool</a>.</p>
+<dt id="term-Research-Data-Australia"><strong>Research Data Australia</strong><a class="headerlink" href="#term-Research-Data-Australia" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://researchdata.edu.au">Research Data Australia RDA</a> is the data discovery service of <a class="reference internal" href="#term-ARDC"><span class="xref std std-term">ARDC</span></a>. Most universities and research centres across Australia are now listing their data collections on RDA. RDA does not hold the data, so it is often used instead to list records existing on other repositories. Universities and data centres often automatically create an RDA record for any newly published dataset. It is a useful tool for data, and more recently, for software discovery. RDA also holds records for research programs, institutions and the researchers themselves. Datasets listed on RDA are automatically added to the <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/index.php?title=Google_dataset_search_tool&amp;action=edit&amp;redlink=1">google dataset search tool</a>.</p>
 </dd>
-<dt id="term-TDS"><strong>TDS</strong><a class="headerlink" href="#term-TDS" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://www.unidata.ucar.edu/software/tds/">THREDDS Data Server (TDS)</a> is a data and metadata catalogue server based on <a class="reference internal" href="#term-THREDDS"><span class="xref std std-term">THREDDS</span></a>.<a class="reference internal" href="#term-NCI"><span class="xref std std-term">NCI</span></a> uses a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS server</a> to make datasets available remotely. The <a class="reference internal" href="#term-CLEX"><span class="xref std std-term">CLEX</span></a> and <a class="reference internal" href="#term-ARCCSS"><span class="xref std std-term">ARCCSS</span></a> data collections are also available on this.</p>
+<dt id="term-TDS"><strong>TDS</strong><a class="headerlink" href="#term-TDS" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://www.unidata.ucar.edu/software/tds/">THREDDS Data Server (TDS)</a> is a data and metadata catalogue server based on <a class="reference internal" href="#term-THREDDS"><span class="xref std std-term">THREDDS</span></a>.<a class="reference internal" href="#term-NCI"><span class="xref std std-term">NCI</span></a> uses a <a class="reference external" href="https://dapds00.nci.org.au/thredds/catalog.html">THREDDS server</a> to make datasets available remotely. The <a class="reference internal" href="#term-CLEX"><span class="xref std std-term">CLEX</span></a> and <a class="reference internal" href="#term-ARCCSS"><span class="xref std std-term">ARCCSS</span></a> data collections are also available on this.</p>
 </dd>
-<dt id="term-TERN"><strong>TERN</strong><a class="headerlink" href="#term-TERN" title="Permalink to this term">¶</a></dt><dd><p>The <a class="reference external" href="https://www.tern.org.au">Australian Terrestrial Ecosystem Research Infrastructure (TERN)</a> is a <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project that supports research leadership in terrestrial environmental monitoring and modelling for long-term national benefit. TERN publish and deliver terrestrial data via its <a class="reference external" href="https://portal.tern.org.au">Data Discovery Portal</a>.</p>
+<dt id="term-TERN"><strong>TERN</strong><a class="headerlink" href="#term-TERN" title="Permalink to this term">#</a></dt><dd><p>The <a class="reference external" href="https://www.tern.org.au">Australian Terrestrial Ecosystem Research Infrastructure (TERN)</a> is a <a class="reference internal" href="#term-NCRIS"><span class="xref std std-term">NCRIS</span></a> project that supports research leadership in terrestrial environmental monitoring and modelling for long-term national benefit. TERN publish and deliver terrestrial data via its <a class="reference external" href="https://portal.tern.org.au">Data Discovery Portal</a>.</p>
 </dd>
-<dt id="term-THREDDS"><strong>THREDDS</strong><a class="headerlink" href="#term-THREDDS" title="Permalink to this term">¶</a></dt><dd><p>The [Thematic Real-Time Environmental Distributed Data Services (THREDDS)]  provides metadata and data access for scientific datasets, using a variety of remote data access protocols, including <a class="reference internal" href="#term-DAP"><span class="xref std std-term">DAP</span></a>.</p>
+<dt id="term-THREDDS"><strong>THREDDS</strong><a class="headerlink" href="#term-THREDDS" title="Permalink to this term">#</a></dt><dd><p>The [Thematic Real-Time Environmental Distributed Data Services (THREDDS)]  provides metadata and data access for scientific datasets, using a variety of remote data access protocols, including <a class="reference internal" href="#term-DAP"><span class="xref std std-term">DAP</span></a>.</p>
 </dd>
-<dt id="term-WCS"><strong>WCS</strong><a class="headerlink" href="#term-WCS" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a> is a protocol used to transfer “coverages”, ie. objects covering a geographical area.</p>
+<dt id="term-WCS"><strong>WCS</strong><a class="headerlink" href="#term-WCS" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a> is a protocol used to transfer “coverages”, ie. objects covering a geographical area.</p>
 </dd>
-<dt id="term-WFS"><strong>WFS</strong><a class="headerlink" href="#term-WFS" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://www.ogc.org/standards/wfs">Web Feature Service (WFS)</a> is a protocol that offers direct fine-grained access to geographic information at the feature and feature property level.</p>
+<dt id="term-WFS"><strong>WFS</strong><a class="headerlink" href="#term-WFS" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://www.ogc.org/standards/wfs">Web Feature Service (WFS)</a> is a protocol that offers direct fine-grained access to geographic information at the feature and feature property level.</p>
 </dd>
-<dt id="term-WMS"><strong>WMS</strong><a class="headerlink" href="#term-WMS" title="Permalink to this term">¶</a></dt><dd><p><a class="reference external" href="https://www.ogc.org/standards/wms">Web Mapping Service (WMS)</a> is a protocol used by map servers to deliver map images.</p>
+<dt id="term-WMS"><strong>WMS</strong><a class="headerlink" href="#term-WMS" title="Permalink to this term">#</a></dt><dd><p><a class="reference external" href="https://www.ogc.org/standards/wms">Web Mapping Service (WMS)</a> is a protocol used by map servers to deliver map images.</p>
 </dd>
 </dl>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -826,7 +632,7 @@
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./appendix"
         },
         predefinedOutput: true
@@ -834,44 +640,88 @@
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="appendix-intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Supplemental material</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="appendix-intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Supplemental material</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="forcodes.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="forcodes.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">ANZSRC Field of Research (FoR) codes 2020</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By ACD Working Group<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
-
-
-      </div>
-    </div>
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By ACD Working Group
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

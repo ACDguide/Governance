@@ -1,792 +1,533 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>File permissions &#8212; Climate Data Guidelines</title>
-    
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tech/permissions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Mass Data Storage System" href="massdata.html" />
     <link rel="prev" title="Descriptive title" href="title.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/ACDG-logo_v2.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Climate Data Guidelines</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   Introduction
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data
- </span>
-</p>
+    
+    
+    <img src="../_static/ACDG-logo_v2.png" class="logo__image only-light" alt="Climate Data Guidelines - Home"/>
+    <script>document.write(`<img src="../_static/ACDG-logo_v2.png" class="logo__image only-dark" alt="Climate Data Guidelines - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-intro.html">
-   Guidelines to create a climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-basics.html">
-   Dataset creation basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-new-derived.html">
-   New, modified, and derived datasets
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-publishing.html">
-   Preparing files for publication
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../create/create-checklists.html">
-   Checklists for data management in the project lifecycle
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-intro.html">Guidelines to create a climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-basics.html">Dataset creation basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-new-derived.html">New, modified, and derived datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-publishing.html">Preparing files for publication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../create/create-checklists.html">Checklists for data management in the project lifecycle</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Publishing climate data
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Publishing climate data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-intro.html">
-   Guidelines to publish climate data
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../publish/publish-options.html">
-   Publishing options
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-nci-geonetwork.html">
-     Publishing climate data with NCI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-esgf.html">
-     ESGF publishing procedure
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-csiro-dap.html">
-     CSIRO Data Access Portal (DAP)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../publish/publish-zenodo.html">
-     Publishing with Zenodo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/publish-examples.html">
-   Best Practice Published Data Records
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../publish/journals.html">
-   Journal publishers data policies
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-intro.html">Guidelines to publish climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-procedure.html">Publishing procedure</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../publish/publish-options.html">Publishing options</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-nci-geonetwork.html">Publishing climate data with NCI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-esgf.html">ESGF publishing procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-csiro-dap.html">CSIRO Data Access Portal (DAP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../publish/publish-zenodo.html">Publishing with Zenodo</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Managing datasets
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/publish-examples.html">Best Practice Published Data Records</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../publish/journals.html">Journal publishers data policies</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Managing datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-intro.html">
-   Guidelines to manage climate dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-project.html">
-   Project management
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../manage/manage-file.html">
-   File handling
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-rep.html">
-     Updates to replicated data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../manage/manage-update-pub.html">
-     Updates to published data
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-docs.html">
-   Documentation and provenance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../manage/manage-ausref.html">
-   Australian Community Reference Climate Data Collection @ NCI
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-intro.html">Guidelines to manage climate dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-project.html">Project management</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../manage/manage-file.html">File handling</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-rep.html">Updates to replicated data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../manage/manage-update-pub.html">Updates to published data</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Retiring datasets
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-docs.html">Documentation and provenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../manage/manage-ausref.html">Australian Community Reference Climate Data Collection @ NCI</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Retiring datasets</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-intro.html">
-   Guidelines to manage the retirement of a dataset
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-principles.html">
-   General principles of data retirement
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-published.html">
-   Use case: published data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-replica.html">
-   Use case: replicated data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-unpublished.html">
-   Use case: unpublished data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../retire/retire-references.html">
-   Further information
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-intro.html">Guidelines to manage the retirement of a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-principles.html">General principles of data retirement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-published.html">Use case: published data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-replica.html">Use case: replicated data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-unpublished.html">Use case: unpublished data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../retire/retire-references.html">Further information</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Creating climate data products
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating climate data products</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../products/products-intro.html">
-   Guidelines to create a climate data product
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../products/products-intro.html">Guidelines to create a climate data product</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  About us
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">About us</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/working-group-governance.html">
-   Working group governance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/goals.html">
-   Working group goals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../about-us/how-to-contribute.html">
-   Guidelines for contributors
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/working-group-governance.html">Working group governance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/goals.html">Working group goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about-us/how-to-contribute.html">Guidelines for contributors</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Concepts
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../concepts/concept-intro.html">
-   Key concepts in data management
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/authorship.html">
-     Authorship
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/backup.html">
-     Backup strategy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/controlled-vocab.html">
-     Controlled vocabularies
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/conventions.html">
-     Conventions and standards
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/cf-conventions.html">
-       CF Conventions
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/acdd-conventions.html">
-       Attribute Convention for Data Discovery
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/other-conventions.html">
-       Other conventions
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/availability-statement.html">
-     Data availability statement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/collaboration-agreement.html">
-     Data collaboration agreement
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/dmp.html">
-     Data Management Plan
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/policies.html">
-     Data policies
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-conduct.html">
-       Responsible Conduct of Research
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-arc.html">
-       Australian Research Council data policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-bom.html">
-       Bureau of Meteorology Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-clex.html">
-       CLEX Data Policy
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/policy-csiro.html">
-       CSIRO Data Policy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/fairer-principles.html">
-     FAIR(ER) Principles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/journal.html">
-     Journal requirements
-    </a>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../concepts/license.html">
-     Open Access License
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-data.html">
-       Dataset license
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-code.html">
-       Software licenses
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../concepts/license-qa.html">
-       Q&amp;A
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/pids.html">
-     Persistent identifiers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/provenance.html">
-     Provenance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../concepts/version-control.html">
-     Version Control
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../concepts/concept-intro.html">Key concepts in data management</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/authorship.html">Authorship</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/backup.html">Backup strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/controlled-vocab.html">Controlled vocabularies</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/conventions.html">Conventions and standards</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/cf-conventions.html">CF Conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/acdd-conventions.html">Attribute Convention for Data Discovery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/other-conventions.html">Other conventions</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Technical guide
- </span>
-</p>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/availability-statement.html">Data availability statement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/collaboration-agreement.html">Data collaboration agreement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/dmp.html">Data Management Plan</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/policies.html">Data policies</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-conduct.html">Responsible Conduct of Research</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-arc.html">Australian Research Council data policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-bom.html">Bureau of Meteorology Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-clex.html">CLEX Data Policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/policy-csiro.html">CSIRO Data Policy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/fairer-principles.html">FAIR(ER) Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/journal.html">Journal requirements</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../concepts/license.html">Open Access License</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-data.html">Dataset license</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-code.html">Software licenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../concepts/license-qa.html">Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/pids.html">Persistent identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/provenance.html">Provenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../concepts/version-control.html">Version Control</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Technical guide</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="tech-intro.html">
-   Technical tips
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="backup-checklist.html">
-     Backup checklist
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cf-checker.html">
-     CF compliance checkers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="contributors.html">
-     Contributor roles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="drs-names.html">
-     Choosing a directory structure and filenames
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="keywords.html">
-     Choosing keywords
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="coding.html">
-     Coding best practices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="data_formats.html">
-     Data formats
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="tech-readme.html">
-     Dataset readme file template
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="title.html">
-     Descriptive title
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     File permissions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="massdata.html">
-     Mass Data Storage System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="moving-data.html">
-     Moving data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="compression.html">
-     NetCDF compression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="versioning.html">
-     Versioning
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="conventions.html">
-     Writing valid and compliant netCDF files
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="tech-intro.html">Technical tips</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="backup-checklist.html">Backup checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cf-checker.html">CF compliance checkers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributors.html">Contributor roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drs-names.html">Choosing a directory structure and filenames</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="keywords.html">Choosing keywords</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coding.html">Coding best practices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_formats.html">Data formats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tech-readme.html">Annotated README example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="title.html">Descriptive title</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">File permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="massdata.html">Mass Data Storage System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="moving-data.html">Moving data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compression.html">NetCDF compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioning.html">Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conventions.html">Writing valid and compliant netCDF files</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../appendix/appendix-intro.html">
-   Supplemental material
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/glossary.html">
-     Glossary
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/forcodes.html">
-     ANZSRC Field of Research (FoR) codes 2020
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../appendix/zenodo.html">
-     Step by step Zenodo guide
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/appendix-intro.html">Supplemental material</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/glossary.html">Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/forcodes.html">ANZSRC Field of Research (FoR) codes 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/zenodo.html">Step by step Zenodo guide</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+      </div>
+      
+      <main id="main-content" class="bd-main">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tech/permissions.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/permissions.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/permissions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/ACDguide/Governance"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/ACDguide/Governance/issues/new?title=Issue%20on%20page%20%2Ftech/permissions.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ACDguide/Governance/edit/paola_branch/Governance/tech/permissions.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tech/permissions.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
 
-            <!-- Launch buttons -->
 
-        </div>
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
 
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>File permissions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div>
+                <h2> Contents </h2>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
+            <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#posix">
-   POSIX
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hidden-permissions">
-     Hidden permissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-permissions">
-     Changing permissions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-control-lists">
-   Access Control Lists
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acls-cheat-sheet">
-     ACLs cheat sheet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#troubleshooting">
-     Troubleshooting
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posix">POSIX</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-permissions">Hidden permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-permissions">Changing permissions</a></li>
 </ul>
-
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-control-lists">Access Control Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acls-cheat-sheet">ACLs cheat sheet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>File permissions</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#posix">
-   POSIX
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hidden-permissions">
-     Hidden permissions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#changing-permissions">
-     Changing permissions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-control-lists">
-   Access Control Lists
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#acls-cheat-sheet">
-     ACLs cheat sheet
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#troubleshooting">
-     Troubleshooting
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="section" id="file-permissions">
-<h1>File permissions<a class="headerlink" href="#file-permissions" title="Permalink to this headline">¶</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="file-permissions">
+<h1>File permissions<a class="headerlink" href="#file-permissions" title="Permalink to this heading">#</a></h1>
 <p>Access to files and directories is controlled by setting permissions, on a UNIX system the base permissions are set using POSIX and can be extended with Access Control Lists (ACLs).</p>
-<div class="section" id="posix">
-<span id="id1"></span><h2>POSIX<a class="headerlink" href="#posix" title="Permalink to this headline">¶</a></h2>
+<section id="posix">
+<span id="id1"></span><h2>POSIX<a class="headerlink" href="#posix" title="Permalink to this heading">#</a></h2>
 <p>Most UNIX file systems use the Portable Operating System Interface (POSIX) to control who can access files and directories. POSIX uses a combination of three groups of users, known as <code class="docutils literal notranslate"><span class="pre">access</span> <span class="pre">classes</span></code>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">user</span></code> each user identified by a user-id</p></li>
@@ -800,14 +541,14 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">write</span></code> - the permission to modify or remove a file. When set for a directory, it grants the ability to modify entries in the directory, including creating, deleting, and renaming files. Note that, without execute permission on a directory, the write permission does not take any effect.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">execute</span></code> - the permission to execute a file. When set for a directory, it is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but does not list files inside the directory, unless read is set.</p></li>
 </ul>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Permission example</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">This is an example of what the permissions look like when we list files using the long <code class="docutils literal notranslate"><span class="pre">l</span></code> option.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Permission example</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This is an example of what the permissions look like when we list files using the long <code class="docutils literal notranslate"><span class="pre">l</span></code> option.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span>
 <span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>   <span class="mi">1</span> <span class="n">pxp581</span> <span class="n">ua8</span>  <span class="mi">18</span><span class="n">K</span> <span class="n">May</span> <span class="mi">16</span>  <span class="mi">2016</span> <span class="n">readme</span><span class="o">.</span><span class="n">txt</span>
 <span class="n">drwx</span><span class="o">------</span>   <span class="mi">5</span> <span class="n">pxp581</span> <span class="n">ua8</span>  <span class="mi">512</span> <span class="n">May</span> <span class="mi">21</span>  <span class="mi">2020</span> <span class="n">private</span><span class="o">/</span>
@@ -820,10 +561,10 @@
 <span class="s1">&#39;------------ file type: d=directory, l=symbolic link, - means regular file</span>
 </pre></div>
 </div>
-<p class="card-text">NB When listing a directory content with <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>, an additional “+” character is displayed after the permissions of all files that have extended ACLs (see below for more information).</p>
+<p class="sd-card-text">NB When listing a directory content with <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>, an additional “+” character is displayed after the permissions of all files that have extended ACLs (see below for more information).</p>
 </div>
-</details><div class="section" id="hidden-permissions">
-<h3>Hidden permissions<a class="headerlink" href="#hidden-permissions" title="Permalink to this headline">¶</a></h3>
+</details><section id="hidden-permissions">
+<h3>Hidden permissions<a class="headerlink" href="#hidden-permissions" title="Permalink to this heading">#</a></h3>
 <p>Most of this section is taken from the <a class="reference external" href="https://opus.nci.org.au/display/Help/File+Access+Permissions">NCI user guide</a>.</p>
 <p>In addition to the 9 bits required to store the user, group, and other permissions of a file, there are three kinds of “additional permissions” that are rarely used but are extremely important to understand. The additional permissions are known as the <code class="docutils literal notranslate"><span class="pre">setuid</span> <span class="pre">bit</span></code>, <code class="docutils literal notranslate"><span class="pre">setgid</span> <span class="pre">bit</span></code>, and <code class="docutils literal notranslate"><span class="pre">sticky</span> <span class="pre">bit</span></code>. Each special bit has a different function depending on where it is used.</p>
 <p><strong>setuid</strong></p>
@@ -856,9 +597,9 @@ It is considered as a security hazard and will have no effect when setting the e
 <li><p>if the file is in a directory with the <code class="docutils literal notranslate"><span class="pre">sticky</span> <span class="pre">bit</span></code> activated, then only the file owner, directory owner or root will be able to remove the file, regardless of other permissions.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="changing-permissions">
-<h3>Changing permissions<a class="headerlink" href="#changing-permissions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="changing-permissions">
+<h3>Changing permissions<a class="headerlink" href="#changing-permissions" title="Permalink to this heading">#</a></h3>
 <p>A file/directory owner is the only user that can set and change a file’s permissions and/or group (aside from a system administrator).
 Unix commands are:</p>
 <ul class="simple">
@@ -876,53 +617,53 @@ In that case, the distinction between <code class="docutils literal notranslate"
 This means that it is not possible to have only a subset of the group users (i.e., the data managers) having writing permission.
 This is where Access Control Lists (ACLs) enter into play, as with ACLs is possible to set permissions for a different group and/or user.
 In the data management context this usually happens by setting a writers group which can be joined by all the managers and then using ACLs to give this group writing permission.</p>
-</div>
-</div>
-<div class="section" id="access-control-lists">
-<span id="acls"></span><h2>Access Control Lists<a class="headerlink" href="#access-control-lists" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="access-control-lists">
+<span id="acls"></span><h2>Access Control Lists<a class="headerlink" href="#access-control-lists" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.redhat.com/sysadmin/linux-access-control-lists">Access Control Lists</a> (ACLs) are used to impose a finer level of permissions control on files and directories.</p>
-<div class="section" id="acls-cheat-sheet">
-<h3>ACLs cheat sheet<a class="headerlink" href="#acls-cheat-sheet" title="Permalink to this headline">¶</a></h3>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Listing ACLs: getfacl</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+<section id="acls-cheat-sheet">
+<h3>ACLs cheat sheet<a class="headerlink" href="#acls-cheat-sheet" title="Permalink to this heading">#</a></h3>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Listing ACLs: getfacl</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">/</span><span class="nb">dir</span><span class="o">&gt;</span>  
 </pre></div>
 </div>
-<p class="card-text">Shows <em>file/dir</em> ACLs. If ACLs are set, a line like “mask::r-x” should be present.
+<p class="sd-card-text">Shows <em>file/dir</em> ACLs. If ACLs are set, a line like “mask::r-x” should be present.
 <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span> <span class="pre">dir</span></code>  should also show a ‘+’ at the end of permissions if ACLs are set
 Eg.  drwxr-s—+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
 </div>
-<p class="card-text">Display help</p>
+<p class="sd-card-text">Display help</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">-</span><span class="n">a</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">Display the ACLs for files in <em>somedir</em> only</p>
+<p class="sd-card-text">Display the ACLs for files in <em>somedir</em> only</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">-</span><span class="n">d</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">Display the default ACLs for <em>somedir</em> only</p>
-<p class="card-text"><code class="docutils literal notranslate"><span class="pre">u</span></code> for user
+<p class="sd-card-text">Display the default ACLs for <em>somedir</em> only</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">u</span></code> for user
 <code class="docutils literal notranslate"><span class="pre">g</span></code> for group
 <code class="docutils literal notranslate"><span class="pre">o</span></code> for others as in the usual permissions</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">--</span><span class="n">omit</span><span class="o">-</span><span class="n">header</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">Will show only the actual permissions and not the header showing owner, group and flags</p>
+<p class="sd-card-text">Will show only the actual permissions and not the header showing owner, group and flags</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Setting ACLs: setfacl</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Setting ACLs: setfacl</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">h</span>
 </pre></div>
 </div>
@@ -932,69 +673,69 @@ Eg.  drwxr-s—+</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span> <span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>  <span class="n">onefile</span>  
 </pre></div>
 </div>
-<p class="card-text">Give <em>user1</em> r-x access to <em>onefile</em>,
+<p class="sd-card-text">Give <em>user1</em> r-x access to <em>onefile</em>,
 -m stands for <code class="docutils literal notranslate"><span class="pre">modify</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span>  <span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">rwx</span> <span class="n">file</span><span class="p">,</span>  <span class="n">g</span><span class="p">:</span><span class="n">group1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>  
 </pre></div>
 </div>
-<p class="card-text">Give <em>user1</em> rwx access and <em>group1</em> r-x access to <em>file</em></p>
+<p class="sd-card-text">Give <em>user1</em> rwx access and <em>group1</em> r-x access to <em>file</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span>  <span class="n">d</span><span class="p">:</span><span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>  <span class="n">somedir</span>  
 </pre></div>
 </div>
-<p class="card-text">Give <em>user1</em> default r-x access to <em>somedir</em>,
+<p class="sd-card-text">Give <em>user1</em> default r-x access to <em>somedir</em>,
 any new files in <em>somedir</em> will inherit this permission</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">R</span> <span class="o">-</span><span class="n">m</span> <span class="n">d</span><span class="p">:</span><span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span> <span class="n">somedir</span>  
 </pre></div>
 </div>
-<p class="card-text">Give <em>user1</em> default r-x access to <em>somedir</em> and recursively to all its subdirectories</p>
+<p class="sd-card-text">Give <em>user1</em> default r-x access to <em>somedir</em> and recursively to all its subdirectories</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">m</span> <span class="n">d</span><span class="p">:</span><span class="n">u</span><span class="p">:</span><span class="n">user1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="n">x</span> <span class="n">somedir</span>  
 </pre></div>
 </div>
-<p class="card-text">Give <em>user1</em> default r-x access to <em>somedir</em> following symbolic links</p>
+<p class="sd-card-text">Give <em>user1</em> default r-x access to <em>somedir</em> following symbolic links</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Removing ACLs</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Removing ACLs</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">x</span> <span class="n">u</span><span class="p">:</span><span class="n">user1</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">Remove all ACLs for <em>user1</em> in <em>somedir</em></p>
+<p class="sd-card-text">Remove all ACLs for <em>user1</em> in <em>somedir</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">b</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">Remove all ACLs for directory <em>somedir</em></p>
+<p class="sd-card-text">Remove all ACLs for directory <em>somedir</em></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">k</span> <span class="n">somedir</span>
 </pre></div>
 </div>
-<p class="card-text">Remove all default ACLs for directory <em>somedir</em></p>
+<p class="sd-card-text">Remove all default ACLs for directory <em>somedir</em></p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>Backing up and restoring ACLs</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>Backing up and restoring ACLs</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">-</span><span class="n">R</span> <span class="n">somedir</span> <span class="o">&gt;</span> <span class="n">somedir_acls</span>
 </pre></div>
 </div>
-<p class="card-text">Save ACLs directive for <em>somedir</em> to <em>somedir_acls</em> file</p>
+<p class="sd-card-text">Save ACLs directive for <em>somedir</em> to <em>somedir_acls</em> file</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">--</span><span class="n">restore</span><span class="o">=</span><span class="n">somedir_acls</span>
 </pre></div>
 </div>
-<p class="card-text">Restore ACLs directives for <em>somedir</em> from the <em>somedir_acls</em> file</p>
+<p class="sd-card-text">Restore ACLs directives for <em>somedir</em> from the <em>somedir_acls</em> file</p>
 </div>
 </details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Only the file/directory owner can change ACLs, as for any other permissions. If a user runs this command on a directory containing some files they do not own, they will get a warning like “Operation not permitted”. These warnings can be safely ignored, if there are files that they own, the ACLs will be successfully updated for these.</p>
 </div>
-</div>
-<div class="section" id="troubleshooting">
-<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h3>
 <p>ACLs are very useful but tend to get broken easily.</p>
 <p>Let’s see first how to interpret the <code class="docutils literal notranslate"><span class="pre">getfacl</span></code> output</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="n">Download</span><span class="o">/</span>
@@ -1022,7 +763,7 @@ However, as the directory has setgid, set the directory other permissions act as
 <div class="admonition-order-of-operations admonition">
 <p class="admonition-title"><strong>Order of operations</strong></p>
 <p>When a process requests access to a file system object, two steps are performed.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The ACL entry that most closely matches the requesting process is selected. The ACL entries are looked at in the following order: owner, named users, (owning or named) groups, others. Only the highest ranking entry determines access: i.e. if the user is the owner this will have precedence on the group permissions.</p></li>
 <li><p>The system checks if the matching entry contains sufficient permissions to execute action.</p></li>
 </ol>
@@ -1044,40 +785,40 @@ However, as the directory has setgid, set the directory other permissions act as
 <p>As some process has set the <code class="docutils literal notranslate"><span class="pre">mask</span></code> to <code class="docutils literal notranslate"><span class="pre">rw-</span></code>, the group will have effectively <code class="docutils literal notranslate"><span class="pre">r--</span></code> instead of <code class="docutils literal notranslate"><span class="pre">r-x</span></code> permissions. And similarly, the groups w40 and hh5_w ACL entry contains permissions that are disabled by the mask entry, so <code class="docutils literal notranslate"><span class="pre">getfacl</span></code> adds a comment that shows the effective set of permissions granted by that entry.<br>
 If we grant again writing permissions to the group using <code class="docutils literal notranslate"><span class="pre">chmod</span></code> the mask will change, and the ACLs will be again effective. The ACLs can be disabled but not altered by <code class="docutils literal notranslate"><span class="pre">chmod</span></code>.</p>
 <p>Any command that sets the <code class="docutils literal notranslate"><span class="pre">mode</span> <span class="pre">parameter</span></code> can have unexpected effects on ACLs. Aside from <code class="docutils literal notranslate"><span class="pre">setacls</span></code> and <code class="docutils literal notranslate"><span class="pre">chmod</span></code>, these are usually commands used to create, move, and copy files.</p>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>mkdir</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Unless otherwise specified, the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command uses a value of 0777 as the mode parameter to the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> system call, which it uses for creating the new directory.
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>mkdir</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Unless otherwise specified, the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> command uses a value of 0777 as the mode parameter to the <code class="docutils literal notranslate"><span class="pre">mkdir</span></code> system call, which it uses for creating the new directory.
 This corresponds to <code class="docutils literal notranslate"><span class="pre">a+rwx,ug-s,-t</span></code>.</p>
-<p class="card-text">If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable affect because the value 0777 used for the mode parameter represents a full set of permissions.</p>
+<p class="sd-card-text">If this is run in a directory with ACLs set, all permissions not included in the mode parameter are removed from the corresponding ACL entries, but there is no noticeable affect because the value 0777 used for the mode parameter represents a full set of permissions.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>cp</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><code class="docutils literal notranslate"><span class="pre">cp</span></code> will preserve the permissions of the original file, but it will change the group depending on the setgid bit of the destination folder.</p>
-<p class="card-text">As an example:</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>cp</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">cp</span></code> will preserve the permissions of the original file, but it will change the group depending on the setgid bit of the destination folder.</p>
+<p class="sd-card-text">As an example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ua8</span><span class="o">/.</span>
 </pre></div>
 </div>
-<p class="card-text">the new test.txt file in ua8 will keep the same set of permissions of the original but with the ua8 group.</p>
-<p class="card-text">Using the archive flag <code class="docutils literal notranslate"><span class="pre">-a</span></code>:</p>
+<p class="sd-card-text">the new test.txt file in ua8 will keep the same set of permissions of the original but with the ua8 group.</p>
+<p class="sd-card-text">Using the archive flag <code class="docutils literal notranslate"><span class="pre">-a</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">a</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ua8</span><span class="o">/.</span> 
 </pre></div>
 </div>
-<p class="card-text">the new test.txt file in ua8 will preserve the same set of permissions and group of the original file.</p>
-<p class="card-text">Adding the ACLs in the mix:</p>
+<p class="sd-card-text">the new test.txt file in ua8 will preserve the same set of permissions and group of the original file.</p>
+<p class="sd-card-text">Adding the ACLs in the mix:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">setfacl</span> <span class="o">-</span><span class="n">m</span> <span class="n">d</span><span class="p">:</span><span class="n">u</span><span class="p">:</span><span class="n">ua8_nfs</span><span class="p">:</span><span class="n">rwx</span> <span class="n">Test</span>
 </pre></div>
 </div>
-<p class="card-text">the full set of permissions for the Test folder is now:</p>
+<p class="sd-card-text">the full set of permissions for the Test folder is now:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">getfacl</span> <span class="o">--</span><span class="n">omit</span><span class="o">-</span><span class="n">header</span> <span class="n">Test</span><span class="o">/</span>
 <span class="n">user</span><span class="p">::</span><span class="n">rwx</span>
 <span class="n">group</span><span class="p">::</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>
@@ -1089,11 +830,11 @@ This corresponds to <code class="docutils literal notranslate"><span class="pre"
 <span class="n">default</span><span class="p">:</span><span class="n">other</span><span class="p">::</span><span class="n">r</span><span class="o">-</span><span class="n">x</span>
 </pre></div>
 </div>
-<p class="card-text">A new test.txt file with group w40 and <code class="docutils literal notranslate"><span class="pre">rwx</span></code> only for the owner pxp581 is created and then copied to Test:</p>
+<p class="sd-card-text">A new test.txt file with group w40 and <code class="docutils literal notranslate"><span class="pre">rwx</span></code> only for the owner pxp581 is created and then copied to Test:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ua8</span><span class="o">/</span><span class="n">Test</span><span class="o">/.</span>
 </pre></div>
 </div>
-<p class="card-text">The resulting permissions for the copy are:</p>
+<p class="sd-card-text">The resulting permissions for the copy are:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># file: test.txt</span>
 <span class="c1"># owner: pxp581</span>
 <span class="c1"># group: ua8</span>
@@ -1104,35 +845,35 @@ This corresponds to <code class="docutils literal notranslate"><span class="pre"
 <span class="n">other</span><span class="p">::</span><span class="o">---</span>
 </pre></div>
 </div>
-<p class="card-text">The group changed to ua8 as expected but the original file POSIX permissions are setting a mask to <code class="docutils literal notranslate"><span class="pre">---</span></code> which gets mapped to the ua8_nfs user and the group permissions.</p>
-<p class="card-text">Finally, in the case the file to copy has ACLs set, running <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-a</span></code> will preserve the permissions in the copy regardless that the destination has or not ACLs set.
+<p class="sd-card-text">The group changed to ua8 as expected but the original file POSIX permissions are setting a mask to <code class="docutils literal notranslate"><span class="pre">---</span></code> which gets mapped to the ua8_nfs user and the group permissions.</p>
+<p class="sd-card-text">Finally, in the case the file to copy has ACLs set, running <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-a</span></code> will preserve the permissions in the copy regardless that the destination has or not ACLs set.
 Without the archive flag, the copy will lose all the ACLs and its permissions will be set depending on the directory settings.</p>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>mv</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Move (mv) behaves as an attribute-preserving copy followed by a deletion (rm), as far as permissions are concerned.</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>mv</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Move (mv) behaves as an attribute-preserving copy followed by a deletion (rm), as far as permissions are concerned.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ua8</span><span class="o">/.</span>
 </pre></div>
 </div>
-<p class="card-text">test.txt file will retain both permissions and group without need of specifying any mode preserving flag.</p>
+<p class="sd-card-text">test.txt file will retain both permissions and group without need of specifying any mode preserving flag.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p class="card-text">So, after moving files to a new project, it’s a good idea to run</p>
+<p class="sd-card-text">So, after moving files to a new project, it’s a good idea to run</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">chgrp</span> <span class="o">&lt;</span><span class="n">new</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p class="card-text">on all files that have been moved.</p>
+<p class="sd-card-text">on all files that have been moved.</p>
 </div>
-<p class="card-text">Moving a file to a directory with ACLs, for example Test from the copy example:</p>
+<p class="sd-card-text">Moving a file to a directory with ACLs, for example Test from the copy example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ua8</span><span class="o">/</span><span class="n">Test</span><span class="o">/.</span>
 </pre></div>
 </div>
-<p class="card-text">will produce the same effective permissions, as it will retain completely the permissions and group of the original file, basically ignoring the ACLs completely.</p>
+<p class="sd-card-text">will produce the same effective permissions, as it will retain completely the permissions and group of the original file, basically ignoring the ACLs completely.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># file: test.txt</span>
 <span class="c1"># owner: pxp581</span>
 <span class="c1"># group: w40</span>
@@ -1141,51 +882,51 @@ Without the archive flag, the copy will lose all the ACLs and its permissions wi
 <span class="n">other</span><span class="p">::</span><span class="o">---</span>
 </pre></div>
 </div>
-<p class="card-text">Finally, in the case the file to move has ACLs set, running <code class="docutils literal notranslate"><span class="pre">mv</span></code> will preserve the permissions regardless of the destination ACLs set (or not set).</p>
+<p class="sd-card-text">Finally, in the case the file to move has ACLs set, running <code class="docutils literal notranslate"><span class="pre">mv</span></code> will preserve the permissions regardless of the destination ACLs set (or not set).</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p class="card-text">Moving a file across the same file system means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!</p>
+<p class="sd-card-text">Moving a file across the same file system means removing its directory entry from its containing directory. The writing operation affects the directory, not the file itself, hence no write permissions on the file are necessary to move it!</p>
 </div>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>rsync</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text"><code class="docutils literal notranslate"><span class="pre">rsync</span></code> will behave similarly to <code class="docutils literal notranslate"><span class="pre">cp</span></code> when run without any flag. So, if the ACLs are set on the destination, the files will inherit them.
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>rsync</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">rsync</span></code> will behave similarly to <code class="docutils literal notranslate"><span class="pre">cp</span></code> when run without any flag. So, if the ACLs are set on the destination, the files will inherit them.
 Like <code class="docutils literal notranslate"><span class="pre">cp</span></code> rsync has an archive flag <code class="docutils literal notranslate"><span class="pre">-a</span></code> which should preserve both permissions and group.
 Differently from <code class="docutils literal notranslate"><span class="pre">cp</span></code>, if ACLs are set, even when using the archive flag, the permissions and group <strong>will not be preserved</strong>. The <code class="docutils literal notranslate"><span class="pre">archive</span></code> flag, as well as the <code class="docutils literal notranslate"><span class="pre">perms</span></code> and <code class="docutils literal notranslate"><span class="pre">group</span></code> flags, are ignored if there are ACLs.</p>
-<p class="card-text">If rsync-ing a directory with ACLs set, as Test in previous examples, to a directory with no ACLs:</p>
+<p class="sd-card-text">If rsync-ing a directory with ACLs set, as Test in previous examples, to a directory with no ACLs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rsync</span> <span class="o">-</span><span class="n">r</span> <span class="n">Test</span> <span class="n">Test</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">acls</span><span class="o">/.</span> 
 </pre></div>
 </div>
-<p class="card-text">The original directory ACLs are completely ignored, the same happens for the files contained in it.
+<p class="sd-card-text">The original directory ACLs are completely ignored, the same happens for the files contained in it.
 To preserve them rsync has a specific flag <code class="docutils literal notranslate"><span class="pre">-A</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rsync</span> <span class="o">-</span><span class="n">rA</span> <span class="n">Test</span> <span class="n">Test</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">acls</span><span class="o">/.</span>
 </pre></div>
 </div>
-<p class="card-text">this will preserve the ACLs. If run with the additional archive flag <code class="docutils literal notranslate"><span class="pre">-raA</span></code>, the POSIX permissions and group will also be inherited by the new directory.</p>
+<p class="sd-card-text">this will preserve the ACLs. If run with the additional archive flag <code class="docutils literal notranslate"><span class="pre">-raA</span></code>, the POSIX permissions and group will also be inherited by the new directory.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p class="card-text">The -A flag requires source and destination to have compatible ACL systems, when this is not the case a potential solution in rsync is to use the <code class="docutils literal notranslate"><span class="pre">--chmod</span></code> option.
+<p class="sd-card-text">The -A flag requires source and destination to have compatible ACL systems, when this is not the case a potential solution in rsync is to use the <code class="docutils literal notranslate"><span class="pre">--chmod</span></code> option.
 From the rsync man page (in the –perms section of the manual):</p>
 <blockquote>
-<div><p class="card-text">To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the –perms option is off and use <code class="docutils literal notranslate"><span class="pre">--chmod=ugo=rwX</span></code> (which ensures that all non-masked bits get enabled).</p>
+<div><p class="sd-card-text">To give new files the destination-default permissions (while leaving existing files unchanged), make sure that the –perms option is off and use <code class="docutils literal notranslate"><span class="pre">--chmod=ugo=rwX</span></code> (which ensures that all non-masked bits get enabled).</p>
 </div></blockquote>
-<p class="card-text">NB the order of flags is important: -a, -A and so on can in fact, be used but MUST come before the –chmod flag.
+<p class="sd-card-text">NB the order of flags is important: -a, -A and so on can in fact, be used but MUST come before the –chmod flag.
 This tip is from ref (4).</p>
 </div>
 </div>
-</details><details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-<strong>touch</strong><div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">The touch command passes a mode value of 0666 to the kernel for creating the file. So, all classes will have <code class="docutils literal notranslate"><span class="pre">rw-</span></code> permissions and the group and ACLs extended classes will be mapped by a <code class="docutils literal notranslate"><span class="pre">rw-</span></code> mask.</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>touch</strong><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">The touch command passes a mode value of 0666 to the kernel for creating the file. So, all classes will have <code class="docutils literal notranslate"><span class="pre">rw-</span></code> permissions and the group and ACLs extended classes will be mapped by a <code class="docutils literal notranslate"><span class="pre">rw-</span></code> mask.</p>
 </div>
 </details><div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -1193,16 +934,16 @@ This tip is from ref (4).</p>
 </div>
 <div class="admonition-references admonition">
 <p class="admonition-title">References</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><a class="reference external" href="https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/gruenbacher/gruenbacher.pdf">Andreas Gru ̈nbacher, POSIX Access Control Lists on Linux</a></p></li>
 <li><p><a class="reference external" href="https://opus.nci.org.au/display/Help/File+Access+Permissions">NCI user guide</a></p></li>
 <li><p><a class="reference external" href="https://www.redhat.com/sysadmin/linux-access-control-lists">RedHat guide to Linux Access Control Lists</a></p></li>
 <li><p><a class="reference external" href="https://serverfault.com/questions/455111/rsynced-files-not-getting-proper-acl">rsync between ACLs incompatible systems</a></p></li>
 </ol>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1216,7 +957,7 @@ This tip is from ref (4).</p>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./tech"
         },
         predefinedOutput: true
@@ -1224,44 +965,111 @@ This tip is from ref (4).</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="title.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Descriptive title</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="title.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Descriptive title</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="massdata.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="massdata.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Mass Data Storage System</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By ACD Working Group<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#posix">POSIX</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hidden-permissions">Hidden permissions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-permissions">Changing permissions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#access-control-lists">Access Control Lists</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acls-cheat-sheet">ACLs cheat sheet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
 
-      </div>
-    </div>
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By ACD Working Group
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

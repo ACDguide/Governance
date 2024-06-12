@@ -20,11 +20,90 @@ While preparing the data to be moved, it is a good idea to also document what da
 
 Useful tools:
 
-* TAR- to create archives cheatsheet
-````{dropdown}
+````{dropdown} **TAR - Tape ARchive cheat sheet**
+**Options**
+* c – create archive file.
+* u - update archive file.
+* x – extract a archive file.
+* v – show the progress of archive file.
+* f – filename of archive file.
+* t – viewing content of archive file.
+* j – filter archive through bzip2.
+* z – filter archive through gzip.
+* r – append or update files or directories to existing archive file.
+* p - preserve-permissions
+*   --acls - preserve acls 
+
+**Create tar archive**
+
+	tar -cvf archive.tar testdir
+
+**Create compressed tar archive**
+
+	tar -cvzf archive.tar.gz  testdir
+
+Or for more compression but slower writing/uncompressing
+
+	tar -cvfj archive.tar.bz2  testdir
+
+**Exclude only  files or directories with pattern**
+
+	tar -cvf archive.tar --exclude=”*.txt” testdir
+
+There are many exclude options check with: `man tar`
+
+**Update tar archive**
+
+	tar -uvf archive.tar testdir
+
+This will add previously excluded files and update any file which has changed.
+
+**Untar archive**
+
+	tar -xvf archive.tar 
+        tar -xvf archive.tar.gz 
+	tar -xvf archive.tar.bz2 
+	tar -xvf archive.tar -C /home/uncompress/here
+
+**List archive content**
+
+	tar -tvf archive.tar
+
+**Extract one file from tar archive**
+
+Need to use the full path for the file. As an example, if archive was created with:<br>
+    tar -cvf archive.tar testdir
+
+You have to specify: <br>
+    tar -xf archive.tar testdir/readme.txt 
+
+**Extract multiple files from tar archive**
+
+    tar -xvf archive.tar readme.txt another.txt
+
+Or using wildcards:
+
+    tar -xvf archive.tar *.txt
+
+**Add files or directories to tar archive**
+
+	tar -rvf archive.tar readme.txt
+	tar -rvf archive.tar anotherdir
+
+**Delete files or directories from tar archive**
+
+	tar --delete -f archive.tar anotherdir
+
+**Find differences between archive and local directory**
+
+	tar -d archive.tar testdir   
+
+NB. this can take a long time
+
+Modified from: https://neverendingsecurity.wordpress.com/2015/04/13/linux-tar-commands-cheatsheet/
 ````
 
-* Compressing tools
+For advice on compressing files see the [relevant page](compression.md)
 
 ## Accessing MDSS
 
